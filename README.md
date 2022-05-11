@@ -1,21 +1,4 @@
-# HypermediaProject-2022
-
-## Project Description
-The project consists of an implementation of the website of a tourist office of an art town using the NuxtJS Framework
-
-This repository includes:
-- Project Documentation;
-- Comment on best practices used;
-- the acutual website source code;
-- all required resources to run the website.
-
-## The Team
-- [Pietro Bernardelle](https://github.com/PietroBernardelle)
-- [Stefano Civelli](https://github.com/Stefano-Civelli)
-- [Samuele Cannilla](https://github.com/scannilla)
-- [Stefano D'Errico](https://github.com/stefanoderr)
-
--------------------------
+# Final Project template
 
 ## Build Setup
 
