@@ -1,4 +1,4 @@
-
+// initialized the DB ??
 
 export default async (models) => {
     const locationList = [
