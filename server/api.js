@@ -18,7 +18,7 @@ const database = new Sequelize('postgres://postgres:admin@localhost:5432/hyp')
 // Function that will initialize the connection to the database
 async function initializeDatabaseConnection() {
   await database.authenticate()
-  const event = database.define('event', {
+  const Event = database.define('event', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     img: DataTypes.STRING,
     ticket_price: DataTypes.DOUBLE,
@@ -61,8 +61,8 @@ async function initializeDatabaseConnection() {
   Poi.hasMany(poi_img)
 
   //relationship between "event" and "poi"
-  event.belongsTo(Poi)
-  Poi.hasMany(event)
+  Event.belongsTo(Poi)
+  Poi.hasMany(Event)
 
   //relationship between "poi" and "itinerary"
   Poi.belongsToMany(itinerary, { through: 'poi_itinerary' })
@@ -73,7 +73,7 @@ async function initializeDatabaseConnection() {
   )
 
   return {
-    event,
+    Event,
     Poi,
     poi_img,
     service,
@@ -110,6 +110,18 @@ const pageContentObject = {
 async function runMainApi() {
   const models = await initializeDatabaseConnection()
   await initialize(models) //initializes the DB
+
+  app.get('/event/list', async (req, res) => {
+    const result = await models.Event.findAll()
+    const filtered = []
+    for (const element of result) {
+      filtered.push({
+        name: element.name,
+        img: element.img,
+      })
+    }
+    return res.json(filtered)
+  })
 
   app.get('/poi/list', async (req, res) => {
     const result = await models.Poi.findAll()

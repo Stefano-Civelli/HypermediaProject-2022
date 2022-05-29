@@ -11,7 +11,5 @@ module.exports = {
   extends: ['@nuxtjs', 'plugin:nuxt/recommended', 'prettier'],
   plugins: [],
   // add your custom rules here
-  rules: {
-    rules: [{"vue/no-multiple-template-root": "off" }, {'vue/multi-word-component-names': 'off',}]
-  },
+  rules: [{"vue/no-multiple-template-root": "off" }, {'vue/multi-word-component-names': 'off',}]
 }

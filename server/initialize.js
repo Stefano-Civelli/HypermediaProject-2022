@@ -338,11 +338,10 @@ export default async (models) => {
             timetable: "Mon-Fry 8:0-19",
             phone_number: "02 8645 3382",
             address: "Via Olmetto, 21",
-        },
-        
+        }
     ]
     await models.Poi.bulkCreate(poiList)
-    await models.event.bulkCreate(eventList)
+    await models.Event.bulkCreate(eventList)
     await models.itinerary.bulkCreate(itineraryList)
     await models.service.bulkCreate(serviceList)
 }

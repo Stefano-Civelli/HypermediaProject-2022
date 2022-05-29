@@ -61,6 +61,10 @@ export default {
           name: 'POIS',
           path: '/pois',
         },
+        {
+          name: 'Events',
+          path: '/events', 
+        }
       ],
     }
   },
