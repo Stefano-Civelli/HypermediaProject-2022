@@ -341,7 +341,7 @@ export default async (models) => {
         },
         
     ]
-    await models.poi.bulkCreate(poiList)
+    await models.Poi.bulkCreate(poiList)
     await models.event.bulkCreate(eventList)
     await models.itinerary.bulkCreate(itineraryList)
     await models.service.bulkCreate(serviceList)

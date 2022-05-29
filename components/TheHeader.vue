@@ -57,6 +57,10 @@ export default {
           name: 'About',
           path: '/about',
         },
+        {
+          name: 'POIS',
+          path: '/pois',
+        },
       ],
     }
   },

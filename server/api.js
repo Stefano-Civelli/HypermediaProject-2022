@@ -24,10 +24,10 @@ async function initializeDatabaseConnection() {
     ticket_price: DataTypes.DOUBLE,
     description: DataTypes.TEXT,
     starting_date: DataTypes.DATEONLY,
-    ending_date: DataTypes.DATE,
+    ending_date: DataTypes.DATEONLY,
     name: DataTypes.STRING,
   })
-  const poi = database.define('poi', {
+  const Poi = database.define("poi", {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     address: DataTypes.STRING,
     position: DataTypes.STRING,
@@ -36,7 +36,7 @@ async function initializeDatabaseConnection() {
     ticket_price: DataTypes.DOUBLE,
     description: DataTypes.TEXT,
   })
-  const poi_img = database.define('poi_images', {
+  const poi_img = database.define('poi_img', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     img_path: DataTypes.STRING,
   })
@@ -45,7 +45,7 @@ async function initializeDatabaseConnection() {
     type: DataTypes.STRING,
     name: DataTypes.STRING,
     timetable: DataTypes.STRING,
-    phone_number: DataTypes.INTEGER,
+    phone_number: DataTypes.STRING,
     address: DataTypes.STRING,
   })
   const itinerary = database.define('itinerary', {
@@ -57,16 +57,16 @@ async function initializeDatabaseConnection() {
   })
 
   //relationship between "poi" and "poi_img"
-  poi_img.belongsTo(poi)
-  poi.hasMany(poi_img)
+  poi_img.belongsTo(Poi)
+  Poi.hasMany(poi_img)
 
   //relationship between "event" and "poi"
-  event.belongsTo(poi)
-  poi.hasMany(event)
+  event.belongsTo(Poi)
+  Poi.hasMany(event)
 
   //relationship between "poi" and "itinerary"
-  poi.belongsToMany(itinerary, { through: 'poi_itinerary' })
-  itinerary.belongsToMany(poi, { through: 'poi_itinerary' })
+  Poi.belongsToMany(itinerary, { through: 'poi_itinerary' })
+  itinerary.belongsToMany(Poi, { through: 'poi_itinerary' })
 
   await database.sync(
     { force: true } /*needed if want to also drop existing tables*/
@@ -74,7 +74,7 @@ async function initializeDatabaseConnection() {
 
   return {
     event,
-    poi,
+    Poi,
     poi_img,
     service,
     itinerary,
@@ -110,6 +110,11 @@ const pageContentObject = {
 async function runMainApi() {
   const models = await initializeDatabaseConnection()
   await initialize(models) //initializes the DB
+
+  app.get('/poi/list', async (req, res) => {
+    const result = await models.Poi.findAll()
+    return res.json(result)
+  })
 
   app.get('/page-info/:topic', (req, res) => {
     const { topic } = req.params
