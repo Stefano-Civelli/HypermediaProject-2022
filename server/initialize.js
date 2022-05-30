@@ -164,6 +164,248 @@ export default async (models) => {
             description: "Founded in the XII Century" ,
         },
     ]
+    const poi_img_list = [
+        {
+            poi_id: 1,
+            img_path: "https://duomo.shbcdn.com/blobs/variants/8/a/5/f/8a5f9f6b-fe25-4b40-857c-b82c80126a88_medium.jpg?_636862546878987581",
+        },
+        {
+            poi_id: 1,
+            img_path: "https://img.ilgcdn.com/sites/default/files/styles/xl/public/foto/2022/05/02/1651509563-milano-duomo-1.jpg?_=1651509563",
+        },
+        {
+            poi_id: 1,
+            img_path: "https://duomo.shbcdn.com/blobs/variants/a/c/8/e/ac8e3797-d691-420b-9b49-0d851f3ca9c3_xl.jpg?_636840242257777638",
+        },
+        {
+            poi_id: 2,
+            img_path: "http://www.turismo.it/fileadmin/mediafiles/turismo/articoli/201902/images/1254x836/iStock-184374451.jpg",
+        },
+        {
+            poi_id: 2,
+            img_path: "https://cdn.getyourguide.com/img/tour/5ea16be9e0fb0.jpeg/97.jpg",
+        },
+        {
+            poi_id: 2,
+            img_path: "https://www.yesmilano.it/sites/default/files/luogo/copertina/64/60/Castello_sforzesco_copertina_Depositphotos_157455922_xl-2015.jpg",
+        },
+        {
+            poi_id: 3,
+            img_path: "https://cdn2.civitatis.com/italia/milan/guia/galleria-vittorio-emanuele-ii.jpg",
+        },
+        {
+            poi_id: 3,
+            img_path: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Galleria_Milano_%28179532365%29.jpeg",
+        },
+        {
+            poi_id: 3,
+            img_path: "https://www.residencedesenzano.it/wp-content/uploads/2016/01/galleria_vittorio_emanuele_milano.jpg",
+        },
+        {
+            poi_id: 4,
+            img_path: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Milan_-_Scala_-_Facade.jpg",
+        },
+        {
+            poi_id: 4,
+            img_path: "https://www.operapertutti.it/wp-content/uploads/2020/09/teatro-alla-scala.jpg",
+        },
+        {
+            poi_id: 4,
+            img_path: "https://www.milanotoday.it/~media/horizontal-hi/69405908568147/la-scala-ph-brescia-e-amisano-2.jpg",
+        },
+        {
+            poi_id: 5,
+            img_path: "https://zero-media.s3.amazonaws.com/uploads/2015/05/pinacoteca_brera-milano-zero.jpg",
+        },
+        {
+            poi_id: 5,
+            img_path: "https://storico.beniculturali.it/mibac/multimedia/MiBAC/images/med/88/d4a52ff7f5563dad5282957d6116bcda22214b.jpg",
+        },
+        {
+            poi_id: 5,
+            img_path: "https://pinacotecabrera.org/wp-content/uploads/2019/03/Pinacoteca-di-Brera-Salone-Napoleonico-1024x577.jpg",
+        },
+        {
+            poi_id: 6,
+            img_path: "https://upload.wikimedia.org/wikipedia/commons/8/83/Santa_Maria_delle_Grazie_Milan_2013.jpg",
+        },
+        {
+            poi_id: 6,
+            img_path: "https://images.fidhouse.com/fidelitynews/wp-content/uploads/sites/9/2014/11/Santa-Maria-delle-Grazie.jpg",
+        },
+        {
+            poi_id: 6,
+            img_path: "https://www.milanopocket.it/wp-content/uploads/2019/04/chiesa-santa-maria-delle-grazie-milano-633x400.jpg",
+        },
+        {
+            poi_id: 7,
+            img_path: "https://www.yesmilano.it/sites/default/files/luogo/copertina/164/2066/Palazzo_Reale_Photo_by_Lorenzo_Pennati_1280x560.jpg",
+        },
+        {
+            poi_id: 7,
+            img_path: "https://www.milanoweekend.it/wp-content/uploads/2017/11/palazzorealemw-620x340.jpg",
+        },
+        {
+            poi_id: 7,
+            img_path: "https://c1.staticflickr.com/8/7332/16277820418_212a9265a3_b.jpg",
+        },
+        {
+            poi_id: 8,
+            img_path: "https://image.jimcdn.com/app/cms/image/transf/none/path/sf63059cf0e80ccf2/image/i6676cf264b1d30b9/version/1613580296/image.jpg",
+        },
+        {
+            poi_id: 8,
+            img_path: "https://www.ambrosiana.it/wp-content/uploads/2021/04/SALA-LETTURA-2.jpg",
+        },
+        {
+            poi_id: 8,
+            img_path: "https://i0.wp.com/www.hisour.com/wp-content/uploads/2019/09/Ambrosian-Library-Milan-Italy.jpg?fit=960%2C640&ssl=1",
+        },
+        {
+            poi_id: 9,
+            img_path: "https://www.milanoperibambini.it/images/2019c/mscienza-milano.jpg",
+        },
+        {
+            poi_id: 9,
+            img_path: "https://www.museoscienza.org/besrv/sites/default/files/2019-11/nave-scuola-ebe-preview.jpg",
+        },
+        {
+            poi_id: 9,
+            img_path: "https://www.tastingtheworld.it/wp-content/uploads/2018/10/Museo-della-Scienza-e-della-Tecnologia-di-Milano-1-1200x804.jpg",
+        },
+        {
+            poi_id: 10,
+            img_path: "https://blog.unioneprofessionisti.com/wp-content/uploads/2019/11/quali-sono-le-caratteristiche-e-i-benefici-del-bosco-verticale-bioedilizia.jpg",
+        },
+        {
+            poi_id: 10,
+            img_path: "https://www.ristrutturazione-torino.it/wp-content/uploads/2020/12/4568777.png",
+        },
+        {
+            poi_id: 10,
+            img_path: "https://cdn.lifegate.it/RyWMvxmzowTqR5ZgM3Ev22srgJs=/1960x1102/smart/https://www.lifegate.it/app/uploads/COVER-rendering-05.jpg",
+        },
+        {
+            poi_id: 11,
+            img_path: "https://www.yesmilano.it/sites/default/files/luogo/copertina/155/6328/FondazionePrada_1280x560.jpg",
+        },
+        {
+            poi_id: 11,
+            img_path: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Fondazione_PRADA_%2C_Via_Ripamonti_-_Largo_Isarco_area%2C_Golden_Tower_Rem_Koolhass_design.jpg",
+        },
+        {
+            poi_id: 11,
+            img_path: "https://image.jimcdn.com/app/cms/image/transf/none/path/sf63059cf0e80ccf2/image/i3b20afba2b8177f5/version/1613730213/image.jpg",
+        },
+        {
+            poi_id: 12,
+            img_path: "https://imbruttito.com/images/milano-arco-della-pace.jpg?p=16x9&s=4633d34e4051cd8000c68325a194f773",
+        },
+        {
+            poi_id: 12,
+            img_path: "https://forbes.it/wp-content/uploads/2022/01/Arch-of-Light-3-min-scaled.jpg",
+        },
+        {
+            poi_id: 12,
+            img_path: "https://www.milanocittastato.it/wp-content/uploads/2018/10/CherchiARCODELLAPACE.jpg",
+        },
+        {
+            poi_id: 13,
+            img_path: "https://www.inexhibit.com/wp-content/uploads/2015/01/Milano-Polzi-Pezoli-Paolini-esterno-1-Inexhibit.jpg",
+        },
+        {
+            poi_id: 13,
+            img_path: "https://cdn2.civitatis.com/italia/milan/guia/museo-poldi-pezzoli.jpg",
+        },
+        {
+            poi_id: 13,
+            img_path: "https://casemuseo.it/wp-content/uploads/2015/06/20110622_PoldiPezzoli-2012.jpg",
+        },
+        {
+            poi_id: 14,
+            img_path: "https://www.divinamilano.it/wp-content/themes/yootheme/cache/Via-Montenapoleone-5ab8b757.jpeg",
+        },
+        {
+            poi_id: 14,
+            img_path: "https://citynews-milanotoday.stgy.ovh/~media/horizontal-mid/16344606787087/ferrari-montenapo-frame-da-video-nimesh-s-2.jpg",
+        },
+        {
+            poi_id: 14,
+            img_path: "https://www.mentelocale.it/images/articoli/462x260/52948.jpg",
+        },
+        {
+            poi_id: 15,
+            img_path: "https://www.mudec.it/ita/wp-content/uploads/sites/2/2020/11/Mudec-MuseoCultureMilano-1200x628.jpg",
+        },
+        {
+            poi_id: 15,
+            img_path: "https://modulo.net/files/chunks/55376d3822e7b96b5800000e/5a154a9da0d55638e6000a9d.jpg",
+        },
+        {
+            poi_id: 15,
+            img_path: "https://citynews-milanotoday.stgy.ovh/~media/original-hi/63892734962767/mudec-3.jpg",
+        },
+        {
+            poi_id: 16,
+            img_path: "https://www.milanoweekend.it/wp-content/uploads/2018/03/Villa-Reale_credit_GAM-min.jpg",
+        },
+        {
+            poi_id: 16,
+            img_path: "https://www.milanoweekend.it/wp-content/uploads/2018/03/Sala-da-Ballo_-photo-credit_Delfino-Sisto-Legnani_Marco-Cappelletti-min-Copia-620x340.jpg",
+        },
+        {
+            poi_id: 16,
+            img_path: "https://artemagazine.it/wp-content/uploads/2021/11/Divisionismo_2-Collezioni_04.jpg",
+        },
+        {
+            poi_id: 17,
+            img_path: "https://upload.wikimedia.org/wikipedia/commons/c/ce/Milano_-_Basilica_san_Lorenzo_a_porta_Ticinese.jpg",
+        },
+        {
+            poi_id: 17,
+            img_path: "https://www.residencelepontina.it/wp-content/uploads/2016/01/basilica_san_lorenzo_milano.jpg",
+        },
+        {
+            poi_id: 17,
+            img_path: "https://www.milanopocket.it/wp-content/uploads/2019/04/basilica-san-lorenzo-maggiore-milano-633x400.jpg",
+        },
+        {
+            poi_id: 18,
+            img_path: "https://www.booking.best/it/wp-content/uploads/2020/02/Piazza-Gae-Aulenti-11.jpg",
+        },
+        {
+            poi_id: 18,
+            img_path: "https://cdn2.civitatis.com/italia/milan/guia/piazza-gae-aulenti.jpg",
+        },
+        {
+            poi_id: 18,
+            img_path: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/piazza-gae-aulenti-of-milan-italy-designed-by-the-argentine-news-photo-1631632007.jpg?crop=1.00xw:1.00xh;0,0&resize=640:*",
+        },
+        {
+            poi_id: 19,
+            img_path: "https://www.luoghidiinteresse.it/wp-content/uploads/MILANO-FOTO-42-Pac-Padiglione-dell%E2%80%99arte-contemporanea-e1489616686268.jpg",
+        },
+        {
+            poi_id: 19,
+            img_path: "http://www.arte.it/foto/600x450/4e/11241-Mission.jpg",
+        },
+        {
+            poi_id: 19,
+            img_path: "https://www.chiamamilano.it/uploads/1/6/8/6/16865702/published/pac-blue-4rc.jpeg?1509451007",
+        },
+        {
+            poi_id: 20,
+            img_path: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/AbbaziaChiaravalle.jpg/1200px-AbbaziaChiaravalle.jpg",
+        },
+        {
+            poi_id: 20,
+            img_path: "https://www.lombardiafacile.regione.lombardia.it/wps/wcm/connect/9277e75c-ef98-428a-ab07-458c0f10fc71/strada+delle+abbazie.jpeg?MOD=AJPERES&CACHEID=ROOTWORKSPACE-9277e75c-ef98-428a-ab07-458c0f10fc71-mnHUIu6",
+        },
+        {
+            poi_id: 20,
+            img_path: "https://milanoweekend.it/wp-content/uploads/2013/06/abbazia_chiaravalle_esterno.jpg",
+        },
+    ]
     const eventList = [
         {
             img: "https://oltremateria.it/wp-content/uploads/Milano-design-week-1200X500.jpeg",
@@ -341,6 +583,7 @@ export default async (models) => {
         }
     ]
     await models.Poi.bulkCreate(poiList)
+    await models.Poi_img.bulkCreate(poi_img_list)
     await models.Event.bulkCreate(eventList)
     await models.itinerary.bulkCreate(itineraryList)
     await models.service.bulkCreate(serviceList)
