@@ -36,8 +36,9 @@ async function initializeDatabaseConnection() {
     ticket_price: DataTypes.DOUBLE,
     description: DataTypes.TEXT,
   })
-  const poi_img = database.define('poi_img', {
+  const Poi_img = database.define('poi_img', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+    poi_id: DataTypes.INTEGER,
     img_path: DataTypes.STRING,
   })
   const service = database.define('service', {
@@ -57,8 +58,8 @@ async function initializeDatabaseConnection() {
   })
 
   //relationship between "poi" and "poi_img"
-  poi_img.belongsTo(Poi)
-  Poi.hasMany(poi_img)
+  Poi_img.belongsTo(Poi)
+  Poi.hasMany(Poi_img, {foreignKey: 'poi_id'})
 
   //relationship between "event" and "poi"
   Event.belongsTo(Poi)
