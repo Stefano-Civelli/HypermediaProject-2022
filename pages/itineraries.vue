@@ -5,7 +5,7 @@
         v-for="itinerary in itineraryList" 
         :key="itinerary.id" 
         :name="itinerary.name" 
-        :img="itinerary.img"/>
+        :img="itinerary.img"/> 
   </div>
 </template>
 

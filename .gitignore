@@ -88,7 +88,3 @@ sw.*
 
 # Vim swap files
 *.swp
-
-# Itinerary vue files
-components\ItineraryComponent.vue
-pages\itineraries.vue

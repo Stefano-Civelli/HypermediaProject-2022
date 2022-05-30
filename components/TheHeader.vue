@@ -64,6 +64,10 @@ export default {
         {
           name: 'Events',
           path: '/events', 
+        },
+        {
+          name: 'Itineraries',
+          path: '/itineraries', 
         }
       ],
     }

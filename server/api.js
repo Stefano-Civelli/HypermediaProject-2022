@@ -5,6 +5,7 @@ const initialize = require('./initialize').default
 app.use(express.json())
 
 // Development
+//const database = new Sequelize('postgres://postgres:postgres@localhost:5432/hyp')
 const database = new Sequelize('postgres://postgres:admin@localhost:5432/hyp')
 
 // Production (use this code when deploying to production in Heroku)
@@ -38,7 +39,6 @@ async function initializeDatabaseConnection() {
   })
   const Poi_img = database.define('poi_img', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-    poi_id: DataTypes.INTEGER,
     img_path: DataTypes.STRING,
   })
   const service = database.define('service', {
@@ -59,7 +59,7 @@ async function initializeDatabaseConnection() {
 
   //relationship between "poi" and "poi_img"
   Poi_img.belongsTo(Poi)
-  Poi.hasMany(Poi_img, {foreignKey: 'poi_id'})
+  Poi.hasMany(Poi_img)
 
   //relationship between "event" and "poi"
   Event.belongsTo(Poi)
@@ -76,7 +76,7 @@ async function initializeDatabaseConnection() {
   return {
     Event,
     Poi,
-    poi_img,
+    Poi_img,
     service,
     itinerary,
   }
