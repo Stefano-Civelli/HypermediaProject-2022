@@ -1,11 +1,8 @@
 <template>
-  <div class="page container">
-    <h1>Itineraries</h1>
-    <itinerary-component 
-        v-for="itinerary in itineraryList" 
-        :key="itinerary.id" 
-        :name="itinerary.name" 
-        :img="itinerary.img"/> 
+  <div>
+    <h1>Itinerary page</h1>
+      <itinerary-component v-for="itinerary in data" :key="itinerary.id" :name="itinerary.name" :img="itinerary.img"
+        :description="itinerary.description" :duration="itinerary.duration" />
   </div>
 </template>
 
@@ -14,17 +11,16 @@ import ItineraryComponent from '~/components/ItineraryComponent.vue'
 export default {
   components: { ItineraryComponent },
   async asyncData({ $axios }) {
-    const { itineraryList } = await $axios.get('/api/itinerary/list')
+    const { data } = await $axios.get('/api/itinerary/list')
     return {
-      itineraryList
+      data
     }
   },
   data() {
     return {}
-  }
+  },
 }
 </script>
 
 <style>
-
 </style>

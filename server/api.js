@@ -5,8 +5,8 @@ const initialize = require('./initialize').default
 app.use(express.json())
 
 // Development
-//const database = new Sequelize('postgres://postgres:postgres@localhost:5432/hyp')
-const database = new Sequelize('postgres://postgres:admin@localhost:5432/hyp')
+const database = new Sequelize('postgres://postgres:postgres@localhost:5432/hyp')
+//const database = new Sequelize('postgres://postgres:admin@localhost:5432/hyp')
 
 // Production (use this code when deploying to production in Heroku)
 // const pg = require('pg')
@@ -53,7 +53,7 @@ async function initializeDatabaseConnection() {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     name: DataTypes.STRING,
     duration: DataTypes.INTEGER,
-    img: DataTypes.STRING,
+    img: DataTypes.TEXT,
     description: DataTypes.TEXT,
   })
 
@@ -111,6 +111,11 @@ const pageContentObject = {
 async function runMainApi() {
   const models = await initializeDatabaseConnection()
   await initialize(models) //initializes the DB
+
+  app.get('/itinerary/list', async (req, res) => {
+    const result = await models.itinerary.findAll()
+    return res.json(result)
+  })
 
   app.get('/event/list', async (req, res) => {
     const result = await models.Event.findAll()

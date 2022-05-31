@@ -493,19 +493,19 @@ export default async (models) => {
         {
             name: "Must see in Milan",
             duration: 12,
-            img: "",
+            img: "https://duomo.shbcdn.com/blobs/variants/8/a/5/f/8a5f9f6b-fe25-4b40-857c-b82c80126a88_medium.jpg?_636862546878987581",
             description: "Here are the most important attractions in Milan: Duomo di Milano, Castello Sforzesco, Galleria Vittorio Emanuele, Pinacoteca di Brera",
         },
         {
             name: "Best museums in Milan",
             duration: 4,
-            img: "",
+            img: "https://milanhotspots.com/wp-content/uploads/2018/01/49_d4a52ff7f5563dad5282957d6116bcda22214b.jpg",
             description: "These museums are a must for your first time in Milan! Palazzo reale, Pinacoteca di Brera, Mudec",
         },
         {
             name: "Shopping streets",
             duration: 2,
-            img: "",
+            img: "https://www.divinamilano.it/wp-content/themes/yootheme/cache/Via-Montenapoleone-5ab8b757.jpeg",
             description: "Shopping lover? Try these streets to find all best shops in town! Via Monte Napoleone, Galleria Vittorio Emanuele, Corso Garibaldi, Corso Comod",
         },
 
