@@ -50,14 +50,6 @@ export default {
           path: '/',
         },
         {
-          name: 'List',
-          path: '/list',
-        },
-        {
-          name: 'About',
-          path: '/about',
-        },
-        {
           name: 'POIS',
           path: '/pois',
         },
@@ -68,6 +60,14 @@ export default {
         {
           name: 'Itineraries',
           path: '/itineraries', 
+        },
+        {
+          name: 'About',
+          path: '/about',
+        },        
+        {
+          name: 'Contact Us',
+          path: '/contactus'
         }
       ],
     }

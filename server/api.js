@@ -98,7 +98,7 @@ const pageContentObject = {
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et tincidunt elit, in finibus elit. Aliquam nec posuere sem, at faucibus erat. Suspendisse iaculis lorem id odio placerat bibendum. Suspendisse potenti. Sed quis efficitur erat. Pellentesque non velit ipsum. Maecenas finibus felis a magna auctor finibus. Mauris tincidunt nibh sit amet ante consectetur, non cursus elit feugiat.
         Integer vitae elit at nunc lacinia egestas. Etiam nec sagittis lorem. Phasellus consectetur mauris eget neque posuere, vitae sagittis massa congue. Etiam vitae eleifend odio, sit amet tempus ex. Ut semper feugiat erat, id consequat elit volutpat sed. Curabitur vel arcu at risus vehicula blandit in ut nunc. In nec pellentesque tellus. Maecenas vitae purus lacinia, tristique elit vitae, interdum est. Ut feugiat nulla et vestibulum efficitur. Suspendisse potenti. Duis ex dolor, vestibulum a leo eu, dapibus elementum ipsum. Curabitur euismod rhoncus nulla ac interdum. Mauris vulputate viverra scelerisque. Mauris ullamcorper tempus eros.`,
   },
-  contact_us: {
+  contactus: {
     title: 'ContactUs',
     image: 'path/to/img (if any)',
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et tincidunt elit, in finibus elit. Aliquam nec posuere sem, at faucibus erat. Suspendisse iaculis lorem id odio placerat bibendum. Suspendisse potenti. Sed quis efficitur erat. Pellentesque non velit ipsum. Maecenas finibus felis a magna auctor finibus. Mauris tincidunt nibh sit amet ante consectetur, non cursus elit feugiat.
@@ -140,6 +140,7 @@ async function runMainApi() {
     return res.json(result)
   })
 
+  /*
   app.get('/cats/:id', async (req, res) => {
     const id = +req.params.id
     const result = await models.Cat.findOne({
@@ -150,7 +151,7 @@ async function runMainApi() {
   })
 
   // HTTP GET api that returns all the cats in our actual database
-  app.get('/cats', async (req, res) => {
+   app.get('/cats', async (req, res) => {
     const result = await models.Cat.findAll()
     const filtered = []
     for (const element of result) {
@@ -163,6 +164,7 @@ async function runMainApi() {
     }
     return res.json(filtered)
   })
+  
 
   // HTTP POST api, that will push (and therefore create) a new element in
   // our actual database
@@ -171,6 +173,7 @@ async function runMainApi() {
     await models.Cat.create(body)
     return res.sendStatus(200)
   })
+  */
 }
 
 runMainApi()
