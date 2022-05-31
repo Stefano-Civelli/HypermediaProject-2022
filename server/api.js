@@ -5,8 +5,8 @@ const initialize = require('./initialize').default
 app.use(express.json())
 
 // Development
-const database = new Sequelize('postgres://postgres:postgres@localhost:5432/hyp')
-//const database = new Sequelize('postgres://postgres:admin@localhost:5432/hyp')
+//const database = new Sequelize('postgres://postgres:postgres@localhost:5432/hyp')
+const database = new Sequelize('postgres://postgres:admin@localhost:5432/hyp')
 
 // Production (use this code when deploying to production in Heroku)
 // const pg = require('pg')
@@ -127,6 +127,15 @@ async function runMainApi() {
       })
     }
     return res.json(filtered)
+  })
+
+  app.get('/event/:name', async (req, res) => {
+    const name = req.params.name
+    const result = await models.Event.findOne({
+      where: { name: name },
+      //include: [{ model: models.Location }],
+    })
+    return res.json(result)
   })
 
   app.get('/poi/list', async (req, res) => {
