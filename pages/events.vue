@@ -5,6 +5,7 @@
     <!-- need to add link to summer/winter events page and the one from which is possible to chose by year  -->
 
         <event-component 
+            class="card"
             v-for="event in data" 
             :key="event.id" 
             :name="event.name" 
@@ -29,6 +30,8 @@ export default {
 }
 </script>
 
-<style>
-
-</style>
+<style scoped>
+.card  {
+    margin: 1%;
+}
+</style>>

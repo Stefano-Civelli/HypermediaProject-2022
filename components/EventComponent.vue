@@ -6,28 +6,25 @@
         ></div>
         <div class="card-body">
         <h5 class="card-title"> {{ name }} </h5>
-        <!-- <p class="card-text">
-            {{ breed }}
-        </p>
-        <nuxt-link :to="`/details/${id}`">
+         <nuxt-link :to="`/details/event/${name}`">
             <div class="btn btn-primary btn-orange">See Details</div>
-        </nuxt-link> -->
+        </nuxt-link> 
         </div>
-    </div>
+    </div> 
 </template>
 
 <script>
 export default {
     props: {
-        name: {
-            type: String,
-            required: true,
-        },
-        img: {
-            type: String,
-            required: true,
-        }
-    }
+      name: {
+          type: String,
+          required: true,
+      },
+      img: {
+          type: String,
+          required: true,
+      },
+    },
 }
 </script>
 
