@@ -139,7 +139,10 @@ async function runMainApi() {
   })
 
   app.get('/poi/list', async (req, res) => {
-    const result = await models.Poi.findAll()
+    const result = await models.Poi.findAll({
+      // needed for eager fetching
+      include: [{ model: models.Poi_img }],
+    })
     return res.json(result)
   })
 
@@ -147,6 +150,7 @@ async function runMainApi() {
     const { name } = req.params
     const result = await models.Poi.findOne({
       where: { name },
+      // needed for eager fetching
       include: [{ model: models.Poi_img }],
     })
     return res.json(result)

@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light px-3 header">
-    <a class="navbar-brand" href="/">The Cat Shelter</a>
+    <a class="navbar-brand navbar-text" href="/">Milano City</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -31,11 +31,13 @@
 
 <style scoped>
 .header {
-  background: orange;
+  background: rgb(53, 53, 53);
 }
 .logo {
-  color: white;
   font-size: 32px;
+}
+.navbar-text {
+  color: azure;
 }
 </style>
 
@@ -55,20 +57,20 @@ export default {
         },
         {
           name: 'Events',
-          path: '/events', 
+          path: '/events',
         },
         {
           name: 'Itineraries',
-          path: '/itineraries', 
+          path: '/itineraries',
         },
         {
           name: 'About',
           path: '/about',
-        },        
+        },
         {
           name: 'Contact Us',
-          path: '/contactus'
-        }
+          path: '/contactus',
+        },
       ],
     }
   },

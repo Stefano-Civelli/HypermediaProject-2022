@@ -1,12 +1,13 @@
 <template>
-  <div class="sm">
-    <div class="d-flex flex-wrap">
+  <div class="container mt-5">
+    <h1 class="display-4">Points of Interest</h1>
+    <div class="row justify-content-center">
       <poi-component
         v-for="poi in data"
         :key="poi.id"
         :name="poi.name"
         :id="poi.id"
-        :img="poi.img"
+        :imgs="poi.poi_imgs"
       />
     </div>
   </div>
@@ -21,8 +22,8 @@ export default {
   },
   async asyncData({ $axios }) {
     const { data } = await $axios.get('/api/poi/list')
+    console.log( data[0])
     // const name = data.name
-
     return {
       data,
     }
