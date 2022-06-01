@@ -12,7 +12,7 @@ module.exports = {
   plugins: [],
   // add your custom rules here
   rules: {
-    "vue/no-multiple-template-root": "off" , 
+    "vue/no-multiple-template-root": "off" ,
     'vue/multi-word-component-names': 'off'
   }
 }

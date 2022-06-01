@@ -1,7 +1,14 @@
 <template>
-  <div>
-    <poi-component />
-    <h1 v-for="poi in data" :key="poi.id">{{ poi.name }}</h1>
+  <div class="sm">
+    <div class="d-flex flex-wrap">
+      <poi-component
+        v-for="poi in data"
+        :key="poi.id"
+        :name="poi.name"
+        :id="poi.id"
+        :img="poi.img"
+      />
+    </div>
   </div>
 </template>
 
@@ -14,7 +21,8 @@ export default {
   },
   async asyncData({ $axios }) {
     const { data } = await $axios.get('/api/poi/list')
-    const name = data.name
+    // const name = data.name
+
     return {
       data,
     }
