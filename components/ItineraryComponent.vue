@@ -1,15 +1,15 @@
 <template>
-    <div class="card" style="width: 18rem;">
-        <img :src="img" class="card-img-top">
-        <div class="card-body">
-            <h5 class="card-title"> {{ name }} </h5>
-            <p class="card-text"> {{ description }} </p>
+    <div class="itinerary-card">
+        <img :src="img" class="itinerary-img">
+        <div class="itinerary-body">
+            <h5> {{ name }} </h5>
+            <p> {{ description }} </p>
         </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">Duration : {{ duration }}</li>
-        </ul>
-        <div class="card-body">
-            <a href="#" class="btn btn-primary">Explore</a>
+        <div class="itinerary-footer">
+            <ul>
+                <li>Duration : {{ duration }}</li>
+            </ul>
+            <a href="#" class="itinerary-btn">Explore</a>
         </div>
     </div>
 </template>
@@ -38,4 +38,55 @@ export default {
 </script>
 
 <style scoped>
+.itinerary-card {
+    border: 2px solid rgb(211, 211, 211);
+    width: 400px;
+    display: inline-block;
+}
+
+.itinerary-card:hover {
+    border: 2px solid rgb(0, 162, 255);
+    width: 400px;
+}
+
+.itinerary-card,
+.itinerary-img {
+    border-radius: 5px;
+}
+
+.itinerary-img {
+    width: 98%;
+    height: 300px;
+    margin: 1%;
+}
+
+.itinerary-body {
+    padding: 10px;
+    height: 15ch;
+}
+
+.itinerary-footer {
+    padding: 0.5rem 1rem;
+    background-color: rgba(0, 0, 0, .05);
+    border-radius: 5px;
+}
+
+.itinerary-btn {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+}
+
+.itinerary-btn:hover {
+    background-color: #0d59fd;
+    border-color: #5a6f8f;
+}
 </style>

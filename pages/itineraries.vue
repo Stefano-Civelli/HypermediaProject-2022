@@ -1,8 +1,10 @@
 <template>
-  <div>
-    <h1>Itinerary page</h1>
+  <div class="page">
+    <h1 class="page-title">Itinerary page</h1>
+    <div class="itinerary">
       <itinerary-component v-for="itinerary in data" :key="itinerary.id" :name="itinerary.name" :img="itinerary.img"
         :description="itinerary.description" :duration="itinerary.duration" />
+    </div>
   </div>
 </template>
 
@@ -22,5 +24,15 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.page-title
+{
+  margin-left: 4%;
+}
+.itinerary
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 </style>
