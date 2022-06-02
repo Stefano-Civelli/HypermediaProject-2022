@@ -1,9 +1,9 @@
 <template>
   <div class="page">
-    <h1 class="page-title">Itinerary page</h1>
-    <div class="itinerary">
-      <itinerary-component v-for="itinerary in data" :key="itinerary.id" :name="itinerary.name" :img="itinerary.img"
-        :description="itinerary.description" :duration="itinerary.duration" />
+    <h2 class="page-title">Suggested itineraries</h2>
+    <div class="itineraries-list">
+      <itinerary-component v-for="itinerary in data" :key="itinerary.id" :id="itinerary.id" :name="itinerary.name"
+        :img="itinerary.img" :description="itinerary.description" :duration="itinerary.duration" />
     </div>
   </div>
 </template>
@@ -25,12 +25,17 @@ export default {
 </script>
 
 <style scoped>
-.page-title
-{
-  margin-left: 4%;
+.page-title {
+  background-color: rgb(0, 140, 255);
+  text-align: center;
+  width: 100vw;
+  font-size: 20pt;
+  color: rgb(255, 255, 255);
+  border: 3px solid rgb(0, 140, 255);
+  padding: 5px;
 }
-.itinerary
-{
+
+.itineraries-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

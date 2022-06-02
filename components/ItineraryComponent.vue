@@ -3,13 +3,13 @@
         <img :src="img" class="itinerary-img">
         <div class="itinerary-body">
             <h5> {{ name }} </h5>
-            <p> {{ description }} </p>
+            <!-- p> {{ description }} </p -->
         </div>
         <div class="itinerary-footer">
-            <ul>
-                <li>Duration : {{ duration }}</li>
-            </ul>
-            <a href="#" class="itinerary-btn">Explore</a>
+            <p class="itinerary-duration">Duration : {{ duration }}</p>
+            <nuxt-link :to="`/details/itinerary/${id}`">
+                <div class="itinerary-btn">Explore</div>
+            </nuxt-link>
         </div>
     </div>
 </template>
@@ -17,6 +17,10 @@
 <script>
 export default {
     props: {
+        id: {
+            type: Int32Array,
+            required: true,
+        },
         name: {
             type: String,
             required: true,
@@ -40,13 +44,13 @@ export default {
 <style scoped>
 .itinerary-card {
     border: 2px solid rgb(211, 211, 211);
-    width: 400px;
+    width: 300px;
     display: inline-block;
+    margin: 5px;
 }
 
 .itinerary-card:hover {
     border: 2px solid rgb(0, 162, 255);
-    width: 400px;
 }
 
 .itinerary-card,
@@ -56,19 +60,26 @@ export default {
 
 .itinerary-img {
     width: 98%;
-    height: 300px;
+    height: 200px;
     margin: 1%;
 }
 
 .itinerary-body {
     padding: 10px;
-    height: 15ch;
+    padding-bottom: 4px;
+    /* height: 15ch; */
 }
 
 .itinerary-footer {
-    padding: 0.5rem 1rem;
+    padding: 16px;
+    padding-top: 7px;
+    padding-bottom: 10px;
     background-color: rgba(0, 0, 0, .05);
     border-radius: 5px;
+}
+
+.itinerary-duration {
+    margin-bottom: 7px;
 }
 
 .itinerary-btn {

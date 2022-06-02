@@ -117,6 +117,14 @@ async function runMainApi() {
     return res.json(result)
   })
 
+  app.get('/itinerary/:id', async (req, res) => {
+    const id = req.params.id
+    const result = await models.itinerary.findOne({
+      where: { id: id },
+    })
+    return res.json(result)
+  })
+
   app.get('/event/list', async (req, res) => {
     const result = await models.Event.findAll()
     const filtered = []
@@ -139,10 +147,7 @@ async function runMainApi() {
   })
 
   app.get('/poi/list', async (req, res) => {
-    const result = await models.Poi.findAll({
-      // needed for eager fetching
-      include: [{ model: models.Poi_img }],
-    })
+    const result = await models.Poi.findAll()
     return res.json(result)
   })
 
@@ -150,7 +155,6 @@ async function runMainApi() {
     const { name } = req.params
     const result = await models.Poi.findOne({
       where: { name },
-      // needed for eager fetching
       include: [{ model: models.Poi_img }],
     })
     return res.json(result)
