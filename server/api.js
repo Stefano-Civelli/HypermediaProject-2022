@@ -28,7 +28,7 @@ async function initializeDatabaseConnection() {
     ending_date: DataTypes.DATEONLY,
     name: DataTypes.STRING,
   })
-  const Poi = database.define("poi", {
+  const Poi = database.define('poi', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     address: DataTypes.STRING,
     position: DataTypes.STRING,
@@ -147,7 +147,10 @@ async function runMainApi() {
   })
 
   app.get('/poi/list', async (req, res) => {
-    const result = await models.Poi.findAll()
+    const result = await models.Poi.findAll({
+      // needed for eager fetching
+      include: [{ model: models.Poi_img }],
+    })
     return res.json(result)
   })
 

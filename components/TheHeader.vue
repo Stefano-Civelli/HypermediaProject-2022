@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light px-3 header">
+  <nav class="my-navbar navbar navbar-expand-lg navbar-dark px-3 header">
     <a class="navbar-brand navbar-text" href="/">Milano City</a>
     <button
       class="navbar-toggler"
@@ -36,8 +36,55 @@
 .logo {
   font-size: 32px;
 }
-.navbar-text {
+.my-navbar-text {
   color: azure;
+}
+/*my-navbar*/
+.my-navbar {
+  height: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navItems {
+  position: absolute;
+  right: 0px;
+  height: fit-content;
+}
+
+.logo {
+  position: absolute;
+  left: 20px;
+}
+
+.my-navbar li {
+  display: inline;
+  margin: 10px;
+  position: relative;
+}
+
+.my-navbar a:link,
+.my-navbar a:visited {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.my-navbar ul a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 10;
+  content: '';
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.my-navbar a:hover:after {
+  width: 100%;
+  left: 0;
 }
 </style>
 
