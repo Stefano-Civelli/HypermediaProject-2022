@@ -19,7 +19,7 @@
 
 <style scoped>
 .page-title {
-  background-color: rgb(0, 255, 149);
+  background-color: rgb(0, 165, 91);
   width: 100%;
   height: 150px;
 }
