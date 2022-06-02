@@ -33,7 +33,7 @@
 
 <style scoped>
 .header {
-  background: rgb(53, 53, 53);
+  background: rgb(41, 42, 45);
 }
 .logo {
   font-size: 32px;
@@ -45,6 +45,7 @@
 .my-navbar {
   height: 50px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 1000;
 }
 
 .navItems {
@@ -97,11 +98,7 @@ export default {
     return {
       headerList: [
         {
-          name: 'Home',
-          path: '/',
-        },
-        {
-          name: 'POIS',
+          name: 'Points of Interest',
           path: '/pois',
         },
         {

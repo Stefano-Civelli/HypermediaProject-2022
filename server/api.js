@@ -124,7 +124,7 @@ async function runMainApi() {
     })
     return res.json(result)
   })
-
+  /** Events APIs -------------------------------------------*/
   app.get('/event/list', async (req, res) => {
     const result = await models.Event.findAll()
     const filtered = []
@@ -145,6 +145,54 @@ async function runMainApi() {
     })
     return res.json(result)
   })
+  /** Events APIs -------------------------------------------*/
+
+  /** POI APIs -------------------------------------------*/
+  app.get('/poi/next/:name', async (req, res) => {
+    const { name } = req.params
+    const old = await models.Poi.findOne({
+      where: { name },
+    })
+    const next_id = old.id + 1
+    let result = await models.Poi.findOne({
+      where: { id: next_id },
+    })
+    if (result == null) {
+      result = await models.Poi.findOne({
+        where: { id: 1 },
+      })
+    }
+    return res.json(result)
+  })
+
+  app.get('/poi/prev/:name', async (req, res) => {
+    const { name } = req.params
+    const old = await models.Poi.findOne({
+      where: { name },
+    })
+    const next_id = old.id - 1
+    let result = await models.Poi.findOne({
+      where: { id: next_id },
+    })
+    if (result == null) {
+      result = await models.Poi.findOne({
+        where: { id: 1 },
+      })
+    }
+    return res.json(result)
+  })
+
+  app.get('/poi/next/:name', async (req, res) => {
+    const { name } = req.params
+    const old = await models.Poi.findOne({
+      where: { name },
+    })
+    const next_id = old.id + 1
+    const result = await models.Poi.findOne({
+      where: { id: next_id },
+    })
+    return res.json(result)
+  })
 
   app.get('/poi/list', async (req, res) => {
     const result = await models.Poi.findAll({
@@ -162,6 +210,7 @@ async function runMainApi() {
     })
     return res.json(result)
   })
+  /** POI APIs -------------------------------------------*/
 
   app.get('/page-info/:topic', (req, res) => {
     const { topic } = req.params
@@ -170,6 +219,8 @@ async function runMainApi() {
   })
 
   /*
+
+
   app.get('/cats/:id', async (req, res) => {
     const id = +req.params.id
     const result = await models.Cat.findOne({

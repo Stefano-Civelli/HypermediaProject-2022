@@ -8,6 +8,15 @@
         {{ name }}
       </h1>
     </div>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/pois">Points of Interest</a></li>
+        <li class="breadcrumb-item">
+          {{ name }}
+        </li>
+      </ol>
+    </nav>
 
     <div class="row g-5 mt-3">
       <div class="col-md-8">
@@ -21,18 +30,8 @@
           <p>
             {{ description }}
           </p>
-          <h2>Blockquotes</h2>
-          <p>This is an example blockquote in action:</p>
-          <blockquote class="blockquote">
-            <p>Quoted text goes here.</p>
-          </blockquote>
-          <p>
-            This is some additional paragraph placeholder content. It has been
-            written to fill the available space and show how a longer snippet of
-            text affects the surrounding content. We'll repeat it often to keep
-            the demonstration flowing, so be on the lookout for this exact same
-            string of text.
-          </p>
+          <h2 class="mb-4">Related Events</h2>
+
           <!-- Three columns of text below the carousel -->
           <div class="row">
             <div class="col-lg-4">
@@ -118,13 +117,21 @@
         </article>
 
         <nav class="blog-pagination" aria-label="Pagination">
-          <a class="btn btn-outline-secondary rounded-pill">Previous</a>
-          <a class="btn btn-outline-primary rounded-pill" href="#">Next</a>
+          <button class="btn btn-outline-secondary rounded-pill" @click="prev">
+            Previous
+          </button>
+          <button
+            class="btn btn-outline-primary rounded-pill"
+            @click="next"
+            href="#"
+          >
+            Next
+          </button>
         </nav>
       </div>
 
       <div class="col-md-4">
-        <div class="position-sticky" style="top: 2rem">
+        <div class="position-sticky" style="top: 4rem">
           <div class="p-4 mb-3 bg-light rounded">
             <h4 class="fst-italic">Practical Info</h4>
             <p class="mb-0">{{ practical_info }}</p>
@@ -165,22 +172,23 @@
   background-size: cover;
   background-position: 0% 70%;
 }
-.poi-imgs {
-  width: 200px;
-  height: 200px;
-  margin-top: 12px;
-  background-size: cover;
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
-.carousello img {
-  object-fit: cover;
-  height: 200px;
-  width: 200px;
+
+a {
+  background: linear-gradient(to right, rgb(33, 37, 41), rgb(33, 37, 41)),
+    linear-gradient(to right, rgb(0, 165, 91), rgb(0, 165, 91));
+  background-size: 100% 1px, 0 1px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 500ms;
 }
-.my-border {
-  border: 1px solid red;
-}
-.left-column {
-  flex-direction: column;
+
+a:hover {
+  background-size: 0 2px, 100% 2px;
 }
 </style>
 
@@ -208,6 +216,15 @@ export default {
     }
   },
   mounted() {},
-  methods: {},
+  methods: {
+    async next() {
+      const { data } = await this.$axios.get('/api/poi/next/' + this.name)
+      this.$router.push(`/details/poi/${data.name}`)
+    },
+    async prev() {
+      const { data } = await this.$axios.get('/api/poi/prev/' + this.name)
+      this.$router.push(`/details/poi/${data.name}`)
+    },
+  },
 }
 </script>
