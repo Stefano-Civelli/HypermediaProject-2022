@@ -1,5 +1,5 @@
 <template>
-  <div class="card" style="width: 18rem">
+  <div class="poi-card m-2" style="width: 18rem">
     <div
       class="card-img-top card-image"
       :style="{ 'background-image': 'url(' + imgs[0].img_path + ')' }"
@@ -12,6 +12,12 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+.poi-card:hover {
+  border: 2px solid rgb(0, 255, 149);
+}
+</style>
 
 <script>
 export default {
@@ -29,9 +35,7 @@ export default {
     },
   },
   mounted() {
-      console.log(this.imgs)
-  }
+    console.log(this.imgs)
+  },
 }
 </script>
-
-<style></style>
