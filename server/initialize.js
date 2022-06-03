@@ -472,6 +472,7 @@ export default async (models) => {
       starting_date: '2022-06-06',
       ending_date: '2022-06-12',
       name: 'Milan Design Week',
+      poiId: 5,
     },
     {
       img: 'https://upload.wikimedia.org/wikipedia/it/e/e9/Logo_EuroBasket_2021.png',
@@ -480,6 +481,7 @@ export default async (models) => {
       starting_date: '2022-09-02',
       ending_date: '2022-09-08',
       name: 'EuroBasket',
+      poiId: 1,
     },
     {
       img: 'https://upload.wikimedia.org/wikipedia/it/e/e7/Next_gen.png',
@@ -488,6 +490,7 @@ export default async (models) => {
       starting_date: '2022-11-08',
       ending_date: '2022-11-12',
       name: 'Next Gen ATP Finals',
+      poiId: 3,
     },
     {
       img: 'https://assets.fuorisalone.it/assets/fuorisalone/img/fb-fuorisaloneit-2-2022.jpg',
@@ -496,6 +499,7 @@ export default async (models) => {
       starting_date: '2022-05-06',
       ending_date: '2022-06-12',
       name: 'Fuorisalone 2022',
+      poiId: 6,
     },
     {
       img: 'https://www.bimu.it/wp-content/uploads/2019/09/logo.svg',
@@ -504,14 +508,16 @@ export default async (models) => {
       starting_date: '2022-10-12',
       ending_date: '2022-10-15',
       name: 'Bi-Mu',
+      poiId: 10,
     },
     {
-      img: '',
+      img: 'https://www.showsbee.com/newmaker/www/u/2022/20221/cfr_img/EICMA-logo.png',
       ticket_price: 15.0,
       description: 'Largest bike and motorbike exhibition in Italy',
       starting_date: '2022-11-08',
       ending_date: '2022-11-13',
       name: 'EICMA',
+      poiId: 12,
     },
     {
       img: 'https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/itIT/Images/running-fw21-rfto-tease-clp-masthead-v3-t_tcm213-369217.jpg',
@@ -520,6 +526,7 @@ export default async (models) => {
       starting_date: '2022-05-23',
       ending_date: '2022-06-08',
       name: 'Run for the Oceans',
+      poiId: 20,
     },
     {
       img: 'https://www.artribune.com/wp-content/uploads/2022/05/Artur-Zmijewski.-Quando-la-paura-mangia-lanima.-Exhibition-view-at-PAC-%E2%80%93-Padiglione-dArte-Contemporanea-Milano-2022.-Photo-Nico-Covre-Vulcano-Agency-_9.jpg',
@@ -528,6 +535,7 @@ export default async (models) => {
       starting_date: '2022-03-09',
       ending_date: '2022-06-12',
       name: 'Artur Zmijewski',
+      poiId: 7,
     },
     {
       img: 'https://www.fringemi.com/wp-content/uploads/2022/04/FRINGE_FESTIVAL_MILANO_LOGO_fb.png',
@@ -536,6 +544,7 @@ export default async (models) => {
       starting_date: '2022-06-13',
       ending_date: '2022-06-19',
       name: 'FringeMi Festival',
+      poiId: 7,
     },
     {
       img: 'https://artidecorative.milanocastello.it/sites/artidecorative.milanocastello.it/files/styles/grande_per_colorbox/public/Ayano_ICON%20photo%20credit%20Pippy%20Mount.jpg?itok=tGXyW5-v',
@@ -544,6 +553,7 @@ export default async (models) => {
       starting_date: '2022-03-10',
       ending_date: '2022-06-19',
       name: 'Milano Vetro -35',
+      poiId: 15,
     },
   ]
   const itineraryList = [
@@ -665,10 +675,49 @@ export default async (models) => {
       address: 'Via Olmetto, 21',
     },
   ]
+  const poiItineraryList = [
+    {
+      poiId: 1,
+      itineraryId: 1,
+    },
+    {
+      poiId: 2,
+      itineraryId: 1,
+    },
+    {
+      poiId: 5,
+      itineraryId: 1,
+    },
+    {
+      poiId: 9,
+      itineraryId: 2,
+    },
+    {
+      poiId: 15,
+      itineraryId: 2,
+    },
+    {
+      poiId: 16,
+      itineraryId: 2,
+    },
+    {
+      poiId: 14,
+      itineraryId: 3,
+    },
+    {
+      poiId: 3,
+      itineraryId: 3,
+    },
+    {
+      poiId: 18,
+      itineraryId: 3,
+    },
+  ]
   await models.Poi.bulkCreate(poiList)
   await models.Poi_img.bulkCreate(poi_img_list)
   await models.Event.bulkCreate(eventList)
   await models.itinerary.bulkCreate(itineraryList)
   await models.ServiceType.bulkCreate(serviceTypeList)
   await models.service.bulkCreate(serviceList)
+  await models.poi_itinerary.bulkCreate(poiItineraryList)
 }
