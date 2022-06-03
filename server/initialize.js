@@ -651,9 +651,48 @@ export default async (models) => {
       address: 'Via Olmetto, 21',
     },
   ]
+  const poiItineraryList = [
+    {
+      poiId: 1,
+      itineraryId: 1,
+    },
+    {
+      poiId: 2,
+      itineraryId: 1,
+    },
+    {
+      poiId: 5,
+      itineraryId: 1,
+    },
+    {
+      poiId: 9,
+      itineraryId: 2,
+    },
+    {
+      poiId: 15,
+      itineraryId: 2,
+    },
+    {
+      poiId: 16,
+      itineraryId: 2,
+    },
+    {
+      poiId: 14,
+      itineraryId: 3,
+    },
+    {
+      poiId: 3,
+      itineraryId: 3,
+    },
+    {
+      poiId: 18,
+      itineraryId: 3,
+    },
+  ]
   await models.Poi.bulkCreate(poiList)
   await models.Poi_img.bulkCreate(poi_img_list)
   await models.Event.bulkCreate(eventList)
   await models.itinerary.bulkCreate(itineraryList)
   await models.service.bulkCreate(serviceList)
+  await models.poi_itinerary.bulkCreate(poiItineraryList)
 }

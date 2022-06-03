@@ -56,6 +56,9 @@ async function initializeDatabaseConnection() {
     img: DataTypes.TEXT,
     description: DataTypes.TEXT,
   })
+  const poi_itinerary = database.define('poi_itinerary', {
+    id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
+  })
 
   //relationship between "poi" and "poi_img"
   Poi_img.belongsTo(Poi)
@@ -79,6 +82,7 @@ async function initializeDatabaseConnection() {
     Poi_img,
     service,
     itinerary,
+    poi_itinerary,
   }
 }
 
