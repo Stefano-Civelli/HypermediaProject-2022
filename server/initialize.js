@@ -569,72 +569,96 @@ export default async (models) => {
         'Shopping lover? Try these streets to find all best shops in town! Via Monte Napoleone, Galleria Vittorio Emanuele, Corso Garibaldi, Corso Comod',
     },
   ]
-  const serviceList = [
+  const serviceTypeList = [
     {
       type: 'Hospital',
+      description:
+        'Need to book a visit? Take a look at the hospitals near to you.',
+      img: '/assets/Hospital_img.jpg',
+    },
+    {
+      type: 'Bank',
+      description: 'Check out the banks available in the city.',
+      img: 'https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+    },
+    {
+      type: 'Pharmacy',
+      description: '',
+      img: 'https://images.unsplash.com/photo-1622230208995-0f26eba75875?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
+    },
+    {
+      type: 'InfoPoint',
+      description:
+        'In need of some additional informations about the city? Here are some InfoPoints.',
+      img: 'https://images.unsplash.com/photo-1532256253150-2f0e4e883a74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+    },
+  ]
+  const serviceList = [
+    {
+      serviceTypeId: 1,
       name: 'Niguarda',
       timetable: 'Always Open',
       phone_number: '02 64441',
       address: "Piazza dell'Ospedale Maggiore, 3",
     },
     {
-      type: 'Hospital',
+      serviceTypeId: 1,
       name: 'Ospedale Macedonio Melloni',
       timetable: 'Always Open',
       phone_number: '02 63631',
       address: 'Via Macedonio Melloni. 52',
     },
     {
-      type: 'Hospital',
+      serviceTypeId: 1,
       name: 'Humanitas San Pio X',
       timetable: 'Always Open',
       phone_number: '02 69511',
       address: 'Via Francesco Nava, 31',
     },
     {
-      type: 'Bank/ATM',
+      serviceTypeId: 2,
       name: 'Bper Bank',
       timetable: 'Mon-Fry 8:30-13:30, 14:45-15:45',
       phone_number: '02 875 029',
       address: 'Piazza Giuseppe Missori, 2',
     },
     {
-      type: 'Bank/ATM',
+      serviceTypeId: 2,
       name: 'Intesa San Paolo',
       timetable: 'Mon-Fry 8:30-14, 15:00-16:45',
       phone_number: '02 5518 1901',
       address: 'Via della Commenda, 12',
     },
     {
-      type: 'Bank/ATM',
+      serviceTypeId: 2,
       name: 'MPS',
       timetable: 'Mon-Fry 8:35-13:35, 14:15-15:45',
       phone_number: '02 9179 6311',
       address: 'Via Gustavo Fara, 39',
     },
     {
-      type: 'Pharmacy',
+      serviceTypeId: 3,
       name: 'LaFarmacia',
       timetable: 'Mon-Fry 8-20 Sat-San 10-20',
       phone_number: '02 876 457',
       address: 'Via Broletto, 1',
     },
     {
-      type: 'Pharmacy',
+      serviceTypeId: 3,
       name: 'Farmacia Carlo Alberto',
       timetable: 'Mon-Fry 8-19',
       phone_number: '02 8646 2067',
       address: 'Via Giuseppe Mazzini, 12',
     },
     {
-      type: 'Pharmacy',
+      serviceTypeId: 3,
       name: 'Farmacia del Garibaldi',
       timetable: 'Mon-Fry 8:30-19:30',
       phone_number: '02 655 4250',
       address: 'Corso Garibaldi, 83',
     },
     {
-      type: 'Pharmacy',
+      serviceTypeId: 3,
       name: 'Farmacia Olmetto',
       timetable: 'Mon-Fry 8:0-19',
       phone_number: '02 8645 3382',
@@ -645,5 +669,6 @@ export default async (models) => {
   await models.Poi_img.bulkCreate(poi_img_list)
   await models.Event.bulkCreate(eventList)
   await models.itinerary.bulkCreate(itineraryList)
+  await models.ServiceType.bulkCreate(serviceTypeList)
   await models.service.bulkCreate(serviceList)
 }

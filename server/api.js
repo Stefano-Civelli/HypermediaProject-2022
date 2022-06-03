@@ -43,11 +43,16 @@ async function initializeDatabaseConnection() {
   })
   const service = database.define('service', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-    type: DataTypes.STRING,
     name: DataTypes.STRING,
     timetable: DataTypes.STRING,
     phone_number: DataTypes.STRING,
     address: DataTypes.STRING,
+  })
+  const ServiceType = database.define('service_type', {
+    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+    type: DataTypes.STRING,
+    description: DataTypes.TEXT,
+    img: DataTypes.STRING,
   })
   const itinerary = database.define('itinerary', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
@@ -56,6 +61,10 @@ async function initializeDatabaseConnection() {
     img: DataTypes.TEXT,
     description: DataTypes.TEXT,
   })
+
+  //relationship between "service" and "ServiceType"
+  service.belongsTo(ServiceType)
+  ServiceType.hasMany(service)
 
   //relationship between "poi" and "poi_img"
   Poi_img.belongsTo(Poi)
@@ -79,6 +88,7 @@ async function initializeDatabaseConnection() {
     Poi_img,
     service,
     itinerary,
+    ServiceType,
   }
 }
 
@@ -182,18 +192,6 @@ async function runMainApi() {
     return res.json(result)
   })
 
-  app.get('/poi/next/:name', async (req, res) => {
-    const { name } = req.params
-    const old = await models.Poi.findOne({
-      where: { name },
-    })
-    const next_id = old.id + 1
-    const result = await models.Poi.findOne({
-      where: { id: next_id },
-    })
-    return res.json(result)
-  })
-
   app.get('/poi/list', async (req, res) => {
     const result = await models.Poi.findAll({
       // needed for eager fetching
@@ -211,6 +209,14 @@ async function runMainApi() {
     return res.json(result)
   })
   /** POI APIs -------------------------------------------*/
+
+  /** ServiceTypes APIs -------------------------------------------*/
+  app.get('/service_type/list', async (req, res) => {
+    const result = await models.ServiceType.findAll({})
+    return res.json(result)
+  })
+
+  /** ServiceTypes APIs -------------------------------------------*/
 
   app.get('/page-info/:topic', (req, res) => {
     const { topic } = req.params
