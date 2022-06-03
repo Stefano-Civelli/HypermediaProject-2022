@@ -220,6 +220,19 @@ async function runMainApi() {
     return res.json(result)
   })
 
+  app.get('/service_type/:name', async (req, res) => {
+    const { name } = req.params
+    const selectedServiceType = await models.ServiceType.findOne({
+      where: { type: name },
+    })
+    const id = selectedServiceType.id
+    console.log('id: ' + id)
+    const result = await models.service.findAll({
+      where: { serviceTypeId: id },
+    })
+    return res.json(result)
+  })
+
   /** ServiceTypes APIs -------------------------------------------*/
 
   app.get('/page-info/:topic', (req, res) => {

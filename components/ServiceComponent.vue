@@ -3,7 +3,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content rounded-4 shadow">
         <div class="modal-body p-5">
-          <h2 class="fw-bold mb-0">Niguarda</h2>
+          <h2 class="fw-bold mb-0">{{ name }}</h2>
 
           <ul class="d-grid gap-4 my-5 list-unstyled">
             <li class="d-flex gap-4">
@@ -20,7 +20,7 @@
               </svg>
               <div>
                 <h5 class="mb-0">Hours</h5>
-                Not into lists? Try the new grid view.
+                {{ timetable }}
               </div>
             </li>
             <li class="d-flex gap-4">
@@ -37,7 +37,7 @@
               </svg>
               <div>
                 <h5 class="mb-0">Tel. number</h5>
-                Save items you love for easy access later.
+                {{ phone_number }}
               </div>
             </li>
             <li class="d-flex gap-4">
@@ -57,7 +57,7 @@
               </svg>
               <div>
                 <h5 class="mb-0">Position</h5>
-                Share videos wherever you go.
+                {{ address }}
               </div>
             </li>
           </ul>
@@ -74,11 +74,16 @@ export default {
       type: String,
       required: true,
     },
-    imgs: {
+    timetable: {
+      type: String,
       required: true,
     },
-    id: {
-      type: Number,
+    phone_number: {
+      type: String,
+      required: true,
+    },
+    address: {
+      type: String,
       required: true,
     },
   },
