@@ -78,8 +78,8 @@ async function initializeDatabaseConnection() {
   Poi.hasMany(Event)
 
   //relationship between "poi" and "itinerary"
-  Poi.belongsToMany(itinerary, { through: 'poi_itinerary' })
-  itinerary.belongsToMany(Poi, { through: 'poi_itinerary' })
+  Poi.belongsToMany(itinerary, { through: poi_itinerary })
+  itinerary.belongsToMany(Poi, { through: poi_itinerary })
 
   await database.sync(
     { force: true } /*needed if want to also drop existing tables*/
@@ -145,8 +145,8 @@ async function runMainApi() {
     const result = await models.poi_itinerary.findAll({
       where: { itineraryId: id },
     })
-    const pois = [];
-    for(const poi of result){
+    const pois = []
+    for (const poi of result) {
       let temp = await models.Poi.findOne({
         where: { id: poi.id },
       })
@@ -227,6 +227,19 @@ async function runMainApi() {
     const result = await models.Poi.findOne({
       where: { name },
       include: [{ model: models.Poi_img }],
+    })
+    return res.json(result)
+  })
+
+  app.get('/poi/related_itineraries/:name', async (req, res) => {
+    const { name } = req.params
+    const myPoi = await models.Poi.findOne({
+      where: { name },
+    })
+    const myId = myPoi.id
+
+    const result = await models.poi_itinerary.findAll({
+      where: { poiId: myId },
     })
     return res.json(result)
   })
