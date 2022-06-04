@@ -1,7 +1,7 @@
 <template>
   <div>
     <group-page-header-component :text="name" />
-    <div class="container d-flex flex-wrap">
+    <div class="container">
       <service-component
         v-for="service in serviceList"
         :key="service.id"
@@ -31,4 +31,8 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.my-border {
+  border: 1px solid red;
+}
+</style>
