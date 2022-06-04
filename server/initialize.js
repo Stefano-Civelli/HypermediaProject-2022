@@ -593,7 +593,7 @@ export default async (models) => {
     },
     {
       type: 'Pharmacy',
-      description: '',
+      description: 'Need some drugs? Find the closest pharmacy!',
       img: 'https://images.unsplash.com/photo-1622230208995-0f26eba75875?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
     },
     {
@@ -601,6 +601,12 @@ export default async (models) => {
       description:
         'In need of some additional informations about the city? Here are some InfoPoints.',
       img: 'https://images.unsplash.com/photo-1532256253150-2f0e4e883a74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+    },
+    {
+      type: 'SuperMarket',
+      description:
+        'U 2 broke 2 eat in a restaurant? lol.',
+      img: 'https://www.esselunga.it/cms/images/images/image-social/esselunga.png',
     },
   ]
   const serviceList = [
@@ -670,9 +676,51 @@ export default async (models) => {
     {
       serviceTypeId: 3,
       name: 'Farmacia Olmetto',
-      timetable: 'Mon-Fry 8:0-19',
+      timetable: 'Mon-Fry 8-19',
       phone_number: '02 8645 3382',
       address: 'Via Olmetto, 21',
+    },
+    {
+      serviceTypeId: 4,
+      name: 'Info Point Duomo',
+      timetable: 'Open every day 10-18',
+      phone_number: '02 8845 5555',
+      address: 'Piazza del Duomo, 14',
+    },
+    {
+      serviceTypeId: 4,
+      name: 'Info Point Mercanti',
+      timetable: 'Mon-Fry 10-18',
+      phone_number: '02 8515 5931',
+      address: 'Via dei Mercanti, 8',
+    },
+    {
+      serviceTypeId: 4,
+      name: 'Info Point ATM',
+      timetable: 'Mon-Fry 10-15:30',
+      phone_number: 'No Phone Number',
+      address: 'Via Olmetto, 21',
+    },
+    {
+      serviceTypeId: 5,
+      name: 'Esselunga Gae Aulenti',
+      timetable: 'Mon-Sat 7:30-22 Sun 8-20',
+      phone_number: '02 6556 0991',
+      address: 'Via Olmetto, 21',
+    },
+    {
+      serviceTypeId: 5,
+      name: 'Pam Local',
+      timetable: 'Open every day 8-22',
+      phone_number: '02 4540 2570',
+      address: 'Piazza Santa Maria Beltrade, 1',
+    },
+    {
+      serviceTypeId: 5,
+      name: 'Carrefour Express',
+      timetable: 'Open every day 7-23',
+      phone_number: '02 8909 2209',
+      address: 'Via Ancora, 4',
     },
   ]
   const poiItineraryList = [
@@ -689,6 +737,14 @@ export default async (models) => {
       itineraryId: 1,
     },
     {
+      poiId: 12,
+      itineraryId: 1,
+    },
+    {
+      poiId: 17,
+      itineraryId: 1,
+    },
+    {
       poiId: 9,
       itineraryId: 2,
     },
@@ -701,6 +757,14 @@ export default async (models) => {
       itineraryId: 2,
     },
     {
+      poiId: 13,
+      itineraryId: 2,
+    },
+    {
+      poiId: 19,
+      itineraryId: 2,
+    },
+    {
       poiId: 14,
       itineraryId: 3,
     },
@@ -710,6 +774,14 @@ export default async (models) => {
     },
     {
       poiId: 18,
+      itineraryId: 3,
+    },
+    {
+      poiId: 10,
+      itineraryId: 3,
+    },
+    {
+      poiId: 11,
       itineraryId: 3,
     },
   ]
