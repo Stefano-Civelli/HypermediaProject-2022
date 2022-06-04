@@ -132,6 +132,8 @@ async function runMainApi() {
       filtered.push({
         name: element.name,
         img: element.img,
+        start: element.starting_date,
+        end: element.ending_date
       })
     }
     return res.json(filtered)
@@ -141,10 +143,44 @@ async function runMainApi() {
     const name = req.params.name
     const result = await models.Event.findOne({
       where: { name: name },
-      //include: [{ model: models.Location }],
+      include: [{ model: models.Poi }],
     })
     return res.json(result)
   })
+
+  app.get('/event/prev/:name', async(req, res) => {
+    const { name } = req.params
+    const old = await models.Event.findOne({
+      where: { name },
+    })
+    const next_id = old.id - 1
+    let result = await models.Event.findOne({
+      where: { id: next_id },
+    })
+    if (result == null) {
+      result = await models.Event.findOne({
+        where: { id: 1 },
+      })
+    }
+    return res.json(result)
+  })
+
+  app.get('/event/next/:name', async (req, res) => {
+    const { name } = req.params
+    const old = await models.Event.findOne({
+      where: { name },
+    })
+    const next_id = old.id + 1
+    let result = await models.Event.findOne({
+      where: { id: next_id },
+    })
+    if (result == null) {
+      result = await models.Event.findOne({
+        where: { id: 1 },
+      })
+    }
+    return res.json(result)
+  }) 
   /** Events APIs -------------------------------------------*/
 
   /** POI APIs -------------------------------------------*/
