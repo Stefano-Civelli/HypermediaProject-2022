@@ -1,6 +1,6 @@
 <template>
     <div class="itinerary-card">
-        <img :src="img" class="itinerary-img">
+        <img :src="img" alt="" class="itinerary-img">
         <div class="itinerary-body">
             <h5> {{ name }} </h5>
             <!-- p> {{ description }} </p -->
@@ -85,7 +85,6 @@ export default {
 .itinerary-btn {
     color: #fff;
     background-color: #0d6efd;
-    border-color: #0d6efd;
     display: inline-block;
     text-align: center;
     text-decoration: none;
@@ -98,6 +97,5 @@ export default {
 
 .itinerary-btn:hover {
     background-color: #0d59fd;
-    border-color: #5a6f8f;
 }
 </style>

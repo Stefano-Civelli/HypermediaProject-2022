@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div class="page-title d-flex justify-content-center align-items-center">
-      <h1 class="display-3 fw-bold my-border">Points of Interest</h1>
-    </div>
+    <group-page-header-component text="Points of Interest" />
     <div class="container mt-5">
       <div class="row justify-content-center">
         <poi-component
@@ -17,18 +15,11 @@
   </div>
 </template>
 
-<style scoped>
-.page-title {
-  background-color: rgb(0, 165, 91);
-  width: 100%;
-  height: 150px;
-}
-</style>
-
 <script>
+import GroupPageHeaderComponent from '~/components/GroupPageHeaderComponent.vue'
 import PoiComponent from '~/components/PoiComponent.vue'
 export default {
-  components: { PoiComponent },
+  components: { PoiComponent, GroupPageHeaderComponent },
   data() {
     return {}
   },
@@ -42,3 +33,9 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.page-title {
+  background-color: rgb(0, 165, 91);
+}
+</style>

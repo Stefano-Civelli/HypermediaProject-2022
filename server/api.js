@@ -43,11 +43,16 @@ async function initializeDatabaseConnection() {
   })
   const service = database.define('service', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-    type: DataTypes.STRING,
     name: DataTypes.STRING,
     timetable: DataTypes.STRING,
     phone_number: DataTypes.STRING,
     address: DataTypes.STRING,
+  })
+  const ServiceType = database.define('service_type', {
+    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+    type: DataTypes.STRING,
+    description: DataTypes.TEXT,
+    img: DataTypes.STRING,
   })
   const itinerary = database.define('itinerary', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
@@ -56,6 +61,13 @@ async function initializeDatabaseConnection() {
     img: DataTypes.TEXT,
     description: DataTypes.TEXT,
   })
+  const poi_itinerary = database.define('poi_itinerary', {
+    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+  })
+
+  //relationship between "service" and "ServiceType"
+  service.belongsTo(ServiceType)
+  ServiceType.hasMany(service)
 
   //relationship between "poi" and "poi_img"
   Poi_img.belongsTo(Poi)
@@ -79,6 +91,8 @@ async function initializeDatabaseConnection() {
     Poi_img,
     service,
     itinerary,
+    ServiceType,
+    poi_itinerary,
   }
 }
 
@@ -111,6 +125,7 @@ const pageContentObject = {
 async function runMainApi() {
   const models = await initializeDatabaseConnection()
   await initialize(models) //initializes the DB
+  /** Itineraries APIs -------------------------------------------*/
 
   app.get('/itinerary/list', async (req, res) => {
     const result = await models.itinerary.findAll()
@@ -124,6 +139,23 @@ async function runMainApi() {
     })
     return res.json(result)
   })
+
+  app.get('/pois-by-itin-id/:id', async (req, res) => {
+    const id = req.params.id
+    const result = await models.poi_itinerary.findAll({
+      where: { itineraryId: id },
+    })
+    const pois = [];
+    for(const poi of result){
+      let temp = await models.Poi.findOne({
+        where: { id: poi.id },
+      })
+      pois.push(temp)
+    }
+    return res.json(pois)
+  })
+  /** Itineraries APIs -------------------------------------------*/
+
   /** Events APIs -------------------------------------------*/
   app.get('/event/list', async (req, res) => {
     const result = await models.Event.findAll()
@@ -218,18 +250,6 @@ async function runMainApi() {
     return res.json(result)
   })
 
-  app.get('/poi/next/:name', async (req, res) => {
-    const { name } = req.params
-    const old = await models.Poi.findOne({
-      where: { name },
-    })
-    const next_id = old.id + 1
-    const result = await models.Poi.findOne({
-      where: { id: next_id },
-    })
-    return res.json(result)
-  })
-
   app.get('/poi/list', async (req, res) => {
     const result = await models.Poi.findAll({
       // needed for eager fetching
@@ -247,6 +267,27 @@ async function runMainApi() {
     return res.json(result)
   })
   /** POI APIs -------------------------------------------*/
+
+  /** ServiceTypes APIs -------------------------------------------*/
+  app.get('/service_type/list', async (req, res) => {
+    const result = await models.ServiceType.findAll({})
+    return res.json(result)
+  })
+
+  app.get('/service_type/:name', async (req, res) => {
+    const { name } = req.params
+    const selectedServiceType = await models.ServiceType.findOne({
+      where: { type: name },
+    })
+    const id = selectedServiceType.id
+    console.log('id: ' + id)
+    const result = await models.service.findAll({
+      where: { serviceTypeId: id },
+    })
+    return res.json(result)
+  })
+
+  /** ServiceTypes APIs -------------------------------------------*/
 
   app.get('/page-info/:topic', (req, res) => {
     const { topic } = req.params
