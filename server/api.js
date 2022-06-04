@@ -125,6 +125,7 @@ const pageContentObject = {
 async function runMainApi() {
   const models = await initializeDatabaseConnection()
   await initialize(models) //initializes the DB
+  /** Itineraries APIs -------------------------------------------*/
 
   app.get('/itinerary/list', async (req, res) => {
     const result = await models.itinerary.findAll()
@@ -138,6 +139,23 @@ async function runMainApi() {
     })
     return res.json(result)
   })
+
+  app.get('/pois-by-itin-id/:id', async (req, res) => {
+    const id = req.params.id
+    const result = await models.poi_itinerary.findAll({
+      where: { itineraryId: id },
+    })
+    const pois = [];
+    for(const poi of result){
+      let temp = await models.Poi.findOne({
+        where: { id: poi.id },
+      })
+      pois.push(temp)
+    }
+    return res.json(pois)
+  })
+  /** Itineraries APIs -------------------------------------------*/
+
   /** Events APIs -------------------------------------------*/
   app.get('/event/list', async (req, res) => {
     const result = await models.Event.findAll()

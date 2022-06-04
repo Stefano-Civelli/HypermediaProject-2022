@@ -30,6 +30,7 @@ export default {
   text-align: center;
   width: 100vw;
   font-size: 20pt;
+  font-weight: 300;
   color: rgb(255, 255, 255);
   border: 3px solid rgb(0, 140, 255);
   padding: 5px;
@@ -37,7 +38,8 @@ export default {
 
 .itineraries-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: center;
+  width: auto;
 }
 </style>
