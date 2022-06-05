@@ -126,8 +126,8 @@ const pageContentObject = {
 async function runMainApi() {
   const models = await initializeDatabaseConnection()
   await initialize(models) //initializes the DB
-  /** Itineraries APIs -------------------------------------------*/
 
+  /** Itineraries APIs -------------------------------------------*/
   app.get('/itinerary/list', async (req, res) => {
     const result = await models.itinerary.findAll()
     return res.json(result)
@@ -150,10 +150,21 @@ async function runMainApi() {
     for (const poi of result) {
       let temp = await models.Poi.findOne({
         where: { id: poi.id },
+        include: [{ model: models.Poi_img }],
       })
+      let temp2 = await models.Event.findAll({
+        where: { poiId: poi.id }
+      })
+      temp.dataValues.events = temp2
       pois.push(temp)
     }
     return res.json(pois)
+  })
+  
+  app.get('/maxItinId', async (req, res) => {
+    const result = await models.itinerary.findAll()
+    const maxItinId = result[result.length - 1].dataValues.id
+    return res.json(maxItinId)
   })
   /** Itineraries APIs -------------------------------------------*/
 
