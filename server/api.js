@@ -126,8 +126,8 @@ const pageContentObject = {
 async function runMainApi() {
   const models = await initializeDatabaseConnection()
   await initialize(models) //initializes the DB
-  /** Itineraries APIs -------------------------------------------*/
 
+  /** Itineraries APIs -------------------------------------------*/
   app.get('/itinerary/list', async (req, res) => {
     const result = await models.itinerary.findAll()
     return res.json(result)
@@ -150,10 +150,21 @@ async function runMainApi() {
     for (const poi of result) {
       let temp = await models.Poi.findOne({
         where: { id: poi.id },
+        include: [{ model: models.Poi_img }],
       })
+      let temp2 = await models.Event.findAll({
+        where: { poiId: poi.id }
+      })
+      temp.dataValues.events = temp2
       pois.push(temp)
     }
     return res.json(pois)
+  })
+  
+  app.get('/maxItinId', async (req, res) => {
+    const result = await models.itinerary.findAll()
+    const maxItinId = result[result.length - 1].dataValues.id
+    return res.json(maxItinId)
   })
   /** Itineraries APIs -------------------------------------------*/
 
@@ -165,6 +176,8 @@ async function runMainApi() {
       filtered.push({
         name: element.name,
         img: element.img,
+        start: element.starting_date,
+        end: element.ending_date
       })
     }
     return res.json(filtered)
@@ -174,10 +187,44 @@ async function runMainApi() {
     const name = req.params.name
     const result = await models.Event.findOne({
       where: { name: name },
-      //include: [{ model: models.Location }],
+      include: [{ model: models.Poi }],
     })
     return res.json(result)
   })
+
+  app.get('/event/prev/:name', async(req, res) => {
+    const { name } = req.params
+    const old = await models.Event.findOne({
+      where: { name },
+    })
+    const next_id = old.id - 1
+    let result = await models.Event.findOne({
+      where: { id: next_id },
+    })
+    if (result == null) {
+      result = await models.Event.findOne({
+        where: { id: 1 },
+      })
+    }
+    return res.json(result)
+  })
+
+  app.get('/event/next/:name', async (req, res) => {
+    const { name } = req.params
+    const old = await models.Event.findOne({
+      where: { name },
+    })
+    const next_id = old.id + 1
+    let result = await models.Event.findOne({
+      where: { id: next_id },
+    })
+    if (result == null) {
+      result = await models.Event.findOne({
+        where: { id: 1 },
+      })
+    }
+    return res.json(result)
+  }) 
   /** Events APIs -------------------------------------------*/
 
   /** POI APIs -------------------------------------------*/
