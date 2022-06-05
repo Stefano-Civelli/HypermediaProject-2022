@@ -422,7 +422,7 @@ export default async (models) => {
     {
       poiId: 18,
       img_path:
-        'https://www.booking.best/it/wp-content/uploads/2020/02/Piazza-Gae-Aulenti-11.jpg',
+        'https://images.unsplash.com/photo-1545256633-9d719bec17c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80',
     },
     {
       poiId: 18,

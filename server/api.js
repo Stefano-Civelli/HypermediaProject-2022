@@ -153,14 +153,14 @@ async function runMainApi() {
         include: [{ model: models.Poi_img }],
       })
       let temp2 = await models.Event.findAll({
-        where: { poiId: poi.id }
+        where: { poiId: poi.id },
       })
       temp.dataValues.events = temp2
       pois.push(temp)
     }
     return res.json(pois)
   })
-  
+
   app.get('/maxItinId', async (req, res) => {
     const result = await models.itinerary.findAll()
     const maxItinId = result[result.length - 1].dataValues.id
@@ -171,7 +171,7 @@ async function runMainApi() {
   /** Events APIs -------------------------------------------*/
   app.get('/event/list', async (req, res) => {
     const result = await models.Event.findAll({
-      include: [{model: models.Poi}]
+      include: [{ model: models.Poi }],
     })
     const filtered = []
     for (const element of result) {
@@ -180,7 +180,7 @@ async function runMainApi() {
         img: element.img,
         start: element.starting_date,
         end: element.ending_date,
-        location: element.address
+        location: element.address,
       })
     }
     return res.json(filtered)
@@ -195,7 +195,7 @@ async function runMainApi() {
     return res.json(result)
   })
 
-  app.get('/event/prev/:name', async(req, res) => {
+  app.get('/event/prev/:name', async (req, res) => {
     const { name } = req.params
     const old = await models.Event.findOne({
       where: { name },
@@ -227,7 +227,7 @@ async function runMainApi() {
       })
     }
     return res.json(result)
-  }) 
+  })
   /** Events APIs -------------------------------------------*/
 
   /** POI APIs -------------------------------------------*/

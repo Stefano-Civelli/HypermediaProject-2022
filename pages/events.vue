@@ -40,12 +40,12 @@ export default {
 }
 
 .page-title {
-  background-color: rgb(255, 165, 0);
+  background-color: rgb(23, 212, 77);
   text-align: center;
   width: 100vw;
   font-size: 20pt;
   color: rgb(255, 255, 255);
-  border: 3px solid rgb(255, 165, 0);
+  border: 3px solid rgb(23, 212, 77);
   padding: 5px;
 }
 

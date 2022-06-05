@@ -3,7 +3,9 @@
     <nav
       class="my-navbar navbar navbar-expand-lg navbar-dark px-3 header position-fixed w-100 top-0"
     >
-      <a class="navbar-brand navbar-text" href="/">Milano City</a>
+      <a class="navbar-brand navbar-text navbar-home-button" href="/"
+        >Milano City</a
+      >
       <button
         class="navbar-toggler"
         type="button"
@@ -35,6 +37,9 @@
 </template>
 
 <style scoped>
+.navbar-home-button {
+  font-family: 'Lobster', Georgia, Times, serif;
+}
 .spacer {
   height: 62px;
   width: 100%;

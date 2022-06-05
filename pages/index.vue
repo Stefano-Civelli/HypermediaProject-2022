@@ -25,17 +25,13 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <svg
-            class="bd-placeholder-img"
-            width="100%"
+          <img
+            class="my-img"
+            src="https://images.unsplash.com/photo-1613154908225-9116593e98b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1103&q=80"
+            alt=""
             height="100%"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          >
-            <rect width="100%" height="100%" fill="#777" />
-          </svg>
+            width="100%"
+          />
 
           <div class="container">
             <div class="carousel-caption text-start">
@@ -51,17 +47,13 @@
           </div>
         </div>
         <div class="carousel-item">
-          <svg
-            class="bd-placeholder-img"
-            width="100%"
+          <img
+            class="my-img"
+            src="https://images.unsplash.com/photo-1545256633-9d719bec17c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+            alt=""
             height="100%"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          >
-            <rect width="100%" height="100%" fill="#777" />
-          </svg>
+            width="100%"
+          />
 
           <div class="container">
             <div class="carousel-caption">
@@ -75,17 +67,13 @@
           </div>
         </div>
         <div class="carousel-item">
-          <svg
-            class="bd-placeholder-img"
-            width="100%"
+          <img
+            class="my-img"
+            src="https://images.unsplash.com/photo-1533640750342-723c1a4912e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            alt=""
             height="100%"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          >
-            <rect width="100%" height="100%" fill="#777" />
-          </svg>
+            width="100%"
+          />
 
           <div class="container">
             <div class="carousel-caption text-end">
@@ -301,19 +289,13 @@
       <!-- /END THE FEATURETTES -->
     </div>
     <!-- /.container -->
-
-    <!-- FOOTER -->
-    <footer class="container">
-      <p class="float-end"><a href="#">Back to top</a></p>
-      <p>
-        &copy; 2017–2022 Company, Inc. &middot; <a href="#">Privacy</a> &middot;
-        <a href="#">Terms</a>
-      </p>
-    </footer>
   </main>
 </template>
 
 <style scoped>
+.my-img {
+  object-fit: cover;
+}
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */

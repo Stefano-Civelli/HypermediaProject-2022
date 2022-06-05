@@ -1,6 +1,8 @@
 <template>
   <div class="page-title d-flex justify-content-center align-items-center">
-    <h1 class="display-4 fw-bold my-border text-light">{{ text }}</h1>
+    <h1 class="display-4 fw-bold my-border text-light">
+      {{ text }}
+    </h1>
   </div>
 </template>
 
