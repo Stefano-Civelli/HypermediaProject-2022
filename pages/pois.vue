@@ -2,13 +2,15 @@
   <div>
     <group-page-header-component text="Points of Interest" />
     <div class="container mt-5">
-      <div class="row justify-content-center">
+      <div class="component d-flex flex-wrap justify-content-center">
         <poi-component
           v-for="poi in data"
           :key="poi.id"
           :name="poi.name"
           :id="poi.id"
           :imgs="poi.poi_imgs"
+          :address="poi.address"
+          :info="poi.practical_info"
         />
       </div>
     </div>
@@ -36,6 +38,6 @@ export default {
 
 <style scoped>
 .page-title {
-  background-color: rgb(0, 165, 91);
+  background-color: rgb(226, 175, 6);
 }
 </style>

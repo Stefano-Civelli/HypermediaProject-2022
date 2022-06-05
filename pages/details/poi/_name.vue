@@ -107,8 +107,6 @@
 </template>
 
 <style scoped>
-.my-btn {
-}
 .my-img {
   object-fit: cover;
   object-position: 20% 50%;

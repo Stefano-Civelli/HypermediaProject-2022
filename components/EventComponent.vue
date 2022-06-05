@@ -50,7 +50,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .event-card {
   border: 2px solid rgb(211, 211, 211);
   width: 300px;
