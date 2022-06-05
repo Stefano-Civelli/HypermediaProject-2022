@@ -1,0 +1,6 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lobster', Georgia, Times, serif;
+}
+p, div, a {
+    font-family: 'Cabin', Helvetica, Arial, sans-serif;
+}

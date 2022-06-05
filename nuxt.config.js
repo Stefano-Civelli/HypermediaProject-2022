@@ -8,7 +8,7 @@ export default {
     },
   ],
   head: {
-    title: 'lesson16',
+    title: 'Milan Guide',
     htmlAttrs: {
       lang: 'en',
     },
@@ -37,6 +37,19 @@ export default {
         href: 'https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap',
         rel: 'stylesheet',
       },
+      {
+        // Fonts I willingly added --------------------------------------------------------------------------
+        href: 'https://fonts.googleapis.com/css?family=Lobster',
+        rel: 'stylesheet',
+      },
+      {
+        href: 'https://fonts.googleapis.com/css?family=Cabin',
+        rel: 'stylesheet',
+      },
+      {
+        href: '//db.onlinewebfonts.com/c/a67dd4b5c96fed6370c1767ececa0952?family=URWClassicoW01-Bold',
+        rel: 'stylesheet',
+      },
     ],
     script: [
       {
@@ -46,7 +59,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['~/assets/css/main.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
