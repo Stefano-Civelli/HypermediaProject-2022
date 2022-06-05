@@ -1,20 +1,19 @@
 <template>
   <div class="page">
     <h2 class="page-title">Events</h2>
-    <div class="container mt-5">
-      <div class="row justify-content-center">
-        <!-- need to add link to summer/winter events page and the one from which is possible to chose by year  -->
+    <div class="container mt-5 d-flex flex-wrap justify-content-center">
+      <!-- need to add link to summer/winter events page and the one from which is possible to chose by year  -->
 
-        <event-component
-          class="card"
-          v-for="event in data"
-          :key="event.id"
-          :name="event.name"
-          :img="event.img"
-          :start="event.start"
-          :end="event.end"
-        />
-      </div>
+      <event-component
+        class="card"
+        v-for="event in data"
+        :key="event.id"
+        :name="event.name"
+        :img="event.img"
+        :start="event.start"
+        :end="event.end"
+        :location="event.location"
+      />
     </div>
   </div>
 </template>
