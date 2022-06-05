@@ -170,14 +170,17 @@ async function runMainApi() {
 
   /** Events APIs -------------------------------------------*/
   app.get('/event/list', async (req, res) => {
-    const result = await models.Event.findAll()
+    const result = await models.Event.findAll({
+      include: [{model: models.Poi}]
+    })
     const filtered = []
     for (const element of result) {
       filtered.push({
         name: element.name,
         img: element.img,
         start: element.starting_date,
-        end: element.ending_date
+        end: element.ending_date,
+        location: element.address
       })
     }
     return res.json(filtered)

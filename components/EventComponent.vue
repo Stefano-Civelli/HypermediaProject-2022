@@ -1,32 +1,22 @@
 <template>
-  <div class="event-card">
-    <img :src="img" class="event-img" />
-    <div class="event-body">
-      <h5>{{ name }}</h5>
-      <!-- p> {{ description }} </p -->
-    </div>
-    <div class="event-footer">
-      <p class="event-duration-start">From: {{ start }}</p>
-      <p class="event-duration-end">To: {{ end }}</p>
-      <nuxt-link :to="`/details/event/${name}`">
-        <div class="event-btn">See Details</div>
-      </nuxt-link>
-    </div>
-  </div>
+  <div class="cards">
+    <nuxt-link :to="`/details/event/${name}`" class="card shadow-sm">
+      <img :src="img" class="card__image" alt="" />
+      <div class="card__overlay">
+        <div class="card__header">
+          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+            <path />
+          </svg>
 
-  <!--
-    <div class="card" style="width: 18rem">
-        <div
-        class="card-img-top card-image"
-        :style="{ 'background-image': 'url(' + img + ')' }"
-        ></div>
-        <div class="card-body">
-        <h5 class="card-title"> {{ name }} </h5>
-         <nuxt-link :to="`/details/event/${name}`">
-            <div class="btn btn-primary btn-orange">See Details</div>
-        </nuxt-link> 
+          <div class="card__header-text">
+            <h3 class="card__title">{{ name }}</h3>
+            <span class="card__status">{{ start }} - {{ end }} </span>
+          </div>
         </div>
-    </div> -->
+        <p class="card__description">Held in: {{ location }} <br /></p>
+      </div>
+    </nuxt-link>
+  </div>
 </template>
 
 <script>
@@ -46,72 +36,116 @@ export default {
     end: {
       require: true,
     },
+    location: {
+      require: true,
+    },
   },
 }
 </script>
 
 <style scoped>
-.event-card {
-  border: 2px solid rgb(211, 211, 211);
-  width: 300px;
-  display: inline-block;
-  margin: 5px;
+.cards {
+  margin: 1rem 0.8vw;
+  padding: 0;
+  list-style-type: none;
+  width: 24rem;
 }
 
-.event-card:hover {
-  border: 2px solid rgb(255, 165, 0);
-}
-
-.event-card,
-.event-img {
-  border-radius: 5px;
-}
-
-.event-img {
-  width: 100%;
-  height: 200px;
-  margin: 1%;
-}
-
-.event-body {
-  padding: 10px;
-  padding-bottom: 4px;
-  margin-bottom: 5px;
-}
-
-.event-footer {
-  padding: 16px;
-  padding-top: 7px;
-  padding-bottom: 10px;
-  background-color: rgba(0, 0, 0, 0.05);
-  border-radius: 5px;
-  margin-bottom: 5px;
-}
-
-.event-btn {
-  color: #fff;
-  background-color: rgb(255, 165, 0);
-  border-color: rgb(255, 165, 0);
-  display: inline-block;
-  text-align: center;
+.card {
+  border-radius: calc(40 * 1px);
+  overflow: hidden;
   text-decoration: none;
-  cursor: pointer;
-  user-select: none;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  border-radius: 0.25rem;
+  border: none;
 }
 
-.event-btn:hover {
-  background-color: rgb(255, 165, 0);
-  border-color: #5a6f8f;
+.card__image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border: 1px solid white;
+  border-radius: 40px;
 }
 
-.event-duration-end {
-  margin-bottom: 20px;
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border-radius: calc(40 * 1px);
+  background-color: #fff;
+  transform: translateY(100%);
+  transition: 0.2s ease-in-out;
 }
 
-.event-duration-start {
-  margin-bottom: -1px;
+.card:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+  border-radius: calc(40 * 1px) 0 0 0;
+  background-color: #fff;
+  transform: translateY(-100%);
+  transition: 0.2s ease-in-out;
+}
+
+.card__arc {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  z-index: 1;
+}
+
+.card__arc path {
+  fill: #fff;
+  d: path('M 40 80 c 22 0 40 -22 40 -40 v 40 Z');
+}
+
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+.card__thumb {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.card__title {
+  font-size: 1em;
+  margin: 0 0 0.3em;
+  color: #6a515e;
+}
+
+.card__tagline {
+  display: block;
+  margin: 1em 0;
+  font-family: 'MockFlowFont';
+  font-size: 0.8em;
+  color: #d7bdca;
+}
+
+.card__status {
+  font-size: 0.8em;
+  color: #d7bdca;
+}
+
+.card__description {
+  padding: 0 2em 2em;
+  margin: 0;
+  color: rgb(165, 141, 152);
+  font-size: 0.92em;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 </style>
