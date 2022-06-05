@@ -227,20 +227,17 @@ async function runMainApi() {
     const { name } = req.params
     const result = await models.Poi.findOne({
       where: { name },
-      include: [{ model: models.Poi_img }],
+      include: [{ model: models.Poi_img }, { model: models.Event }],
     })
     return res.json(result)
   })
 
   app.get('/poi/related_itineraries/:name', async (req, res) => {
     const { name } = req.params
-    const myPoi = await models.Poi.findOne({
+    const result = await models.Poi.findOne({
       where: { name },
-    })
-    const myId = myPoi.id
-
-    const result = await models.poi_itinerary.findAll({
-      where: { poiId: myId },
+      // joining through bridge table
+      include: [{ model: models.itinerary }],
     })
     return res.json(result)
   })

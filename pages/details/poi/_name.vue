@@ -32,86 +32,29 @@
           </p>
           <h2 class="mb-4">Related Events</h2>
 
-          <!-- Three columns of text below the carousel -->
+          <!-- Events circles -->
           <div class="row">
-            <div class="col-lg-4">
-              <svg
-                class="bd-placeholder-img rounded-circle"
+            <div class="col-lg-4" v-for="event in events" :key="event.id">
+              <img
+                :src="event.img"
+                class="rounded-circle border my-img"
                 width="140"
                 height="140"
-                xmlns="http://www.w3.org/2000/svg"
-                role="img"
-                aria-label="Placeholder: 140x140"
-                preserveAspectRatio="xMidYMid slice"
-                focusable="false"
-              >
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#777" />
-                <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-              </svg>
+              />
 
-              <h2 class="fw-normal">Heading</h2>
+              <h2 class="fw-normal">{{ event.name }}</h2>
               <p>
-                Some representative placeholder content for the three columns of
-                text below the carousel. This is the first column.
+                {{ event.description }}
               </p>
               <p>
-                <a class="btn btn-secondary" href="#">View details &raquo;</a>
+                <nuxt-link
+                  class="btn btn-secondary my-btn"
+                  :to="`/details/event/${event.name}`"
+                >
+                  View details
+                </nuxt-link>
               </p>
             </div>
-            <!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-              <svg
-                class="bd-placeholder-img rounded-circle"
-                width="140"
-                height="140"
-                xmlns="http://www.w3.org/2000/svg"
-                role="img"
-                aria-label="Placeholder: 140x140"
-                preserveAspectRatio="xMidYMid slice"
-                focusable="false"
-              >
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#777" />
-                <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-              </svg>
-
-              <h2 class="fw-normal">Heading</h2>
-              <p>
-                Another exciting bit of representative placeholder content. This
-                time, we've moved on to the second column.
-              </p>
-              <p>
-                <a class="btn btn-secondary" href="#">View details &raquo;</a>
-              </p>
-            </div>
-            <!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-              <svg
-                class="bd-placeholder-img rounded-circle"
-                width="140"
-                height="140"
-                xmlns="http://www.w3.org/2000/svg"
-                role="img"
-                aria-label="Placeholder: 140x140"
-                preserveAspectRatio="xMidYMid slice"
-                focusable="false"
-              >
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#777" />
-                <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-              </svg>
-
-              <h2 class="fw-normal">Heading</h2>
-              <p>
-                And lastly this, the third column of representative placeholder
-                content.
-              </p>
-              <p>
-                <a class="btn btn-secondary" href="#">View details &raquo;</a>
-              </p>
-            </div>
-            <!-- /.col-lg-4 -->
           </div>
           <!-- /.row -->
         </article>
@@ -142,8 +85,8 @@
             <h4 class="fst-italic">Itineraries</h4>
             <ol class="list-unstyled mb-0">
               <li v-for="itinerary in relatedItineraries" :key="itinerary.id">
-                <nuxt-link :to="`/details/itinerary/${itinerary.itineraryId}`">
-                  {{ itinerary.itineraryId }}
+                <nuxt-link :to="`/details/itinerary/${itinerary.id}`">
+                  {{ itinerary.name }}
                 </nuxt-link>
               </li>
             </ol>
@@ -164,6 +107,12 @@
 </template>
 
 <style scoped>
+.my-btn {
+}
+.my-img {
+  object-fit: cover;
+  object-position: 20% 50%;
+}
 .top-img {
   height: 300px;
 }
@@ -202,7 +151,9 @@ export default {
     const itineraryData = await $axios.get(
       '/api/poi/related_itineraries/' + name
     )
-    const relatedItineraries = itineraryData.data
+    console.log(itineraryData.data.itineraries)
+    const relatedItineraries = itineraryData.data.itineraries
+    console.log(relatedItineraries)
     return {
       name: data.name,
       imgs: data.poi_imgs,
@@ -210,6 +161,7 @@ export default {
       practical_info: data.practical_info,
       ticket_price: data.ticket_price,
       address: data.address,
+      events: data.events,
       relatedItineraries,
     }
   },

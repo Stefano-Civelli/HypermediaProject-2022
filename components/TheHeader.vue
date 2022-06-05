@@ -1,37 +1,44 @@
 <template>
-  <nav
-    class="my-navbar navbar navbar-expand-lg navbar-dark px-3 header position-fixed w-100 top-0"
-  >
-    <a class="navbar-brand navbar-text" href="/">Milano City</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarToggler"
-      aria-controls="navbarToggler"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
+  <div>
+    <nav
+      class="my-navbar navbar navbar-expand-lg navbar-dark px-3 header position-fixed w-100 top-0"
     >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <a class="navbar-brand navbar-text" href="/">Milano City</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarToggler"
+        aria-controls="navbarToggler"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="navbarToggler">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li
-          v-for="(navItem, navItemIndex) of headerList"
-          :key="`navItem${navItemIndex}`"
-          class="nav-item"
-        >
-          <nuxt-link :to="navItem.path" class="nav-link">
-            {{ navItem.name }}
-          </nuxt-link>
-        </li>
-      </ul>
-    </div>
-  </nav>
+      <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li
+            v-for="(navItem, navItemIndex) of headerList"
+            :key="`navItem${navItemIndex}`"
+            class="nav-item"
+          >
+            <nuxt-link :to="navItem.path" class="nav-link">
+              {{ navItem.name }}
+            </nuxt-link>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="spacer"></div>
+  </div>
 </template>
 
 <style scoped>
+.spacer {
+  height: 62px;
+  width: 100%;
+}
 .header {
   background: rgb(41, 42, 45);
 }
@@ -43,7 +50,6 @@
 }
 /*my-navbar*/
 .my-navbar {
-  height: 50px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   z-index: 10000;
 }
@@ -89,6 +95,11 @@
   width: 100%;
   left: 0;
 }
+@media (min-width: 991.98px) {
+  .my-navbar {
+    height: 62px;
+  }
+}
 </style>
 
 <script>
@@ -102,12 +113,16 @@ export default {
           path: '/pois',
         },
         {
+          name: 'Itineraries',
+          path: '/itineraries',
+        },
+        {
           name: 'Events',
           path: '/events',
         },
         {
-          name: 'Itineraries',
-          path: '/itineraries',
+          name: 'Services',
+          path: '/services',
         },
         {
           name: 'About',
@@ -116,10 +131,6 @@ export default {
         {
           name: 'Contact Us',
           path: '/contactus',
-        },
-        {
-          name: 'Services',
-          path: '/services',
         },
       ],
     }
