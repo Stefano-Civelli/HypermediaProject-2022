@@ -18,7 +18,7 @@
 export default {
     props: {
         id: {
-            type: Int32Array,
+            type: Number,
             required: true,
         },
         name: {
@@ -34,7 +34,7 @@ export default {
             required: true,
         },
         duration: {
-            type: Int32Array,
+            type: Number,
             required: true,
         }
     }
@@ -92,7 +92,7 @@ export default {
     user-select: none;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
-    border-radius: 0.25rem;
+    border-radius: 0.85rem;
 }
 
 .itinerary-btn:hover {

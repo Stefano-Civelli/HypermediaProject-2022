@@ -9,12 +9,13 @@ app.use(express.json())
 const database = new Sequelize('postgres://postgres:admin@localhost:5432/hyp')
 
 // Production (use this code when deploying to production in Heroku)
-// const pg = require('pg')
-// pg.defaults.ssl = true
-// const database = new Sequelize(process.env.DATABASE_URL, {
-//   ssl: true,
-//   dialectOptions: { ssl: { require: true, rejectUnauthorized: false } },
-// })
+/*
+const pg = require('pg')
+pg.defaults.ssl = true
+const database = new Sequelize(process.env.DATABASE_URL, {
+  ssl: true,
+  dialectOptions: { ssl: { require: true, rejectUnauthorized: false } },
+})*/
 
 // Function that will initialize the connection to the database
 async function initializeDatabaseConnection() {
@@ -78,8 +79,8 @@ async function initializeDatabaseConnection() {
   Poi.hasMany(Event)
 
   //relationship between "poi" and "itinerary"
-  Poi.belongsToMany(itinerary, { through: 'poi_itinerary' })
-  itinerary.belongsToMany(Poi, { through: 'poi_itinerary' })
+  Poi.belongsToMany(itinerary, { through: poi_itinerary })
+  itinerary.belongsToMany(Poi, { through: poi_itinerary })
 
   await database.sync(
     { force: true } /*needed if want to also drop existing tables*/
@@ -125,8 +126,8 @@ const pageContentObject = {
 async function runMainApi() {
   const models = await initializeDatabaseConnection()
   await initialize(models) //initializes the DB
-  /** Itineraries APIs -------------------------------------------*/
 
+  /** Itineraries APIs -------------------------------------------*/
   app.get('/itinerary/list', async (req, res) => {
     const result = await models.itinerary.findAll()
     return res.json(result)
@@ -145,14 +146,25 @@ async function runMainApi() {
     const result = await models.poi_itinerary.findAll({
       where: { itineraryId: id },
     })
-    const pois = [];
-    for(const poi of result){
+    const pois = []
+    for (const poi of result) {
       let temp = await models.Poi.findOne({
         where: { id: poi.id },
+        include: [{ model: models.Poi_img }],
       })
+      let temp2 = await models.Event.findAll({
+        where: { poiId: poi.id }
+      })
+      temp.dataValues.events = temp2
       pois.push(temp)
     }
     return res.json(pois)
+  })
+  
+  app.get('/maxItinId', async (req, res) => {
+    const result = await models.itinerary.findAll()
+    const maxItinId = result[result.length - 1].dataValues.id
+    return res.json(maxItinId)
   })
   /** Itineraries APIs -------------------------------------------*/
 
@@ -263,6 +275,19 @@ async function runMainApi() {
     const result = await models.Poi.findOne({
       where: { name },
       include: [{ model: models.Poi_img }],
+    })
+    return res.json(result)
+  })
+
+  app.get('/poi/related_itineraries/:name', async (req, res) => {
+    const { name } = req.params
+    const myPoi = await models.Poi.findOne({
+      where: { name },
+    })
+    const myId = myPoi.id
+
+    const result = await models.poi_itinerary.findAll({
+      where: { poiId: myId },
     })
     return res.json(result)
   })

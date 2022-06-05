@@ -1,6 +1,6 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  ssr: false,
+  ssr: true,
   serverMiddleware: [
     {
       path: '/api',
@@ -70,6 +70,10 @@ export default {
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: 'http://localhost:3000',
+    /* 
+    for heroku
+     
+    baseURL: 'https://hypermedia-project-2022.herokuapp.com',*/
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

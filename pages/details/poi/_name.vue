@@ -141,12 +141,11 @@
           <div class="p-4">
             <h4 class="fst-italic">Itineraries</h4>
             <ol class="list-unstyled mb-0">
-              <li><a href="#">it 1</a></li>
-              <li><a href="#">it 2</a></li>
-              <li><a href="#">it 3</a></li>
-              <li><a href="#">it 4</a></li>
-              <li><a href="#">it 5</a></li>
-              <li><a href="#">it 6</a></li>
+              <li v-for="itinerary in relatedItineraries" :key="itinerary.id">
+                <nuxt-link :to="`/details/itinerary/${itinerary.itineraryId}`">
+                  {{ itinerary.itineraryId }}
+                </nuxt-link>
+              </li>
             </ol>
           </div>
 
@@ -200,7 +199,10 @@ export default {
   async asyncData({ route, $axios }) {
     const { name } = route.params
     const { data } = await $axios.get('/api/poi/' + name)
-    console.log(data)
+    const itineraryData = await $axios.get(
+      '/api/poi/related_itineraries/' + name
+    )
+    const relatedItineraries = itineraryData.data
     return {
       name: data.name,
       imgs: data.poi_imgs,
@@ -208,6 +210,7 @@ export default {
       practical_info: data.practical_info,
       ticket_price: data.ticket_price,
       address: data.address,
+      relatedItineraries,
     }
   },
   head() {

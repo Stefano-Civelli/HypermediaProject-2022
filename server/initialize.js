@@ -604,8 +604,7 @@ export default async (models) => {
     },
     {
       type: 'SuperMarket',
-      description:
-        'U 2 broke 2 eat in a restaurant? lol.',
+      description: 'U 2 broke 2 eat in a restaurant? lol.',
       img: 'https://www.esselunga.it/cms/images/images/image-social/esselunga.png',
     },
   ]
