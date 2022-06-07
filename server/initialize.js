@@ -10,6 +10,7 @@ export default async (models) => {
       ticket_price: 2.0,
       description:
         'Il Duomo di Milano, la cattedrale cuore della città, è il luogo che rimane nella memoria di tutti coloro che hanno visitato Milano almeno una volta. Le centinaia di guglie e statue, che ricordano una vera e propria foresta di marmo, sorprendono chiunque ci arrivi uscendo dalla metropolitana o arrivando dalla Galleria Vittorio Emanuele. Non a caso la sua costruzione, iniziata nel 1386 e durata più di sei secoli, fu voluta dal signore di Milano come simbolo della forza e grandezza della città. È il più grande e complesso edificio gotico d’Italia, realizzato in marmo bianco rosato che proviene da una cava dedicata solo a questa costruzione. È lungo 157 metri e sulla guglia maggiore, alta 108,5 metri, svetta la statua dorata della Madonnina, simbolo amato da tutti i milanesi e non solo. Nel mondo infatti esistono numerose copie della Madonnina di Milano, una è persino sull’Everest! Il Duomo è anche la più grande costruzione gotica al mondo in cui è possibile camminare sul tetto. Una delle cose da non perdere nella visita è infatti salire sulle terrazze, da cui si gode una vista imperdibile sulla città e le montagne.',
+      map_src: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2798.2787111624275!2d9.1897542!3d45.4641892!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6ac28236193%3A0x34a0550ec03673e6!2sDuomo!5e0!3m2!1sen!2sit!4v1654619505067!5m2!1sen!2sit',
     },
     {
       address: 'Piazza Castello',
@@ -18,6 +19,7 @@ export default async (models) => {
       practical_info: 'Always open',
       ticket_price: 0.0,
       description: 'At the end of via Dante, near Parco Sempione',
+      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.966627459925!2d9.17714381549889!3d45.470476179101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786fcb60ea97b3d%3A0x6556dd66c472c29b!2sSforzesco%20Castle!5e0!3m2!1sen!2sit!4v1654619619289!5m2!1sen!2sit',
     },
     {
       address: 'Piazza del Duomo',
@@ -26,6 +28,7 @@ export default async (models) => {
       practical_info: 'Always open',
       ticket_price: 0.0,
       description: 'Started builiding in the first part of XX century',
+      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.196600450955!2d9.187751417443847!3d45.46584340000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47793506fd86b6c3%3A0x270b9ca95809d416!2sGalleria%20Vittorio%20Emanuele%20II!5e0!3m2!1sen!2sit!4v1654619666739!5m2!1sen!2sit',
     },
     {
       address: 'Via Filodrammatici, 2',
@@ -34,6 +37,7 @@ export default async (models) => {
       practical_info: 'Buy tickets online',
       ticket_price: 0.0,
       description: 'Opened in 1778',
+      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.1192290445406!2d9.187362515498796!3d45.46740207910103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6ad891a5757%3A0x1bade948102e834f!2sTeatro%20alla%20Scala!5e0!3m2!1sen!2sit!4v1654619729531!5m2!1sen!2sit',
     },
     {
       address: 'Via Brera, 28',
@@ -42,6 +46,7 @@ export default async (models) => {
       practical_info: 'Opening hours may vary',
       ticket_price: 15.0,
       description: 'Largest art gallery in Milan',
+      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.893240211957!2d9.185625815498893!3d45.471954479101115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786ee11587e4e1f%3A0x1b367a8e2cb13736!2sPinacoteca%20di%20Brera!5e0!3m2!1sen!2sit!4v1654619761194!5m2!1sen!2sit',
     },
     {
       address: 'Piazza di Santa Maria delle Grazie',
@@ -50,6 +55,7 @@ export default async (models) => {
       practical_info: 'Closed during religious functions',
       ticket_price: 0.0,
       description: 'Started building in 1463',
+      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.1906647269816!2d9.168773415498706!3d45.465962979101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c15a44bf1c83%3A0xed5bcdc4d3c75a59!2sSanta%20Maria%20delle%20Grazie!5e0!3m2!1sen!2sit!4v1654619791964!5m2!1sen!2sit',
     },
     {
       address: 'Piazza del Duomo',
@@ -58,6 +64,7 @@ export default async (models) => {
       practical_info: 'Closed on Mondays',
       ticket_price: 10.0,
       description: 'Used for different exhibitions',
+      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1399.169686088783!2d9.190202658235588!3d45.46296709477524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6aec57575a1%3A0xdd579e63ba086381!2sRoyal%20Palace!5e0!3m2!1sen!2sit!4v1654619820537!5m2!1sen!2sit',
     },
     {
       address: 'Piazza Pio XI, 2',
@@ -66,6 +73,7 @@ export default async (models) => {
       practical_info: 'Closed on Mondays',
       ticket_price: 10.0,
       description: "Musem inside Palazzo dell'Ambrosiana",
+      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.3139592270863!2d9.183599415498627!3d45.463479079100914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6ac88b2ca9f%3A0xcc86bf5e7ffbd36e!2sAmbrosian%20Library!5e0!3m2!1sen!2sit!4v1654619856970!5m2!1sen!2sit',
     },
     {
       address: 'Via San Vittore, 21',
@@ -74,6 +82,7 @@ export default async (models) => {
       practical_info: 'Closed on mondays',
       ticket_price: 7.0,
       description: 'Biggest tech-related museum in Italy',
+      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.397788938599!2d9.16808141549859!3d45.46179017910095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c159c26cee9b%3A0x72458fca19e5eb92!2sMuseo%20Nazionale%20della%20Scienza%20e%20della%20Tecnologia%20Leonardo%20da%20Vinci!5e0!3m2!1sen!2sit!4v1654619886737!5m2!1sen!2sit',
     },
     {
       address: 'Via Gaetano di Castillia, 11',
@@ -82,6 +91,7 @@ export default async (models) => {
       practical_info: 'Private building',
       ticket_price: 0.0,
       description: 'More than 2000 different tree species',
+      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.214815188939!2d9.188205015499387!3d45.48561877910131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c132b4a49b21%3A0x545068687f3a217b!2sBosco%20Verticale!5e0!3m2!1sen!2sit!4v1654619924198!5m2!1sen!2sit',
     },
     {
       address: 'Largo Isarco, 2',
@@ -90,6 +100,7 @@ export default async (models) => {
       practical_info: 'Closed on Tuesdays',
       ticket_price: '5.00',
       description: 'Permanent contemporary art gallery',
+      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2799.2774993125945!2d9.202628415497975!3d45.44406387910073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c69ef804a0d7%3A0x1545d69fc021179f!2sFondazione%20Prada!5e0!3m2!1sen!2sit!4v1654619965440!5m2!1sen!2sit',
     },
     {
       address: 'Piazza Sempione',
@@ -98,6 +109,7 @@ export default async (models) => {
       practical_info: 'Always open',
       ticket_price: 0.0,
       description: 'Started builiding in 1807',
+      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.7076564368494!2d9.170262715499053!3d45.47569267910106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c147aa41b7cf%3A0xfbbcb44d7ec5c615!2sArco%20della%20Pace!5e0!3m2!1sen!2sit!4v1654619992451!5m2!1sen!2sit',
     },
     {
       address: 'Via Alessandro Manzoni, 12',
@@ -106,6 +118,7 @@ export default async (models) => {
       practical_info: 'Closed on Tuesdays',
       ticket_price: 5.0,
       description: 'Home-Museum',
+      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.0633540013337!2d9.189504015498803!3d45.468527679100944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6b1f202e397%3A0x849898e3faf27d6e!2sPoldi%20Pezzoli%20Museum!5e0!3m2!1sen!2sit!4v1654620020314!5m2!1sen!2sit',
     },
     {
       address: 'Via Monte Napoleone',
@@ -114,6 +127,7 @@ export default async (models) => {
       practical_info: 'Always Open',
       ticket_price: 0.0,
       description: 'Shopping street',
+      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.072979318978!2d9.19294441549881!3d45.46833377910094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6b046e886ed%3A0x30dd2847bfbfd4b4!2sVia%20Monte%20Napoleone%2C%2020121%20Milano%20MI!5e0!3m2!1sen!2sit!4v1654620048945!5m2!1sen!2sit',
     },
     {
       address: 'Via Tortona, 56',
@@ -122,6 +136,7 @@ export default async (models) => {
       practical_info: 'Opening hours: 9.30-19.30',
       ticket_price: 4.0,
       description: 'Cultures museum',
+      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.9063388014106!2d9.15934971549821!3d45.45154347910079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c3e618f2c2c1%3A0x72134ad9d5328077!2sMudec!5e0!3m2!1sen!2sit!4v1654620078083!5m2!1sen!2sit',
     },
     {
       address: 'Via Palestro, 16',
@@ -130,6 +145,7 @@ export default async (models) => {
       practical_info: 'Closed on Mondays',
       ticket_price: 3.0,
       description: 'Modern Art Gallery',
+      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.8523683219664!2d9.197811315498951!3d45.47277777910098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6b9166aa2d1%3A0xc193980dc5f1bc0b!2sModern%20Art%20Gallery!5e0!3m2!1sen!2sit!4v1654620108016!5m2!1sen!2sit',
     },
     {
       address: 'Corso di Porta Ticinese, 35',
@@ -138,6 +154,7 @@ export default async (models) => {
       practical_info: 'Always Open',
       ticket_price: 0.0,
       description: 'One of the oldest churc in Milan',
+      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.5753476147893!2d9.17988891549843!3d45.458212779100904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c3fff8fa2aa5%3A0x84e38da300dd3a16!2sBasilica%20San%20Lorenzo%20Maggiore!5e0!3m2!1sen!2sit!4v1654620136876!5m2!1sen!2sit',
     },
     {
       address: 'Piazza Gae Aulenti',
@@ -146,6 +163,7 @@ export default async (models) => {
       practical_info: 'Always open',
       ticket_price: 0.0,
       description: 'Designed by archi-star Gae Aulenti',
+      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.3089004747517!2d9.187410015499344!3d45.48372397910119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c133391261d1%3A0xb55f65872cb8ba7!2sPiazza%20Gae%20Aulenti%2C%2020124%20Milano%20MI!5e0!3m2!1sen!2sit!4v1654620167119!5m2!1sen!2sit',
     },
     {
       address: 'Via Palestro, 14',
@@ -154,6 +172,7 @@ export default async (models) => {
       practical_info: 'Closed on Mondays',
       ticket_price: 2.0,
       description: 'Contemporary Art Gallery',
+      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.844716474281!2d9.19498062979565!3d45.47293191225567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6b9bc18b95b%3A0x95c3d804f41744c2!2sPAC%20-%20Padiglione%20d&#39;Arte%20Contemporanea!5e0!3m2!1sen!2sit!4v1654620193332!5m2!1sen!2sit',
     },
     {
       address: "Via Sant'Arialdo, 102",
@@ -162,6 +181,7 @@ export default async (models) => {
       practical_info: 'Opening Hours: 9-12 15-18',
       ticket_price: 0.0,
       description: 'Founded in the XII Century',
+      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.6773179308657!2d9.233906315497016!3d45.4158461791005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c5a079ba2cef%3A0xac1eadfbc364324b!2sChiaravalle%20Abbey!5e0!3m2!1sen!2sit!4v1654620219258!5m2!1sen!2sit',
     },
   ]
   const poi_img_list = [
@@ -563,6 +583,7 @@ export default async (models) => {
       img: 'https://duomo.shbcdn.com/blobs/variants/8/a/5/f/8a5f9f6b-fe25-4b40-857c-b82c80126a88_medium.jpg?_636862546878987581',
       description:
         'Here are the most important attractions in Milan: Duomo di Milano, Castello Sforzesco, Galleria Vittorio Emanuele, Pinacoteca di Brera',
+      map_src: 'https://www.google.com/maps/d/u/0/embed?mid=1VGvpuzKVJxiw4KNTq0XH61-9ByHpx8k&ehbc=2E312F',
     },
     {
       name: 'Best museums in Milan',
@@ -570,13 +591,15 @@ export default async (models) => {
       img: 'https://milanhotspots.com/wp-content/uploads/2018/01/49_d4a52ff7f5563dad5282957d6116bcda22214b.jpg',
       description:
         'These museums are a must for your first time in Milan! Palazzo reale, Pinacoteca di Brera, Mudec',
+      map_src: '',
     },
     {
       name: 'Shopping streets',
       duration: 2,
       img: 'https://www.divinamilano.it/wp-content/themes/yootheme/cache/Via-Montenapoleone-5ab8b757.jpeg',
       description:
-        'Shopping lover? Try these streets to find all best shops in town! Via Monte Napoleone, Galleria Vittorio Emanuele, Corso Garibaldi, Corso Comod',
+        'Shopping lover? Try these streets to find all best shops in town! Via Monte Napoleone, Galleria Vittorio Emanuele, Corso Garibaldi, Corso Como',
+      map_src: '',
     },
   ]
   const serviceTypeList = [
@@ -604,7 +627,8 @@ export default async (models) => {
     },
     {
       type: 'SuperMarket',
-      description: 'U 2 broke 2 eat in a restaurant? lol.',
+      description:
+        'U 2 broke 2 eat in a restaurant? lol.',
       img: 'https://www.esselunga.it/cms/images/images/image-social/esselunga.png',
     },
   ]

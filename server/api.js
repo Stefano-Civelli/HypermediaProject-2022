@@ -37,6 +37,7 @@ async function initializeDatabaseConnection() {
     practical_info: DataTypes.TEXT,
     ticket_price: DataTypes.DOUBLE,
     description: DataTypes.TEXT,
+    map_src: DataTypes.TEXT,
   })
   const Poi_img = database.define('poi_img', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
@@ -61,6 +62,7 @@ async function initializeDatabaseConnection() {
     duration: DataTypes.INTEGER,
     img: DataTypes.TEXT,
     description: DataTypes.TEXT,
+    map_src: DataTypes.TEXT,
   })
   const poi_itinerary = database.define('poi_itinerary', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
