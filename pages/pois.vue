@@ -38,6 +38,6 @@ export default {
 
 <style scoped>
 .page-title {
-  background-color: rgb(212, 210, 66);
+  background-color: rgb(243, 134, 48);
 }
 </style>

@@ -134,7 +134,7 @@
       </div>
 
       <div class="col-md-4">
-        <div class="position-sticky" style="top: 4rem">
+        <div class="position-sticky" style="top: 5rem">
           <div class="p-4 mb-3 bg-light rounded">
             <h4 class="fst-italic">Practical Info</h4>
             <p>ticket costs: {{ ticket_price }} €</p>

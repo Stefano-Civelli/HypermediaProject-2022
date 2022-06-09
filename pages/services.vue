@@ -30,7 +30,7 @@ export default {
 
 <style>
 .page-title {
-  background-color: rgb(211, 44, 44);
+  background-color: rgb(105, 210, 231);
 }
 
 .featurette-divider {

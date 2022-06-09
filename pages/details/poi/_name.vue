@@ -1,5 +1,5 @@
 <template>
-  <main class="container">
+  <div class="container">
     <div
       class="p-4 p-md-5 my-4 text-white rounded top-img img shadow-lg d-flex justify-content-center align-items-center"
       :style="{ 'background-image': 'url(' + imgs[1].img_path + ')' }"
@@ -74,7 +74,7 @@
       </div>
 
       <div class="col-md-4">
-        <div class="position-sticky" style="top: 4rem">
+        <div class="position-sticky" style="top: 5rem">
           <div class="p-4 mb-3 bg-light rounded">
             <h4 class="fst-italic">Practical Info</h4>
             <p class="mb-0">{{ practical_info }}</p>
@@ -103,7 +103,7 @@
         </div>
       </div>
     </div>
-  </main>
+  </div>
 </template>
 
 <style scoped>
