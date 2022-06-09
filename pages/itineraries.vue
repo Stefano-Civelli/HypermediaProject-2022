@@ -1,18 +1,16 @@
 <template>
-  <div class="page">
-    <div class="title-container">
-      <h1 class="page-title">Suggested itineraries</h1>
-    </div>
-    <div class="itineraries-list">
-      <itinerary-component
-        v-for="itinerary in data"
-        :key="itinerary.id"
-        :id="itinerary.id"
+  <div>
+    <group-page-header-component text="Itineraries" />
+    <div class="container mt-5">
+      <div class="component d-flex flex-wrap justify-content-center">
+        <Itinerary-component v-for="itinerary in data" 
+        :key="itinerary.id" 
+        :id="itinerary.id" 
         :name="itinerary.name"
-        :img="itinerary.img"
-        :description="itinerary.description"
-        :duration="itinerary.duration"
-      />
+        :img="itinerary.img" 
+        :description="itinerary.description" 
+        :duration="itinerary.duration"/>
+      </div>
     </div>
   </div>
 </template>
@@ -33,32 +31,10 @@ export default {
 }
 </script>
 
+
+
 <style scoped>
-.title-container {
-  display: flex;
-  flex-wrap: row wrap;
-  justify-content: center;
-  align-items: center;
-  height: 120px;
-  border: 3px solid rgb(23, 139, 212);
-  background-color: rgb(23, 139, 212);
-}
-
 .page-title {
-  text-align: center;
-  width: 100vw;
-  font-size: clamp(1.475rem, calc(1.475rem + 2.7vw), 55px);
-  font-weight: 700;
-  color: rgb(255, 255, 255);
-  background-color: rgb(23, 139, 212);
-  padding: 5px;
-  line-height: 1.2;
-}
-
-.itineraries-list {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  width: auto;
+  background-color: rgb(6, 109, 226);
 }
 </style>

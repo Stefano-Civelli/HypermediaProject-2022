@@ -31,10 +31,8 @@
                     :poi_imgs="poi.poi_imgs" :events="poi.events" />
             </div>
             <div class="group-links">
-                <div v-if="id == 1" @click="previousItinerary()" class="previous-btn" title="no previous">Previous</div>
-                <div v-else @click="previousItinerary()" class="previous-btn previous-btn-hov">Previous</div>
-                <div v-if="id == maxItinId" @click="nextItinerary()" class="next-btn" title="no more">Next</div>
-                <div v-else @click="nextItinerary()" class="next-btn next-btn-hov">Next</div>
+                <div v-if="id !== 1" @click="previousItinerary()" class="previous-btn previous-btn-hov">Previous</div>
+                <div v-if="id !== maxItinId" @click="nextItinerary()" class="next-btn next-btn-hov">Next</div>
             </div>
         </div>
     </div>
@@ -223,6 +221,7 @@ hr {
     flex-flow: row wrap;
     justify-content: center;
     width: 80vw;
+    padding-bottom: 0.8%;
 }
 
 .itinerary-description {
