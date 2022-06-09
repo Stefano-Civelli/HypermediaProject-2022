@@ -1,15 +1,21 @@
 <template>
   <div>
-    <group-page-header-component text="Itineraries" />
+    <group-page-header-component
+      text="Itineraries"
+      textColor="rgb(248, 249, 250)"
+      bgColor="rgb(243, 134, 48)"
+    />
     <div class="container mt-5">
       <div class="component d-flex flex-wrap justify-content-center">
-        <Itinerary-component v-for="itinerary in data" 
-        :key="itinerary.id" 
-        :id="itinerary.id" 
-        :name="itinerary.name"
-        :img="itinerary.img" 
-        :description="itinerary.description" 
-        :duration="itinerary.duration"/>
+        <Itinerary-component
+          v-for="itinerary in data"
+          :key="itinerary.id"
+          :id="itinerary.id"
+          :name="itinerary.name"
+          :img="itinerary.img"
+          :description="itinerary.description"
+          :duration="itinerary.duration"
+        />
       </div>
     </div>
   </div>
@@ -30,8 +36,6 @@ export default {
   },
 }
 </script>
-
-
 
 <style scoped>
 .page-title {

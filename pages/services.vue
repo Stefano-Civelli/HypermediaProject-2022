@@ -1,6 +1,10 @@
 <template>
   <div>
-    <group-page-header-component text="Services you might need " />
+    <group-page-header-component
+      text="Services you might need "
+      textColor="rgb(33, 37, 41)"
+      bgColor="rgb(105, 210, 231)"
+    />
     <div class="container">
       <service-type-component
         v-for="serviceType in serviceTypeList"

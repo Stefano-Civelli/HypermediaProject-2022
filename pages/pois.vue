@@ -1,6 +1,10 @@
 <template>
   <div>
-    <group-page-header-component text="Points of Interest" />
+    <group-page-header-component
+      text="Points of Interest"
+      textColor="rgb(248, 249, 250)"
+      bgColor="rgb(250, 105, 0)"
+    />
     <div class="container mt-5">
       <div class="component d-flex flex-wrap justify-content-center">
         <poi-component

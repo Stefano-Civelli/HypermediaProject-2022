@@ -1,6 +1,10 @@
 <template>
   <div>
-    <group-page-header-component :text="name" />
+    <group-page-header-component
+      :text="name"
+      textColor="rgb(33, 37, 41)"
+      bgColor="rgb(105, 210, 231)"
+    />
     <div class="container">
       <service-component
         v-for="service in serviceList"

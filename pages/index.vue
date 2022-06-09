@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <div>
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button
@@ -289,7 +289,7 @@
       <!-- /END THE FEATURETTES -->
     </div>
     <!-- /.container -->
-  </main>
+  </div>
 </template>
 
 <style scoped>

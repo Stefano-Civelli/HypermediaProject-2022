@@ -1,6 +1,10 @@
 <template>
   <div class="page">
-    <h2 class="page-title">Events</h2>
+    <group-page-header-component
+      text="Events"
+      textColor="rgb(33, 37, 41)"
+      bgColor="rgb(167, 219, 216)"
+    />
     <div class="container mt-5 d-flex flex-wrap justify-content-center">
       <!-- need to add link to summer/winter events page and the one from which is possible to chose by year  -->
 
@@ -37,16 +41,6 @@ export default {
 <style scoped>
 .card {
   margin: 1%;
-}
-
-.page-title {
-  background-color: rgb(23, 212, 77);
-  text-align: center;
-  width: 100vw;
-  font-size: 20pt;
-  color: rgb(255, 255, 255);
-  border: 3px solid rgb(23, 212, 77);
-  padding: 5px;
 }
 
 .itineraries-list {

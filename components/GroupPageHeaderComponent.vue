@@ -1,6 +1,9 @@
 <template>
-  <div class="page-title d-flex justify-content-center align-items-center">
-    <h1 class="display-4 fw-bold my-border text-light">
+  <div
+    class="page-title d-flex justify-content-center align-items-center"
+    :style="{ 'background-color': bgColor }"
+  >
+    <h1 class="display-4 fw-bold my-border" :style="{ color: textColor }">
       {{ text }}
     </h1>
   </div>
@@ -20,6 +23,12 @@ export default {
     text: {
       type: String,
       required: true,
+    },
+    bgColor: {
+      type: String,
+    },
+    textColor: {
+      type: String,
     },
   },
 }
