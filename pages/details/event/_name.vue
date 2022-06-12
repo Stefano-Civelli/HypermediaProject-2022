@@ -6,7 +6,7 @@
         'background-image': 'url(' + img + ')',
       }"
     >
-      <h1 class="display-4 fst-italic">
+      <h1 class="display-4 my-title">
         {{ name }}
       </h1>
     </div>
@@ -191,8 +191,8 @@
 </template>
 
 <style scoped>
-.talla {
-  border: 1px solid red;
+.my-title {
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
 }
 
 .top-description-spacing {

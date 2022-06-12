@@ -2,10 +2,10 @@
   <div>
     <group-page-header-component
       text="Services you might need "
-      textColor="rgb(33, 37, 41)"
+      textColor="rgb(248, 249, 250)"
       bgColor="rgb(105, 210, 231)"
     />
-    <div class="container">
+    <div class="container page-component px-5 pt-5">
       <service-type-component
         v-for="serviceType in serviceTypeList"
         :key="serviceType.id"
@@ -32,12 +32,21 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .page-title {
   background-color: rgb(105, 210, 231);
 }
-
+.page-component {
+  background-color: white;
+  border-radius: 40px;
+  margin-top: 300px;
+  position: relative;
+  box-shadow: 0 0 3rem 0.1rem rgb(0 0 0 / 40%);
+}
 .featurette-divider {
   margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+.hero-section-parallax {
+  background-image: url('~/assets/Tram-background.jpg');
 }
 </style>

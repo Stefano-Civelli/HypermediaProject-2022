@@ -17,3 +17,9 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.main-page {
+  background-color: rgb(255, 255, 255);
+}
+</style>

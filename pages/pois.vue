@@ -2,10 +2,10 @@
   <div>
     <group-page-header-component
       text="Points of Interest"
-      textColor="rgb(248, 249, 250)"
+      textColor="rgb(33, 37, 41)"
       bgColor="rgb(250, 105, 0)"
     />
-    <div class="container mt-5">
+    <div class="container page-component pt-5">
       <div class="component d-flex flex-wrap justify-content-center">
         <poi-component
           v-for="poi in data"
@@ -43,5 +43,12 @@ export default {
 <style scoped>
 .page-title {
   background-color: rgb(243, 134, 48);
+}
+.page-component {
+  background-color: white;
+  border-radius: 40px;
+  margin-top: 300px;
+  position: relative;
+  box-shadow: 0 0 3rem 0.1rem rgb(0 0 0 / 40%);
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <group-page-header-component
+    <OldGPHeader
       :text="name"
       textColor="rgb(248, 249, 250)"
       bgColor="rgb(243, 134, 48)"
@@ -64,10 +64,10 @@
 </template>
 
 <script>
-import GroupPageHeaderComponent from '~/components/GroupPageHeaderComponent.vue'
 import ItinPoiComponent from '~/components/Itin-Poi-Component.vue'
+import OldGPHeader from '~/components/OldGPHeader.vue'
 export default {
-  components: { ItinPoiComponent, GroupPageHeaderComponent },
+  components: { ItinPoiComponent, OldGPHeader },
   name: 'ItineraryPage',
   async asyncData({ route, $axios }) {
     const { id } = route.params

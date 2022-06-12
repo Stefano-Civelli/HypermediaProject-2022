@@ -2,10 +2,12 @@
   <div class="page">
     <group-page-header-component
       text="Events"
-      textColor="rgb(33, 37, 41)"
+      textColor="rgb(248, 249, 250)"
       bgColor="rgb(167, 219, 216)"
     />
-    <div class="container mt-5 d-flex flex-wrap justify-content-center">
+    <div
+      class="container d-flex flex-wrap justify-content-center page-component pt-5"
+    >
       <!-- need to add link to summer/winter events page and the one from which is possible to chose by year  -->
 
       <event-component
@@ -39,6 +41,9 @@ export default {
 </script>
 
 <style scoped>
+.hero-section-parallax {
+  background-image: url('~/assets/Gae-background.jpg');
+}
 .card {
   margin: 1%;
 }
@@ -47,5 +52,12 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+.page-component {
+  background-color: white;
+  border-radius: 40px;
+  margin-top: 300px;
+  position: relative;
+  box-shadow: 0 0 3rem 0.1rem rgb(0 0 0 / 40%);
 }
 </style>

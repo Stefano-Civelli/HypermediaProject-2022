@@ -45,7 +45,7 @@
   width: 100%;
 }
 .header {
-  background: rgb(41, 42, 45);
+  background: rgba(41, 42, 45, 0.966);
 }
 .logo {
   font-size: 32px;

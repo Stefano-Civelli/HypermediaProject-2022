@@ -1,6 +1,6 @@
 <template>
   <div>
-    <group-page-header-component
+    <OldGPHeader
       :text="name"
       textColor="rgb(33, 37, 41)"
       bgColor="rgb(105, 210, 231)"
@@ -19,9 +19,10 @@
 </template>
 
 <script>
+import OldGPHeader from '~/components/OldGPHeader.vue'
 import ServiceComponent from '~/components/ServiceComponent.vue'
 export default {
-  components: { ServiceComponent },
+  components: { ServiceComponent, OldGPHeader },
   async asyncData({ route, $axios }) {
     const { name } = route.params
     const { data } = await $axios.get('/api/service_type/' + name)

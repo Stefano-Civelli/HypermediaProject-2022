@@ -112,8 +112,15 @@ const pageContentObject = {
   about: {
     title: 'About',
     image: 'path/to/img (if any)',
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et tincidunt elit, in finibus elit. Aliquam nec posuere sem, at faucibus erat. Suspendisse iaculis lorem id odio placerat bibendum. Suspendisse potenti. Sed quis efficitur erat. Pellentesque non velit ipsum. Maecenas finibus felis a magna auctor finibus. Mauris tincidunt nibh sit amet ante consectetur, non cursus elit feugiat.
-        Integer vitae elit at nunc lacinia egestas. Etiam nec sagittis lorem. Phasellus consectetur mauris eget neque posuere, vitae sagittis massa congue. Etiam vitae eleifend odio, sit amet tempus ex. Ut semper feugiat erat, id consequat elit volutpat sed. Curabitur vel arcu at risus vehicula blandit in ut nunc. In nec pellentesque tellus. Maecenas vitae purus lacinia, tristique elit vitae, interdum est. Ut feugiat nulla et vestibulum efficitur. Suspendisse potenti. Duis ex dolor, vestibulum a leo eu, dapibus elementum ipsum. Curabitur euismod rhoncus nulla ac interdum. Mauris vulputate viverra scelerisque. Mauris ullamcorper tempus eros.`,
+    description: `Milano & Partners è l'agenzia di promozione ufficiale della città di Milano. È un'associazione fondata dal Comune di Milano e la Camera di Commercio di Milano, Monza, Brianza, Lodi, creata per attivare collaborazioni e partnership con  imprese locali, marchi globali, università, istituzioni culturali e altri enti pubblici.
+
+ 
+
+    Promuoviamo il brand YesMilano nel mondo per attrarre nuovi visitatori, talenti e investimenti per la città.
+    
+    La nostra missione è quella di supportare la crescita di Milano e renderla la più accogliente città al mondo.
+    
+    Milano & Partners vive grazie al sostegno finanziario e operativo dei suoi partner. Siamo orgogliosi di condividere con i nostri partner l'obiettivo comune di rendere Milano una destinazione globale sempre più attrattiva.`,
   },
   contactus: {
     title: 'ContactUs',

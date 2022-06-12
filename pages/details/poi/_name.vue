@@ -4,7 +4,7 @@
       class="p-4 p-md-5 my-4 text-white rounded top-img img shadow-lg d-flex justify-content-center align-items-center"
       :style="{ 'background-image': 'url(' + imgs[1].img_path + ')' }"
     >
-      <h1 class="display-4 fst-italic">
+      <h1 class="display-4 my-title">
         {{ name }}
       </h1>
     </div>
@@ -47,19 +47,27 @@
                 {{ event.description }}
               </p>
               <p>
-                <nuxt-link
-                  class="btn btn-secondary my-btn"
-                  :to="`/details/event/${event.name}`"
-                >
-                  View details
+                <nuxt-link :to="`/details/event/${event.name}`">
+                  <button class="btn btn-secondary my-btn">View details</button>
                 </nuxt-link>
               </p>
+            </div>
+            <h2 class="blog-post-title mb-1">Where is it?</h2>
+            <br />
+            <div class="px-4 py-2">
+              <iframe
+                :src="mapSrc"
+                width="100%"
+                height="400"
+                referrerpolicy="no-referrer-when-downgrade"
+                class="border my-map rounded-4"
+              ></iframe>
             </div>
           </div>
           <!-- /.row -->
         </article>
 
-        <nav class="blog-pagination" aria-label="Pagination">
+        <nav class="blog-pagination mt-5" aria-label="Pagination">
           <button class="btn btn-outline-secondary rounded-pill" @click="prev">
             Previous
           </button>
@@ -107,6 +115,18 @@
 </template>
 
 <style scoped>
+.my-map {
+  margin: auto;
+}
+.rounded-4 {
+  border-radius: 15px;
+}
+.my-border {
+  border: 1px solid red;
+}
+.my-title {
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
+}
 .my-img {
   object-fit: cover;
   object-position: 20% 50%;
@@ -160,6 +180,7 @@ export default {
       ticket_price: data.ticket_price,
       address: data.address,
       events: data.events,
+      mapSrc: data.map_src,
       relatedItineraries,
     }
   },
