@@ -3,13 +3,6 @@
     <footer>
       <div class="footer">
         <div class="riga">
-          <a href="#"><i class="fa fa-facebook"></i></a>
-          <a href="#"><i class="fa fa-instagram"></i></a>
-          <a href="#"><i class="fa fa-youtube"></i></a>
-          <a href="#"><i class="fa fa-twitter"></i></a>
-        </div>
-
-        <div class="riga">
           <ul>
             <li><a href="#">Contact us</a></li>
             <li><a href="#">Our Services</a></li>
