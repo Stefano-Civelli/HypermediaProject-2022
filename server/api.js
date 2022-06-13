@@ -49,6 +49,7 @@ async function initializeDatabaseConnection() {
     timetable: DataTypes.STRING,
     phone_number: DataTypes.STRING,
     address: DataTypes.STRING,
+    map_src: DataTypes.TEXT,
   })
   const ServiceType = database.define('service_type', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
