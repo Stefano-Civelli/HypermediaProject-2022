@@ -190,7 +190,7 @@ async function runMainApi() {
         img: element.img,
         start: element.starting_date,
         end: element.ending_date,
-        location: element.address,
+        location: element.poi.address,
       })
     }
     return res.json(filtered)

@@ -1,10 +1,6 @@
 <template>
   <div class="page">
-    <group-page-header-component
-      text="Events"
-      textColor="rgb(248, 249, 250)"
-      bgColor="rgb(167, 219, 216)"
-    />
+    <group-page-header-component text="Events" textColor="rgb(248, 249, 250)" />
     <div
       class="container d-flex flex-wrap justify-content-center page-component pt-5"
     >

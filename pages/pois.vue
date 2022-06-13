@@ -3,7 +3,6 @@
     <group-page-header-component
       text="Points of Interest"
       textColor="rgb(33, 37, 41)"
-      bgColor="rgb(250, 105, 0)"
     />
     <div class="container page-component pt-5">
       <div class="component d-flex flex-wrap justify-content-center">
@@ -36,7 +35,6 @@ export default {
   async asyncData({ $axios }) {
     const { data } = await $axios.get('/api/poi/list')
     console.log(data[0])
-    // const name = data.name
     return {
       data,
     }

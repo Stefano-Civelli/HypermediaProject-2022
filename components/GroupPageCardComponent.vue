@@ -2,7 +2,7 @@
   <div class="cards">
     <nuxt-link
       :to="`${nuxtLink}/${id == -1 ? title : id}`"
-      class="card shadow-sm"
+      class="card shadow-lg"
     >
       <img :src="img" class="card__image" alt="" />
       <div class="card__overlay">

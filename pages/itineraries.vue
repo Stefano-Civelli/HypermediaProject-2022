@@ -3,7 +3,6 @@
     <group-page-header-component
       text="Itineraries"
       textColor="rgb(248, 249, 250)"
-      bgColor="rgb(243, 134, 48)"
     />
     <div class="container page-component pt-5">
       <div class="component d-flex flex-wrap justify-content-center">

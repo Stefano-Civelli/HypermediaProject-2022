@@ -1,7 +1,6 @@
 <template>
   <div
     class="w-100 d-flex justify-content-center align-items-start hero-section-parallax"
-    :style="{ 'background-color': bgColor }"
   >
     <h1
       class="display-4 fw-bold my-border my-page-title"
@@ -25,7 +24,7 @@
 
   /* Set a specific height */
   /** decidere a quanto settarlo */
-  min-height: 90vh;
+  min-height: 80vh;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -50,9 +49,6 @@ export default {
     text: {
       type: String,
       required: true,
-    },
-    bgColor: {
-      type: String,
     },
     textColor: {
       type: String,
