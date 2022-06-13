@@ -7,14 +7,15 @@
     />
     <div class="container page-component pt-5">
       <div class="component d-flex flex-wrap justify-content-center">
-        <Itinerary-component
+        <GroupPageCardComponent
           v-for="itinerary in data"
           :key="itinerary.id"
-          :id="itinerary.id"
-          :name="itinerary.name"
+          :title="itinerary.name"
           :img="itinerary.img"
-          :description="itinerary.description"
-          :duration="itinerary.duration"
+          :subtitle="itinerary.duration"
+          :param="itinerary.description"
+          :id="itinerary.id"
+          nuxtLink="/details/itinerary"
         />
       </div>
     </div>
@@ -22,9 +23,9 @@
 </template>
 
 <script>
-import ItineraryComponent from '~/components/ItineraryComponent.vue'
+import GroupPageCardComponent from '~/components/GroupPageCardComponent.vue'
 export default {
-  components: { ItineraryComponent },
+  components: { GroupPageCardComponent },
   async asyncData({ $axios }) {
     const { data } = await $axios.get('/api/itinerary/list')
     return {

@@ -1,7 +1,10 @@
 <template>
   <div class="cards">
-    <nuxt-link :to="`/details/poi/${name}`" class="card shadow-sm">
-      <img :src="imgs[0].img_path" class="card__image" alt="" />
+    <nuxt-link
+      :to="`${nuxtLink}/${id == -1 ? title : id}`"
+      class="card shadow-sm"
+    >
+      <img :src="img" class="card__image" alt="" />
       <div class="card__overlay">
         <div class="card__header">
           <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
@@ -9,8 +12,8 @@
           </svg>
 
           <div class="card__header-text">
-            <h3 class="card__title">{{ name }}</h3>
-            <span class="card__status">Check it out!</span>
+            <h3 class="card__title">{{ title }}</h3>
+            <span class="card__status">{{ subtitle }}</span>
           </div>
         </div>
         <p class="card__description">
@@ -28,19 +31,7 @@
               d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
             />
           </svg>
-          {{ address }} <br />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="17"
-            fill="currentColor"
-            class="bi bi-calendar mb-1"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"
-            />
-          </svg>
-          {{ info }}
+          {{ param }} <br />
         </p>
       </div>
     </nuxt-link>
@@ -157,23 +148,23 @@
 <script>
 export default {
   props: {
-    name: {
+    title: {
       type: String,
       required: true,
     },
-    imgs: {
+    id: {},
+    img: {
       type: String,
       required: true,
     },
-    id: {
-      type: Number,
-      required: true,
-    },
-    address: {
+    subtitle: {
       type: String,
       required: true,
     },
-    info: {
+    param: {
+      required: true,
+    },
+    nuxtLink: {
       type: String,
       required: true,
     },
