@@ -1,7 +1,5 @@
 <template>
   <div class="container w-100">
-    <hr class="my-divider" />
-
     <div class="row mt-3">
       <div class="col-md-7">
         <h2 class="my-heading fw-normal lh-1">
@@ -21,6 +19,7 @@
         <img class="my-img img-fluid" :src="img" />
       </div>
     </div>
+    <hr class="my-divider" />
   </div>
 </template>
 

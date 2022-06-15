@@ -5,7 +5,7 @@
       textColor="rgb(248, 249, 250)"
       bgColor="rgb(105, 210, 231)"
     />
-    <div class="container page-component px-5 pt-5">
+    <div class="container page-component px-5 pt-4">
       <service-type-component
         v-for="serviceType in serviceTypeList"
         :key="serviceType.id"
@@ -13,7 +13,6 @@
         :img="serviceType.img"
         :description="serviceType.description"
       />
-      <hr class="featurette-divider" />
     </div>
   </div>
 </template>

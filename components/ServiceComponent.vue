@@ -65,7 +65,7 @@
           </div>
           <div class="col-md-8 d-flex justify-content-end">
             <iframe
-              src="https://www.google.com/maps/d/u/0/embed?mid=1p-kEH-VPmVrp5FLfWIcM3FW_HAvL7loq&ehbc=2E312F"
+              src="https://www.google.com/maps/d/u/0/embed?mid=1VGvpuzKVJxiw4KNTq0XH61-9ByHpx8k&ehbc=2E312F"
               width="75%"
               height="300"
               referrerpolicy="no-referrer-when-downgrade"

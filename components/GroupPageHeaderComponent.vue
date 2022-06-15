@@ -14,8 +14,8 @@
 
 <style scoped>
 .my-page-title {
-  margin-top: 170px;
-
+  margin-top: 145px;
+  font-size: 5.5rem;
   border-radius: 20px;
   padding: 10px;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
@@ -36,10 +36,15 @@
 
   top: 0;
 }
-
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .my-page-title {
-    font-size: 3.3rem;
+    font-size: 4.4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .my-page-title {
+    font-size: 3.5rem;
   }
 }
 </style>
