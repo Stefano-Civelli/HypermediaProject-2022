@@ -43,9 +43,10 @@ export default {
 </script>
 
 <style scoped>
-.page-title {
-  background-color: rgb(243, 134, 48);
+.hero-section-parallax {
+  background-image: url('~/assets/Life-background.jpg');
 }
+
 .page-component {
   background-color: white;
   border-radius: 40px;

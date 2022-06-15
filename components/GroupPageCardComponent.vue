@@ -125,12 +125,12 @@
   margin: 1em 0;
   font-family: 'MockFlowFont';
   font-size: 0.8em;
-  color: #d7bdca;
+  color: #b49ba8;
 }
 
 .card__status {
   font-size: 0.8em;
-  color: #d7bdca;
+  color: #b49ba8;
 }
 
 .card__description {
