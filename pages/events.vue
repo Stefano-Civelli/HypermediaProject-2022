@@ -1,33 +1,29 @@
 <template>
   <div class="page">
-    <group-page-header-component
-      text="Events"
-      textColor="rgb(248, 249, 250)"
-      bgColor="rgb(167, 219, 216)"
-    />
+    <group-page-header-component text="Events" textColor="rgb(248, 249, 250)" />
     <div
       class="container d-flex flex-wrap justify-content-center page-component pt-5"
     >
       <!-- need to add link to summer/winter events page and the one from which is possible to chose by year  -->
 
-      <event-component
-        class="card"
+      <GroupPageCardComponent
         v-for="event in data"
         :key="event.id"
-        :name="event.name"
+        :title="event.name"
         :img="event.img"
-        :start="event.start"
-        :end="event.end"
-        :location="event.location"
+        :param="event.location"
+        id="-1"
+        :subtitle="event.start"
+        nuxtLink="/details/event"
       />
     </div>
   </div>
 </template>
 
 <script>
-import EventComponent from '~/components/EventComponent.vue'
+import GroupPageCardComponent from '~/components/GroupPageCardComponent.vue'
 export default {
-  components: { EventComponent },
+  components: { GroupPageCardComponent },
   async asyncData({ $axios }) {
     const { data } = await $axios.get('/api/event/list')
     return {

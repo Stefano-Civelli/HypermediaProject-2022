@@ -3,7 +3,6 @@
     <group-page-header-component
       text="Services you might need "
       textColor="rgb(248, 249, 250)"
-      bgColor="rgb(105, 210, 231)"
     />
     <div class="container page-component px-5 pt-4">
       <service-type-component

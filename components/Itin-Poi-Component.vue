@@ -1,12 +1,13 @@
 <template>
     <div class="poi-card">
         <div class="poi-header">
+            <p class="poi-number"> {{ idx }} </p>
             <h3 class="poi-name"> {{ name }} </h3>
             <!-- <p class="poi-description"> Poi description: {{ description }} </p> -->
         </div>
         <hr />
         <div class="poi-img-container">
-            <nuxt-link :to="`/details/poi/${name}`">
+            <nuxt-link class="poi-img-container-2" :to="`/details/poi/${name}`">
                 <img :src="poi_imgs[0].img_path" class="poi-img" :title="name">
             </nuxt-link>
         </div>
@@ -22,6 +23,7 @@
 </template>
 
 <style scoped>
+
 p {
     margin: 0px;
     padding: 5px;
@@ -36,6 +38,13 @@ hr {
     color: rgb(0, 0, 0);
     height: 1px;
     width: 50%;
+}
+
+.poi-number {
+    background-color: #00af0f;
+    border-radius: 50%;
+    font-size: 100%;
+    align-content: center;
 }
 
 .poi-name {
@@ -98,31 +107,43 @@ hr {
     max-width: 240px;
     text-align: start;
     display: flex;
-    flex-flow: column;
+    flex-flow: row;
     justify-content: center;
+    align-items: center;
 }
 
-.poi-img-container {
+.poi-img-container, .poi-img-container-2 {
     display: flex;
     flex-flow: row;
     justify-content: center;
+    align-items: center;
+}
+
+.poi-img-container-2 {
+    width: 100%;
+    height: 100%;
 }
 
 .poi-img {
-    width: 25vw;
+    width: 30vw;
     min-width: 100px;
-    max-width: 300px;
-    height: 15vw;
+    max-width: 600px;
+    height: 20vw;
     min-height: 100px;
-    max-height: 180px;
+    max-height: 360px;
     border-radius: 50%;
-    border: 2px solid grey;
+    border: 2px solid rgb(128, 128, 128);
     transition: 0.2s;
 }
 
 .poi-img:hover {
-    border: 2px solid rgb(0, 171, 201);
-    transform: rotate(-0.5deg);
+    border: 3px solid rgb(0, 171, 201);
+    width: 31vw;
+    min-width: 105px;
+    max-width: 605px;
+    height: 20.7vw;
+    min-height: 105px;
+    max-height: 365px;
 }
 </style>
 
@@ -165,6 +186,10 @@ export default {
         },
         events: {
             type: Array,
+            required: true,
+        },
+        idx: {
+            type: Number,
             required: true,
         }
     }

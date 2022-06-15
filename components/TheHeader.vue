@@ -20,6 +20,55 @@
 
       <div class="collapse navbar-collapse" id="navbarToggler">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Events
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                fill="currentColor"
+                class="bi bi-caret-down"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"
+                />
+              </svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <nuxt-link class="dropdown-item" to="/events"
+                  >All events</nuxt-link
+                >
+              </li>
+              <li>
+                <nuxt-link class="dropdown-item" to="/summer_events"
+                  >Summer Events</nuxt-link
+                >
+              </li>
+              <li>
+                <nuxt-link class="dropdown-item" to="/winter_events"
+                  >Winter Events</nuxt-link
+                >
+              </li>
+              <li></li>
+              <li>
+                <nuxt-link class="dropdown-item" to="/events_by_year"
+                  >Events by Year</nuxt-link
+                >
+              </li>
+              <li></li>
+            </ul>
+          </li>
+
           <li
             v-for="(navItem, navItemIndex) of headerList"
             :key="`navItem${navItemIndex}`"
@@ -96,6 +145,19 @@
   width: 0;
 }
 
+.dropdown-menu {
+  border-radius: 0px 0px 15px 15px;
+  background-color: rgba(41, 42, 45, 0.966);
+  margin-top: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.dropdown-item {
+  margin-top: -0.5vh;
+  margin-bottom: -0.5vh;
+}
+
 .my-navbar a:hover:after {
   width: 100%;
   left: 0;
@@ -120,10 +182,6 @@ export default {
         {
           name: 'Itineraries',
           path: '/itineraries',
-        },
-        {
-          name: 'Events',
-          path: '/events',
         },
         {
           name: 'Services',

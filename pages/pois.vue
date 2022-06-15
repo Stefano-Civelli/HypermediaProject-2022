@@ -3,18 +3,18 @@
     <group-page-header-component
       text="Points of Interest"
       textColor="rgb(33, 37, 41)"
-      bgColor="rgb(250, 105, 0)"
     />
     <div class="container page-component pt-5">
       <div class="component d-flex flex-wrap justify-content-center">
-        <poi-component
+        <GroupPageCardComponent
           v-for="poi in data"
           :key="poi.id"
-          :name="poi.name"
-          :id="poi.id"
-          :imgs="poi.poi_imgs"
-          :address="poi.address"
-          :info="poi.practical_info"
+          :title="poi.name"
+          :img="poi.poi_imgs[0].img_path"
+          :param="poi.address"
+          id="-1"
+          subtitle="Check it out!"
+          nuxtLink="/details/poi"
         />
       </div>
     </div>
@@ -22,17 +22,19 @@
 </template>
 
 <script>
+import GroupPageCardComponent from '~/components/GroupPageCardComponent.vue'
 import GroupPageHeaderComponent from '~/components/GroupPageHeaderComponent.vue'
-import PoiComponent from '~/components/PoiComponent.vue'
 export default {
-  components: { PoiComponent, GroupPageHeaderComponent },
+  components: {
+    GroupPageHeaderComponent,
+    GroupPageCardComponent,
+  },
   data() {
     return {}
   },
   async asyncData({ $axios }) {
     const { data } = await $axios.get('/api/poi/list')
     console.log(data[0])
-    // const name = data.name
     return {
       data,
     }

@@ -83,4 +83,10 @@ export default {
     margin-top: 2rem;
   }
 }
+
+@media (max-width: 768px) {
+  .my-button {
+    margin-top: -3.5vh;
+  }
+}
 </style>
