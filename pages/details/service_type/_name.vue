@@ -13,6 +13,7 @@
         :timetable="service.timetable"
         :phone_number="service.phone_number"
         :address="service.address"
+        :map_src="service.map_src"
       />
     </div>
   </div>
