@@ -33,41 +33,30 @@
           <h2 class="mb-4">Related Events</h2>
 
           <!-- Events circles -->
-          <div class="row">
-            <div class="col-lg-4" v-for="event in events" :key="event.id">
-              <img
-                :src="event.img"
-                class="rounded-circle border my-img"
-                width="140"
-                height="140"
-              />
-
-              <h2 class="fw-normal">{{ event.name }}</h2>
-              <p>
-                {{ event.description }}
-              </p>
-              <p>
-                <nuxt-link :to="`/details/event/${event.name}`">
-                  <button class="btn btn-secondary my-btn">View details</button>
-                </nuxt-link>
-              </p>
-            </div>
-            <h2 class="blog-post-title mb-1">Where is it?</h2>
-            <br />
-            <div class="px-4 py-2">
-              <iframe
-                :src="mapSrc"
-                width="100%"
-                height="400"
-                referrerpolicy="no-referrer-when-downgrade"
-                class="border my-map rounded-4"
-              ></iframe>
-            </div>
+          <div class="row eventsContainer">
+            <EventComponent
+              v-for="event in events"
+              :key="event.id"
+              :name="event.name"
+              :img="event.img"
+              :description="event.description"
+            />
           </div>
           <!-- /.row -->
+          <h2 class="blog-post-title mb-1">Where is it?</h2>
+          <br />
+          <div class="px-4 py-2">
+            <iframe
+              :src="mapSrc"
+              width="100%"
+              height="400"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="border my-map rounded-4"
+            ></iframe>
+          </div>
         </article>
 
-        <nav class="blog-pagination mt-5" aria-label="Pagination">
+        <nav class="blog-pagination mt-5">
           <button class="btn btn-outline-secondary rounded-pill" @click="prev">
             Previous
           </button>
@@ -115,6 +104,9 @@
 </template>
 
 <style scoped>
+.eventsContainer {
+  text-align: center;
+}
 .my-map {
   margin: auto;
 }
@@ -163,10 +155,13 @@ a:hover {
 </style>
 
 <script>
-import CommonMixin from '~/mixins/common'
+import EventComponent from '~/components/EventComponent.vue'
+
 export default {
   name: 'PoiPage',
-  mixins: [CommonMixin],
+  components: {
+    EventComponent,
+  },
   async asyncData({ route, $axios }) {
     const { name } = route.params
     const { data } = await $axios.get('/api/poi/' + name)

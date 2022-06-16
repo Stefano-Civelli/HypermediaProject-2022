@@ -191,6 +191,7 @@ async function runMainApi() {
         start: element.starting_date,
         end: element.ending_date,
         location: element.poi.address,
+        description: element.description, //da togliere
       })
     }
     return res.json(filtered)

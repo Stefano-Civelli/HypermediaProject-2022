@@ -55,7 +55,7 @@ export default {
 
 .breadcrumb {
   background-color: rgba(105, 210, 231, 0.527);
-  border-radius: 20px;
+  border-radius: 15px;
   margin-bottom: -30px;
 }
 .breadcrumb a {
