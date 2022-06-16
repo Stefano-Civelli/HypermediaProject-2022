@@ -196,6 +196,25 @@ async function runMainApi() {
     return res.json(filtered)
   })
 
+  app.get('/event/random/:number', async (req, res) => {
+    const number = req.params.number
+    const result = await models.Event.findAll({
+      order: [
+        [sequelize.fn('RANDOM')]
+      ],
+      limit: number
+    })
+    const filtered = [] 
+    for (const element of result) {
+      filtered.push({
+        name: element.name,
+        img: element.img,
+        description: element.description
+      })
+    }
+    return res.json(filtered) 
+  })
+
   app.get('/event/:name', async (req, res) => {
     const name = req.params.name
     const result = await models.Event.findOne({
@@ -246,10 +265,42 @@ async function runMainApi() {
     const years = []
     for (const element of result) {
       splittedDate = element.starting_date.split("-")
-      years.push(splittedDate[0])
+      if (!years.map(x => x.year).includes(splittedDate[0])) {
+        years.push({year: splittedDate[0], img: element.img, events: 1})
+      }
+      else {
+        let i=0
+        for(const obj of years) {
+          if(obj.year == splittedDate[0]) {
+            years[i].events += 1
+          }
+          else {
+            i++
+          }
+        }
+      }
     }
-    console.log(years)
-    return res.json(years)
+
+
+    return res.json(years.sort((a,b) => b.year - a.year))
+  })
+
+  app.get('/event/year/:year', async (req, res) => {
+    const { year } = req.params
+    const { Op } = require("sequelize")
+    const starting = (year+'-1-1')
+    const ending = ((parseInt(year)+1)+'-12-31')
+
+    console.log(starting)
+    console.log(ending)
+    console.log(year)
+    const result = await models.Event.findAll({
+      where: { starting_date: {
+        [Op.and]: [{[Op.gte]: starting}, {[Op.lte]: ending}]
+      }}
+    })
+    console.log(result)
+    return res.json(result)
   })
   /** Events APIs -------------------------------------------*/
 
