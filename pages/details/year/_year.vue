@@ -1,6 +1,9 @@
 <template>
   <div class="page">
-    <group-page-header-component text="Events" textColor="rgb(248, 249, 250)" />
+    <group-page-header-component
+      :text="`Events of ${year}`"
+      textColor="rgb(248, 249, 250)"
+    />
     <div
       class="container d-flex flex-wrap justify-content-center page-component pt-5"
     >
@@ -31,10 +34,12 @@ export default {
   data() {
     return {}
   },
-  async asyncData({ $axios }) {
-    const { data } = await $axios.get('/api/event/list')
+  async asyncData({ route, $axios }) {
+    const { year } = route.params
+    const { data } = await $axios.get('/api/event/year/' + year)
     return {
       data,
+      year,
     }
   },
 }
