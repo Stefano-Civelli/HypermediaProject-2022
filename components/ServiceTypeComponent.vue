@@ -1,6 +1,6 @@
 <template>
   <div class="container w-100">
-    <div class="row mt-3">
+    <div class="row mt-5">
       <div class="col-md-7">
         <h2 class="my-heading fw-normal lh-1">
           {{ description }}
@@ -42,8 +42,6 @@ export default {
 </script>
 
 <style scoped>
-.my-button {
-}
 .my-img {
   object-fit: cover;
   height: 300px;
@@ -58,23 +56,16 @@ export default {
 /* rtl:begin:remove */
 .my-heading {
   letter-spacing: -0.05rem;
+  font-size: 45px;
 }
 
-.my-border {
-  border: 1px solid red;
-}
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
 @media (min-width: 40em) {
   .carousel-caption p {
     margin-bottom: 1.25rem;
-    font-size: 1.25rem;
     line-height: 1.4;
-  }
-
-  .my-heading {
-    font-size: 50px;
   }
 }
 
@@ -86,7 +77,11 @@ export default {
 
 @media (max-width: 768px) {
   .my-button {
-    margin-top: -3.5vh;
+    margin-top: -40px;
+  }
+  .my-heading {
+    font-size: 40px;
+    margin-top: -40px;
   }
 }
 </style>

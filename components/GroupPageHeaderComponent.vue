@@ -24,7 +24,7 @@
 
   /* Set a specific height */
   /** decidere a quanto settarlo */
-  min-height: 80vh;
+  min-height: 90vh;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;

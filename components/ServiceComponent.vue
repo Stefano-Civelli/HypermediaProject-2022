@@ -38,7 +38,7 @@
                 </svg>
                 <div>
                   <h5 class="mb-0">Tel. number</h5>
-                  {{ phone_number }}
+                  {{ phoneNumber }}
                 </div>
               </li>
               <li class="d-flex gap-4">
@@ -65,7 +65,7 @@
           </div>
           <div class="col-md-8 d-flex justify-content-end">
             <iframe
-              :src="map_src"
+              :src="mapSrc"
               width="75%"
               height="300"
               referrerpolicy="no-referrer-when-downgrade"
@@ -89,7 +89,7 @@ export default {
       type: String,
       required: true,
     },
-    phone_number: {
+    phoneNumber: {
       type: String,
       required: true,
     },
@@ -97,7 +97,7 @@ export default {
       type: String,
       required: true,
     },
-    map_src: {
+    mapSrc: {
       type: String,
       required: true,
     },

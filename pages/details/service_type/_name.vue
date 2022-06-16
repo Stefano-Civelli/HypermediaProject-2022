@@ -22,9 +22,9 @@
         :key="service.id"
         :name="service.name"
         :timetable="service.timetable"
-        :phone_number="service.phone_number"
+        :phoneNumber="service.phone_number"
         :address="service.address"
-        :map_src="service.map_src"
+        :mapSrc="service.map_src"
       />
     </div>
   </div>
