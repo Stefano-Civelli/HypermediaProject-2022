@@ -8,7 +8,7 @@
         {{ name }}
       </h1>
     </div>
-    <nav aria-label="breadcrumb">
+    <nav>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/">Home</a></li>
         <li class="breadcrumb-item"><a href="/pois">Points of Interest</a></li>
@@ -146,7 +146,11 @@ a {
 
 a {
   background: linear-gradient(to right, rgb(33, 37, 41), rgb(33, 37, 41)),
-    linear-gradient(to right, rgb(0, 165, 91), rgb(0, 165, 91));
+    linear-gradient(
+      to right,
+      rgba(124, 138, 150, 0.671),
+      rgba(124, 138, 150, 0.671)
+    );
   background-size: 100% 1px, 0 1px;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
@@ -154,7 +158,7 @@ a {
 }
 
 a:hover {
-  background-size: 0 2px, 100% 2px;
+  background-size: 0 1px, 100% 1px;
 }
 </style>
 

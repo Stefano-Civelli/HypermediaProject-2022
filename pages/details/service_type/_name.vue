@@ -6,6 +6,17 @@
       bgColor="rgb(105, 210, 231)"
     />
     <div class="container">
+      <nav class="d-flex bread-container">
+        <ol class="breadcrumb p-2">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item">
+            <a href="/services">Services</a>
+          </li>
+          <li class="breadcrumb-item">
+            {{ name }}
+          </li>
+        </ol>
+      </nav>
       <service-component
         v-for="service in serviceList"
         :key="service.id"
@@ -38,7 +49,34 @@ export default {
 </script>
 
 <style scoped>
-.my-border {
-  border: 1px solid red;
+.bread-container {
+  margin: 30px 0px 0px 10px;
+}
+
+.breadcrumb {
+  background-color: rgba(105, 210, 231, 0.527);
+  border-radius: 20px;
+  margin-bottom: -30px;
+}
+.breadcrumb a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.breadcrumb a {
+  background: linear-gradient(to right, rgb(33, 37, 41), rgb(33, 37, 41)),
+    linear-gradient(
+      to right,
+      rgba(105, 210, 231, 0.527),
+      rgba(105, 210, 231, 0.527)
+    );
+  background-size: 100% 1px, 0 1px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 500ms;
+}
+
+.breadcrumb a:hover {
+  background-size: 0 1px, 100% 1px;
 }
 </style>
