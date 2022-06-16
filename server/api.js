@@ -238,6 +238,19 @@ async function runMainApi() {
     }
     return res.json(result)
   })
+
+  app.get('/event/list/years', async (req, res) => {
+    const result = await models.Event.findAll({
+    })
+    let splittedDate = []
+    const years = []
+    for (const element of result) {
+      splittedDate = element.starting_date.split("-")
+      years.push(splittedDate[0])
+    }
+    console.log(years)
+    return res.json(years)
+  })
   /** Events APIs -------------------------------------------*/
 
   /** POI APIs -------------------------------------------*/
