@@ -34,6 +34,9 @@
 
           <!-- Events circles -->
           <div class="row eventsContainer">
+            <p class="text-muted my-3" v-if="events.length == 0">
+              There are no events related to this point of interest
+            </p>
             <EventComponent
               v-for="event in events"
               :key="event.id"
@@ -168,9 +171,7 @@ export default {
     const itineraryData = await $axios.get(
       '/api/poi/related_itineraries/' + name
     )
-    console.log(itineraryData.data.itineraries)
     const relatedItineraries = itineraryData.data.itineraries
-    console.log(relatedItineraries)
     return {
       name: data.name,
       imgs: data.poi_imgs,

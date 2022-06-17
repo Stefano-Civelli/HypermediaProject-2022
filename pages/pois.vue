@@ -5,7 +5,7 @@
       textColor="rgb(33, 37, 41)"
     />
     <div class="container page-component pt-5">
-      <div class="component d-flex flex-wrap justify-content-center">
+      <div class="d-flex flex-wrap justify-content-center">
         <GroupPageCardComponent
           v-for="poi in data"
           :key="poi.id"

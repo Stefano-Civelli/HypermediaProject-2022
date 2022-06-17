@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div>
     <group-page-header-component text="Events" textColor="rgb(248, 249, 250)" />
     <div
       class="container d-flex flex-wrap justify-content-center page-component pt-5"

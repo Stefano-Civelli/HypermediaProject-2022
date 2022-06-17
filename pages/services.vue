@@ -11,6 +11,7 @@
         :type="serviceType.type"
         :img="serviceType.img"
         :description="serviceType.description"
+        nuxtLink="/details/service_type"
       />
     </div>
   </div>

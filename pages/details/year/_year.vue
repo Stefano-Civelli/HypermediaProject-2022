@@ -64,5 +64,6 @@ export default {
   margin-top: 300px;
   position: relative;
   box-shadow: 0 0 3rem 0.1rem rgb(0 0 0 / 40%);
+  min-height: 65vh;
 }
 </style>
