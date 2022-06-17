@@ -39,6 +39,21 @@ export default {
       data,
     }
   },
+  head() {
+    return {
+      title: 'Points of Interest',
+      meta: [
+        {
+          name: 'description',
+          content: 'List of points of interest available in the city of milan',
+        },
+        {
+          name: 'keywords',
+          content: 'POI, point of interest, attraction, location, must-see, ',
+        },
+      ],
+    }
+  },
 }
 </script>
 
