@@ -176,6 +176,25 @@ async function runMainApi() {
     const maxItinId = result[result.length - 1].dataValues.id
     return res.json(maxItinId)
   })
+
+  app.get('/itinerary/random/:number', async (req, res) => {
+    const sequelize = new Sequelize(url, opts)
+    const number = req.params.number
+    const result = await models.itinerary.findAll({
+      order: [[sequelize.fn('RANDOM')]],
+      limit: number,
+    })
+    const filtered = []
+    for (const element of result) {
+      filtered.push({
+        name: element.name,
+        img: element.img,
+        description: element.description,
+        duration: element.duration,
+      })
+    }
+    return res.json(filtered)
+  })
   /** Itineraries APIs -------------------------------------------*/
 
   /** Events APIs -------------------------------------------*/
@@ -191,13 +210,81 @@ async function runMainApi() {
         start: element.starting_date,
         end: element.ending_date,
         location: element.poi.address,
-        description: element.description, //da togliere
       })
     }
     return res.json(filtered)
   })
 
+  app.get('/event/winter', async (req, res) => {
+    const startingMonth = 12
+    const endingMonth = 3
+    const startingDay = 21
+    const endingDay = 20
+    const result = await models.Event.findAll({
+      include: [{ model: models.Poi }],
+    })
+    const filtered = []
+    for (const element of result) {
+      let splittedDate = element.starting_date.split('-')
+      console.log(splittedDate)
+      if (
+        parseInt(splittedDate[1]) > 0 &&
+        parseInt(splittedDate[1]) < endingMonth
+      ) {
+        filtered.push(element)
+      }
+      if (
+        parseInt(splittedDate[1]) == startingMonth &&
+        parseInt(splittedDate[2]) >= startingDay
+      ) {
+        filtered.push(element)
+      }
+      if (
+        parseInt(splittedDate[1]) == endingMonth &&
+        parseInt(splittedDate[2]) <= endingDay
+      ) {
+        filtered.push(element)
+      }
+    }
+    return res.json(filtered)
+  })
+
+  app.get('/event/summer', async (req, res) => {
+    const startingMonth = 6
+    const endingMonth = 9
+    const startingDay = 21
+    const endingDay = 23
+    const result = await models.Event.findAll({
+      include: [{ model: models.Poi }],
+    })
+    const filtered = []
+    for (const element of result) {
+      let splittedDate = element.starting_date.split('-')
+      console.log(splittedDate)
+      if (
+        parseInt(splittedDate[1]) > startingMonth &&
+        parseInt(splittedDate[1]) < endingMonth
+      ) {
+        filtered.push(element)
+      }
+      if (
+        parseInt(splittedDate[1]) == startingMonth &&
+        parseInt(splittedDate[2]) >= startingDay
+      ) {
+        filtered.push(element)
+      }
+      if (
+        parseInt(splittedDate[1]) == endingMonth &&
+        parseInt(splittedDate[2]) <= endingDay
+      ) {
+        filtered.push(element)
+      }
+    }
+    return res.json(filtered)
+  })
+
   app.get('/event/random/:number', async (req, res) => {
+    const sequelize = new Sequelize(url, opts)
     const number = req.params.number
     const result = await models.Event.findAll({
       order: [[Sequelize.fn('RANDOM')]],
@@ -276,7 +363,6 @@ async function runMainApi() {
         }
       }
     }
-
     return res.json(years.sort((a, b) => b.year - a.year))
   })
 
@@ -285,18 +371,14 @@ async function runMainApi() {
     const { Op } = require('sequelize')
     const starting = year + '-1-1'
     const ending = parseInt(year) + 1 + '-12-31'
-
-    console.log(starting)
-    console.log(ending)
-    console.log(year)
     const result = await models.Event.findAll({
       where: {
         starting_date: {
           [Op.and]: [{ [Op.gte]: starting }, { [Op.lte]: ending }],
         },
       },
+      include: [{ model: models.Poi }],
     })
-    console.log(result)
     return res.json(result)
   })
   /** Events APIs -------------------------------------------*/
