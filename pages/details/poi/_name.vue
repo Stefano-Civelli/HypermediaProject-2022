@@ -187,6 +187,16 @@ export default {
   head() {
     return {
       title: this.name,
+      meta: [
+        {
+          name: 'description',
+          content: `Detailed information about ${this.name}: opening hours, tickets, and other practical informations.`,
+        },
+        {
+          name: 'keywords',
+          content: `${this.name}, hours, address, practical info, events, POI, point of interest, attraction, location`,
+        },
+      ],
     }
   },
   mounted() {},

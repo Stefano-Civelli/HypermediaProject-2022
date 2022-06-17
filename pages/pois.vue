@@ -45,7 +45,8 @@ export default {
       meta: [
         {
           name: 'description',
-          content: 'List of points of interest available in the city of milan',
+          content:
+            'Milano is rich in art treasures waiting to be discovered and in unmissable events. Come and enjoy a very rewarding experience in a city full of unexpected surprises. Here is a list of points of interest available in the city.',
         },
         {
           name: 'keywords',
