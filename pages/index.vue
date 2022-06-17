@@ -50,7 +50,7 @@
   font-size: 60px;
 }
 .eventsSlice {
-  padding-top: 60px;
+  padding-top: 10px;
   margin-top: -65px;
 }
 .itinerarySlice {
@@ -62,9 +62,9 @@
     48
   ); /* For browsers that do not support gradients */
   background-image: linear-gradient(
-    190deg,
-    white 18%,
-    rgb(224, 228, 204) 18.1%
+    188deg,
+    white 15%,
+    rgb(224, 228, 204) 15.1%
   );
 }
 .my-img {
@@ -112,7 +112,7 @@ export default {
     const { data } = await $axios.get('/api/event/random/3')
     const eventList = data
     const itineraryData = await $axios.get('/api/itinerary/random/3')
-    const itineraryList = itineraryData.data.slice(0, 3)
+    const itineraryList = itineraryData.data
 
     return {
       eventList,

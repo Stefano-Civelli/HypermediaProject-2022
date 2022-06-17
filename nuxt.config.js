@@ -18,9 +18,11 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'put here website description',
+        content:
+          'This Milano city guide aims at providing guidance mainly for tourists looking to visit Milan, providing them with all the information needed to spend some days in the city',
       },
       { name: 'format-detection', content: 'telephone=no' },
+      { name: 'author', content: 'HyPSS' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
