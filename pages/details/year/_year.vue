@@ -11,12 +11,12 @@
 
       <GroupPageCardComponent
         v-for="event in data"
+        id="-1"
         :key="event.id"
         :title="event.name"
         :img="event.img"
-        :param="event.location"
-        id="-1"
-        :subtitle="event.start"
+        :param="event.poi.address"
+        :subtitle="event.starting_date"
         nuxtLink="/details/event"
       />
     </div>
@@ -31,16 +31,17 @@ export default {
     GroupPageHeaderComponent,
     GroupPageCardComponent,
   },
-  data() {
-    return {}
-  },
   async asyncData({ route, $axios }) {
     const { year } = route.params
     const { data } = await $axios.get('/api/event/year/' + year)
+    console.log(data)
     return {
       data,
       year,
     }
+  },
+  data() {
+    return {}
   },
 }
 </script>

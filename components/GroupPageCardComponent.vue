@@ -38,6 +38,41 @@
   </div>
 </template>
 
+<script>
+export default {
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+    id: {
+      type: String,
+      default: '-1',
+    },
+    img: {
+      type: String,
+      required: true,
+    },
+    subtitle: {
+      type: String,
+      required: true,
+    },
+    param: {
+      type: String,
+      required: true,
+    },
+    nuxtLink: {
+      type: String,
+      required: true,
+    },
+    secondLineSubtitle: {
+      type: String,
+      default: '',
+    },
+  },
+}
+</script>
+
 <style scoped>
 .cards {
   margin: 1rem 0.8vw;
@@ -144,30 +179,3 @@
   overflow: hidden;
 }
 </style>
-
-<script>
-export default {
-  props: {
-    title: {
-      type: String,
-      required: true,
-    },
-    id: {},
-    img: {
-      type: String,
-      required: true,
-    },
-    subtitle: {
-      type: String,
-      required: true,
-    },
-    param: {
-      required: true,
-    },
-    nuxtLink: {
-      type: String,
-      required: true,
-    },
-  },
-}
-</script>
