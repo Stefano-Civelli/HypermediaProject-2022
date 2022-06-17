@@ -14,6 +14,8 @@
           <div class="card__header-text">
             <h3 class="card__title">{{ title }}</h3>
             <span class="card__status">{{ subtitle }}</span>
+            <br />
+            <span class="card__status">{{ secondLineSubtitle }}</span>
           </div>
         </div>
         <p class="card__description">

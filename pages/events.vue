@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <group-page-header-component text="Events" textColor="rgb(248, 249, 250)" />
+  <div class="page">
+    <GroupPageHeaderComponent text="Events" textColor="rgb(248, 249, 250)" />
     <div
       class="container d-flex flex-wrap justify-content-center page-component pt-5"
     >
@@ -13,8 +13,9 @@
         :img="event.img"
         :param="event.location"
         id="-1"
-        :subtitle="event.start"
+        :subtitle="`From: ${event.start}`"
         nuxtLink="/details/event"
+        :secondLineSubtitle="`To: ${event.end}`"
       />
     </div>
   </div>
@@ -28,14 +29,14 @@ export default {
     GroupPageHeaderComponent,
     GroupPageCardComponent,
   },
-  data() {
-    return {}
-  },
   async asyncData({ $axios }) {
     const { data } = await $axios.get('/api/event/list')
     return {
       data,
     }
+  },
+  data() {
+    return {}
   },
 }
 </script>
