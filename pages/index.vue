@@ -54,6 +54,7 @@
   margin-top: -65px;
 }
 .itinerarySlice {
+  margin-bottom: -100px;
   padding-top: 130px;
   background-color: rgb(
     243,
@@ -92,6 +93,7 @@ body {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
 }
+
 /* rtl:end:ignore */
 
 /* RESPONSIVE CSS
@@ -109,7 +111,7 @@ export default {
   async asyncData({ $axios }) {
     const { data } = await $axios.get('/api/event/random/3')
     const eventList = data
-    const itineraryData = await $axios.get('/api/itinerary/list')
+    const itineraryData = await $axios.get('/api/itinerary/random/3')
     const itineraryList = itineraryData.data.slice(0, 3)
 
     return {
