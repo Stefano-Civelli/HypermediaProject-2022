@@ -186,10 +186,10 @@ async function runMainApi() {
     const filtered = []
     for (const element of result) {
       filtered.push({
+        id: element.id,
         name: element.name,
         img: element.img,
         description: element.description,
-        duration: element.duration,
       })
     }
     return res.json(filtered)
@@ -233,8 +233,11 @@ async function runMainApi() {
           end: element.ending_date,
           location: element.poi.address,
         })
-      } 
-      if(parseInt(splittedDate[1])==startingMonth && parseInt(splittedDate[2]) >= startingDay) {
+      }
+      if (
+        parseInt(splittedDate[1]) == startingMonth &&
+        parseInt(splittedDate[2]) >= startingDay
+      ) {
         filtered.push({
           name: element.name,
           img: element.img,
@@ -243,7 +246,10 @@ async function runMainApi() {
           location: element.poi.address,
         })
       }
-      if(parseInt(splittedDate[1])==endingMonth && parseInt(splittedDate[2]) <= endingDay) {
+      if (
+        parseInt(splittedDate[1]) == endingMonth &&
+        parseInt(splittedDate[2]) <= endingDay
+      ) {
         filtered.push({
           name: element.name,
           img: element.img,
@@ -268,16 +274,10 @@ async function runMainApi() {
     for (const element of result) {
       let splittedDate = element.starting_date.split('-')
       console.log(splittedDate)
-      if (parseInt(splittedDate[1]) > startingMonth && parseInt(splittedDate[1]) < endingMonth) {
-        filtered.push({
-          name: element.name,
-          img: element.img,
-          start: element.starting_date,
-          end: element.ending_date,
-          location: element.poi.address,
-        })
-      } 
-      if(parseInt(splittedDate[1])==startingMonth && parseInt(splittedDate[2]) >= startingDay) {
+      if (
+        parseInt(splittedDate[1]) > startingMonth &&
+        parseInt(splittedDate[1]) < endingMonth
+      ) {
         filtered.push({
           name: element.name,
           img: element.img,
@@ -286,7 +286,22 @@ async function runMainApi() {
           location: element.poi.address,
         })
       }
-      if(parseInt(splittedDate[1])==endingMonth && parseInt(splittedDate[2]) <= endingDay) {
+      if (
+        parseInt(splittedDate[1]) == startingMonth &&
+        parseInt(splittedDate[2]) >= startingDay
+      ) {
+        filtered.push({
+          name: element.name,
+          img: element.img,
+          start: element.starting_date,
+          end: element.ending_date,
+          location: element.poi.address,
+        })
+      }
+      if (
+        parseInt(splittedDate[1]) == endingMonth &&
+        parseInt(splittedDate[2]) <= endingDay
+      ) {
         filtered.push({
           name: element.name,
           img: element.img,

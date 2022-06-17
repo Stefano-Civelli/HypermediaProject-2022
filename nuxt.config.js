@@ -16,11 +16,12 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
-        hid: 'description',
         name: 'description',
-        content: 'put here website description',
+        content:
+          'Milano city guide providing you with all the information you need: itineraries, monuments, exhibitions, events, maps, transport and curiosities to help you prepare your trip. Aimed mainly at tourists looking to visit the city.',
       },
       { name: 'format-detection', content: 'telephone=no' },
+      { name: 'author', content: 'HyPSS' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

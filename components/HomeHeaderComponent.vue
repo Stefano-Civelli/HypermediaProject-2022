@@ -71,7 +71,7 @@ export default {
     134,
     48
   ); /* For browsers that do not support gradients */
-  background-image: linear-gradient(170deg, rgb(243, 134, 48) 60%, white 60.1%);
+  background-image: linear-gradient(172deg, rgb(243, 134, 48) 60%, white 60.1%);
   height: 600px;
   margin-top: -32px;
 }

@@ -47,7 +47,6 @@
 
 <script>
 import HomeHeaderComponent from '~/components/HomeHeaderComponent.vue'
-
 import ServiceTypeComponent from '~/components/ServiceTypeComponent.vue'
 export default {
   components: { HomeHeaderComponent, ServiceTypeComponent },
@@ -72,10 +71,11 @@ export default {
   font-size: 60px;
 }
 .eventsSlice {
-  padding-top: 60px;
+  padding-top: 10px;
   margin-top: -65px;
 }
 .itinerarySlice {
+  margin-bottom: -100px;
   padding-top: 130px;
   background-color: rgb(
     243,
@@ -83,9 +83,9 @@ export default {
     48
   ); /* For browsers that do not support gradients */
   background-image: linear-gradient(
-    190deg,
-    white 18%,
-    rgb(224, 228, 204) 18.1%
+    188deg,
+    white 15%,
+    rgb(224, 228, 204) 15.1%
   );
 }
 .my-img {
@@ -114,6 +114,7 @@ body {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
 }
+
 /* rtl:end:ignore */
 
 /* RESPONSIVE CSS

@@ -39,6 +39,22 @@ export default {
       data,
     }
   },
+  head() {
+    return {
+      title: 'Points of Interest',
+      meta: [
+        {
+          name: 'description',
+          content:
+            'Milano is rich in art treasures waiting to be discovered and in unmissable events. Come and enjoy a very rewarding experience in a city full of unexpected surprises. Here is a list of points of interest available in the city.',
+        },
+        {
+          name: 'keywords',
+          content: 'POI, point of interest, attraction, location, must-see, ',
+        },
+      ],
+    }
+  },
 }
 </script>
 

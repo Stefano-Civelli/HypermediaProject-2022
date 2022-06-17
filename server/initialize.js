@@ -9,7 +9,7 @@ export default async (models) => {
       practical_info: 'Closed during religious functions',
       ticket_price: 2.0,
       description:
-        'Il Duomo di Milano, la cattedrale cuore della città, è il luogo che rimane nella memoria di tutti coloro che hanno visitato Milano almeno una volta. Le centinaia di guglie e statue, che ricordano una vera e propria foresta di marmo, sorprendono chiunque ci arrivi uscendo dalla metropolitana o arrivando dalla Galleria Vittorio Emanuele. Non a caso la sua costruzione, iniziata nel 1386 e durata più di sei secoli, fu voluta dal signore di Milano come simbolo della forza e grandezza della città. È il più grande e complesso edificio gotico d’Italia, realizzato in marmo bianco rosato che proviene da una cava dedicata solo a questa costruzione. È lungo 157 metri e sulla guglia maggiore, alta 108,5 metri, svetta la statua dorata della Madonnina, simbolo amato da tutti i milanesi e non solo. Nel mondo infatti esistono numerose copie della Madonnina di Milano, una è persino sull’Everest! Il Duomo è anche la più grande costruzione gotica al mondo in cui è possibile camminare sul tetto. Una delle cose da non perdere nella visita è infatti salire sulle terrazze, da cui si gode una vista imperdibile sulla città e le montagne.',
+        'Milan cathedral is the largest and most complex Gothic building in Italy. The entire city of Milan can be admired from the rooftop terraces.',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2798.2787111624275!2d9.1897542!3d45.4641892!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6ac28236193%3A0x34a0550ec03673e6!2sDuomo!5e0!3m2!1sen!2sit!4v1654619505067!5m2!1sen!2sit',
     },
@@ -612,7 +612,8 @@ export default async (models) => {
       img: 'https://milanhotspots.com/wp-content/uploads/2018/01/49_d4a52ff7f5563dad5282957d6116bcda22214b.jpg',
       description:
         'These museums are a must for your first time in Milan! Palazzo reale, Pinacoteca di Brera, Mudec',
-      map_src: 'https://www.google.com/maps/d/u/0/embed?mid=1nLYSqwXK2y3YNaKtGbiKt77XlSBhH80&ehbc=2E312F',
+      map_src:
+        'https://www.google.com/maps/d/u/0/embed?mid=1nLYSqwXK2y3YNaKtGbiKt77XlSBhH80&ehbc=2E312F',
     },
     {
       name: 'Shopping streets',
@@ -620,7 +621,8 @@ export default async (models) => {
       img: 'https://www.divinamilano.it/wp-content/themes/yootheme/cache/Via-Montenapoleone-5ab8b757.jpeg',
       description:
         'Shopping lover? Try these streets to find all best shops in town! Via Monte Napoleone, Galleria Vittorio Emanuele, Corso Garibaldi, Corso Como',
-      map_src: 'https://www.google.com/maps/d/u/0/embed?mid=1yQnbCfJsDKpd4VPO6A8WZiSr1Bb4c4w&ehbc=2E312F',
+      map_src:
+        'https://www.google.com/maps/d/u/0/embed?mid=1yQnbCfJsDKpd4VPO6A8WZiSr1Bb4c4w&ehbc=2E312F',
     },
     {
       name: 'Art at its finest',
@@ -635,9 +637,9 @@ export default async (models) => {
       name: 'Milan in a rush',
       duration: 2,
       img: 'https://c.tenor.com/PNmq7RhXTXYAAAAd/keemstar-im-fast-as-fuck-boi.gif',
-      description:
-        'U have to be fast af boi?',
-      map_src: 'https://www.google.com/maps/d/u/0/embed?mid=1BKwGRd02wgFrTS35LC9BZuPHPN-zi2U&ehbc=2E312F',
+      description: 'U have to be fast af boi?',
+      map_src:
+        'https://www.google.com/maps/d/u/0/embed?mid=1BKwGRd02wgFrTS35LC9BZuPHPN-zi2U&ehbc=2E312F',
     },
   ]
   const serviceTypeList = [
@@ -676,7 +678,8 @@ export default async (models) => {
       timetable: 'Always Open',
       phone_number: '02 64441',
       address: "Piazza dell'Ospedale Maggiore, 3",
-      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.0220484085426!2d9.184995415558948!3d45.509634779101475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c0c5f04e1a71%3A0x2b20483935bf22ed!2sASST%20Grande%20Ospedale%20Metropolitano%20Niguarda!5e0!3m2!1sit!2sit!4v1655111082789!5m2!1sit!2sit',
+      map_src:
+        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.0220484085426!2d9.184995415558948!3d45.509634779101475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c0c5f04e1a71%3A0x2b20483935bf22ed!2sASST%20Grande%20Ospedale%20Metropolitano%20Niguarda!5e0!3m2!1sit!2sit!4v1655111082789!5m2!1sit!2sit',
     },
     {
       serviceTypeId: 1,
@@ -684,7 +687,8 @@ export default async (models) => {
       timetable: 'Always Open',
       phone_number: '02 63631',
       address: 'Via Macedonio Melloni. 52',
-      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.183983602468!2d9.214604137063768!3d45.46609757449712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c690eb4fd619%3A0x2fd9acab6ef28eeb!2sOspedale%20Macedonio%20Melloni!5e0!3m2!1sit!2sit!4v1655111119882!5m2!1sit!2sit',
+      map_src:
+        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.183983602468!2d9.214604137063768!3d45.46609757449712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c690eb4fd619%3A0x2fd9acab6ef28eeb!2sOspedale%20Macedonio%20Melloni!5e0!3m2!1sit!2sit!4v1655111119882!5m2!1sit!2sit',
     },
     {
       serviceTypeId: 1,
@@ -692,7 +696,8 @@ export default async (models) => {
       timetable: 'Always Open',
       phone_number: '02 69511',
       address: 'Via Francesco Nava, 31',
-      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.7575850628305!2d9.187204116233024!3d45.49482613941909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c12a68fe6761%3A0x505d101695045feb!2sHumanitas%20San%20Pio%20X%20Ospedale%2FPoliambulatorio!5e0!3m2!1sit!2sit!4v1655111147989!5m2!1sit!2sit',
+      map_src:
+        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.7575850628305!2d9.187204116233024!3d45.49482613941909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c12a68fe6761%3A0x505d101695045feb!2sHumanitas%20San%20Pio%20X%20Ospedale%2FPoliambulatorio!5e0!3m2!1sit!2sit!4v1655111147989!5m2!1sit!2sit',
     },
     {
       serviceTypeId: 2,
@@ -700,7 +705,8 @@ export default async (models) => {
       timetable: 'Mon-Fry 8:30-13:30, 14:45-15:45',
       phone_number: '02 875 029',
       address: 'Piazza Giuseppe Missori, 2',
-      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.4180517199075!2d9.185917816232434!3d45.46138194165139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c7f5cc8050a9%3A0xb3ecb4fe7810ee07!2sBPER%20Banca!5e0!3m2!1sit!2sit!4v1655111178290!5m2!1sit!2sit',
+      map_src:
+        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.4180517199075!2d9.185917816232434!3d45.46138194165139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c7f5cc8050a9%3A0xb3ecb4fe7810ee07!2sBPER%20Banca!5e0!3m2!1sit!2sit!4v1655111178290!5m2!1sit!2sit',
     },
     {
       serviceTypeId: 2,
@@ -708,7 +714,8 @@ export default async (models) => {
       timetable: 'Mon-Fry 8:30-14, 15:00-16:45',
       phone_number: '02 5518 1901',
       address: 'Via della Commenda, 12',
-      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.5474148409253!2d9.194070737062606!3d45.458775574985545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6a7729acea3%3A0x2a674a316d146b4a!2sIntesa%20Sanpaolo%20S.p.A.!5e0!3m2!1sit!2sit!4v1655111251892!5m2!1sit!2sit',
+      map_src:
+        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.5474148409253!2d9.194070737062606!3d45.458775574985545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6a7729acea3%3A0x2a674a316d146b4a!2sIntesa%20Sanpaolo%20S.p.A.!5e0!3m2!1sit!2sit!4v1655111251892!5m2!1sit!2sit',
     },
     {
       serviceTypeId: 2,
@@ -716,7 +723,8 @@ export default async (models) => {
       timetable: 'Mon-Fry 8:35-13:35, 14:15-15:45',
       phone_number: '02 9179 6311',
       address: 'Via Gustavo Fara, 39',
-      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.1959133051128!2d9.196778316232821!3d45.48599944000836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c761e12652cd%3A0x74506ea4ccadbb87!2sBanca%20Monte%20dei%20Paschi%20di%20Siena!5e0!3m2!1sit!2sit!4v1655111273854!5m2!1sit!2sit',
+      map_src:
+        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.1959133051128!2d9.196778316232821!3d45.48599944000836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c761e12652cd%3A0x74506ea4ccadbb87!2sBanca%20Monte%20dei%20Paschi%20di%20Siena!5e0!3m2!1sit!2sit!4v1655111273854!5m2!1sit!2sit',
     },
     {
       serviceTypeId: 3,
@@ -724,7 +732,8 @@ export default async (models) => {
       timetable: 'Mon-Fry 8-20 Sat-San 10-20',
       phone_number: '02 876 457',
       address: 'Via Broletto, 1',
-      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.1966563182996!2d9.181746937063723!3d45.46584227451409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6ada0dc062f%3A0xa36a983f6212e27e!2sLafarmacia.Centro%20Milano!5e0!3m2!1sit!2sit!4v1655111298384!5m2!1sit!2sit',
+      map_src:
+        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.1966563182996!2d9.181746937063723!3d45.46584227451409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6ada0dc062f%3A0xa36a983f6212e27e!2sLafarmacia.Centro%20Milano!5e0!3m2!1sit!2sit!4v1655111298384!5m2!1sit!2sit',
     },
     {
       serviceTypeId: 3,
@@ -732,7 +741,8 @@ export default async (models) => {
       timetable: 'Mon-Fry 8-19',
       phone_number: '02 8646 2067',
       address: 'Via Giuseppe Mazzini, 12',
-      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.3645897808665!2d9.186220616232447!3d45.462459041579415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6abf8fb00b1%3A0x280f0218a29f1f9c!2sFarmacia%20Carlo%20Alberto%20S.a.s.%20della%20Dr.ssa%20Peviani%20Alessandra%20e%20C.!5e0!3m2!1sit!2sit!4v1655111319287!5m2!1sit!2sit',
+      map_src:
+        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.3645897808665!2d9.186220616232447!3d45.462459041579415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6abf8fb00b1%3A0x280f0218a29f1f9c!2sFarmacia%20Carlo%20Alberto%20S.a.s.%20della%20Dr.ssa%20Peviani%20Alessandra%20e%20C.!5e0!3m2!1sit!2sit!4v1655111319287!5m2!1sit!2sit',
     },
     {
       serviceTypeId: 3,
@@ -740,7 +750,8 @@ export default async (models) => {
       timetable: 'Mon-Fry 8:30-19:30',
       phone_number: '02 655 4250',
       address: 'Corso Garibaldi, 83',
-      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.67136133058!2d9.181662316232675!3d45.47642374064768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c14a6857ff8b%3A0x5a1a19ae86517b10!2sFarmacia%20del%20Garibaldi!5e0!3m2!1sit!2sit!4v1655111343471!5m2!1sit!2sit',
+      map_src:
+        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.67136133058!2d9.181662316232675!3d45.47642374064768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c14a6857ff8b%3A0x5a1a19ae86517b10!2sFarmacia%20del%20Garibaldi!5e0!3m2!1sit!2sit!4v1655111343471!5m2!1sit!2sit',
     },
     {
       serviceTypeId: 3,
@@ -748,7 +759,8 @@ export default async (models) => {
       timetable: 'Mon-Fry 8-19',
       phone_number: '02 8645 3382',
       address: 'Via Olmetto, 21',
-      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.5458878086156!2d9.182646816232443!3d45.4588063418232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6aa879bae63%3A0x9012745b3d70742e!2sFarmacia%20Olmetto%20S.A.S.%20del%20Dott.%20Selle%20Marco%20e%20C.!5e0!3m2!1sit!2sit!4v1655111365977!5m2!1sit!2sit',
+      map_src:
+        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.5458878086156!2d9.182646816232443!3d45.4588063418232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6aa879bae63%3A0x9012745b3d70742e!2sFarmacia%20Olmetto%20S.A.S.%20del%20Dott.%20Selle%20Marco%20e%20C.!5e0!3m2!1sit!2sit!4v1655111365977!5m2!1sit!2sit',
     },
     {
       serviceTypeId: 4,
@@ -756,7 +768,8 @@ export default async (models) => {
       timetable: 'Open every day 10-18',
       phone_number: '02 8845 5555',
       address: 'Piazza del Duomo, 14',
-      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.545516377096!2d9.1826468162004!3d45.45881382546937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6ac55555555%3A0x7e5ef10adc0a1c31!2sInfoPoint%20Ufficio%20Informazioni%20Turistiche%20Milano!5e0!3m2!1sit!2sit!4v1655111396589!5m2!1sit!2sit',
+      map_src:
+        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.545516377096!2d9.1826468162004!3d45.45881382546937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6ac55555555%3A0x7e5ef10adc0a1c31!2sInfoPoint%20Ufficio%20Informazioni%20Turistiche%20Milano!5e0!3m2!1sit!2sit!4v1655111396589!5m2!1sit!2sit',
     },
     {
       serviceTypeId: 4,
@@ -764,7 +777,8 @@ export default async (models) => {
       timetable: 'Mon-Fry 10-18',
       phone_number: '02 8515 5931',
       address: 'Via dei Mercanti, 8',
-      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.2300354975796!2d9.185205416200398!3d45.4651698241966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c7a1a9addb57%3A0xadee0e8b5c144c5f!2sUfficio%20Informazioni%20Turistiche%20Ufficiale%20del%20Comune%20di%20Milano%20e%20YesMilano!5e0!3m2!1sit!2sit!4v1655111437884!5m2!1sit!2sit',
+      map_src:
+        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.2300354975796!2d9.185205416200398!3d45.4651698241966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c7a1a9addb57%3A0xadee0e8b5c144c5f!2sUfficio%20Informazioni%20Turistiche%20Ufficiale%20del%20Comune%20di%20Milano%20e%20YesMilano!5e0!3m2!1sit!2sit!4v1655111437884!5m2!1sit!2sit',
     },
     {
       serviceTypeId: 4,
@@ -772,7 +786,8 @@ export default async (models) => {
       timetable: 'Mon-Fry 10-15:30',
       phone_number: 'No Phone Number',
       address: 'Piazza del Duomo, 1',
-      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.3827592034436!2d9.184149172170887!3d45.4620929836958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c713a3d23731%3A0xa95b02d53fd60c8e!2sInfopoint%20atm%20area%20B%20e%20area%20C!5e0!3m2!1sit!2sit!4v1655111551881!5m2!1sit!2sit',
+      map_src:
+        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.3827592034436!2d9.184149172170887!3d45.4620929836958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c713a3d23731%3A0xa95b02d53fd60c8e!2sInfopoint%20atm%20area%20B%20e%20area%20C!5e0!3m2!1sit!2sit!4v1655111551881!5m2!1sit!2sit',
     },
     {
       serviceTypeId: 5,
@@ -780,7 +795,8 @@ export default async (models) => {
       timetable: 'Mon-Sat 7:30-22 Sun 8-20',
       phone_number: '02 6556 0991',
       address: 'Via Luigi Sturzo, 1',
-      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.2973926676664!2d9.187933216232722!3d45.483955740144644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c133c3f45065%3A0x1e47dc17c19959d3!2sEsselunga!5e0!3m2!1sit!2sit!4v1655111607590!5m2!1sit!2sit',
+      map_src:
+        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.2973926676664!2d9.187933216232722!3d45.483955740144644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c133c3f45065%3A0x1e47dc17c19959d3!2sEsselunga!5e0!3m2!1sit!2sit!4v1655111607590!5m2!1sit!2sit',
     },
     {
       serviceTypeId: 5,
@@ -788,7 +804,8 @@ export default async (models) => {
       timetable: 'Open every day 8-22',
       phone_number: '02 4540 2570',
       address: 'Piazza Santa Maria Beltrade, 1',
-      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.3405197643265!2d9.181793237063266!3d45.46294397470763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c7279095a1a3%3A0xd1cd8562ce0c4338!2sPam%20Local!5e0!3m2!1sit!2sit!4v1655111642639!5m2!1sit!2sit',
+      map_src:
+        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.3405197643265!2d9.181793237063266!3d45.46294397470763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c7279095a1a3%3A0xd1cd8562ce0c4338!2sPam%20Local!5e0!3m2!1sit!2sit!4v1655111642639!5m2!1sit!2sit',
     },
     {
       serviceTypeId: 5,
@@ -796,7 +813,8 @@ export default async (models) => {
       timetable: 'Open every day 7-23',
       phone_number: '02 8909 2209',
       address: 'Via Ancona, 4',
-      map_src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.8029935476893!2d9.184617216232606!3d45.4737723408244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6b4cb0e418f%3A0x419f28c71a756a99!2sCarrefour%20Express!5e0!3m2!1sit!2sit!4v1655111680154!5m2!1sit!2sit',
+      map_src:
+        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.8029935476893!2d9.184617216232606!3d45.4737723408244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6b4cb0e418f%3A0x419f28c71a756a99!2sCarrefour%20Express!5e0!3m2!1sit!2sit!4v1655111680154!5m2!1sit!2sit',
     },
   ]
   const poiItineraryList = [

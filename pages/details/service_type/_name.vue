@@ -17,7 +17,7 @@
           </li>
         </ol>
       </nav>
-      <service-component
+      <ServiceComponent
         v-for="service in serviceList"
         :key="service.id"
         :name="service.name"
@@ -52,10 +52,10 @@ export default {
 .bread-container {
   margin: 30px 0px 0px 10px;
 }
-
-.breadcrumb {
-  background-color: rgba(105, 210, 231, 0.527);
+.rounded-4 {
   border-radius: 15px;
+}
+.breadcrumb {
   margin-bottom: -30px;
 }
 .breadcrumb a {
