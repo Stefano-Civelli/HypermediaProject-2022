@@ -225,7 +225,6 @@ async function runMainApi() {
     const filtered = []
     for (const element of result) {
       let splittedDate = element.starting_date.split('-')
-      console.log(splittedDate)
       if (parseInt(splittedDate[1]) > 0 && parseInt(splittedDate[1]) < endingMonth) {
         filtered.push({
           name: element.name,
@@ -324,7 +323,25 @@ async function runMainApi() {
       where: { name: name },
       include: [{ model: models.Poi }],
     })
-    return res.json(result)
+    let splittedStartingDate = result.starting_date.split('-')
+    let splittedEndingDate = result.ending_date.split('-')
+    let monthStartingString = monthFromIntToString(parseInt(splittedStartingDate[1]))
+    let monthEndingString = monthFromIntToString(parseInt(splittedEndingDate[1])) 
+
+    const filtered = {
+      name: result.name,
+      img: result.img,
+      description: result.description,
+      startingDay: splittedStartingDate[2],
+      startingMonth: monthStartingString,
+      startingYear: splittedStartingDate[0],
+      endingDay: splittedEndingDate[2], 
+      endingMonth: monthEndingString,
+      endingYear: splittedEndingDate[0],
+      ticket_price: result.ticket_price,
+      poiName: result.poi.name
+    }
+    return res.json(filtered)
   })
 
   app.get('/event/prev/:name', async (req, res) => {
@@ -526,6 +543,49 @@ async function runMainApi() {
     return res.sendStatus(200)
   })
   */
+}
+
+function monthFromIntToString(param) {
+  let startingMonth = ''
+  switch (param) {
+    case 1:
+      startingMonth = 'Jan'
+      break;
+    case 2:
+      startingMonth = 'Feb'
+      break;
+    case 3:
+      startingMonth = 'Mar'
+      break;
+    case 4:
+      startingMonth = 'Apr' 
+      break;
+    case 5:
+      startingMonth = 'May'
+      break;
+    case 6:
+      startingMonth = 'Jun'
+      break;
+    case 7:
+      startingMonth = 'Jul'
+      break;
+    case 8:
+      startingMonth = 'Aug'
+      break;
+    case 9:
+      startingMonth = 'Sept'
+      break;
+    case 10:
+      startingMonth = 'Oct'
+      break;
+    case 11:
+      startingMonth = 'Nov'
+      break;
+    case 12:
+      startingMonth = 'Dec'
+      break;
+  }
+  return startingMonth
 }
 
 runMainApi()
