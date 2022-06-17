@@ -178,10 +178,9 @@ async function runMainApi() {
   })
 
   app.get('/itinerary/random/:number', async (req, res) => {
-    const sequelize = new Sequelize(url, opts)
     const number = req.params.number
     const result = await models.itinerary.findAll({
-      order: [[sequelize.fn('RANDOM')]],
+      order: [[Sequelize.fn('RANDOM')]],
       limit: number,
     })
     const filtered = []
@@ -284,7 +283,7 @@ async function runMainApi() {
   })
 
   app.get('/event/random/:number', async (req, res) => {
-    const sequelize = new Sequelize(url, opts)
+    /*const sequelize = new Sequelize(url, opts)*/
     const number = req.params.number
     const result = await models.Event.findAll({
       order: [[Sequelize.fn('RANDOM')]],
