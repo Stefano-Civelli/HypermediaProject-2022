@@ -7,7 +7,7 @@
           <span class="text-muted">Click the button below</span>
         </h2>
         <div class="pt-5 justify-content-end">
-          <nuxt-link :to="`/details/service_type/${type}`">
+          <nuxt-link :to="`${nuxtLink}/${type}`">
             <button class="btn btn-dark btn-lg my-button mb-3">
               Details >
             </button>
@@ -34,6 +34,10 @@ export default {
       required: true,
     },
     description: {
+      type: String,
+      required: true,
+    },
+    nuxtLink: {
       type: String,
       required: true,
     },

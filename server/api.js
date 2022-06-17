@@ -178,24 +178,21 @@ async function runMainApi() {
   })
 
   app.get('/itinerary/random/:number', async (req, res) => {
-    const sequelize = new Sequelize(url, opts)
     const number = req.params.number
     const result = await models.itinerary.findAll({
-      order: [
-        [sequelize.fn('RANDOM')]
-      ],
-      limit: number
+      order: [[Sequelize.fn('RANDOM')]],
+      limit: number,
     })
-    const filtered = [] 
+    const filtered = []
     for (const element of result) {
       filtered.push({
         name: element.name,
         img: element.img,
         description: element.description,
-        duration: element.duration
+        duration: element.duration,
       })
     }
-    return res.json(filtered) 
+    return res.json(filtered)
   })
   /** Itineraries APIs -------------------------------------------*/
 
@@ -227,7 +224,7 @@ async function runMainApi() {
     })
     const filtered = []
     for (const element of result) {
-      let splittedDate = element.starting_date.split("-")
+      let splittedDate = element.starting_date.split('-')
       console.log(splittedDate)
       if (parseInt(splittedDate[1]) > 0 && parseInt(splittedDate[1]) < endingMonth) {
         filtered.push({
@@ -270,7 +267,7 @@ async function runMainApi() {
     })
     const filtered = []
     for (const element of result) {
-      let splittedDate = element.starting_date.split("-")
+      let splittedDate = element.starting_date.split('-')
       console.log(splittedDate)
       if (parseInt(splittedDate[1]) > startingMonth && parseInt(splittedDate[1]) < endingMonth) {
         filtered.push({
@@ -304,23 +301,21 @@ async function runMainApi() {
   })
 
   app.get('/event/random/:number', async (req, res) => {
-    const sequelize = new Sequelize(url, opts)
+    /*const sequelize = new Sequelize(url, opts)*/
     const number = req.params.number
     const result = await models.Event.findAll({
-      order: [
-        [sequelize.fn('RANDOM')]
-      ],
-      limit: number
+      order: [[Sequelize.fn('RANDOM')]],
+      limit: number,
     })
-    const filtered = [] 
+    const filtered = []
     for (const element of result) {
       filtered.push({
         name: element.name,
         img: element.img,
-        description: element.description
+        description: element.description,
       })
     }
-    return res.json(filtered) 
+    return res.json(filtered)
   })
 
   app.get('/event/:name', async (req, res) => {
@@ -367,39 +362,38 @@ async function runMainApi() {
   })
 
   app.get('/event/list/years', async (req, res) => {
-    const result = await models.Event.findAll({
-    })
+    const result = await models.Event.findAll({})
     let splittedDate = []
     const years = []
     for (const element of result) {
-      splittedDate = element.starting_date.split("-")
-      if (!years.map(x => x.year).includes(splittedDate[0])) {
-        years.push({year: splittedDate[0], img: element.img, events: 1})
-      }
-      else {
-        let i=0
-        for(const obj of years) {
-          if(obj.year == splittedDate[0]) {
+      splittedDate = element.starting_date.split('-')
+      if (!years.map((x) => x.year).includes(splittedDate[0])) {
+        years.push({ year: splittedDate[0], img: element.img, events: 1 })
+      } else {
+        let i = 0
+        for (const obj of years) {
+          if (obj.year == splittedDate[0]) {
             years[i].events += 1
-          }
-          else {
+          } else {
             i++
           }
         }
       }
     }
-    return res.json(years.sort((a,b) => b.year - a.year))
+    return res.json(years.sort((a, b) => b.year - a.year))
   })
 
   app.get('/event/year/:year', async (req, res) => {
     const { year } = req.params
-    const { Op } = require("sequelize")
-    const starting = (year+'-1-1')
-    const ending = ((parseInt(year)+1)+'-12-31')
+    const { Op } = require('sequelize')
+    const starting = year + '-1-1'
+    const ending = parseInt(year) + 1 + '-12-31'
     const result = await models.Event.findAll({
-      where: { starting_date: {
-        [Op.and]: [{[Op.gte]: starting}, {[Op.lte]: ending}]
-      }},
+      where: {
+        starting_date: {
+          [Op.and]: [{ [Op.gte]: starting }, { [Op.lte]: ending }],
+        },
+      },
       include: [{ model: models.Poi }],
     })
     return res.json(result)
