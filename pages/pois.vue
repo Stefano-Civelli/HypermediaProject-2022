@@ -60,7 +60,7 @@ export default {
 
 <style scoped>
 .hero-section-parallax {
-  background-image: url('~/assets/life-background.jpg');
+  background-image: url('~/assets/Life-Background.jpg');
 }
 
 .page-component {
