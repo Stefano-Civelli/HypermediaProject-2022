@@ -22,13 +22,13 @@
           <!-- /.row -->
         </div>
       </div>
-      <!-- START THE FEATURETTES -->
+      <!-- Itinerary part -->
       <div class="itinerarySlice">
         <div class="container">
           <h1 class="slideH1 mb-5 text-decoration-underline">
             ...and the Coolest itineraries!
           </h1>
-
+          <!--
           <ServiceTypeComponent
             v-for="itinerary in itineraryList"
             :key="itinerary.id"
@@ -36,10 +36,10 @@
             :img="itinerary.img"
             :type="itinerary.id"
             nuxtLink="/details/itinerary"
-          />
+          /> -->
         </div>
       </div>
-      <!-- /END THE FEATURETTES -->
+      <!-- /END Itinerary part -->
     </div>
     <!-- /.container -->
   </div>
