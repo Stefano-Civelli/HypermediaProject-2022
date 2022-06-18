@@ -647,28 +647,28 @@ export default async (models) => {
       type: 'Hospital',
       description:
         'Need to book a visit? Take a look at the hospitals near to you.',
-      img: '/assets/Hospital_img.jpg',
+      img: 'Hospital_img.jpg',
     },
     {
       type: 'Bank',
       description: 'Check out the banks available in the city.',
-      img: 'https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+      img: 'bank.jpg',
     },
     {
       type: 'Pharmacy',
       description: 'Need some drugs? Find the closest pharmacy!',
-      img: 'https://images.unsplash.com/photo-1622230208995-0f26eba75875?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
+      img: 'pharmacy.jpg',
     },
     {
       type: 'InfoPoint',
       description:
         'In need of some additional informations about the city? Here are some InfoPoints.',
-      img: 'https://images.unsplash.com/photo-1532256253150-2f0e4e883a74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+      img: 'info.jpg',
     },
     {
       type: 'SuperMarket',
       description: 'U 2 broke 2 eat in a restaurant? lol.',
-      img: 'https://www.esselunga.it/cms/images/images/image-social/esselunga.png',
+      img: 'esselunga.png',
     },
   ]
   const serviceList = [
