@@ -11,7 +11,7 @@
           :key="itinerary.id"
           :title="itinerary.name"
           :img="itinerary.img"
-          :subtitle="itinerary.duration"
+          :subtitle=" 'Duration: ' + itinerary.duration"
           :param="itinerary.description"
           :id="itinerary.id"
           nuxtLink="/details/itinerary"
@@ -34,6 +34,11 @@ export default {
   data() {
     return {}
   },
+    head() {
+        return {
+            title: 'Itineraries',
+        }
+    }
 }
 </script>
 

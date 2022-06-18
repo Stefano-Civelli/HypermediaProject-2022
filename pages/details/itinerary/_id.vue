@@ -175,6 +175,16 @@ export default {
     head() {
         return {
             title: this.name,
+            meta: [
+                {
+                    name: 'description',
+                    content: `Detailed information about ${this.name} itinerary: route description, duration, involved attractions, events on the way, map of the itinerary`
+                }, 
+                {
+                    name : 'keywords',
+                    content: `${this.name}, description, map, route map, practical info, pois, attractions, events, POI, route description`
+                }
+            ]
         }
     },
     mounted() { },
