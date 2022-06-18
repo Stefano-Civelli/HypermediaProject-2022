@@ -35,7 +35,8 @@
           <!-- Events circles -->
           <div class="row eventsContainer">
             <p class="text-muted my-3" v-if="events.length == 0">
-              There are no events related to this point of interest
+              At the moment there are no events related to this point of
+              interest
             </p>
             <EventComponent
               v-for="event in events"
@@ -106,6 +107,51 @@
   </div>
 </template>
 
+<script>
+import EventComponent from '~/components/EventComponent.vue'
+export default {
+  name: 'PoiPage',
+  components: {
+    EventComponent,
+  },
+  async asyncData({ route, $axios }) {
+    const { name } = route.params
+    const { data } = await $axios.get('/api/poi/' + name)
+    const itineraryData = await $axios.get(
+      '/api/poi/related_itineraries/' + name
+    )
+    const relatedItineraries = itineraryData.data.itineraries
+    return {
+      name: data.name,
+      imgs: data.poi_imgs,
+      description: data.description,
+      practical_info: data.practical_info,
+      ticket_price: data.ticket_price,
+      address: data.address,
+      events: data.events,
+      mapSrc: data.map_src,
+      relatedItineraries,
+    }
+  },
+  head() {
+    return {
+      title: this.name,
+    }
+  },
+  mounted() {},
+  methods: {
+    async next() {
+      const { data } = await this.$axios.get('/api/poi/next/' + this.name)
+      this.$router.push(`/details/poi/${data.name}`)
+    },
+    async prev() {
+      const { data } = await this.$axios.get('/api/poi/prev/' + this.name)
+      this.$router.push(`/details/poi/${data.name}`)
+    },
+  },
+}
+</script>
+
 <style scoped>
 .eventsContainer {
   text-align: center;
@@ -156,59 +202,3 @@ a:hover {
   background-size: 0 1px, 100% 1px;
 }
 </style>
-
-<script>
-import EventComponent from '~/components/EventComponent.vue'
-
-export default {
-  name: 'PoiPage',
-  components: {
-    EventComponent,
-  },
-  async asyncData({ route, $axios }) {
-    const { name } = route.params
-    const { data } = await $axios.get('/api/poi/' + name)
-    const itineraryData = await $axios.get(
-      '/api/poi/related_itineraries/' + name
-    )
-    const relatedItineraries = itineraryData.data.itineraries
-    return {
-      name: data.name,
-      imgs: data.poi_imgs,
-      description: data.description,
-      practical_info: data.practical_info,
-      ticket_price: data.ticket_price,
-      address: data.address,
-      events: data.events,
-      mapSrc: data.map_src,
-      relatedItineraries,
-    }
-  },
-  head() {
-    return {
-      title: this.name,
-      meta: [
-        {
-          name: 'description',
-          content: `Detailed information about ${this.name}: opening hours, tickets, and other practical informations.`,
-        },
-        {
-          name: 'keywords',
-          content: `${this.name}, hours, address, practical info, events, POI, point of interest, attraction, location`,
-        },
-      ],
-    }
-  },
-  mounted() {},
-  methods: {
-    async next() {
-      const { data } = await this.$axios.get('/api/poi/next/' + this.name)
-      this.$router.push(`/details/poi/${data.name}`)
-    },
-    async prev() {
-      const { data } = await this.$axios.get('/api/poi/prev/' + this.name)
-      this.$router.push(`/details/poi/${data.name}`)
-    },
-  },
-}
-</script>

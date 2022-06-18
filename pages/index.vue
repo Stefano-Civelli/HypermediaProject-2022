@@ -45,6 +45,27 @@
   </div>
 </template>
 
+<script>
+import HomeHeaderComponent from '~/components/HomeHeaderComponent.vue'
+import ServiceTypeComponent from '~/components/ServiceTypeComponent.vue'
+export default {
+  components: { HomeHeaderComponent, ServiceTypeComponent },
+  name: 'IndexPage',
+
+  async asyncData({ $axios }) {
+    const { data } = await $axios.get('/api/event/random/3')
+    const eventList = data
+    const itineraryData = await $axios.get('/api/itinerary/list')
+    const itineraryList = itineraryData.data.slice(0, 3)
+
+    return {
+      eventList,
+      itineraryList,
+    }
+  },
+}
+</script>
+
 <style scoped>
 .slideH1 {
   font-size: 60px;
@@ -99,25 +120,3 @@ body {
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 </style>
-
-<script>
-import HomeHeaderComponent from '~/components/HomeHeaderComponent.vue'
-
-import ServiceTypeComponent from '~/components/ServiceTypeComponent.vue'
-export default {
-  components: { HomeHeaderComponent, ServiceTypeComponent },
-  name: 'IndexPage',
-
-  async asyncData({ $axios }) {
-    const { data } = await $axios.get('/api/event/random/3')
-    const eventList = data
-    const itineraryData = await $axios.get('/api/itinerary/random/3')
-    const itineraryList = itineraryData.data
-
-    return {
-      eventList,
-      itineraryList,
-    }
-  },
-}
-</script>
