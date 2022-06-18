@@ -16,7 +16,7 @@
       </div>
 
       <div class="col-md-5 d-flex justify-content-end">
-        <img class="my-img img-fluid" :src="img" />
+        <img class="my-img img-fluid" :src="require(`~/assets/${img}`)" />
       </div>
     </div>
     <hr class="my-divider" />
