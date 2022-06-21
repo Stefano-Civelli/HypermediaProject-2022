@@ -29,7 +29,11 @@
           <br />
           <p>
             {{ description }}
+
           </p>
+          <pre>
+            {{ longDescription }}
+          </pre>
           <h2 class="mb-4">Related Events</h2>
 
           <!-- Events circles -->
@@ -131,6 +135,7 @@ export default {
       events: data.events,
       mapSrc: data.map_src,
       relatedItineraries,
+      longDescription: data.long_description,
     }
   },
   head() {
