@@ -6,16 +6,17 @@ app.use(express.json())
 
 // Development
 //const database = new Sequelize('postgres://postgres:postgres@localhost:5432/hyp')
-//const database = new Sequelize('postgres://postgres:admin@localhost:5432/hyp')
+const database = new Sequelize('postgres://postgres:admin@localhost:5432/hyp')
 
 // Production (use this code when deploying to production in Heroku)
 
-const pg = require('pg')
+/*const pg = require('pg')
 pg.defaults.ssl = true
 const database = new Sequelize(process.env.DATABASE_URL, {
   ssl: true,
   dialectOptions: { ssl: { require: true, rejectUnauthorized: false } },
 })
+*/
 
 // Function that will initialize the connection to the database
 async function initializeDatabaseConnection() {
@@ -23,6 +24,8 @@ async function initializeDatabaseConnection() {
   const Event = database.define('event', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     img: DataTypes.STRING,
+    alt_desc: DataTypes.TEXT,
+    long_description: DataTypes.TEXT,
     ticket_price: DataTypes.DOUBLE,
     description: DataTypes.TEXT,
     starting_date: DataTypes.DATEONLY,
@@ -37,11 +40,13 @@ async function initializeDatabaseConnection() {
     practical_info: DataTypes.TEXT,
     ticket_price: DataTypes.DOUBLE,
     description: DataTypes.TEXT,
+    long_description: DataTypes.TEXT,
     map_src: DataTypes.TEXT,
   })
   const Poi_img = database.define('poi_img', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     img_path: DataTypes.STRING,
+    alt_desc: DataTypes.TEXT,
   })
   const service = database.define('service', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
@@ -56,6 +61,7 @@ async function initializeDatabaseConnection() {
     type: DataTypes.STRING,
     description: DataTypes.TEXT,
     img: DataTypes.STRING,
+    alt_desc: DataTypes.TEXT,
   })
   const itinerary = database.define('itinerary', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
@@ -64,6 +70,8 @@ async function initializeDatabaseConnection() {
     img: DataTypes.TEXT,
     description: DataTypes.TEXT,
     map_src: DataTypes.TEXT,
+    alt_desc: DataTypes.TEXT,
+    long_description: DataTypes.TEXT,
   })
   const poi_itinerary = database.define('poi_itinerary', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
