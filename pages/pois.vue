@@ -1,6 +1,6 @@
 <template>
   <div>
-    <group-page-header-component
+    <GroupPageHeaderComponent
       text="Points of Interest"
       textColor="rgb(33, 37, 41)"
     />

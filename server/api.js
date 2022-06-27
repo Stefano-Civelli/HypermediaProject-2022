@@ -6,16 +6,16 @@ app.use(express.json())
 
 // Development
 //const database = new Sequelize('postgres://postgres:postgres@localhost:5432/hyp')
-//const database = new Sequelize('postgres://postgres:admin@localhost:5432/hyp')
+const database = new Sequelize('postgres://postgres:admin@localhost:5432/hyp')
 
 // Production (use this code when deploying to production in Heroku)
-
+/*
 const pg = require('pg')
 pg.defaults.ssl = true
 const database = new Sequelize(process.env.DATABASE_URL, {
   ssl: true,
   dialectOptions: { ssl: { require: true, rejectUnauthorized: false } },
-})
+})*/
 
 // Function that will initialize the connection to the database
 async function initializeDatabaseConnection() {
@@ -225,7 +225,11 @@ async function runMainApi() {
     const filtered = []
     for (const element of result) {
       let splittedDate = element.starting_date.split('-')
-      if (parseInt(splittedDate[1]) > 0 && parseInt(splittedDate[1]) < endingMonth) {
+      console.log(splittedDate)
+      if (
+        parseInt(splittedDate[1]) > 0 &&
+        parseInt(splittedDate[1]) < endingMonth
+      ) {
         filtered.push({
           name: element.name,
           img: element.img,
@@ -340,8 +344,12 @@ async function runMainApi() {
     })
     let splittedStartingDate = result.starting_date.split('-')
     let splittedEndingDate = result.ending_date.split('-')
-    let monthStartingString = monthFromIntToString(parseInt(splittedStartingDate[1]))
-    let monthEndingString = monthFromIntToString(parseInt(splittedEndingDate[1])) 
+    let monthStartingString = monthFromIntToString(
+      parseInt(splittedStartingDate[1])
+    )
+    let monthEndingString = monthFromIntToString(
+      parseInt(splittedEndingDate[1])
+    )
 
     const filtered = {
       name: result.name,
@@ -350,11 +358,11 @@ async function runMainApi() {
       startingDay: splittedStartingDate[2],
       startingMonth: monthStartingString,
       startingYear: splittedStartingDate[0],
-      endingDay: splittedEndingDate[2], 
+      endingDay: splittedEndingDate[2],
       endingMonth: monthEndingString,
       endingYear: splittedEndingDate[0],
       ticket_price: result.ticket_price,
-      poiName: result.poi.name
+      poiName: result.poi.name,
     }
     return res.json(filtered)
   })
@@ -565,40 +573,40 @@ function monthFromIntToString(param) {
   switch (param) {
     case 1:
       startingMonth = 'Jan'
-      break;
+      break
     case 2:
       startingMonth = 'Feb'
-      break;
+      break
     case 3:
       startingMonth = 'Mar'
-      break;
+      break
     case 4:
-      startingMonth = 'Apr' 
-      break;
+      startingMonth = 'Apr'
+      break
     case 5:
       startingMonth = 'May'
-      break;
+      break
     case 6:
       startingMonth = 'Jun'
-      break;
+      break
     case 7:
       startingMonth = 'Jul'
-      break;
+      break
     case 8:
       startingMonth = 'Aug'
-      break;
+      break
     case 9:
       startingMonth = 'Sept'
-      break;
+      break
     case 10:
       startingMonth = 'Oct'
-      break;
+      break
     case 11:
       startingMonth = 'Nov'
-      break;
+      break
     case 12:
       startingMonth = 'Dec'
-      break;
+      break
   }
   return startingMonth
 }

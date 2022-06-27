@@ -10,7 +10,6 @@
     </div>
     <nav>
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/">Home</a></li>
         <li class="breadcrumb-item"><a href="/pois">Points of Interest</a></li>
         <li class="breadcrumb-item">
           {{ name }}
@@ -20,9 +19,9 @@
 
     <div class="row g-5 mt-3">
       <div class="col-md-8">
-        <h3 class="pb-4 mb-4 fst-italic border-bottom">
+        <h2 class="pb-4 mb-4 border-bottom fw-bold">
           What there is to know about {{ name }}
-        </h3>
+        </h2>
 
         <article class="blog-post">
           <h2 class="blog-post-title mb-1">Description</h2>
@@ -30,8 +29,22 @@
           <p>
             {{ description }}
           </p>
+          <br />
+          <br />
+          <h2 class="blog-post-title mb-1">Where is it?</h2>
+          <div class="px-4 py-2">
+            <iframe
+              :src="mapSrc"
+              width="100%"
+              height="400"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="border my-map rounded-4"
+            ></iframe>
+          </div>
+          <br />
+          <br />
           <h2 class="mb-4">Related Events</h2>
-
+          <br />
           <!-- Events circles -->
           <div class="row eventsContainer">
             <p class="text-muted my-3" v-if="events.length == 0">
@@ -47,20 +60,9 @@
             />
           </div>
           <!-- /.row -->
-          <h2 class="blog-post-title mb-1">Where is it?</h2>
-          <br />
-          <div class="px-4 py-2">
-            <iframe
-              :src="mapSrc"
-              width="100%"
-              height="400"
-              referrerpolicy="no-referrer-when-downgrade"
-              class="border my-map rounded-4"
-            ></iframe>
-          </div>
         </article>
 
-        <nav class="blog-pagination mt-5">
+        <nav class="d-flex blog-pagination mt-5 justify-content-end gap-1">
           <button class="btn btn-outline-secondary rounded-pill" @click="prev">
             Previous
           </button>
@@ -74,7 +76,7 @@
         </nav>
       </div>
 
-      <div class="col-md-4">
+      <div class="col-md-4 border-start">
         <div class="position-sticky" style="top: 5rem">
           <div class="p-4 mb-3 bg-light rounded">
             <h4 class="fst-italic">Practical Info</h4>
@@ -90,15 +92,6 @@
                   {{ itinerary.name }}
                 </nuxt-link>
               </li>
-            </ol>
-          </div>
-
-          <div class="p-4">
-            <h4 class="fst-italic">Elsewhere</h4>
-            <ol class="list-unstyled">
-              <li><a href="#">GitHub</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Facebook</a></li>
             </ol>
           </div>
         </div>
@@ -136,6 +129,16 @@ export default {
   head() {
     return {
       title: this.name,
+      meta: [
+        {
+          name: 'description',
+          content: `Detailed information about ${this.name}: opening hours, tickets, and other practical informations.`,
+        },
+        {
+          name: 'keywords',
+          content: `${this.name}, hours, address, practical info, events, POI, point of interest, attraction, location`,
+        },
+      ],
     }
   },
   mounted() {},

@@ -28,7 +28,7 @@
           <h1 class="slideH1 mb-5 text-decoration-underline">
             ...and the Coolest itineraries!
           </h1>
-          <!--
+
           <ServiceTypeComponent
             v-for="itinerary in itineraryList"
             :key="itinerary.id"
@@ -36,7 +36,7 @@
             :img="itinerary.img"
             :type="itinerary.id"
             nuxtLink="/details/itinerary"
-          /> -->
+          />
         </div>
       </div>
       <!-- /END Itinerary part -->
