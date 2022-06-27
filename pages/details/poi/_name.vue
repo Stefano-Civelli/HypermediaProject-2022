@@ -124,6 +124,7 @@ export default {
       events: data.events,
       mapSrc: data.map_src,
       relatedItineraries,
+      longDescription: data.long_description,
     }
   },
   head() {

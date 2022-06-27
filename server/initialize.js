@@ -8,10 +8,13 @@ export default async (models) => {
       name: 'Milan Cathedral',
       practical_info: 'Closed during religious functions',
       ticket_price: 2.0,
+      long_description: 
+        "The Duomo of Milano, the Cathedral at the heart of the city, is an architectural masterpiece that remains imprinted in the memory of all those who visit Milano. The thousands of intricately carved spires and statues, like a marble forest, are an awesome sight for those exiting the Metro or arriving from Galleria Vittorio Emanuele. It is not surprising to learn that its construction, which began in 1386 and lasted almost half a millennium, was commissioned by the Duke of Milano Gian Galeazzo Visconti as a symbol of the glory and grandeur of the city. \n \n Milano’s Duomo is the largest and most elaborate Gothic building in Italy: made of pink-hued white marble from a dedicated quarry, it is 157 meters in length and 108.5 meters high at the top of the main spire, where rests the glistening golden statue of the Madonnina, an evocative symbol much-loved both by all Milanese and visitors. It is not generally known that there are quite a few copies of Milano’s Madonnina around the world, including one on Mount Everest.",
       description:
         'Milan cathedral is the largest and most complex Gothic building in Italy. The entire city of Milan can be admired from the rooftop terraces.',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2798.2787111624275!2d9.1897542!3d45.4641892!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6ac28236193%3A0x34a0550ec03673e6!2sDuomo!5e0!3m2!1sen!2sit!4v1654619505067!5m2!1sen!2sit',
+      
     },
     {
       address: 'Piazza Castello',
@@ -19,6 +22,7 @@ export default async (models) => {
       name: 'Castello Sforzesco',
       practical_info: 'Always open',
       ticket_price: 0.0,
+      long_description: '',
       description: 'At the end of via Dante, near Parco Sempione',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.966627459925!2d9.17714381549889!3d45.470476179101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786fcb60ea97b3d%3A0x6556dd66c472c29b!2sSforzesco%20Castle!5e0!3m2!1sen!2sit!4v1654619619289!5m2!1sen!2sit',
@@ -29,6 +33,7 @@ export default async (models) => {
       name: 'Galleria Vittorio Emanuele II',
       practical_info: 'Always open',
       ticket_price: 0.0,
+      long_description: '',
       description: 'Started builiding in the first part of XX century',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.196600450955!2d9.187751417443847!3d45.46584340000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47793506fd86b6c3%3A0x270b9ca95809d416!2sGalleria%20Vittorio%20Emanuele%20II!5e0!3m2!1sen!2sit!4v1654619666739!5m2!1sen!2sit',
@@ -39,6 +44,7 @@ export default async (models) => {
       name: 'Teatro alla scala',
       practical_info: 'Buy tickets online',
       ticket_price: 0.0,
+      long_description: '',
       description: 'Opened in 1778',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.1192290445406!2d9.187362515498796!3d45.46740207910103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6ad891a5757%3A0x1bade948102e834f!2sTeatro%20alla%20Scala!5e0!3m2!1sen!2sit!4v1654619729531!5m2!1sen!2sit',
@@ -49,6 +55,7 @@ export default async (models) => {
       name: 'Piancoteca di Brera',
       practical_info: 'Opening hours may vary',
       ticket_price: 15.0,
+      long_description: '',
       description: 'Largest art gallery in Milan',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.893240211957!2d9.185625815498893!3d45.471954479101115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786ee11587e4e1f%3A0x1b367a8e2cb13736!2sPinacoteca%20di%20Brera!5e0!3m2!1sen!2sit!4v1654619761194!5m2!1sen!2sit',
@@ -59,6 +66,7 @@ export default async (models) => {
       name: 'Santa Maria delle Grazie',
       practical_info: 'Closed during religious functions',
       ticket_price: 0.0,
+      long_description: '',
       description: 'Started building in 1463',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.1906647269816!2d9.168773415498706!3d45.465962979101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c15a44bf1c83%3A0xed5bcdc4d3c75a59!2sSanta%20Maria%20delle%20Grazie!5e0!3m2!1sen!2sit!4v1654619791964!5m2!1sen!2sit',
@@ -69,6 +77,7 @@ export default async (models) => {
       name: 'Palazzo Reale',
       practical_info: 'Closed on Mondays',
       ticket_price: 10.0,
+      long_description: '',
       description: 'Used for different exhibitions',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1399.169686088783!2d9.190202658235588!3d45.46296709477524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6aec57575a1%3A0xdd579e63ba086381!2sRoyal%20Palace!5e0!3m2!1sen!2sit!4v1654619820537!5m2!1sen!2sit',
@@ -79,6 +88,7 @@ export default async (models) => {
       name: 'Biblioteca Pinacoteca Academia Ambrosiana',
       practical_info: 'Closed on Mondays',
       ticket_price: 10.0,
+      long_description: '',
       description: "Musem inside Palazzo dell'Ambrosiana",
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.3139592270863!2d9.183599415498627!3d45.463479079100914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6ac88b2ca9f%3A0xcc86bf5e7ffbd36e!2sAmbrosian%20Library!5e0!3m2!1sen!2sit!4v1654619856970!5m2!1sen!2sit',
@@ -89,6 +99,7 @@ export default async (models) => {
       name: 'Science and Technology Museum',
       practical_info: 'Closed on mondays',
       ticket_price: 7.0,
+      long_description: '',
       description: 'Biggest tech-related museum in Italy',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.397788938599!2d9.16808141549859!3d45.46179017910095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c159c26cee9b%3A0x72458fca19e5eb92!2sMuseo%20Nazionale%20della%20Scienza%20e%20della%20Tecnologia%20Leonardo%20da%20Vinci!5e0!3m2!1sen!2sit!4v1654619886737!5m2!1sen!2sit',
@@ -99,6 +110,7 @@ export default async (models) => {
       name: 'Bosco Verticale',
       practical_info: 'Private building',
       ticket_price: 0.0,
+      long_description: '',
       description: 'More than 2000 different tree species',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.214815188939!2d9.188205015499387!3d45.48561877910131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c132b4a49b21%3A0x545068687f3a217b!2sBosco%20Verticale!5e0!3m2!1sen!2sit!4v1654619924198!5m2!1sen!2sit',
@@ -108,7 +120,8 @@ export default async (models) => {
       position: '45.444267579507446, 9.205304363472345',
       name: 'Fondazione Prada',
       practical_info: 'Closed on Tuesdays',
-      ticket_price: '5.00',
+      ticket_price: 5.00,
+      long_description: '',
       description: 'Permanent contemporary art gallery',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2799.2774993125945!2d9.202628415497975!3d45.44406387910073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c69ef804a0d7%3A0x1545d69fc021179f!2sFondazione%20Prada!5e0!3m2!1sen!2sit!4v1654619965440!5m2!1sen!2sit',
@@ -119,6 +132,7 @@ export default async (models) => {
       name: "Peace's Arch",
       practical_info: 'Always open',
       ticket_price: 0.0,
+      long_description: '',
       description: 'Started builiding in 1807',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.7076564368494!2d9.170262715499053!3d45.47569267910106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c147aa41b7cf%3A0xfbbcb44d7ec5c615!2sArco%20della%20Pace!5e0!3m2!1sen!2sit!4v1654619992451!5m2!1sen!2sit',
@@ -129,6 +143,7 @@ export default async (models) => {
       name: 'Poldi Pezzoli Museum',
       practical_info: 'Closed on Tuesdays',
       ticket_price: 5.0,
+      long_description: '',
       description: 'Home-Museum',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.0633540013337!2d9.189504015498803!3d45.468527679100944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6b1f202e397%3A0x849898e3faf27d6e!2sPoldi%20Pezzoli%20Museum!5e0!3m2!1sen!2sit!4v1654620020314!5m2!1sen!2sit',
@@ -139,6 +154,7 @@ export default async (models) => {
       name: 'Via Monte Napoleone',
       practical_info: 'Always Open',
       ticket_price: 0.0,
+      long_description: '',
       description: 'Shopping street',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.072979318978!2d9.19294441549881!3d45.46833377910094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6b046e886ed%3A0x30dd2847bfbfd4b4!2sVia%20Monte%20Napoleone%2C%2020121%20Milano%20MI!5e0!3m2!1sen!2sit!4v1654620048945!5m2!1sen!2sit',
@@ -149,6 +165,7 @@ export default async (models) => {
       name: 'Mudec',
       practical_info: 'Opening hours: 9.30-19.30',
       ticket_price: 4.0,
+      long_description: '',
       description: 'Cultures museum',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.9063388014106!2d9.15934971549821!3d45.45154347910079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c3e618f2c2c1%3A0x72134ad9d5328077!2sMudec!5e0!3m2!1sen!2sit!4v1654620078083!5m2!1sen!2sit',
@@ -159,6 +176,7 @@ export default async (models) => {
       name: 'GAM',
       practical_info: 'Closed on Mondays',
       ticket_price: 3.0,
+      long_description: '',
       description: 'Modern Art Gallery',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.8523683219664!2d9.197811315498951!3d45.47277777910098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6b9166aa2d1%3A0xc193980dc5f1bc0b!2sModern%20Art%20Gallery!5e0!3m2!1sen!2sit!4v1654620108016!5m2!1sen!2sit',
@@ -169,6 +187,7 @@ export default async (models) => {
       name: "San Lorenzo Maggiore's Chatedral",
       practical_info: 'Always Open',
       ticket_price: 0.0,
+      long_description: '',
       description: 'One of the oldest churc in Milan',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.5753476147893!2d9.17988891549843!3d45.458212779100904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c3fff8fa2aa5%3A0x84e38da300dd3a16!2sBasilica%20San%20Lorenzo%20Maggiore!5e0!3m2!1sen!2sit!4v1654620136876!5m2!1sen!2sit',
@@ -179,6 +198,7 @@ export default async (models) => {
       name: 'Piazza Gae Aulenti',
       practical_info: 'Always open',
       ticket_price: 0.0,
+      long_description: '',
       description: 'Designed by archi-star Gae Aulenti',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.3089004747517!2d9.187410015499344!3d45.48372397910119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c133391261d1%3A0xb55f65872cb8ba7!2sPiazza%20Gae%20Aulenti%2C%2020124%20Milano%20MI!5e0!3m2!1sen!2sit!4v1654620167119!5m2!1sen!2sit',
@@ -189,6 +209,7 @@ export default async (models) => {
       name: 'PAC',
       practical_info: 'Closed on Mondays',
       ticket_price: 2.0,
+      long_description: '',
       description: 'Contemporary Art Gallery',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.844716474281!2d9.19498062979565!3d45.47293191225567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6b9bc18b95b%3A0x95c3d804f41744c2!2sPAC%20-%20Padiglione%20d&#39;Arte%20Contemporanea!5e0!3m2!1sen!2sit!4v1654620193332!5m2!1sen!2sit',
@@ -199,6 +220,7 @@ export default async (models) => {
       name: 'Chiaravalle Abbey',
       practical_info: 'Opening Hours: 9-12 15-18',
       ticket_price: 0.0,
+      long_description: '',
       description: 'Founded in the XII Century',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.6773179308657!2d9.233906315497016!3d45.4158461791005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c5a079ba2cef%3A0xac1eadfbc364324b!2sChiaravalle%20Abbey!5e0!3m2!1sen!2sit!4v1654620219258!5m2!1sen!2sit',
@@ -207,299 +229,359 @@ export default async (models) => {
   const poi_img_list = [
     {
       poiId: 1,
+      alt_desc: '',
       img_path:
         'https://duomo.shbcdn.com/blobs/variants/8/a/5/f/8a5f9f6b-fe25-4b40-857c-b82c80126a88_medium.jpg?_636862546878987581',
     },
     {
       poiId: 1,
+      alt_desc: '',
       img_path:
         'https://img.ilgcdn.com/sites/default/files/styles/xl/public/foto/2022/05/02/1651509563-milano-duomo-1.jpg?_=1651509563',
     },
     {
       poiId: 1,
+      alt_desc: '',
       img_path:
         'https://duomo.shbcdn.com/blobs/variants/a/c/8/e/ac8e3797-d691-420b-9b49-0d851f3ca9c3_xl.jpg?_636840242257777638',
     },
     {
       poiId: 2,
+      alt_desc: '',
       img_path:
         'http://www.turismo.it/fileadmin/mediafiles/turismo/articoli/201902/images/1254x836/iStock-184374451.jpg',
     },
     {
       poiId: 2,
+      alt_desc: '',
       img_path:
         'https://cdn.getyourguide.com/img/tour/5ea16be9e0fb0.jpeg/97.jpg',
     },
     {
       poiId: 2,
+      alt_desc: '',
       img_path:
         'https://www.yesmilano.it/sites/default/files/luogo/copertina/64/60/Castello_sforzesco_copertina_Depositphotos_157455922_xl-2015.jpg',
     },
     {
       poiId: 3,
+      alt_desc: '',
       img_path:
         'https://cdn2.civitatis.com/italia/milan/guia/galleria-vittorio-emanuele-ii.jpg',
     },
     {
       poiId: 3,
+      alt_desc: '',
       img_path:
         'https://upload.wikimedia.org/wikipedia/commons/b/b6/Galleria_Milano_%28179532365%29.jpeg',
     },
     {
       poiId: 3,
+      alt_desc: '',
       img_path:
         'https://www.residencedesenzano.it/wp-content/uploads/2016/01/galleria_vittorio_emanuele_milano.jpg',
     },
     {
       poiId: 4,
+      alt_desc: '',
       img_path:
         'https://upload.wikimedia.org/wikipedia/commons/3/3f/Milan_-_Scala_-_Facade.jpg',
     },
     {
       poiId: 4,
+      alt_desc: '',
       img_path:
         'https://www.operapertutti.it/wp-content/uploads/2020/09/teatro-alla-scala.jpg',
     },
     {
       poiId: 4,
+      alt_desc: '',
       img_path:
         'https://www.milanotoday.it/~media/horizontal-hi/69405908568147/la-scala-ph-brescia-e-amisano-2.jpg',
     },
     {
       poiId: 5,
+      alt_desc: '',
       img_path:
         'https://zero-media.s3.amazonaws.com/uploads/2015/05/pinacoteca_brera-milano-zero.jpg',
     },
     {
       poiId: 5,
+      alt_desc: '',
       img_path:
         'https://storico.beniculturali.it/mibac/multimedia/MiBAC/images/med/88/d4a52ff7f5563dad5282957d6116bcda22214b.jpg',
     },
     {
       poiId: 5,
+      alt_desc: '',
       img_path:
         'https://pinacotecabrera.org/wp-content/uploads/2019/03/Pinacoteca-di-Brera-Salone-Napoleonico-1024x577.jpg',
     },
     {
       poiId: 6,
+      alt_desc: '',
       img_path:
         'https://upload.wikimedia.org/wikipedia/commons/8/83/Santa_Maria_delle_Grazie_Milan_2013.jpg',
     },
     {
       poiId: 6,
+      alt_desc: '',
       img_path:
         'https://images.fidhouse.com/fidelitynews/wp-content/uploads/sites/9/2014/11/Santa-Maria-delle-Grazie.jpg',
     },
     {
       poiId: 6,
+      alt_desc: '',
       img_path:
         'https://www.milanopocket.it/wp-content/uploads/2019/04/chiesa-santa-maria-delle-grazie-milano-633x400.jpg',
     },
     {
       poiId: 7,
+      alt_desc: '',
       img_path:
         'https://www.yesmilano.it/sites/default/files/luogo/copertina/164/2066/Palazzo_Reale_Photo_by_Lorenzo_Pennati_1280x560.jpg',
     },
     {
       poiId: 7,
+      alt_desc: '',
       img_path:
         'https://www.milanoweekend.it/wp-content/uploads/2017/11/palazzorealemw-620x340.jpg',
     },
     {
       poiId: 7,
+      alt_desc: '',
       img_path:
         'https://c1.staticflickr.com/8/7332/16277820418_212a9265a3_b.jpg',
     },
     {
       poiId: 8,
+      alt_desc: '',
       img_path:
         'https://image.jimcdn.com/app/cms/image/transf/none/path/sf63059cf0e80ccf2/image/i6676cf264b1d30b9/version/1613580296/image.jpg',
     },
     {
       poiId: 8,
+      alt_desc: '',
       img_path:
         'https://www.ambrosiana.it/wp-content/uploads/2021/04/SALA-LETTURA-2.jpg',
     },
     {
       poiId: 8,
+      alt_desc: '',
       img_path:
         'https://i0.wp.com/www.hisour.com/wp-content/uploads/2019/09/Ambrosian-Library-Milan-Italy.jpg?fit=960%2C640&ssl=1',
     },
     {
       poiId: 9,
+      alt_desc: '',
       img_path:
         'https://www.milanoperibambini.it/images/2019c/mscienza-milano.jpg',
     },
     {
       poiId: 9,
+      alt_desc: '',
       img_path:
         'https://www.museoscienza.org/besrv/sites/default/files/2019-11/nave-scuola-ebe-preview.jpg',
     },
     {
       poiId: 9,
+      alt_desc: '',
       img_path:
         'https://www.tastingtheworld.it/wp-content/uploads/2018/10/Museo-della-Scienza-e-della-Tecnologia-di-Milano-1-1200x804.jpg',
     },
     {
       poiId: 10,
+      alt_desc: '',
       img_path:
         'https://blog.unioneprofessionisti.com/wp-content/uploads/2019/11/quali-sono-le-caratteristiche-e-i-benefici-del-bosco-verticale-bioedilizia.jpg',
     },
     {
       poiId: 10,
+      alt_desc: '',
       img_path:
         'https://www.ristrutturazione-torino.it/wp-content/uploads/2020/12/4568777.png',
     },
     {
       poiId: 10,
+      alt_desc: '',
       img_path:
         'https://cdn.lifegate.it/RyWMvxmzowTqR5ZgM3Ev22srgJs=/1960x1102/smart/https://www.lifegate.it/app/uploads/COVER-rendering-05.jpg',
     },
     {
       poiId: 11,
+      alt_desc: '',
       img_path:
         'https://www.yesmilano.it/sites/default/files/luogo/copertina/155/6328/FondazionePrada_1280x560.jpg',
     },
     {
       poiId: 11,
+      alt_desc: '',
       img_path:
         'https://upload.wikimedia.org/wikipedia/commons/2/2d/Fondazione_PRADA_%2C_Via_Ripamonti_-_Largo_Isarco_area%2C_Golden_Tower_Rem_Koolhass_design.jpg',
     },
     {
       poiId: 11,
+      alt_desc: '',
       img_path:
         'https://image.jimcdn.com/app/cms/image/transf/none/path/sf63059cf0e80ccf2/image/i3b20afba2b8177f5/version/1613730213/image.jpg',
     },
     {
       poiId: 12,
+      alt_desc: '',
       img_path:
         'https://imbruttito.com/images/milano-arco-della-pace.jpg?p=16x9&s=4633d34e4051cd8000c68325a194f773',
     },
     {
       poiId: 12,
+      alt_desc: '',
       img_path:
         'https://forbes.it/wp-content/uploads/2022/01/Arch-of-Light-3-min-scaled.jpg',
     },
     {
       poiId: 12,
+      alt_desc: '',
       img_path:
         'https://www.milanocittastato.it/wp-content/uploads/2018/10/CherchiARCODELLAPACE.jpg',
     },
     {
       poiId: 13,
+      alt_desc: '',
       img_path:
         'https://www.inexhibit.com/wp-content/uploads/2015/01/Milano-Polzi-Pezoli-Paolini-esterno-1-Inexhibit.jpg',
     },
     {
       poiId: 13,
+      alt_desc: '',
       img_path:
         'https://cdn2.civitatis.com/italia/milan/guia/museo-poldi-pezzoli.jpg',
     },
     {
       poiId: 13,
+      alt_desc: '',
       img_path:
         'https://casemuseo.it/wp-content/uploads/2015/06/20110622_PoldiPezzoli-2012.jpg',
     },
     {
       poiId: 14,
+      alt_desc: '',
       img_path:
         'https://www.divinamilano.it/wp-content/themes/yootheme/cache/Via-Montenapoleone-5ab8b757.jpeg',
     },
     {
       poiId: 14,
+      alt_desc: '',
       img_path:
         'https://citynews-milanotoday.stgy.ovh/~media/horizontal-mid/16344606787087/ferrari-montenapo-frame-da-video-nimesh-s-2.jpg',
     },
     {
       poiId: 14,
+      alt_desc: '',
       img_path: 'https://www.mentelocale.it/images/articoli/462x260/52948.jpg',
     },
     {
       poiId: 15,
+      alt_desc: '',
       img_path:
         'https://www.mudec.it/ita/wp-content/uploads/sites/2/2020/11/Mudec-MuseoCultureMilano-1200x628.jpg',
     },
     {
       poiId: 15,
+      alt_desc: '',
       img_path:
         'https://modulo.net/files/chunks/55376d3822e7b96b5800000e/5a154a9da0d55638e6000a9d.jpg',
     },
     {
       poiId: 15,
+      alt_desc: '',
       img_path:
         'https://citynews-milanotoday.stgy.ovh/~media/original-hi/63892734962767/mudec-3.jpg',
     },
     {
       poiId: 16,
+      alt_desc: '',
       img_path:
         'https://www.milanoweekend.it/wp-content/uploads/2018/03/Villa-Reale_credit_GAM-min.jpg',
     },
     {
       poiId: 16,
+      alt_desc: '',
       img_path:
         'https://www.milanoweekend.it/wp-content/uploads/2018/03/Sala-da-Ballo_-photo-credit_Delfino-Sisto-Legnani_Marco-Cappelletti-min-Copia-620x340.jpg',
     },
     {
       poiId: 16,
+      alt_desc: '',
       img_path:
         'https://artemagazine.it/wp-content/uploads/2021/11/Divisionismo_2-Collezioni_04.jpg',
     },
     {
       poiId: 17,
+      alt_desc: '',
       img_path:
         'https://upload.wikimedia.org/wikipedia/commons/c/ce/Milano_-_Basilica_san_Lorenzo_a_porta_Ticinese.jpg',
     },
     {
       poiId: 17,
+      alt_desc: '',
       img_path:
         'https://www.residencelepontina.it/wp-content/uploads/2016/01/basilica_san_lorenzo_milano.jpg',
     },
     {
       poiId: 17,
+      alt_desc: '',
       img_path:
         'https://www.milanopocket.it/wp-content/uploads/2019/04/basilica-san-lorenzo-maggiore-milano-633x400.jpg',
     },
     {
       poiId: 18,
+      alt_desc: '',
       img_path:
         'https://images.unsplash.com/photo-1545256633-9d719bec17c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80',
     },
     {
       poiId: 18,
+      alt_desc: '',
       img_path:
         'https://cdn2.civitatis.com/italia/milan/guia/piazza-gae-aulenti.jpg',
     },
     {
       poiId: 18,
+      alt_desc: '',
       img_path:
         'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/piazza-gae-aulenti-of-milan-italy-designed-by-the-argentine-news-photo-1631632007.jpg?crop=1.00xw:1.00xh;0,0&resize=640:*',
     },
     {
       poiId: 19,
+      alt_desc: '',
       img_path:
         'https://www.luoghidiinteresse.it/wp-content/uploads/MILANO-FOTO-42-Pac-Padiglione-dell%E2%80%99arte-contemporanea-e1489616686268.jpg',
     },
     {
       poiId: 19,
+      alt_desc: '',
       img_path: 'http://www.arte.it/foto/600x450/4e/11241-Mission.jpg',
     },
     {
       poiId: 19,
+      alt_desc: '',
       img_path:
         'https://www.chiamamilano.it/uploads/1/6/8/6/16865702/published/pac-blue-4rc.jpeg?1509451007',
     },
     {
       poiId: 20,
+      alt_desc: '',
       img_path:
         'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/AbbaziaChiaravalle.jpg/1200px-AbbaziaChiaravalle.jpg',
     },
     {
       poiId: 20,
+      alt_desc: '',
       img_path:
         'https://www.lombardiafacile.regione.lombardia.it/wps/wcm/connect/9277e75c-ef98-428a-ab07-458c0f10fc71/strada+delle+abbazie.jpeg?MOD=AJPERES&CACHEID=ROOTWORKSPACE-9277e75c-ef98-428a-ab07-458c0f10fc71-mnHUIu6',
     },
     {
       poiId: 20,
+      alt_desc: '',
       img_path:
         'https://milanoweekend.it/wp-content/uploads/2013/06/abbazia_chiaravalle_esterno.jpg',
     },
@@ -509,6 +591,8 @@ export default async (models) => {
       img: 'https://oltremateria.it/wp-content/uploads/Milano-design-week-1200X500.jpeg',
       ticket_price: 0.0,
       description: 'Exploring new design concepts',
+      long_description: '',
+      alt_desc: '',
       starting_date: '2022-06-06',
       ending_date: '2022-06-12',
       name: 'Milan Design Week',
@@ -518,6 +602,8 @@ export default async (models) => {
       img: 'https://upload.wikimedia.org/wikipedia/it/e/e9/Logo_EuroBasket_2021.png',
       ticket_price: 100.0,
       description: 'European Basketball Championship ',
+      long_description: '',
+      alt_desc: '',
       starting_date: '2022-09-02',
       ending_date: '2022-09-08',
       name: 'EuroBasket',
@@ -527,6 +613,8 @@ export default async (models) => {
       img: 'https://upload.wikimedia.org/wikipedia/it/e/e7/Next_gen.png',
       ticket_price: 50.0,
       description: 'Under 21 ATP-Finals',
+      long_description: '',
+      alt_desc: '',
       starting_date: '2022-11-08',
       ending_date: '2022-11-12',
       name: 'Next Gen ATP Finals',
@@ -536,6 +624,8 @@ export default async (models) => {
       img: 'https://assets.fuorisalone.it/assets/fuorisalone/img/fb-fuorisaloneit-2-2022.jpg',
       ticket_price: 10.0,
       description: 'Annual design exhibition',
+      long_description: '',
+      alt_desc: '',
       starting_date: '2022-05-06',
       ending_date: '2022-06-12',
       name: 'Fuorisalone 2022',
@@ -545,6 +635,8 @@ export default async (models) => {
       img: 'https://www.bimu.it/wp-content/uploads/2019/09/logo.svg',
       ticket_price: 7.0,
       description: 'Most important italian exhibition about robots',
+      long_description: '',
+      alt_desc: '',
       starting_date: '2022-10-12',
       ending_date: '2022-10-15',
       name: 'Bi-Mu',
@@ -554,6 +646,8 @@ export default async (models) => {
       img: 'https://www.showsbee.com/newmaker/www/u/2022/20221/cfr_img/EICMA-logo.png',
       ticket_price: 15.0,
       description: 'Largest bike and motorbike exhibition in Italy',
+      long_description: '',
+      alt_desc: '',
       starting_date: '2022-11-08',
       ending_date: '2022-11-13',
       name: 'EICMA',
@@ -563,6 +657,8 @@ export default async (models) => {
       img: 'https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/itIT/Images/running-fw21-rfto-tease-clp-masthead-v3-t_tcm213-369217.jpg',
       ticket_price: 0.0,
       description: 'Global event, to help clean beaches and islands',
+      long_description: '',
+      alt_desc: '',
       starting_date: '2020-05-23',
       ending_date: '2020-06-08',
       name: 'Run for the Oceans',
@@ -572,6 +668,8 @@ export default async (models) => {
       img: 'https://www.artribune.com/wp-content/uploads/2022/05/Artur-Zmijewski.-Quando-la-paura-mangia-lanima.-Exhibition-view-at-PAC-%E2%80%93-Padiglione-dArte-Contemporanea-Milano-2022.-Photo-Nico-Covre-Vulcano-Agency-_9.jpg',
       ticket_price: 8.0,
       description: 'Contemporary art exhibition',
+      long_description: '',
+      alt_desc: '',
       starting_date: '2022-03-09',
       ending_date: '2022-06-12',
       name: 'Artur Zmijewski',
@@ -581,6 +679,8 @@ export default async (models) => {
       img: 'https://www.fringemi.com/wp-content/uploads/2022/04/FRINGE_FESTIVAL_MILANO_LOGO_fb.png',
       ticket_price: 0.0,
       description: 'Art exhibition with more than 100 events',
+      long_description: '',
+      alt_desc: '',
       starting_date: '2023-06-13',
       ending_date: '2023-06-19',
       name: 'FringeMi Festival',
@@ -590,6 +690,8 @@ export default async (models) => {
       img: 'https://artidecorative.milanocastello.it/sites/artidecorative.milanocastello.it/files/styles/grande_per_colorbox/public/Ayano_ICON%20photo%20credit%20Pippy%20Mount.jpg?itok=tGXyW5-v',
       ticket_price: 2.0,
       description: 'Annual glass art competition',
+      long_description: '',
+      alt_desc: '',
       starting_date: '2023-03-10',
       ending_date: '2023-06-19',
       name: 'Milano Vetro -35',
@@ -600,6 +702,8 @@ export default async (models) => {
     {
       name: 'Must see in Milan',
       duration: 12,
+      long_description: '',
+      alt_desc: '',
       img: 'https://duomo.shbcdn.com/blobs/variants/8/a/5/f/8a5f9f6b-fe25-4b40-857c-b82c80126a88_medium.jpg?_636862546878987581',
       description:
         'Here are the most important attractions in Milan: Duomo di Milano, Castello Sforzesco, Galleria Vittorio Emanuele, Pinacoteca di Brera',
@@ -609,6 +713,8 @@ export default async (models) => {
     {
       name: 'Best museums in Milan',
       duration: 16,
+      long_description: '',
+      alt_desc: '',
       img: 'https://milanhotspots.com/wp-content/uploads/2018/01/49_d4a52ff7f5563dad5282957d6116bcda22214b.jpg',
       description:
         'These museums are a must for your first time in Milan! Palazzo reale, Pinacoteca di Brera, Mudec',
@@ -618,6 +724,8 @@ export default async (models) => {
     {
       name: 'Shopping streets',
       duration: 4,
+      long_description: '',
+      alt_desc: '',
       img: 'https://www.divinamilano.it/wp-content/themes/yootheme/cache/Via-Montenapoleone-5ab8b757.jpeg',
       description:
         'Shopping lover? Try these streets to find all best shops in town! Via Monte Napoleone, Galleria Vittorio Emanuele, Corso Garibaldi, Corso Como',
@@ -627,6 +735,8 @@ export default async (models) => {
     {
       name: 'Art at its finest',
       duration: 8,
+      long_description: '',
+      alt_desc: '',
       img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/El_Beso_%28Pinacoteca_de_Brera%2C_Mil%C3%A1n%2C_1859%29.jpg/800px-El_Beso_%28Pinacoteca_de_Brera%2C_Mil%C3%A1n%2C_1859%29.jpg',
       description:
         "If you're all about art and its forms you have to visit these places",
@@ -636,6 +746,8 @@ export default async (models) => {
     {
       name: 'Milan in a rush',
       duration: 2,
+      long_description: '',
+      alt_desc: '',
       img: 'https://c.tenor.com/PNmq7RhXTXYAAAAd/keemstar-im-fast-as-fuck-boi.gif',
       description: 'U have to be fast af boi?',
       map_src:
@@ -645,28 +757,33 @@ export default async (models) => {
   const serviceTypeList = [
     {
       type: 'Hospital',
+      alt_desc: '',
       description:
         'Need to book a visit? Take a look at the hospitals near to you.',
       img: 'https://www.comune.segrate.mi.it/export/sites/segrate/img/novita/Ospedale-San-Raffaele.jpg_1000484673.jpg',
     },
     {
       type: 'Bank',
+      alt_desc: '',
       description: 'Check out the banks available in the city.',
       img: 'https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
     },
     {
       type: 'Pharmacy',
+      alt_desc: '',
       description: 'Need some drugs? Find the closest pharmacy!',
       img: 'https://images.unsplash.com/photo-1622230208995-0f26eba75875?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
     },
     {
       type: 'InfoPoint',
+      alt_desc: '',
       description:
         'In need of some additional informations about the city? Here are some InfoPoints.',
       img: 'https://images.unsplash.com/photo-1532256253150-2f0e4e883a74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
     },
     {
       type: 'SuperMarket',
+      alt_desc: '',
       description: 'U 2 broke 2 eat in a restaurant? lol.',
       img: 'https://www.esselunga.it/cms/images/images/image-social/esselunga.png',
     },

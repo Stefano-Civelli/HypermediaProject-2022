@@ -25,15 +25,15 @@
             <div class="caption_date">
               From
               <time datetime="2022-06-16T12:00:00Z"
-                ><span class="day">{{ startingDay }}</span> {{ startingMonth }}
-                {{ startingYear }}</time
+                ><span class="day">{{ startingDay }} <br /></span>
+                {{ startingMonth }} {{ startingYear }}</time
               >
             </div>
             <div class="caption_date">
               Until
               <time datetime="2022-06-19T12:00:00Z"
-                ><span class="day">{{ endingDay }}</span> {{ endingMonth }}
-                {{ endingYear }}</time
+                ><span class="day">{{ endingDay }} <br /></span>
+                {{ endingMonth }} {{ endingYear }}</time
               >
             </div>
           </div>
