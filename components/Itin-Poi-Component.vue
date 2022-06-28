@@ -49,7 +49,7 @@ hr {
 
 .poi-name {
     font-size: clamp(13px, 1.5vw, 15px);
-    color: white;
+    color: rgb(94, 94, 94);
     margin: 0px;
     padding: 5px;
     font-weight: 700;
@@ -66,11 +66,9 @@ hr {
     align-items: center;
     border: 2px solid transparent;
     border-radius: 30px;
-    background: linear-gradient(to right, #5288fc, #5a6bfd);
-}
-
-.poi-card:hover {
-    border: 2px solid #77c8ff;
+    border: 2px solid #c7c7c7;
+    background: rgb(240, 240, 240);
+    margin: 7px;
 }
 
 .poi-description {
@@ -132,18 +130,12 @@ hr {
     min-height: 100px;
     max-height: 360px;
     border-radius: 50%;
-    border: 2px solid rgb(128, 128, 128);
+    border: 2px solid rgb(107, 107, 107);
     transition: 0.2s;
 }
 
 .poi-img:hover {
     border: 3px solid rgb(0, 171, 201);
-    width: 31vw;
-    min-width: 105px;
-    max-width: 605px;
-    height: 20.7vw;
-    min-height: 105px;
-    max-height: 365px;
 }
 </style>
 
