@@ -1,6 +1,10 @@
 <template>
   <div class="page">
-    <GroupPageHeaderComponent text="Events" textColor="rgb(248, 249, 250)" />
+    <GroupPageHeaderComponent
+      text="Events"
+      textColor="rgb(248, 249, 250)"
+      img="https://i.imgur.com/HZCbi8N.jpg"
+    />
     <div
       class="container d-flex flex-wrap justify-content-center page-component pt-5"
     >
@@ -11,6 +15,7 @@
         :key="event.id"
         :title="event.name"
         :img="event.img"
+        :altDesc="event.alt_desc"
         :param="event.location"
         id="-1"
         :subtitle="`From: ${event.start}`"

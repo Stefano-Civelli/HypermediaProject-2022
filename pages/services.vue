@@ -3,6 +3,7 @@
     <GroupPageHeaderComponent
       text="Services you might need "
       textColor="rgb(248, 249, 250)"
+      img="https://i.imgur.com/TefurpW.jpg"
     />
     <div class="container page-component px-5 pt-4">
       <ServiceTypeComponent
@@ -10,6 +11,7 @@
         :key="serviceType.id"
         :type="serviceType.type"
         :img="serviceType.img"
+        :altDesc="serviceType.alt_desc"
         :description="serviceType.description"
         nuxtLink="/details/service_type"
       />

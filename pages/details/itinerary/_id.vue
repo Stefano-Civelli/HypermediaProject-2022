@@ -1,12 +1,12 @@
 <template>
   <div class="container">
     <div
-      class="p-4 p-md-5 my-4 text-white rounded top-img img shadow-lg d-flex justify-content-center align-items-center"
-      :style="{ 'background-image': 'url(' + img + ')' }"
+      class="top-img-container my-4 text-white rounded shadow-lg d-flex justify-content-center align-items-center"
     >
-      <h1 class="display-4 my-title">
+      <img class="my-img rounded" :src="img" :alt="altDesc" />
+      <div class="display-4 my-title">
         {{ name }}
-      </h1>
+      </div>
     </div>
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
@@ -34,7 +34,7 @@
           <!-- Events circles -->
           <div class="row">
             <div class="pois-container">
-              <itin-poi-component
+              <ItinPoiComponent
                 class="poi-component"
                 v-for="poi in pois"
                 :key="poi.id"
@@ -108,6 +108,16 @@
 </template>
 
 <style scoped>
+.my-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: center 60%;
+}
+.top-img-container {
+  height: 300px;
+  position: relative;
+}
 .my-map {
   margin: auto;
 }
@@ -119,18 +129,14 @@
 .my-border {
   border: 1px solid red;
 }
-
 .my-title {
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
-}
-
-.my-img {
-  object-fit: cover;
-  object-position: 20% 50%;
-}
-
-.top-img {
-  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Lobster', Georgia, Times, serif;
+  font-size: 56px;
 }
 
 .img {
@@ -162,7 +168,9 @@ a:hover {
 </style>
 
 <script>
+import ItinPoiComponent from '~/components/Itin-Poi-Component.vue'
 export default {
+  components: { ItinPoiComponent },
   name: 'ItineraryPage',
   async asyncData({ route, $axios }) {
     const { id } = route.params
@@ -179,6 +187,7 @@ export default {
       id: data.id,
       name: data.name,
       img: data.img,
+      altDesc: data.alt_desc,
       description: data.description,
       duration: data.duration,
       map_src: data.map_src,

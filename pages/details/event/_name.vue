@@ -1,12 +1,12 @@
 <template>
   <div class="container">
     <div
-      class="p-4 p-md-5 my-4 text-white rounded top-img img shadow-lg d-flex justify-content-center align-items-center"
-      :style="{ 'background-image': 'url(' + img + ')' }"
+      class="top-img-container my-4 text-white rounded shadow-lg d-flex justify-content-center align-items-center"
     >
-      <h1 class="display-4 my-title">
+      <img class="my-img rounded" :src="img" :alt="altDesc" />
+      <div class="display-4 my-title">
         {{ name }}
-      </h1>
+      </div>
     </div>
     <nav>
       <ol class="breadcrumb">
@@ -56,6 +56,7 @@
               :key="event.id"
               :name="event.name"
               :img="event.img"
+              :altDesc="event.alt_desc"
               :description="event.description"
             />
           </div>
@@ -121,6 +122,7 @@ export default {
     return {
       name: data.name,
       img: data.img,
+      altDesc: data.alt_desc,
       description: data.description,
       startingDay: data.startingDay,
       startingMonth: data.startingMonth,
@@ -167,17 +169,22 @@ export default {
 }
 .my-title {
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Lobster', Georgia, Times, serif;
+  font-size: 56px;
 }
 .my-img {
   object-fit: cover;
-  object-position: 20% 50%;
+  width: 100%;
+  height: 100%;
+  object-position: center 60%;
 }
-.top-img {
+.top-img-container {
   height: 300px;
-}
-.img {
-  background-size: cover;
-  background-position: 0% 70%;
+  position: relative;
 }
 
 a {

@@ -3,6 +3,7 @@
     <GroupPageHeaderComponent
       text="Points of Interest"
       textColor="rgb(33, 37, 41)"
+      img="https://i.imgur.com/UoImNz4.jpg"
     />
     <div class="container page-component pt-5">
       <div class="d-flex flex-wrap justify-content-center">
@@ -11,6 +12,7 @@
           :key="poi.id"
           :title="poi.name"
           :img="poi.poi_imgs[0].img_path"
+          :altDesc="poi.poi_imgs[0].alt_desc"
           :param="poi.address"
           id="-1"
           subtitle="Check it out!"
@@ -59,10 +61,6 @@ export default {
 </script>
 
 <style scoped>
-.hero-section-parallax {
-  background-image: url('~/assets/Life-Background.jpg');
-}
-
 .page-component {
   background-color: white;
   border-radius: 40px;

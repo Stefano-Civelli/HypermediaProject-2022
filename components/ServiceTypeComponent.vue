@@ -16,7 +16,7 @@
       </div>
 
       <div class="col-md-5 d-flex justify-content-end">
-        <img class="my-img img-fluid" :src="img" />
+        <img class="my-img img-fluid" :src="img" :alt="altDesc" />
       </div>
     </div>
     <hr class="my-divider" />
@@ -31,6 +31,11 @@ export default {
       required: true,
     },
     img: {
+      type: String,
+      required: true,
+    },
+    altDesc: {
+      type: String,
       required: true,
     },
     description: {

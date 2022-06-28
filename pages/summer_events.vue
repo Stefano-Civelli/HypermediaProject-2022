@@ -3,6 +3,7 @@
     <GroupPageHeaderComponent
       text="Summer Events"
       textColor="rgb(248, 249, 250)"
+      img="https://i.imgur.com/ojb6cuI.jpg"
     />
     <div
       class="container d-flex flex-wrap justify-content-center page-component pt-5"
@@ -21,6 +22,7 @@
         :key="event.id"
         :title="event.name"
         :img="event.img"
+        :altDesc="event.alt_desc"
         :param="event.location"
         id="-1"
         :subtitle="`From: ${event.start}`"

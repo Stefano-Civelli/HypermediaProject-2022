@@ -2,6 +2,7 @@
   <div class="col-lg-4">
     <img
       :src="img"
+      :alt="altDesc"
       class="rounded-circle border my-img"
       width="140"
       height="140"
@@ -27,6 +28,10 @@ export default {
       required: true,
     },
     img: {
+      type: String,
+      required: true,
+    },
+    altDesc: {
       type: String,
       required: true,
     },

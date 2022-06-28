@@ -1,8 +1,9 @@
 <template>
   <div>
-    <group-page-header-component
+    <GroupPageHeaderComponent
       text="Itineraries"
       textColor="rgb(248, 249, 250)"
+      img="https://i.imgur.com/9hEd8gt.jpg"
     />
     <div class="container page-component pt-5">
       <div class="component d-flex flex-wrap justify-content-center">
@@ -11,7 +12,7 @@
           :key="itinerary.id"
           :title="itinerary.name"
           :img="itinerary.img"
-          :subtitle=" 'Duration: ' + itinerary.duration"
+          :subtitle="'Duration: ' + itinerary.duration"
           :param="itinerary.description"
           :id="itinerary.id"
           nuxtLink="/details/itinerary"
@@ -23,8 +24,9 @@
 
 <script>
 import GroupPageCardComponent from '~/components/GroupPageCardComponent.vue'
+import GroupPageHeaderComponent from '~/components/GroupPageHeaderComponent.vue'
 export default {
-  components: { GroupPageCardComponent },
+  components: { GroupPageCardComponent, GroupPageHeaderComponent },
   async asyncData({ $axios }) {
     const { data } = await $axios.get('/api/itinerary/list')
     return {
@@ -34,18 +36,15 @@ export default {
   data() {
     return {}
   },
-    head() {
-        return {
-            title: 'Itineraries',
-        }
+  head() {
+    return {
+      title: 'Itineraries',
     }
+  },
 }
 </script>
 
 <style scoped>
-.hero-section-parallax {
-  background-image: url('~/assets/Bosco-background.jpg');
-}
 .page-title {
   background-color: rgb(6, 109, 226);
 }

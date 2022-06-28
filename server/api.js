@@ -213,6 +213,7 @@ async function runMainApi() {
       filtered.push({
         name: element.name,
         img: element.img,
+        alt_desc: element.alt_desc,
         start: element.starting_date,
         end: element.ending_date,
         location: element.poi.address,
@@ -240,6 +241,7 @@ async function runMainApi() {
         filtered.push({
           name: element.name,
           img: element.img,
+          alt_desc: element.alt_desc,
           start: element.starting_date,
           end: element.ending_date,
           location: element.poi.address,
@@ -252,6 +254,7 @@ async function runMainApi() {
         filtered.push({
           name: element.name,
           img: element.img,
+          alt_desc: element.alt_desc,
           start: element.starting_date,
           end: element.ending_date,
           location: element.poi.address,
@@ -264,6 +267,7 @@ async function runMainApi() {
         filtered.push({
           name: element.name,
           img: element.img,
+          alt_desc: element.alt_desc,
           start: element.starting_date,
           end: element.ending_date,
           location: element.poi.address,
@@ -292,6 +296,7 @@ async function runMainApi() {
         filtered.push({
           name: element.name,
           img: element.img,
+          alt_desc: element.alt_desc,
           start: element.starting_date,
           end: element.ending_date,
           location: element.poi.address,
@@ -304,6 +309,7 @@ async function runMainApi() {
         filtered.push({
           name: element.name,
           img: element.img,
+          alt_desc: element.alt_desc,
           start: element.starting_date,
           end: element.ending_date,
           location: element.poi.address,
@@ -316,6 +322,7 @@ async function runMainApi() {
         filtered.push({
           name: element.name,
           img: element.img,
+          alt_desc: element.alt_desc,
           start: element.starting_date,
           end: element.ending_date,
           location: element.poi.address,
@@ -337,6 +344,7 @@ async function runMainApi() {
       filtered.push({
         name: element.name,
         img: element.img,
+        alt_desc: element.alt_desc,
         description: element.description,
       })
     }
@@ -361,6 +369,7 @@ async function runMainApi() {
     const filtered = {
       name: result.name,
       img: result.img,
+      alt_desc: result.alt_desc,
       description: result.description,
       startingDay: splittedStartingDate[2],
       startingMonth: monthStartingString,

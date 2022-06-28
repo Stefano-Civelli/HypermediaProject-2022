@@ -1,6 +1,7 @@
 <template>
   <div
     class="w-100 d-flex justify-content-center align-items-start hero-section-parallax"
+    :style="{ 'background-image': 'url(' + img + ')' }"
   >
     <h1
       class="display-4 fw-bold my-border my-page-title"
@@ -20,8 +21,6 @@
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
 }
 .hero-section-parallax {
-  background-image: url('~/assets/gallery-background.jpg');
-
   /* Set a specific height */
   /** decidere a quanto settarlo */
   min-height: 90vh;
@@ -56,6 +55,9 @@ export default {
       required: true,
     },
     textColor: {
+      type: String,
+    },
+    img: {
       type: String,
     },
   },

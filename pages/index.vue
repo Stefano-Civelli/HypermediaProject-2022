@@ -16,6 +16,7 @@
               :key="event.id"
               :name="event.name"
               :img="event.img"
+              :altDesc="event.alt_desc"
               :description="event.description"
             />
           </div>
@@ -34,6 +35,7 @@
             :key="itinerary.id"
             :description="itinerary.name"
             :img="itinerary.img"
+            :altDesc="itinerary.alt_desc"
             :type="itinerary.id"
             nuxtLink="/details/itinerary"
           />
