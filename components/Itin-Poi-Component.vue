@@ -8,7 +8,7 @@
         <hr />
         <div class="poi-img-container">
             <nuxt-link class="poi-img-container-2" :to="`/details/poi/${name}`">
-                <img :src="poi_imgs[0].img_path" class="poi-img" :title="name">
+                <img :src="poi_imgs[0].img_path" class="poi-img" :title="name" :alt="poi_imgs[0].alt_desc">
             </nuxt-link>
         </div>
         <div v-if="events.length > 0" class="events-container">

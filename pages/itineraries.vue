@@ -15,6 +15,7 @@
           :subtitle="'Duration: ' + itinerary.duration"
           :param="itinerary.description"
           :id="itinerary.id"
+          :altDesc="itinerary.alt_desc"
           nuxtLink="/details/itinerary"
         />
       </div>
