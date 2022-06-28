@@ -1,6 +1,6 @@
 <template>
   <div>
-    <OldGPHeader
+    <SimpleGPHeader
       :text="name"
       textColor="rgb(33, 37, 41)"
       bgColor="rgb(105, 210, 231)"
@@ -8,7 +8,6 @@
     <div class="container">
       <nav class="d-flex bread-container">
         <ol class="breadcrumb p-2">
-          <li class="breadcrumb-item"><a href="/">Home</a></li>
           <li class="breadcrumb-item">
             <a href="/services">Services</a>
           </li>
@@ -31,10 +30,10 @@
 </template>
 
 <script>
-import OldGPHeader from '~/components/OldGPHeader.vue'
+import SimpleGPHeader from '~/components/SimpleGPHeader.vue'
 import ServiceComponent from '~/components/ServiceComponent.vue'
 export default {
-  components: { ServiceComponent, OldGPHeader },
+  components: { ServiceComponent, SimpleGPHeader },
   async asyncData({ route, $axios }) {
     const { name } = route.params
     const { data } = await $axios.get('/api/service_type/' + name)

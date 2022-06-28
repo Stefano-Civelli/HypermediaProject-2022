@@ -11,9 +11,6 @@
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarToggler"
-        aria-controls="navbarToggler"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -27,7 +24,6 @@
               id="navbarDropdownMenuLink"
               role="button"
               data-bs-toggle="dropdown"
-              aria-expanded="false"
             >
               Events
               <svg
@@ -59,13 +55,12 @@
                   >Winter Events</nuxt-link
                 >
               </li>
-              <li></li>
+
               <li>
                 <nuxt-link class="dropdown-item" to="/events_by_year"
                   >Events by Year</nuxt-link
                 >
               </li>
-              <li></li>
             </ul>
           </li>
 

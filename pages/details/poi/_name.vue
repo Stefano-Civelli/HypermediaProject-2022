@@ -23,15 +23,15 @@
           What there is to know about {{ name }}
         </h2>
 
-        <article class="blog-post">
-          <h2 class="blog-post-title mb-1">Description</h2>
+        <div>
+          <h2 class="mb-1">Description</h2>
           <br />
           <p>
-            {{ description }}
+            {{ longDescription }}
           </p>
           <br />
           <br />
-          <h2 class="blog-post-title mb-1">Where is it?</h2>
+          <h2 class="mb-1">Where is it?</h2>
           <div class="px-4 py-2">
             <iframe
               :src="mapSrc"
@@ -60,9 +60,9 @@
             />
           </div>
           <!-- /.row -->
-        </article>
+        </div>
 
-        <nav class="d-flex blog-pagination mt-5 justify-content-end gap-1">
+        <nav class="d-flex mt-5 justify-content-end gap-1">
           <button class="btn btn-outline-secondary rounded-pill" @click="prev">
             Previous
           </button>

@@ -144,25 +144,10 @@ export default {
   transform: translateY(0);
 }
 
-.card__thumb {
-  flex-shrink: 0;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-
 .card__title {
   font-size: 1em;
   margin: 0 0 0.3em;
   color: #6a515e;
-}
-
-.card__tagline {
-  display: block;
-  margin: 1em 0;
-  font-family: 'MockFlowFont';
-  font-size: 0.8em;
-  color: #b49ba8;
 }
 
 .card__status {

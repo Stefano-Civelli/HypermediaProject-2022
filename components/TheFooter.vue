@@ -2,19 +2,17 @@
   <div>
     <footer>
       <div class="footer">
-        <div class="riga">
+        <div class="my-row">
           <ul>
-            <li><a href="#">Contact us</a></li>
-            <li><a href="#">Our Services</a></li>
+            <li><a href="/contactus">Contact us</a></li>
+            <li><a href="/about">About</a></li>
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">Career</a></li>
           </ul>
         </div>
 
-        <div class="riga">
-          TALLARITA Copyright © 2022 TALLA - All rights reserved || Designed By:
-          HyPSSS
+        <div class="my-row">
+          MIT License || Copyright (c) 2022 - Designed By: HyPSSS
         </div>
       </div>
     </footer>
@@ -29,12 +27,11 @@ body {
 .footer {
   background: #000;
   padding: 30px 0px;
-  font-family: 'Play', sans-serif;
   text-align: center;
   margin-top: 20px;
 }
 
-.footer .riga {
+.footer .my-row {
   width: 100%;
   margin: 1% 0%;
   padding: 0.6% 0%;
@@ -42,26 +39,26 @@ body {
   font-size: 0.8em;
 }
 
-.footer .riga a {
+.footer .my-row a {
   text-decoration: none;
   color: gray;
   transition: 0.5s;
 }
 
-.footer .riga a:hover {
+.footer .my-row a:hover {
   color: #fff;
 }
 
-.footer .riga ul {
+.footer .my-row ul {
   width: 100%;
 }
 
-.footer .riga ul li {
+.footer .my-row ul li {
   display: inline-block;
   margin: 0px 30px;
 }
 
-.footer .row a i {
+.footer .my-row a i {
   font-size: 2em;
   margin: 0% 1%;
 }
@@ -71,12 +68,12 @@ body {
     text-align: left;
     padding: 5%;
   }
-  .footer .riga ul li {
+  .footer .my-row ul li {
     display: block;
     margin: 10px 0px;
     text-align: left;
   }
-  .footer .riga a i {
+  .footer .my-row a i {
     margin: 0% 3%;
   }
 }

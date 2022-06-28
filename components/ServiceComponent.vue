@@ -106,17 +106,6 @@ export default {
 </script>
 
 <style scoped>
-.modal-sheet .modal-dialog {
-  width: 380px;
-  transition: bottom 0.75s ease-in-out;
-}
-.modal-sheet .modal-footer {
-  padding-bottom: 2rem;
-}
-
-.modal-alert .modal-dialog {
-  width: 380px;
-}
 .rounded-4 {
   border-radius: 15px;
 }

@@ -10,7 +10,6 @@
       <!-- need to add link to summer/winter events page and the one from which is possible to chose by year  -->
       <nav class="bread-container position-absolute">
         <ol class="breadcrumb p-2 border rounded-4 shadow">
-          <li class="breadcrumb-item"><a href="/">Home</a></li>
           <li class="breadcrumb-item">
             <a href="/events">Events</a>
           </li>

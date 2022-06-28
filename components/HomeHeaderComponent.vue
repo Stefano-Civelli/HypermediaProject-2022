@@ -1,6 +1,6 @@
 <template>
   <div class="head-element">
-    <section class="section-a">
+    <section class="my-section">
       <div class="container">
         <div class="row">
           <div class="col-md-6 header-text mt-5">
@@ -31,31 +31,7 @@
 <script>
 export default {
   data() {
-    return {
-      carouselList: [
-        {
-          title: 'Points of Interest',
-          subtitle: '/pois',
-          buttonText: '/pois',
-          number: 0,
-          img: 'https://images.unsplash.com/photo-1613154908225-9116593e98b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1103&q=80',
-        },
-        {
-          title: 'Points of Interest',
-          subtitle: '/pois',
-          buttonText: '/pois',
-          number: 1,
-          img: 'https://images.unsplash.com/photo-1545256633-9d719bec17c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80',
-        },
-        {
-          title: 'Points of Interest',
-          subtitle: '/pois',
-          buttonText: '/pois',
-          number: 2,
-          img: 'https://raw.githubusercontent.com/Stefano-Civelli/HypermediaProject-2022/master/assets/gallery-background.jpg?token=GHSAT0AAAAAABTU3KXBHLVOK2WVEO3TSVJAYVLTL7A',
-        },
-      ],
-    }
+    return {}
   },
 }
 </script>
@@ -79,16 +55,16 @@ export default {
   padding: 0 2rem;
 }
 
-.section-a {
+.my-section {
   margin: 2rem 0;
 }
 
-.section-a h1 {
+.my-section h1 {
   font-size: 4rem;
   color: var(--primary-color);
 }
 
-.section-a p {
+.my-section p {
   margin: 1rem 0;
 }
 @media (max-width: 991.98px) {

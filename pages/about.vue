@@ -1,5 +1,5 @@
 <template>
-  <custom-page :title="title" :image="image" :description="description" />
+  <CustomPage :title="title" :image="image" :description="description" />
 </template>
 
 <script>

@@ -3,7 +3,7 @@
     <HomeHeaderComponent />
     <!-- end of carousel -->
 
-    <div class="marketing">
+    <div class="main-container">
       <!-- Three columns of text below the carousel -->
       <div class="eventsSlice">
         <div class="container">
@@ -91,9 +91,6 @@ export default {
 .my-img {
   object-fit: cover;
 }
-/* GLOBAL STYLES
--------------------------------------------------- */
-/* Padding below the footer and lighter body text */
 
 body {
   padding-top: 3rem;
@@ -101,22 +98,13 @@ body {
   color: #5a5a5a;
 }
 
-/* MARKETING CONTENT
--------------------------------------------------- */
-
-/* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
+.main-container .col-lg-4 {
   margin-bottom: 1.5rem;
   text-align: center;
 }
-/* rtl:begin:ignore */
-.marketing .col-lg-4 p {
+
+.main-container .col-lg-4 p {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
 }
-
-/* rtl:end:ignore */
-
-/* RESPONSIVE CSS
--------------------------------------------------- */
 </style>

@@ -10,7 +10,7 @@
     </div>
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/pois">Points of Interest</a></li>
+        <li class="breadcrumb-item"><a href="/itineraries">Itineraries</a></li>
         <li class="breadcrumb-item">
           {{ name }}
         </li>
@@ -23,8 +23,8 @@
           "{{ name }}" - What to know
         </h3>
 
-        <article class="blog-post">
-          <h2 class="blog-post-title mb-1">Description</h2>
+        <div>
+          <h2 class="mb-1">Description</h2>
           <br />
           <p>
             {{ description }}
@@ -54,7 +54,7 @@
                 :idx="pois.indexOf(poi) + 1"
               />
             </div>
-            <h2 class="blog-post-title mb-1">Where is it?</h2>
+            <h2 class="mb-1">Where is it?</h2>
             <br />
             <div class="px-4 py-2">
               <iframe
@@ -67,9 +67,9 @@
             </div>
           </div>
           <!-- /.row -->
-        </article>
+        </div>
 
-        <nav class="blog-pagination mt-5" aria-label="Pagination">
+        <nav class="d-flex mt-5 justify-content-end gap-1">
           <button class="btn btn-outline-secondary rounded-pill" @click="prev">
             Previous
           </button>
@@ -83,7 +83,7 @@
         </nav>
       </div>
 
-      <div class="col-md-4">
+      <div class="border-start col-md-4">
         <div class="position-sticky" style="top: 5rem">
           <div class="p-4 mb-3 bg-light rounded">
             <h4 class="fst-italic">Practical Info</h4>
@@ -99,15 +99,6 @@
                   {{ event.name }}
                 </nuxt-link>
               </li>
-            </ol>
-          </div>
-
-          <div class="p-4">
-            <h4 class="fst-italic">Elsewhere</h4>
-            <ol class="list-unstyled">
-              <li><a href="#">GitHub</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Facebook</a></li>
             </ol>
           </div>
         </div>
@@ -154,7 +145,11 @@ a {
 
 a {
   background: linear-gradient(to right, rgb(33, 37, 41), rgb(33, 37, 41)),
-    linear-gradient(to right, rgb(0, 165, 91), rgb(0, 165, 91));
+    linear-gradient(
+      to right,
+      rgba(124, 138, 150, 0.671),
+      rgba(124, 138, 150, 0.671)
+    );
   background-size: 100% 1px, 0 1px;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
@@ -162,7 +157,7 @@ a {
 }
 
 a:hover {
-  background-size: 0 2px, 100% 2px;
+  background-size: 0 1px, 100% 1px;
 }
 </style>
 

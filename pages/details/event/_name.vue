@@ -10,7 +10,6 @@
     </div>
     <nav>
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/">Home</a></li>
         <li class="breadcrumb-item"><a href="/events">Events</a></li>
         <li class="breadcrumb-item">
           {{ name }}
@@ -39,8 +38,8 @@
           </div>
         </h3>
 
-        <article class="blog-post">
-          <h2 class="blog-post-title mb-1">Description</h2>
+        <div>
+          <h2 class="mb-1">Description</h2>
           <br />
           <p>
             {{ description }}
@@ -60,9 +59,9 @@
               :description="event.description"
             />
           </div>
-        </article>
+        </div>
 
-        <nav class="blog-pagination mt-5">
+        <nav class="d-flex mt-5 justify-content-end gap-1">
           <button class="btn btn-outline-secondary rounded-pill" @click="prev">
             Previous
           </button>
@@ -76,7 +75,7 @@
         </nav>
       </div>
 
-      <div class="col-md-4">
+      <div class="border-start col-md-4">
         <div class="position-sticky" style="top: 5rem">
           <div class="p-4 mb-3 bg-light rounded">
             <h4 class="fst-italic">Practical Info</h4>
@@ -102,15 +101,6 @@
             <nuxt-link :to="`/details/poi/${poi}`">
               {{ poi }}
             </nuxt-link>
-          </div>
-
-          <div class="p-4">
-            <h4 class="fst-italic">Elsewhere</h4>
-            <ol class="list-unstyled">
-              <li><a href="#">GitHub</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Facebook</a></li>
-            </ol>
           </div>
         </div>
       </div>

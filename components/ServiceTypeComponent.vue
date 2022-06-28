@@ -56,22 +56,12 @@ export default {
   margin: 5rem 0; /* Space out the Bootstrap <hr> more */
 }
 
-/* Thin out the marketing headings */
-/* rtl:begin:remove */
 .my-heading {
-  letter-spacing: -0.05rem;
+  letter-spacing: -0.07rem;
   font-size: 45px;
 }
 
-/* RESPONSIVE CSS
--------------------------------------------------- */
-
-@media (min-width: 40em) {
-  .carousel-caption p {
-    margin-bottom: 1.25rem;
-    line-height: 1.4;
-  }
-}
+/* RESPONSIVE CSS -------------------------------------------------- */
 
 @media (min-width: 62em) {
   .my-heading {

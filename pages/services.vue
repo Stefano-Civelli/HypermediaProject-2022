@@ -1,11 +1,11 @@
 <template>
   <div>
-    <group-page-header-component
+    <GroupPageHeaderComponent
       text="Services you might need "
       textColor="rgb(248, 249, 250)"
     />
     <div class="container page-component px-5 pt-4">
-      <service-type-component
+      <ServiceTypeComponent
         v-for="serviceType in serviceTypeList"
         :key="serviceType.id"
         :type="serviceType.type"
@@ -18,9 +18,10 @@
 </template>
 
 <script>
+import GroupPageHeaderComponent from '~/components/GroupPageHeaderComponent.vue'
 import ServiceTypeComponent from '~/components/ServiceTypeComponent.vue'
 export default {
-  components: { ServiceTypeComponent },
+  components: { ServiceTypeComponent, GroupPageHeaderComponent },
   async asyncData({ $axios }) {
     const { data } = await $axios.get('/api/service_type/list')
     const serviceTypeList = data
@@ -41,9 +42,6 @@ export default {
   margin-top: 300px;
   position: relative;
   box-shadow: 0 0 3rem 0.1rem rgb(0 0 0 / 40%);
-}
-.featurette-divider {
-  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
 }
 .hero-section-parallax {
   background-image: url('~/assets/Tram-background.jpg');
