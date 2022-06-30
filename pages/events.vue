@@ -105,6 +105,7 @@ a {
 }
 
 a::after {
+  content: '';
   background: white;
   mix-blend-mode: exclusion;
   width: calc(100% + 20px);
