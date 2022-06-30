@@ -10,17 +10,18 @@
           <h1 class="slideH1 mb-5 text-decoration-underline">
             Check out our Hottest events...
           </h1>
-          <div class="row">
-            <EventComponent
-              v-for="event in eventList"
-              :key="event.id"
-              :name="event.name"
-              :img="event.img"
-              :altDesc="event.alt_desc"
-              :description="event.description"
-            />
+          <div class="hero-section">
+            <div class="card-grid">
+              <EventComponent
+                v-for="event in eventList"
+                :key="event.id"
+                :name="event.name"
+                :img="event.img"
+                :altDesc="event.alt_desc"
+                :description="event.description"
+              />
+            </div>
           </div>
-          <!-- /.row -->
         </div>
       </div>
       <!-- Itinerary part -->
@@ -48,10 +49,11 @@
 </template>
 
 <script>
+import EventComponent from '~/components/EventComponent.vue'
 import HomeHeaderComponent from '~/components/HomeHeaderComponent.vue'
 import ServiceTypeComponent from '~/components/ServiceTypeComponent.vue'
 export default {
-  components: { HomeHeaderComponent, ServiceTypeComponent },
+  components: { HomeHeaderComponent, ServiceTypeComponent, EventComponent },
   name: 'IndexPage',
 
   async asyncData({ $axios }) {
@@ -69,6 +71,33 @@ export default {
 </script>
 
 <style scoped>
+.hero-section {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+@media (max-width: 992px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .slideH1 {
   font-size: 60px;
 }

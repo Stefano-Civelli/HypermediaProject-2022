@@ -66,19 +66,6 @@
             ></iframe>
           </div>
         </div>
-
-        <nav class="d-flex mt-5 justify-content-end gap-1">
-          <button class="btn btn-outline-secondary rounded-pill" @click="prev">
-            Previous
-          </button>
-          <button
-            class="btn btn-outline-primary rounded-pill"
-            @click="next"
-            href="#"
-          >
-            Next
-          </button>
-        </nav>
       </div>
 
       <div class="border-start col-md-4">
@@ -100,6 +87,26 @@
             </ol>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <nav class="d-flex mt-5 justify-content-end gap-1">
+          <button
+            class="btn btn-outline-secondary rounded-pill"
+            @click="prev"
+            v-if="id != 1"
+          >
+            Previous
+          </button>
+          <button
+            class="btn btn-outline-primary rounded-pill"
+            @click="next"
+            href="#"
+          >
+            Next
+          </button>
+        </nav>
       </div>
     </div>
   </div>
@@ -174,10 +181,6 @@
 li a {
   color: inherit;
   text-decoration: none;
-}
-
-.breadcrumb a,
-li a {
   background: linear-gradient(to right, rgb(33, 37, 41), rgb(33, 37, 41)),
     linear-gradient(
       to right,
