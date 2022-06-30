@@ -87,7 +87,7 @@ export default {
   background-image: linear-gradient(
     188deg,
     white 15%,
-    rgb(224, 228, 204) 15.1%
+    rgb(251, 231, 198) 15.1%
   );
 }
 .my-img {
