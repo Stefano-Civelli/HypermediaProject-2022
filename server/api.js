@@ -248,8 +248,9 @@ async function runMainApi() {
         })
       }
       if (
-        parseInt(splittedDate[1]) == startingMonth &&
-        parseInt(splittedDate[2]) >= startingDay
+        (parseInt(splittedDate[1]) > startingMonth &&
+        parseInt(splittedDate[1]) <= 12) || (parseInt(splittedDate[1]) >= 1 &&
+        parseInt(splittedDate[1]) < endingMonth)
       ) {
         filtered.push({
           name: element.name,
