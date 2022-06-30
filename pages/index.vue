@@ -55,7 +55,7 @@ export default {
   name: 'IndexPage',
 
   async asyncData({ $axios }) {
-    const { data } = await $axios.get('/api/event/random/3')
+    const { data } = await $axios.get('/api/event/random/-1')
     const eventList = data
     const itineraryData = await $axios.get('/api/itinerary/list')
     const itineraryList = itineraryData.data.slice(0, 3)

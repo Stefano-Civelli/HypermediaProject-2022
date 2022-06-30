@@ -223,9 +223,9 @@ async function runMainApi() {
   })
 
   app.get('/event/winter', async (req, res) => {
-    const startingMonth = 12
+    const startingMonth = 9
     const endingMonth = 3
-    const startingDay = 21
+    const startingDay = 23
     const endingDay = 20
     const result = await models.Event.findAll({
       include: [{ model: models.Poi }],
@@ -278,9 +278,9 @@ async function runMainApi() {
   })
 
   app.get('/event/summer', async (req, res) => {
-    const startingMonth = 6
+    const startingMonth = 3
     const endingMonth = 9
-    const startingDay = 21
+    const startingDay = 20
     const endingDay = 23
     const result = await models.Event.findAll({
       include: [{ model: models.Poi }],
@@ -332,12 +332,14 @@ async function runMainApi() {
     return res.json(filtered)
   })
 
-  app.get('/event/random/:number', async (req, res) => {
+  app.get('/event/random/:id', async (req, res) => {
     /*const sequelize = new Sequelize(url, opts)*/
-    const number = req.params.number
+    const id = parseInt(req.params.id)
+    const { Op } = require('sequelize')
     const result = await models.Event.findAll({
+      where: { id: {[Op.ne]: id}  },
       order: [[Sequelize.fn('RANDOM')]],
-      limit: number,
+      limit: 3,
     })
     const filtered = []
     for (const element of result) {
@@ -367,6 +369,7 @@ async function runMainApi() {
     )
 
     const filtered = {
+      id: result.id,
       name: result.name,
       img: result.img,
       alt_desc: result.alt_desc,
