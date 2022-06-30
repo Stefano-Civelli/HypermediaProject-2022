@@ -1,189 +1,99 @@
 <template>
-    <div class="poi-card">
-        <div class="poi-header">
-            <p class="poi-number"> {{ idx }} </p>
-            <h3 class="poi-name"> {{ name }} </h3>
-            <!-- <p class="poi-description"> Poi description: {{ description }} </p> -->
-        </div>
-        <hr />
-        <div class="poi-img-container">
-            <nuxt-link class="poi-img-container-2" :to="`/details/poi/${name}`">
-                <img :src="poi_imgs[0].img_path" class="poi-img" :title="name" :alt="poi_imgs[0].alt_desc">
-            </nuxt-link>
-        </div>
-        <div v-if="events.length > 0" class="events-container">
-            <p class="ev"> Events: </p>
-            <itin-event-component class="event-component" v-for="event in events" :key="event.id" :id="event.id"
-                :img="event.img" :name="event.name"></itin-event-component>
-        </div>
-        <div v-else class="no-events-div">
-            <p class="ev"> No events involved </p>
-        </div>
+  <nuxt-link class="card" :to="`/details/poi/${name}`">
+    <div
+      class="card__background"
+      :style="{ 'background-image': 'url(' + poi_imgs[0].img_path + ')' }"
+    ></div>
+    <div class="card__content">
+      <p class="card__number">{{ idx }}</p>
     </div>
+    <h3 class="card__heading">{{ name }}</h3>
+  </nuxt-link>
 </template>
 
 <style scoped>
-
-p {
-    margin: 0px;
-    padding: 5px;
-    font-size: clamp(5px, 1vw, 10px);
-    font-weight: 600;
-    color: white;
+.card {
+  position: relative;
+  height: 400px;
+  border: none;
 }
 
-hr {
-    margin-top: 0px;
-    margin-bottom: 5px;
-    color: rgb(0, 0, 0);
-    height: 1px;
-    width: 50%;
+.card:before {
+  display: block;
+  width: 100%;
 }
 
-.poi-number {
-    background-color: #00af0f;
-    border-radius: 50%;
-    font-size: 100%;
-    align-content: center;
+.card__background {
+  background-size: cover;
+  background-position: center;
+  border-radius: 24px;
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  transition: filter 200ms linear, transform 200ms linear;
 }
 
-.poi-name {
-    font-size: clamp(13px, 1.5vw, 15px);
-    color: rgb(94, 94, 94);
-    margin: 0px;
-    padding: 5px;
-    font-weight: 700;
+.card:hover .card__background {
+  filter: brightness(0.95) saturate(1.2) contrast(0.85);
 }
 
-.ev {
-    color: black;
-    font-size: clamp(12px, 1.1vw, 15px);
+.card__content {
+  left: 10px;
+  position: absolute;
+  top: 0;
 }
 
-.poi-card {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    border: 2px solid transparent;
-    border-radius: 30px;
-    border: 2px solid #c7c7c7;
-    background: rgb(240, 240, 240);
-    margin: 7px;
+.card__number {
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  padding: 20px;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
 }
 
-.poi-description {
-    font-size: clamp(15px, 1.2vw, 20px);
+.card__heading {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  right: 0;
+  padding: 10px;
+  bottom: 0;
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
+  line-height: 1.4;
 }
-
-.no-events-div {
-    justify-content: center;
-}
-
-.events-container,
-.no-events-div {
-    font-weight: 600;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: rgb(218, 218, 218);
-    min-height: 70px;
-    width: 100%;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-}
-
-.poi-header {
-    height: 40%;
-    min-height: 60px;
-    max-height: 180px;
-    width: 16vw;
-    min-width: 80px;
-    max-width: 240px;
-    text-align: start;
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.poi-img-container, .poi-img-container-2 {
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.poi-img-container-2 {
-    width: 100%;
-    height: 100%;
-}
-
-.poi-img {
-    width: 30vw;
-    min-width: 100px;
-    max-width: 600px;
-    height: 20vw;
-    min-height: 100px;
-    max-height: 360px;
-    border-radius: 50%;
-    border: 2px solid rgb(107, 107, 107);
-    transition: 0.2s;
-}
-
-.poi-img:hover {
-    border: 3px solid rgb(0, 171, 201);
-}
+/** ------------------------------------------------------------- */
 </style>
 
 <script>
-import ItinEventComponent from './Itin-Event-Component.vue'
 export default {
-    components: { ItinEventComponent },
-    props: {
-        id: {
-            type: Number,
-            required: true,
-        },
-        name: {
-            type: String,
-            required: true,
-        },
-        address: {
-            type: String,
-            required: true,
-        },
-        description: {
-            type: String,
-            required: true,
-        },
-        position: {
-            type: String,
-            required: true,
-        },
-        practical_info: {
-            type: String,
-            required: true,
-        },
-        ticket_price: {
-            type: Number,
-            required: true,
-        },
-        poi_imgs: {
-            type: Array,
-            required: true,
-        },
-        events: {
-            type: Array,
-            required: true,
-        },
-        idx: {
-            type: Number,
-            required: true,
-        }
-    }
+  components: {},
+  props: {
+    id: {
+      type: Number,
+      required: true,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+
+    poi_imgs: {
+      type: Array,
+      required: true,
+    },
+    events: {
+      type: Array,
+      required: true,
+    },
+    idx: {
+      type: Number,
+      required: true,
+    },
+  },
 }
 </script>

@@ -31,28 +31,28 @@
           </p>
           <h2 class="mb-4">Related attractions</h2>
 
-          <!-- Events circles -->
-
-          <div class="pois-container">
-            <ItinPoiComponent
-              class="poi-component"
-              v-for="poi in pois"
-              :key="poi.id"
-              :id="poi.id"
-              :address="poi.address"
-              :name="poi.name"
-              :description="
-                poi.description.length > 1000
-                  ? poi.description.slice(0, 950) + '...'
-                  : poi.description
-              "
-              :position="poi.position"
-              :practical_info="poi.practical_info"
-              :ticket_price="poi.ticket_price"
-              :poi_imgs="poi.poi_imgs"
-              :events="poi.events"
-              :idx="pois.indexOf(poi) + 1"
-            />
+          <div class="hero-section">
+            <div class="card-grid">
+              <ItinPoiComponent
+                class="poi-component"
+                v-for="poi in pois"
+                :key="poi.id"
+                :id="poi.id"
+                :address="poi.address"
+                :name="poi.name"
+                :description="
+                  poi.description.length > 1000
+                    ? poi.description.slice(0, 950) + '...'
+                    : poi.description
+                "
+                :position="poi.position"
+                :practical_info="poi.practical_info"
+                :ticket_price="poi.ticket_price"
+                :poi_imgs="poi.poi_imgs"
+                :events="poi.events"
+                :idx="pois.indexOf(poi) + 1"
+              />
+            </div>
           </div>
           <h2 class="mb-1">Where is it?</h2>
           <br />
@@ -85,8 +85,8 @@
         <div class="position-sticky" style="top: 5rem">
           <div class="p-4 mb-3 bg-light rounded">
             <h4 class="fst-italic">Practical Info</h4>
-            <p class="mb-0">Attractions included: {{ pois.length }}</p>
-            <p>Duration: {{ duration }}</p>
+            <p class="mb-0">Number of attractions: {{ pois.length }}</p>
+            <p>Duration: {{ duration }} hours</p>
           </div>
 
           <div class="p-4">
@@ -106,11 +106,39 @@
 </template>
 
 <style scoped>
+.hero-section {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  width: 100%;
+}
+
+@media (min-width: 540px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 1200px) {
+  .card-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/** */
 .my-img {
   object-fit: cover;
   width: 100%;
   height: 100%;
   object-position: center 60%;
+  filter: brightness(0.85) saturate(1.2) contrast(0.85);
 }
 .top-img-container {
   height: 300px;
@@ -142,12 +170,14 @@
   background-position: 0% 70%;
 }
 
-a {
+.breadcrumb a,
+li a {
   color: inherit;
   text-decoration: none;
 }
 
-a {
+.breadcrumb a,
+li a {
   background: linear-gradient(to right, rgb(33, 37, 41), rgb(33, 37, 41)),
     linear-gradient(
       to right,
@@ -160,7 +190,8 @@ a {
   transition: background-size 500ms;
 }
 
-a:hover {
+.breadcrumb a:hover,
+li a:hover {
   background-size: 0 1px, 100% 1px;
 }
 </style>

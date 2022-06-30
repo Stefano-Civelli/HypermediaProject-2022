@@ -56,6 +56,23 @@ export default {
       image,
     }
   },
+  head() {
+    // TODO
+    return {
+      title: 'Contact Us',
+      meta: [
+        {
+          name: 'description',
+          content:
+            'In this page you can find all the information needed to get in touch with us',
+        },
+        {
+          name: 'keywords',
+          content: 'Contact Us, phone number, contacts, marketing, sales',
+        },
+      ],
+    }
+  },
 }
 </script>
 

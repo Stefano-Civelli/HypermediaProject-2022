@@ -188,6 +188,7 @@ export default {
   width: 100%;
   height: 100%;
   object-position: center 60%;
+  filter: brightness(0.85) saturate(1.2) contrast(0.85);
 }
 .top-img-container {
   height: 300px;
