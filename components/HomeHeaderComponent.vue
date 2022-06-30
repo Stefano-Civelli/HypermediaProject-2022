@@ -16,9 +16,9 @@
           </div>
           <div class="col-md-6">
             <img
-              class="my-img rounded-circle"
-              src="https://thumbs.dreamstime.com/b/cattedrale-di-duomo-milano-sketch-vettoriale-milan-italia-209168926.jpg"
-              width="100%"
+              class="my-img"
+              src="https://cdn-icons-png.flaticon.com/512/444/444707.png"
+              width="75%"
               alt=""
             />
           </div>
@@ -38,8 +38,10 @@ export default {
 
 <style scoped>
 .my-img {
-  border-radius: 400px;
-  margin-top: 60px;
+  border-radius: 40px;
+  margin-top: 20px;
+  margin-left: 120px;
+  filter: brightness(1.5) saturate(0) contrast(0.85);
 }
 .head-element {
   background-color: rgb(
@@ -47,7 +49,7 @@ export default {
     134,
     48
   ); /* For browsers that do not support gradients */
-  background-image: linear-gradient(172deg, rgb(243, 134, 48) 60%, white 60.1%);
+  background-image: linear-gradient(172deg, rgb(250, 215, 15) 60%, white 60.1%);
   height: 600px;
   margin-top: -32px;
 }
