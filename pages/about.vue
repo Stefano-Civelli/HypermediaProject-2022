@@ -1,14 +1,26 @@
 <template>
-  <CustomPage :title="title" :image="image" :description="description" />
+  <div class="container mt-5">
+    <h1 class="display-3 my-page-title">About the city</h1>
+    <div class="border"></div>
+    <div class="row">
+      <div class="col-12">
+        <p>eddsfsdfdsfds</p>
+        <p>eddsfsdfdsfds</p>
+        <p>eddsfsdfdsfds</p>
+        <p>eddsfsdfdsfds</p>
+        <p>eddsfsdfdsfds</p>
+        <p>eddsfsdfdsfds</p>
+        <p>eddsfsdfdsfds</p>
+        <p>eddsfsdfdsfds</p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import CustomPage from '~/components/CustomPage.vue'
 export default {
   name: 'AboutPage',
-  components: {
-    CustomPage,
-  },
+  components: {},
   data() {
     return {}
   },
@@ -25,3 +37,10 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.my-page-title {
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+</style>

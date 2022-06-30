@@ -32,40 +32,39 @@
           <h2 class="mb-4">Related attractions</h2>
 
           <!-- Events circles -->
-          <div class="row">
-            <div class="pois-container">
-              <ItinPoiComponent
-                class="poi-component"
-                v-for="poi in pois"
-                :key="poi.id"
-                :id="poi.id"
-                :address="poi.address"
-                :name="poi.name"
-                :description="
-                  poi.description.length > 1000
-                    ? poi.description.slice(0, 950) + '...'
-                    : poi.description"
-                :position="poi.position"
-                :practical_info="poi.practical_info"
-                :ticket_price="poi.ticket_price"
-                :poi_imgs="poi.poi_imgs"
-                :events="poi.events"
-                :idx="pois.indexOf(poi) + 1"
-              />
-            </div>
-            <h2 class="mb-1">Where is it?</h2>
-            <br />
-            <div class="px-4 py-2">
-              <iframe
-                :src="map_src"
-                width="100%"
-                height="400"
-                referrerpolicy="no-referrer-when-downgrade"
-                class="border my-map rounded-4"
-              ></iframe>
-            </div>
+
+          <div class="pois-container">
+            <ItinPoiComponent
+              class="poi-component"
+              v-for="poi in pois"
+              :key="poi.id"
+              :id="poi.id"
+              :address="poi.address"
+              :name="poi.name"
+              :description="
+                poi.description.length > 1000
+                  ? poi.description.slice(0, 950) + '...'
+                  : poi.description
+              "
+              :position="poi.position"
+              :practical_info="poi.practical_info"
+              :ticket_price="poi.ticket_price"
+              :poi_imgs="poi.poi_imgs"
+              :events="poi.events"
+              :idx="pois.indexOf(poi) + 1"
+            />
           </div>
-          <!-- /.row -->
+          <h2 class="mb-1">Where is it?</h2>
+          <br />
+          <div class="px-4 py-2">
+            <iframe
+              :src="map_src"
+              width="100%"
+              height="400"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="border my-map rounded-4"
+            ></iframe>
+          </div>
         </div>
 
         <nav class="d-flex mt-5 justify-content-end gap-1">
