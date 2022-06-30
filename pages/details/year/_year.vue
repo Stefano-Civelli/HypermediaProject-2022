@@ -1,8 +1,9 @@
 <template>
   <div class="page">
-    <group-page-header-component
+    <GroupPageHeaderComponent
       :text="`Events of ${year}`"
       textColor="rgb(248, 249, 250)"
+      img="https://i.imgur.com/csndEgx.jpg"
     />
     <div
       class="container d-flex flex-wrap justify-content-center page-component pt-5"

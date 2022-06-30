@@ -9,7 +9,6 @@
       <div class="d-flex flex-wrap align-items-center justify-content-center">
         <nav class="bread-container position-absolute">
           <ol class="breadcrumb p-2 border rounded-4 shadow">
-            <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item">
               <a href="/events">Events</a>
             </li>

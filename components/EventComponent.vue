@@ -1,23 +1,14 @@
 <template>
-  <div class="col-lg-4">
-    <img
-      :src="img"
-      :alt="altDesc"
-      class="rounded-circle border my-img"
-      width="140"
-      height="140"
-    />
-
-    <h2 class="fw-normal">{{ name }}</h2>
-    <p>
-      {{ description }}
-    </p>
-    <p>
-      <nuxt-link :to="`/details/event/${name}`">
-        <button class="btn btn-secondary my-btn">View details</button>
-      </nuxt-link>
-    </p>
-  </div>
+  <nuxt-link class="card" :to="`/details/event/${name}`">
+    <div
+      class="card__background"
+      :style="{ 'background-image': 'url(' + img + ')' }"
+    ></div>
+    <div class="card__content">
+      <p class="card__description">{{ description }}</p>
+    </div>
+    <h3 class="card__heading">{{ name }}</h3>
+  </nuxt-link>
 </template>
 
 <script>
@@ -44,6 +35,60 @@ export default {
 </script>
 
 <style scoped>
+.card {
+  position: relative;
+  height: 400px;
+  border: none;
+}
+
+.card:before {
+  display: block;
+  width: 100%;
+}
+
+.card__background {
+  background-size: cover;
+  background-position: center;
+  border-radius: 24px;
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  transition: filter 200ms linear, transform 200ms linear;
+}
+
+.card:hover .card__background {
+  filter: brightness(0.95) saturate(1.2) contrast(0.85);
+}
+
+.card__content {
+  left: 10px;
+  position: absolute;
+  top: 0;
+}
+
+.card__description {
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  padding: 20px;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
+}
+
+.card__heading {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  right: 0;
+  padding: 10px;
+  bottom: 0;
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
+  line-height: 1.4;
+}
 .my-img {
   object-fit: cover;
   object-position: 20% 50%;

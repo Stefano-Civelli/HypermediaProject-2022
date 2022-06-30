@@ -49,36 +49,24 @@
           <br />
           <h2 class="mb-4">Related Events</h2>
           <br />
-          <!-- Events circles -->
-          <div class="row eventsContainer">
+          <!-- Events -->
+          <div class="hero-section">
             <p class="text-muted my-3" v-if="events.length == 0">
               At the moment there are no events related to this point of
               interest
             </p>
-            <EventComponent
-              v-for="event in events"
-              :key="event.id"
-              :name="event.name"
-              :img="event.img"
-              :altDesc="event.alt_desc"
-              :description="event.description"
-            />
+            <div class="card-grid">
+              <EventComponent
+                v-for="event in events"
+                :key="event.id"
+                :name="event.name"
+                :img="event.img"
+                :altDesc="event.alt_desc"
+                :description="event.description"
+              />
+            </div>
           </div>
-          <!-- /.row -->
         </div>
-
-        <nav class="d-flex mt-5 justify-content-end gap-1">
-          <button class="btn btn-outline-secondary rounded-pill" @click="prev">
-            Previous
-          </button>
-          <button
-            class="btn btn-outline-primary rounded-pill"
-            @click="next"
-            href="#"
-          >
-            Next
-          </button>
-        </nav>
       </div>
 
       <div class="col-md-4 border-start">
@@ -100,6 +88,22 @@
             </ol>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <nav class="d-flex mt-5 justify-content-end gap-1">
+          <button class="btn btn-outline-secondary rounded-pill" @click="prev">
+            Previous
+          </button>
+          <button
+            class="btn btn-outline-primary rounded-pill"
+            @click="next"
+            href="#"
+          >
+            Next
+          </button>
+        </nav>
       </div>
     </div>
   </div>
@@ -162,9 +166,32 @@ export default {
 </script>
 
 <style scoped>
-.eventsContainer {
-  text-align: center;
+.hero-section {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 30px;
 }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .my-map {
   margin: auto;
 }
@@ -195,12 +222,10 @@ export default {
   position: relative;
 }
 
-a {
+.breadcrumb a,
+li a {
   color: inherit;
   text-decoration: none;
-}
-
-a {
   background: linear-gradient(to right, rgb(33, 37, 41), rgb(33, 37, 41)),
     linear-gradient(
       to right,
@@ -213,7 +238,8 @@ a {
   transition: background-size 500ms;
 }
 
-a:hover {
+.breadcrumb a:hover,
+li a:hover {
   background-size: 0 1px, 100% 1px;
 }
 </style>
