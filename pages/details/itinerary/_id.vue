@@ -38,16 +38,7 @@
                 v-for="poi in pois"
                 :key="poi.id"
                 :id="poi.id"
-                :address="poi.address"
                 :name="poi.name"
-                :description="
-                  poi.description.length > 1000
-                    ? poi.description.slice(0, 950) + '...'
-                    : poi.description
-                "
-                :position="poi.position"
-                :practical_info="poi.practical_info"
-                :ticket_price="poi.ticket_price"
                 :poi_imgs="poi.poi_imgs"
                 :events="poi.events"
                 :idx="pois.indexOf(poi) + 1"
