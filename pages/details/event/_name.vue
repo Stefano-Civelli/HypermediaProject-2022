@@ -120,7 +120,7 @@ export default {
     const { name } = route.params
     const { data } = await $axios.get('/api/event/' + name)
     console.log(data)
-    const randomEventsData = await $axios.get('/api/event/random/3')
+    const randomEventsData = await $axios.get('/api/event/random/' + data.id)
 
     const randomEvents = randomEventsData.data
     return {

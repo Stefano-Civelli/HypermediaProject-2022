@@ -1,8 +1,8 @@
 <template>
   <div>
     <nav
-      class="my-navbar navbar navbar-expand-lg navbar-dark px-3 header position-fixed w-100 top-0"
       :key="$route.path"
+      class="my-navbar navbar navbar-expand-lg navbar-dark px-3 header position-fixed w-100 top-0"
     >
       <a class="navbar-brand navbar-text navbar-home-button" href="/"
         >Milano City</a
