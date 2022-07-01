@@ -34,7 +34,10 @@
           <h3 class="card__heading">heading</h3>
         </div>
         <div class="item sidebar border">sidebar</div>
-        <div class="item content-1 border">Content-1</div>
+        <div class="item content-1 border">
+          <h3 class="card__heading">name</h3>
+          <p class="card__description">description</p>
+        </div>
         <div class="item content-2 border">Content-2</div>
         <div class="item content-3 border">Content-3</div>
         <div class="item footer border">footer</div>
@@ -65,35 +68,27 @@ export default {
 </script>
 
 <style scoped>
-.card__content {
-  left: 0px;
-  position: absolute;
-  top: 0;
-}
-
 .card__description {
   color: rgb(255, 255, 255);
   font-size: 1rem;
   margin-bottom: 8px;
   text-transform: uppercase;
-  padding: 20px;
+
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
 }
 
 .card__heading {
   color: rgb(255, 255, 255);
-
   font-size: 1.9rem;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
-  line-height: 1.4;
 }
 
 .grid-container {
   display: grid;
   width: 100%;
-  height: 800px;
+  height: 850px;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 80px 1fr 1fr 100px;
+  grid-template-rows: 200px 1fr 1fr 200px;
   grid-gap: 1rem;
   grid-template-areas:
     'header header header'
@@ -104,6 +99,8 @@ export default {
 /** assign elements to grid areas --------- */
 .header {
   grid-area: header;
+  justify-content: center;
+  align-items: center;
 }
 
 .sidebar {
@@ -134,10 +131,9 @@ export default {
 .item {
   color: #ffffff;
   border-radius: 15px;
-
+  background-color: rgb(94, 94, 94);
   display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 10px;
   font-size: 18px;
   font-weight: bold;
 }
