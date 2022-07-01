@@ -2,8 +2,8 @@
   <div>
     <GroupPageHeaderComponent
       text="Points of Interest"
-      textColor="rgb(33, 37, 41)"
-      img="https://i.imgur.com/UoImNz4.jpg"
+      textColor="rgb(248, 249, 250)"
+      img="https://i.imgur.com/jDMKaRH.jpg"
     />
     <div class="container page-component pt-5">
       <div class="d-flex flex-wrap justify-content-center">

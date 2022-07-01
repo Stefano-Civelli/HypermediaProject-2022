@@ -3,7 +3,7 @@
     <GroupPageHeaderComponent
       text="Events"
       textColor="rgb(248, 249, 250)"
-      img="https://i.imgur.com/HZCbi8N.jpg"
+      img="https://i.imgur.com/ojb6cuI.jpg"
     />
 
     <div class="container page-component">
@@ -53,6 +53,7 @@ export default {
   },
   async asyncData({ $axios }) {
     const { data } = await $axios.get('/api/event/list')
+    console.log(data)
     return {
       data,
     }

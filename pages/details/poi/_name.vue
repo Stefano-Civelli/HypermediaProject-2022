@@ -5,7 +5,7 @@
     >
       <img
         class="my-img rounded"
-        :src="imgs[1].img_path"
+        :src="require(`~/assets/images/${imgs[1].img_path}`)"
         :alt="imgs[1].alt_desc"
       />
       <div class="display-4 my-title">

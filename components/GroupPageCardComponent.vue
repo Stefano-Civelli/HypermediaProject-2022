@@ -4,7 +4,11 @@
       :to="`${nuxtLink}/${id == -1 ? title : id}`"
       class="card shadow-lg"
     >
-      <img :src="img" class="card__image" :alt="altDesc" />
+      <img
+        :src="require(`~/assets/images/${img}`)"
+        class="card__image"
+        :alt="altDesc"
+      />
       <div class="card__overlay">
         <div class="card__header">
           <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
