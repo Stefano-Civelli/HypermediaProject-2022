@@ -23,7 +23,7 @@
 .hero-section-parallax {
   /* Set a specific height */
   /** decidere a quanto settarlo */
-  min-height: 90vh;
+  min-height: 850px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;

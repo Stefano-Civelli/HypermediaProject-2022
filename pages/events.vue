@@ -15,10 +15,18 @@
               <div class="p-5">
                 <h2 class="fw-bold see-also">See Also</h2>
 
-                <div class="d-flex justify-content-evenly mt-5">
-                  <a class="my-links" href="/summer_events">summer events</a>
-                  <a class="my-links" href="/winter_events">winter events</a>
-                  <a class="my-links" href="/events_by_year">events by year</a>
+                <div class="row mt-5">
+                  <div class="col-md-4 d-flex justify-content-end">
+                    <a class="my-links" href="/summer_events">summer events</a>
+                  </div>
+                  <div class="col-md-4 d-flex justify-content-center">
+                    <a class="my-links" href="/winter_events">winter events</a>
+                  </div>
+                  <div class="col-md-4 d-flex justify-content-start">
+                    <a class="my-links" href="/events_by_year"
+                      >events by year</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>
@@ -92,6 +100,7 @@ export default {
 .see-also {
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
   text-align: center;
+  font-size: 2.8em;
 }
 
 .rounded-4 {
@@ -119,5 +128,11 @@ a::after {
 
 a:hover::after {
   height: calc(100% + 8px);
+}
+
+@media (max-width: 767px) {
+  .col-md-4 {
+    justify-content: center !important;
+  }
 }
 </style>
