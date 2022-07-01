@@ -22,6 +22,7 @@ async function initializeDatabaseConnection() {
   const Event = database.define('event', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     img: DataTypes.STRING,
+    header_img: DataTypes.STRING,
     alt_desc: DataTypes.TEXT,
     long_description: DataTypes.TEXT,
     ticket_price: DataTypes.DOUBLE,
@@ -208,6 +209,7 @@ async function runMainApi() {
         start: element.starting_date,
         end: element.ending_date,
         location: element.poi.address,
+        header_img: element.header_img,
       })
     }
     return res.json(filtered)
@@ -367,6 +369,7 @@ async function runMainApi() {
       img: result.img,
       alt_desc: result.alt_desc,
       description: result.description,
+      longDescription: result.long_description,
       startingDay: splittedStartingDate[2],
       startingMonth: monthStartingString,
       startingYear: splittedStartingDate[0],
@@ -375,6 +378,7 @@ async function runMainApi() {
       endingYear: splittedEndingDate[0],
       ticket_price: result.ticket_price,
       poiName: result.poi.name,
+      header_img: result.header_img
     }
     return res.json(filtered)
   })
@@ -512,6 +516,28 @@ async function runMainApi() {
       include: [{ model: models.itinerary }],
     })
     return res.json(result)
+  })
+
+  app.get('/poi/random/:name', async (req, res) => {
+    /*const sequelize = new Sequelize(url, opts)*/
+    const name = parseInt(req.params.name)
+    const { Op } = require('sequelize')
+    const result = await models.Poi.findAll({
+      where: { name: {[Op.ne]: name}  },
+      order: [[Sequelize.fn('RANDOM')]],
+      include: { model: models.Poi_img },
+      limit: 3,
+    })
+    const filtered = []
+    for (const element of result) {
+      filtered.push({
+        name: element.name,
+        description: element.description,
+        img: element.poi_imgs[0].img_path,
+        alt_desc: element.poi_imgs[0].alt_desc,
+      })
+    }
+    return res.json(filtered)
   })
   /** POI APIs -------------------------------------------*/
 

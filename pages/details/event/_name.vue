@@ -3,7 +3,11 @@
     <div
       class="top-img-container my-4 text-white rounded shadow-lg d-flex justify-content-center align-items-center"
     >
-      <img class="my-img rounded" :src="img" :alt="altDesc" />
+      <img
+        class="my-img rounded"
+        :src="require(`~/assets/images/${background}`)"
+        :alt="altDesc"
+      />
       <div class="display-4 my-title">
         {{ name }}
       </div>
@@ -42,7 +46,7 @@
           <h2 class="mb-1">Description</h2>
           <br />
           <p>
-            {{ description }}
+            {{ longDescription }}
           </p>
           <h2 class="mb-4">Related Events</h2>
           <div class="hero-section">
@@ -58,6 +62,7 @@
                 :img="event.img"
                 :altDesc="event.alt_desc"
                 :description="event.description"
+                :longDescription="event.longDescription"
               />
             </div>
           </div>
@@ -97,15 +102,19 @@
     <div class="row">
       <div class="col-md-8">
         <nav class="d-flex mt-5 justify-content-end gap-1">
-          <button class="btn btn-outline-secondary rounded-pill" @click="prev">
-            Previous
+          <button
+            class="btn btn-outline-secondary rounded-pill"
+            @click="prev"
+            v-if="id != 1"
+          >
+            Previous Event
           </button>
           <button
             class="btn btn-outline-primary rounded-pill"
             @click="next"
             href="#"
           >
-            Next
+            Next Event
           </button>
         </nav>
       </div>
@@ -124,6 +133,7 @@ export default {
 
     const randomEvents = randomEventsData.data
     return {
+      id: data.id,
       name: data.name,
       img: data.img,
       altDesc: data.alt_desc,
@@ -137,6 +147,8 @@ export default {
       ticket_price: data.ticket_price,
       poi: data.poiName,
       randomEvents,
+      longDescription: data.longDescription,
+      background: data.header_img,
     }
   },
   head() {
