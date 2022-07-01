@@ -5,16 +5,16 @@ const initialize = require('./initialize').default
 app.use(express.json())
 
 // Development
-//const database = new Sequelize('postgres://postgres:admin@localhost:5432/hyp')
+const database = new Sequelize('postgres://postgres:admin@localhost:5432/hyp')
 
 // Production (use this code when deploying to production in Heroku)
-
+/*
 const pg = require('pg')
 pg.defaults.ssl = true
 const database = new Sequelize(process.env.DATABASE_URL, {
   ssl: true,
   dialectOptions: { ssl: { require: true, rejectUnauthorized: false } },
-})
+})*/
 
 // Function that will initialize the connection to the database
 async function initializeDatabaseConnection() {
@@ -378,7 +378,7 @@ async function runMainApi() {
       endingYear: splittedEndingDate[0],
       ticket_price: result.ticket_price,
       poiName: result.poi.name,
-      header_img: result.header_img
+      header_img: result.header_img,
     }
     return res.json(filtered)
   })
@@ -523,7 +523,7 @@ async function runMainApi() {
     const name = parseInt(req.params.name)
     const { Op } = require('sequelize')
     const result = await models.Poi.findAll({
-      where: { name: {[Op.ne]: name}  },
+      where: { name: { [Op.ne]: name } },
       order: [[Sequelize.fn('RANDOM')]],
       include: { model: models.Poi_img },
       limit: 3,
