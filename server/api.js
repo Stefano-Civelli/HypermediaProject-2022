@@ -120,15 +120,7 @@ const pageContentObject = {
   about: {
     title: 'About',
     image: 'path/to/img (if any)',
-    description: `Milano & Partners è l'agenzia di promozione ufficiale della città di Milano. È un'associazione fondata dal Comune di Milano e la Camera di Commercio di Milano, Monza, Brianza, Lodi, creata per attivare collaborazioni e partnership con  imprese locali, marchi globali, università, istituzioni culturali e altri enti pubblici.
-
- 
-
-    Promuoviamo il brand YesMilano nel mondo per attrarre nuovi visitatori, talenti e investimenti per la città.
-    
-    La nostra missione è quella di supportare la crescita di Milano e renderla la più accogliente città al mondo.
-    
-    Milano & Partners vive grazie al sostegno finanziario e operativo dei suoi partner. Siamo orgogliosi di condividere con i nostri partner l'obiettivo comune di rendere Milano una destinazione globale sempre più attrattiva.`,
+    description: `Milan is a city in northern Italy, capital of Lombardy. Second-most populous city proper in Italy after Rome, the city is also the first Italian economy hosting Italy's stock exchange (Borsa Italiana) and has a population of about 1.4 million, while its metropolitan city has 3.26 million inhabitants.`,
   },
   contactus: {
     title: 'ContactUs',

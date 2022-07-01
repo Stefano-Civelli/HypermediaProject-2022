@@ -1,9 +1,7 @@
 <template>
   <nuxt-link class="card" :to="`/details/event/${name}`">
-    <div
-      class="card__background"
-      :style="{ 'background-image': 'url(' + img + ')' }"
-    ></div>
+    <img class="card__background" :src="img" :alt="altDesc" />
+
     <div class="card__content">
       <p class="card__description">{{ description }}</p>
     </div>
@@ -47,6 +45,9 @@ export default {
 }
 
 .card__background {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
   border-radius: 24px;
@@ -88,9 +89,5 @@ export default {
   font-size: 1.9rem;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
   line-height: 1.4;
-}
-.my-img {
-  object-fit: cover;
-  object-position: 20% 50%;
 }
 </style>

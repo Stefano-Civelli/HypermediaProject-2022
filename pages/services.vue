@@ -45,7 +45,4 @@ export default {
   position: relative;
   box-shadow: 0 0 3rem 0.1rem rgb(0 0 0 / 40%);
 }
-.hero-section-parallax {
-  background-image: url('~/assets/Tram-background.jpg');
-}
 </style>
