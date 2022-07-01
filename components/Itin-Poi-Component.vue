@@ -1,9 +1,11 @@
 <template>
   <nuxt-link class="card" :to="`/details/poi/${name}`">
-    <div
+    <img
       class="card__background"
-      :style="{ 'background-image': 'url(' + poi_imgs[0].img_path + ')' }"
-    ></div>
+      :src="poi_imgs[0].img_path"
+      :alt="poi_imgs[0].alt_desc"
+    />
+
     <div class="card__content">
       <p class="card__number">{{ idx }}</p>
     </div>
@@ -24,6 +26,9 @@
 }
 
 .card__background {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
   border-radius: 24px;

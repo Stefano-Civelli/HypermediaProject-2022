@@ -93,7 +93,11 @@
     <div class="row">
       <div class="col-md-8">
         <nav class="d-flex mt-5 justify-content-end gap-1">
-          <button class="btn btn-outline-secondary rounded-pill" @click="prev">
+          <button
+            class="btn btn-outline-secondary rounded-pill"
+            @click="prev"
+            v-if="id != 1"
+          >
             Previous
           </button>
           <button
@@ -124,6 +128,7 @@ export default {
     )
     const relatedItineraries = itineraryData.data.itineraries
     return {
+      id: data.id,
       name: data.name,
       imgs: data.poi_imgs,
       description: data.description,
