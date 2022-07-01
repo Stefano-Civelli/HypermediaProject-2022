@@ -1,6 +1,10 @@
 <template>
   <nuxt-link class="card" :to="`/details/event/${name}`">
-    <img class="card__background" :src="img" :alt="altDesc" />
+    <img
+      class="card__background"
+      :src="require(`~/assets/images/${img}`)"
+      :alt="altDesc"
+    />
 
     <div class="card__content">
       <p class="card__description">{{ description }}</p>
