@@ -97,7 +97,7 @@
           <button
             class="btn btn-outline-primary rounded-pill"
             @click="next"
-            href="#"
+            v-if="this.id + 1 <= this.maxItinId"
           >
             Next
           </button>

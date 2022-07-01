@@ -156,13 +156,14 @@ async function runMainApi() {
       where: { itineraryId: id },
     })
     const pois = []
-    for (const poi of result) {
+    for (const row of result) {
+      console.log(row)
       let temp = await models.Poi.findOne({
-        where: { id: poi.id },
+        where: { id: row.poiId },
         include: [{ model: models.Poi_img }],
       })
       let temp2 = await models.Event.findAll({
-        where: { poiId: poi.id },
+        where: { poiId: row.poiId },
       })
       temp.dataValues.events = temp2
       pois.push(temp)

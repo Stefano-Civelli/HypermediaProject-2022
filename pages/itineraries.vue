@@ -12,7 +12,7 @@
           :key="itinerary.id"
           :title="itinerary.name"
           :img="itinerary.img"
-          :subtitle="'Duration: ' + itinerary.duration"
+          :subtitle="'Duration: ' + itinerary.duration + ' hours'"
           :param="itinerary.description"
           :id="itinerary.id"
           :altDesc="itinerary.alt_desc"
