@@ -2,7 +2,7 @@
   <nuxt-link class="card" :to="`/details/poi/${name}`">
     <img
       class="card__background"
-      :src="poi_imgs[0].img_path"
+      :src="require(`~/assets/images/${poi_imgs[0].img_path}`)"
       :alt="poi_imgs[0].alt_desc"
     />
 

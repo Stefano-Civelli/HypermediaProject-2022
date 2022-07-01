@@ -3,7 +3,11 @@
     <div
       class="top-img-container my-4 text-white rounded shadow-lg d-flex justify-content-center align-items-center"
     >
-      <img class="my-img rounded" :src="img" :alt="altDesc" />
+      <img
+        class="my-img rounded"
+        :src="require(`~/assets/images/${img}`)"
+        :alt="altDesc"
+      />
       <div class="display-4 my-title">
         {{ name }}
       </div>
@@ -206,6 +210,8 @@ export default {
         eventList.push(evento)
       }
     }
+    console.log(data.img)
+    console.log(data2.data)
     return {
       id: data.id,
       name: data.name,

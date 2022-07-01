@@ -656,7 +656,7 @@ export default async (models) => {
       duration: 12,
       long_description: '',
       alt_desc: 'must see (prova)',
-      img: 'https://duomo.shbcdn.com/blobs/variants/8/a/5/f/8a5f9f6b-fe25-4b40-857c-b82c80126a88_medium.jpg?_636862546878987581',
+      img: 'itinerary_group_page/Duomo.jpg',
       description:
         'Here are the most important attractions in Milan: Duomo di Milano, Castello Sforzesco, Galleria Vittorio Emanuele, Pinacoteca di Brera',
       map_src:
@@ -667,7 +667,7 @@ export default async (models) => {
       duration: 16,
       long_description: '',
       alt_desc: '',
-      img: 'https://milanhotspots.com/wp-content/uploads/2018/01/49_d4a52ff7f5563dad5282957d6116bcda22214b.jpg',
+      img: 'itinerary_group_page/Duomo.jpg',
       description:
         'These museums are a must for your first time in Milan! Palazzo reale, Pinacoteca di Brera, Mudec',
       map_src:
@@ -678,7 +678,7 @@ export default async (models) => {
       duration: 4,
       long_description: '',
       alt_desc: '',
-      img: 'https://www.divinamilano.it/wp-content/themes/yootheme/cache/Via-Montenapoleone-5ab8b757.jpeg',
+      img: 'itinerary_group_page/Duomo.jpg',
       description:
         'Shopping lover? Try these streets to find all best shops in town! Via Monte Napoleone, Galleria Vittorio Emanuele, Corso Garibaldi, Corso Como',
       map_src:
@@ -689,7 +689,7 @@ export default async (models) => {
       duration: 8,
       long_description: '',
       alt_desc: '',
-      img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/El_Beso_%28Pinacoteca_de_Brera%2C_Mil%C3%A1n%2C_1859%29.jpg/800px-El_Beso_%28Pinacoteca_de_Brera%2C_Mil%C3%A1n%2C_1859%29.jpg',
+      img: 'itinerary_group_page/Duomo.jpg',
       description:
         "If you're all about art and its forms you have to visit these places",
       map_src:
@@ -700,7 +700,7 @@ export default async (models) => {
       duration: 2,
       long_description: '',
       alt_desc: '',
-      img: 'https://c.tenor.com/PNmq7RhXTXYAAAAd/keemstar-im-fast-as-fuck-boi.gif',
+      img: 'itinerary_group_page/Duomo.jpg',
       description: 'U have to be fast af boi?',
       map_src:
         'https://www.google.com/maps/d/u/0/embed?mid=1BKwGRd02wgFrTS35LC9BZuPHPN-zi2U&ehbc=2E312F',
