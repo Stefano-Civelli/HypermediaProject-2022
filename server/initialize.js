@@ -8,13 +8,12 @@ export default async (models) => {
       name: 'Milan Cathedral',
       practical_info: 'Closed during religious functions',
       ticket_price: 2.0,
-      long_description: 
-        "The Duomo of Milano, the Cathedral at the heart of the city, is an architectural masterpiece that remains imprinted in the memory of all those who visit Milano. The thousands of intricately carved spires and statues, like a marble forest, are an awesome sight for those exiting the Metro or arriving from Galleria Vittorio Emanuele. It is not surprising to learn that its construction, which began in 1386 and lasted almost half a millennium, was commissioned by the Duke of Milano Gian Galeazzo Visconti as a symbol of the glory and grandeur of the city. \n \n Milano’s Duomo is the largest and most elaborate Gothic building in Italy: made of pink-hued white marble from a dedicated quarry, it is 157 meters in length and 108.5 meters high at the top of the main spire, where rests the glistening golden statue of the Madonnina, an evocative symbol much-loved both by all Milanese and visitors. It is not generally known that there are quite a few copies of Milano’s Madonnina around the world, including one on Mount Everest.",
+      long_description:
+        'The Duomo of Milano, the Cathedral at the heart of the city, is an architectural masterpiece that remains imprinted in the memory of all those who visit Milano. The thousands of intricately carved spires and statues, like a marble forest, are an awesome sight for those exiting the Metro or arriving from Galleria Vittorio Emanuele. It is not surprising to learn that its construction, which began in 1386 and lasted almost half a millennium, was commissioned by the Duke of Milano Gian Galeazzo Visconti as a symbol of the glory and grandeur of the city. \n \n Milano’s Duomo is the largest and most elaborate Gothic building in Italy: made of pink-hued white marble from a dedicated quarry, it is 157 meters in length and 108.5 meters high at the top of the main spire, where rests the glistening golden statue of the Madonnina, an evocative symbol much-loved both by all Milanese and visitors. It is not generally known that there are quite a few copies of Milano’s Madonnina around the world, including one on Mount Everest.',
       description:
         'Milan cathedral is the largest and most complex Gothic building in Italy. The entire city of Milan can be admired from the rooftop terraces.',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2798.2787111624275!2d9.1897542!3d45.4641892!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6ac28236193%3A0x34a0550ec03673e6!2sDuomo!5e0!3m2!1sen!2sit!4v1654619505067!5m2!1sen!2sit',
-      
     },
     {
       address: 'Piazza Castello',
@@ -120,7 +119,7 @@ export default async (models) => {
       position: '45.444267579507446, 9.205304363472345',
       name: 'Fondazione Prada',
       practical_info: 'Closed on Tuesdays',
-      ticket_price: 5.00,
+      ticket_price: 5.0,
       long_description: '',
       description: 'Permanent contemporary art gallery',
       map_src:
@@ -229,18 +228,18 @@ export default async (models) => {
   const poi_img_list = [
     {
       poiId: 1,
-      alt_desc: '',
-      img_path:'poi_group_page/MilanCathedral.jpg',
+      alt_desc: 'duomo 0 (prova)',
+      img_path: 'poi_group_page/MilanCathedral.jpg',
+    },
+    {
+      poiId: 1,
+      alt_desc: 'duomo 1 (prova)',
+      img_path: 'poi_background/MilanCathedral1.jpg',
     },
     {
       poiId: 1,
       alt_desc: '',
-      img_path:'poi_background/MilanCathedral1.jpg',
-    },
-    {
-      poiId: 1,
-      alt_desc: '',
-      img_path:'poi_background/MilanCathedral2.jpg',
+      img_path: 'poi_background/MilanCathedral2.jpg',
     },
     {
       poiId: 2,
@@ -534,8 +533,9 @@ export default async (models) => {
       header_img: 'events_background/DesignWeek2022.webp',
       ticket_price: 0.0,
       description: 'Exploring new design concepts',
-      long_description: "Milan Design Week attracts professionals and enthusiasts from all over the world to Milan, around two key events: the Salone Internazionale del Mobile in the Rho Fiera pavilions, and the Fuorisalone in the various districts of the city. Over the years the Design Weeks have developed all over the world, since 2017 the World Design Weeks project was born, a virtual network of 40 design weeks spread all over the world. The goal is to share the knowledge, resources and good practices of the project so as to improve people's understanding and education in the world of design.",
-      alt_desc: '',
+      long_description:
+        "Milan Design Week attracts professionals and enthusiasts from all over the world to Milan, around two key events: the Salone Internazionale del Mobile in the Rho Fiera pavilions, and the Fuorisalone in the various districts of the city. Over the years the Design Weeks have developed all over the world, since 2017 the World Design Weeks project was born, a virtual network of 40 design weeks spread all over the world. The goal is to share the knowledge, resources and good practices of the project so as to improve people's understanding and education in the world of design.",
+      alt_desc: 'milan design week (prova)',
       starting_date: '2022-06-06',
       ending_date: '2022-06-12',
       name: 'Milan Design Week',
@@ -655,7 +655,7 @@ export default async (models) => {
       name: 'Must see in Milan',
       duration: 12,
       long_description: '',
-      alt_desc: '',
+      alt_desc: 'must see (prova)',
       img: 'https://duomo.shbcdn.com/blobs/variants/8/a/5/f/8a5f9f6b-fe25-4b40-857c-b82c80126a88_medium.jpg?_636862546878987581',
       description:
         'Here are the most important attractions in Milan: Duomo di Milano, Castello Sforzesco, Galleria Vittorio Emanuele, Pinacoteca di Brera',
@@ -709,7 +709,7 @@ export default async (models) => {
   const serviceTypeList = [
     {
       type: 'Hospital',
-      alt_desc: '',
+      alt_desc: 'provaprovaprova',
       description:
         'Need to book a visit? Take a look at the hospitals near to you.',
       img: 'https://www.comune.segrate.mi.it/export/sites/segrate/img/novita/Ospedale-San-Raffaele.jpg_1000484673.jpg',

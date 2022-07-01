@@ -4,12 +4,10 @@
       <div class="col-12">
         <div class="hero">
           <div class="text">
-            <p class="text__short">Lorem ipsum dolor sit amet</p>
+            <p class="text__short">Start Exploring Today!</p>
             <h1 class="text__title">About the city</h1>
             <p class="text__description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Recusandae, necessitatibus reiciendis. Voluptatem, eaque fugiat?
-              Natus ab soluta nostrum quos! Laboriosam
+              {{ description }}
             </p>
             <a class="text__button" href="#">Learn more</a>
           </div>
@@ -28,6 +26,18 @@
             <div class="grid__item eleven"></div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 grid-container">
+        <div class="item header border">
+          <h3 class="card__heading">heading</h3>
+        </div>
+        <div class="item sidebar border">sidebar</div>
+        <div class="item content-1 border">Content-1</div>
+        <div class="item content-2 border">Content-2</div>
+        <div class="item content-3 border">Content-3</div>
+        <div class="item footer border">footer</div>
       </div>
     </div>
   </div>
@@ -55,6 +65,111 @@ export default {
 </script>
 
 <style scoped>
+.card__content {
+  left: 0px;
+  position: absolute;
+  top: 0;
+}
+
+.card__description {
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  padding: 20px;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
+}
+
+.card__heading {
+  color: rgb(255, 255, 255);
+
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
+  line-height: 1.4;
+}
+
+.grid-container {
+  display: grid;
+  width: 100%;
+  height: 800px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 80px 1fr 1fr 100px;
+  grid-gap: 1rem;
+  grid-template-areas:
+    'header header header'
+    'sidebar content-1 content-1'
+    'sidebar content-2 content-3'
+    'footer footer footer';
+}
+/** assign elements to grid areas --------- */
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.content-1 {
+  grid-area: content-1;
+}
+
+.content-2 {
+  grid-area: content-2;
+}
+
+.content-3 {
+  grid-area: content-3;
+}
+/** assign elements to grid areas --------- */
+
+.footer {
+  grid-area: footer;
+  grid-row: 4 / 5;
+  grid-column: 1 / 4;
+}
+
+/* OTHER STYLES */
+
+.item {
+  color: #ffffff;
+  border-radius: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.header {
+}
+
+.sidebar {
+}
+
+.content-1,
+.content-2,
+.content-3 {
+}
+
+.footer {
+}
+
+/** fare delle media query per far andare tutto su 1 colonna */
+@media (max-width: 780px) {
+  .grid-container {
+    grid-template-areas:
+      'header header heder'
+      'sidebar'
+      'content-1'
+      'content-2'
+      'content-3'
+      'footer';
+  }
+}
+
+/** ------------- UPPER PART OF PAGE from here down------------- */
 .hero {
   display: flex;
   max-width: 1440px;
@@ -76,12 +191,14 @@ export default {
   text-transform: uppercase;
   font-size: 0.75rem;
   color: #479a7e;
+  margin-bottom: 0;
 }
 
 .text__title {
   line-height: 1.1;
   margin: 0;
   font-size: 4em;
+  margin-bottom: 10px;
 }
 
 .text__description {
@@ -220,7 +337,7 @@ export default {
   }
 
   .text {
-    margin-top: -100px;
+    margin-top: -50px;
     width: 100%;
   }
 }

@@ -5,7 +5,6 @@ const initialize = require('./initialize').default
 app.use(express.json())
 
 // Development
-//const database = new Sequelize('postgres://postgres:postgres@localhost:5432/hyp')
 const database = new Sequelize('postgres://postgres:admin@localhost:5432/hyp')
 
 // Production (use this code when deploying to production in Heroku)
@@ -243,8 +242,9 @@ async function runMainApi() {
       }
       if (
         (parseInt(splittedDate[1]) > startingMonth &&
-        parseInt(splittedDate[1]) <= 12) || (parseInt(splittedDate[1]) >= 1 &&
-        parseInt(splittedDate[1]) < endingMonth)
+          parseInt(splittedDate[1]) <= 12) ||
+        (parseInt(splittedDate[1]) >= 1 &&
+          parseInt(splittedDate[1]) < endingMonth)
       ) {
         filtered.push({
           name: element.name,
@@ -332,7 +332,7 @@ async function runMainApi() {
     const id = parseInt(req.params.id)
     const { Op } = require('sequelize')
     const result = await models.Event.findAll({
-      where: { id: {[Op.ne]: id}  },
+      where: { id: { [Op.ne]: id } },
       order: [[Sequelize.fn('RANDOM')]],
       limit: 3,
     })
@@ -378,7 +378,7 @@ async function runMainApi() {
       endingYear: splittedEndingDate[0],
       ticket_price: result.ticket_price,
       poiName: result.poi.name,
-      header_img: result.header_img
+      header_img: result.header_img,
     }
     return res.json(filtered)
   })
@@ -523,7 +523,7 @@ async function runMainApi() {
     const name = parseInt(req.params.name)
     const { Op } = require('sequelize')
     const result = await models.Poi.findAll({
-      where: { name: {[Op.ne]: name}  },
+      where: { name: { [Op.ne]: name } },
       order: [[Sequelize.fn('RANDOM')]],
       include: { model: models.Poi_img },
       limit: 3,
