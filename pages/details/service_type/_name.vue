@@ -44,6 +44,21 @@ export default {
       serviceList,
     }
   },
+  head() {
+    return {
+      title: this.name,
+      meta: [
+        {
+          name: 'description',
+          content: `Detailed information about ${this.name} in Milan:`,
+        },
+        {
+          name: 'keywords',
+          content: `${this.name}, opening time, tel number, position, map, practical info`,
+        },
+      ],
+    }
+  },
 }
 </script>
 

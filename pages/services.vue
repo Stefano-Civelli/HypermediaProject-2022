@@ -31,6 +31,21 @@ export default {
       serviceTypeList,
     }
   },
+  head() {
+    return {
+      title: 'Services',
+      meta: [
+        {
+          name: 'description',
+          content: `In this page you can find a list of the main services in Milan`,
+        },
+        {
+          name: 'keywords',
+          content: `Services, list, need, tourism, tourists, visitors`,
+        },
+      ],
+    }
+  }
 }
 </script>
 

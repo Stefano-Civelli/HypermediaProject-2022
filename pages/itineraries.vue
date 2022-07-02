@@ -12,7 +12,7 @@
           :key="itinerary.id"
           :title="itinerary.name"
           :img="itinerary.img"
-          :subtitle="'Duration: ' + itinerary.duration"
+          :subtitle="'Duration: ' + itinerary.duration + ' hours'"
           :param="itinerary.description"
           :id="itinerary.id"
           :altDesc="itinerary.alt_desc"
@@ -40,6 +40,16 @@ export default {
   head() {
     return {
       title: 'Itineraries',
+      meta: [
+        {
+          name: 'description',
+          content: `In this page you can find a list of all the we suggest for Milan's visitors`,
+        },
+        {
+          name: 'keywords',
+          content: `Itineraries, list, attractions, Milan, tourists, tourism`,
+        },
+      ],
     }
   },
 }
