@@ -1,3 +1,5 @@
+import sequelize from 'sequelize'
+
 const express = require('express')
 const app = express()
 const { Sequelize, DataTypes } = require('sequelize')
@@ -465,6 +467,52 @@ async function runMainApi() {
       include: [{ model: models.Poi }],
     })
     return res.json(result)
+  })
+
+  app.get('/event/year/next/:year', async(req, res) => {
+    const { year } = req.params
+    const { Op } = require('sequelize') 
+    const currentYear = year + '-12-31'
+    const result = await models.Event.findOne({
+      where: {
+        starting_date: {
+          [Op.gt]: currentYear
+        },
+      },
+      order: sequelize.col('starting_date'),
+      include: [{ model: models.Poi }],
+    })
+    if(result == null) {
+      return res.json(result)
+    }
+    const nextYear = {
+      next: result.starting_date.split('-')[0] 
+    }
+    console.log(nextYear)
+    return res.json(nextYear) 
+  })
+
+  app.get('/event/year/previous/:year', async(req, res) => {
+    const { year } = req.params
+    const { Op } = require('sequelize') 
+    const currentYear = year + '-1-1'
+    const result = await models.Event.findOne({
+      where: {
+        starting_date: {
+          [Op.lt]: currentYear
+        },
+      },
+      order: [[sequelize.col('starting_date'), 'DESC']],
+      include: [{ model: models.Poi }],
+    })
+    if(result == null) {
+      return res.json(result)
+    }
+    const prevYear = {
+      previous: result.starting_date.split('-')[0] 
+    }
+    console.log(prevYear)
+    return res.json(prevYear) 
   })
   /** Events APIs -------------------------------------------*/
 

@@ -13,13 +13,46 @@
             <div class="mb-n2 w-100">
               <div class="p-4">
                 <div class="row mx-5">
-                  <div class="col-md-12 d-flex justify-content-between">
-                    <nuxt-link class="my-links" to="/summer_events"
-                      >prev</nuxt-link
+                  <div
+                    class="col-md-12 d-flex justify-content-between year-switch-container"
+                  >
+                    <nuxt-link
+                      v-if="previous != null"
+                      class="my-links"
+                      :to="`/details/year/${previous}`"
                     >
-                    <nuxt-link class="my-links" to="/events_by_year"
-                      >next</nuxt-link
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="35"
+                        height="35"
+                        fill="currentColor"
+                        class="bi bi-caret-left"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"
+                        />
+                      </svg>
+                      Year {{ previous }}</nuxt-link
                     >
+                    <nuxt-link
+                      v-if="next != null"
+                      class="my-links"
+                      :to="`/details/year/${next}`"
+                      >Year {{ next }}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="35"
+                        height="35"
+                        fill="currentColor"
+                        class="bi bi-caret-right"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"
+                        />
+                      </svg>
+                    </nuxt-link>
                   </div>
                 </div>
               </div>
@@ -28,6 +61,17 @@
         </div>
       </div>
       <div class="d-flex flex-wrap justify-content-center">
+        <nav class="bread-container position-absolute">
+          <ol class="breadcrumb p-2 border rounded-4 shadow">
+            <li class="breadcrumb-item">
+              <a href="/events">All events</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="/events_by_year">Events by year</a>
+            </li>
+            <li class="breadcrumb-item">Events of {{ year }}</li>
+          </ol>
+        </nav>
         <GroupPageCardComponent
           v-for="event in data"
           id="-1"
@@ -36,6 +80,7 @@
           :img="event.img"
           :param="event.poi.address"
           :subtitle="event.starting_date"
+          :altDesc="event.alt_desc"
           nuxtLink="/details/event"
         />
       </div>
@@ -54,9 +99,16 @@ export default {
   async asyncData({ route, $axios }) {
     const { year } = route.params
     const { data } = await $axios.get('/api/event/year/' + year)
+    const nextData = await $axios.get('/api/event/year/next/' + year)
+    const previousData = await $axios.get('/api/event/year/previous/' + year)
+    const next = nextData.data == null ? null : nextData.data.next
+    const previous =
+      previousData.data == null ? null : previousData.data.previous
     return {
       data,
       year,
+      next,
+      previous,
     }
   },
   data() {
@@ -106,14 +158,14 @@ export default {
   min-height: 65vh;
 }
 
-a {
+.year-switch-container a {
   display: block;
   color: black;
   text-decoration: underline;
   position: relative;
 }
 
-a::after {
+.year-switch-container a::after {
   content: '';
   background: white;
   mix-blend-mode: exclusion;
@@ -125,7 +177,38 @@ a::after {
   transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
-a:hover::after {
+.year-switch-container a:hover::after {
   height: calc(100% + 8px);
+}
+
+/** breadcrumb styling */
+.bread-container {
+  margin: 0px 0px 0px 10px;
+  left: 0px;
+  top: -50px;
+}
+.rounded-4 {
+  border-radius: 15px;
+}
+.breadcrumb {
+  margin-bottom: -30px;
+  background-color: white;
+}
+.breadcrumb a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.breadcrumb a {
+  background: linear-gradient(to right, rgb(33, 37, 41), rgb(33, 37, 41)),
+    linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
+  background-size: 100% 1px, 0 1px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 500ms;
+}
+
+.breadcrumb a:hover {
+  background-size: 0 1px, 100% 1px;
 }
 </style>

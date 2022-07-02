@@ -10,7 +10,7 @@
         <nav class="bread-container position-absolute">
           <ol class="breadcrumb p-2 border rounded-4 shadow">
             <li class="breadcrumb-item">
-              <a href="/events">Events</a>
+              <a href="/events">All events</a>
             </li>
             <li class="breadcrumb-item">Events by Year</li>
           </ol>
@@ -100,11 +100,7 @@ export default {
 
 .breadcrumb a {
   background: linear-gradient(to right, rgb(33, 37, 41), rgb(33, 37, 41)),
-    linear-gradient(
-      to right,
-      rgba(105, 210, 231, 0.527),
-      rgba(105, 210, 231, 0.527)
-    );
+    linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
   background-size: 100% 1px, 0 1px;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
