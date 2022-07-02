@@ -654,7 +654,7 @@ export default async (models) => {
     {
       name: 'Must see in Milan',
       duration: 12,
-      long_description: '',
+      long_description: 'First time in Milan? No way you skip these amazing points of interest! Start from the world-wide known Duomo di Milano, the biggest church in Italy, next stop: Castello Sforzesco, built in the XV century, takes its name from Francesco Sforza. It\'s time to relax with a little bit of shopping and dining in one of the finest restaurant, take a walk in Galleria Vittorio Emanuele and don\'t forget to spin on the bull\'s "balls". Last stop is Picanoteca di Brera, one of the largest art gallery in Italy',
       alt_desc: 'must see (prova)',
       img: 'itinerary_group_page/Duomo.jpg',
       description:
@@ -665,7 +665,7 @@ export default async (models) => {
     {
       name: 'Best museums in Milan',
       duration: 16,
-      long_description: '',
+      long_description: 'If art in all its form is what you\'re all about you have to see these museums. Starting from Museo della Scienza e della tecnica, whit its 50000 sqm it\'s the largest technical museum in Italy. Mudec is the next stop: its name stands for "Museum of coltures", more than 7000 original pieces. GAM and PAC are the next two points in our itinerary: the first one is a collection of modern art, the latter on contemporary art. Last but not least we have Poldi Pezzoli Museum, here you can find the Bellini Masterpiece "Pietà" and different Botticelli paintings like "Madonna del Libro" and "Compianto del Cristo Morto"',
       alt_desc: '',
       img: 'itinerary_group_page/Duomo.jpg',
       description:
@@ -676,7 +676,7 @@ export default async (models) => {
     {
       name: 'Shopping streets',
       duration: 4,
-      long_description: '',
+      long_description: 'Milan is know as the city of fashion, so if you came here to find your unic style these are the places you have to see. Via Montenapoleone is a street near the Duomo, here you\'ll find a lot of high-end luxury brands. Now go back towards the centre, Galleria Vittorio Emanuele is not only an architecture masterpiece but also has tens of unic shopping stores. It\'s time to visit the brand new Isola district, between Piazza Gae Aulenti and Bosco Verticale you can find a lot of international brands.',
       alt_desc: '',
       img: 'itinerary_group_page/Duomo.jpg',
       description:
@@ -687,7 +687,7 @@ export default async (models) => {
     {
       name: 'Art at its finest',
       duration: 8,
-      long_description: '',
+      long_description: 'Everytime you watch a painting you get goosebumps? Everytime you see a scolpture you get fascinated of its beauty? We got the places for you: starting from Biblioteca Pinacoteca Ambrosiana, two forms of art in the same place: paintings and books. New stop, new art: Theatre, Teatro alla Scala is the most famous theatre in italy, its "prima" is one of the most exclusive event. There are so many paintings in the Pinacoteca di Breara that\'s almost for sure that you\'ll find your favourite artist here, what are you waiting for? Last stop is Abbazia di Chiaravalle, to discover the beauties of medioeval architecture',
       alt_desc: '',
       img: 'itinerary_group_page/Duomo.jpg',
       description:
@@ -698,7 +698,7 @@ export default async (models) => {
     {
       name: 'Milan in a rush',
       duration: 2,
-      long_description: '',
+      long_description: 'We get it, you\'d like to stay more, you just can\'t because you\'re gonna miss your flight, don\'t worry, we have the itinerary for you, all these places in less than 2 hours. Let\'s start from Palazzo Reale, there\'s always something new to see here, thanks to its temporary exhibitions. As soon as you exit you\'ll find yourself in front of the Duomo, take a look from outside, to admire its majesty, or go inside to see all its paintings, if you want you can even get to the top to have an exclusive view on Milan. Now let\'s go to the Galleria, want to buy a little gift for your family? This is the right place to do so. For the next step you\'ll probably have not enough time to see an entire play at Teatro alla scala, but trust us, it\'s worth seeing it also from the outside. And now, just before calling a taxi, don\'t forget to buy something in "Via Montenapoleone"',
       alt_desc: '',
       img: 'itinerary_group_page/Duomo.jpg',
       description: 'U have to be fast af boi?',
@@ -712,32 +712,32 @@ export default async (models) => {
       alt_desc: 'provaprovaprova',
       description:
         'Need to book a visit? Take a look at the hospitals near to you.',
-      img: 'service_types/Hospital.jpg',
-    },
-    {
-      type: 'Pharmacy',
-      alt_desc: '',
-      description: 'Need some drugs? Find the closest pharmacy!',
-      img: 'service_types/Pharmacy.jpg',
+      img: 'https://www.comune.segrate.mi.it/export/sites/segrate/img/novita/Ospedale-San-Raffaele.jpg_1000484673.jpg',
     },
     {
       type: 'Bank',
       alt_desc: '',
       description: 'Check out the banks available in the city.',
-      img: 'service_types/Bank.jpg',
+      img: 'https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+    },
+    {
+      type: 'Pharmacy',
+      alt_desc: '',
+      description: 'Need some drugs? Find the closest pharmacy!',
+      img: 'https://images.unsplash.com/photo-1622230208995-0f26eba75875?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
     },
     {
       type: 'InfoPoint',
       alt_desc: '',
       description:
         'In need of some additional informations about the city? Here are some InfoPoints.',
-      img: 'service_types/InfoPoint.jpg',
+      img: 'https://images.unsplash.com/photo-1532256253150-2f0e4e883a74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
     },
     {
       type: 'SuperMarket',
       alt_desc: '',
       description: 'U 2 broke 2 eat in a restaurant? lol.',
-      img: 'service_types/Esselunga.png',
+      img: 'https://www.esselunga.it/cms/images/images/image-social/esselunga.png',
     },
   ]
   const serviceList = [
