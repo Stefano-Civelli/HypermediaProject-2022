@@ -211,7 +211,7 @@ export default async (models) => {
       long_description: '',
       description: 'Contemporary Art Gallery',
       map_src:
-        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.844716474281!2d9.19498062979565!3d45.47293191225567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6b9bc18b95b%3A0x95c3d804f41744c2!2sPAC%20-%20Padiglione%20d&#39;Arte%20Contemporanea!5e0!3m2!1sen!2sit!4v1654620193332!5m2!1sen!2sit',
+        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.844713155776!2d9.197276615324864!3d45.4729319791011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6b9bc18b95b%3A0x95c3d804f41744c2!2sPAC%20-%20Padiglione%20d&#39;Arte%20Contemporanea!5e0!3m2!1sen!2sit!4v1656757435261!5m2!1sen!2sit',
     },
     {
       address: "Via Sant'Arialdo, 102",
@@ -712,32 +712,32 @@ export default async (models) => {
       alt_desc: 'provaprovaprova',
       description:
         'Need to book a visit? Take a look at the hospitals near to you.',
-      img: 'https://www.comune.segrate.mi.it/export/sites/segrate/img/novita/Ospedale-San-Raffaele.jpg_1000484673.jpg',
+      img: 'service_types/Hospital.jpg',
     },
     {
       type: 'Bank',
       alt_desc: '',
       description: 'Check out the banks available in the city.',
-      img: 'https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+      img: 'service_types/Bank.jpg',
     },
     {
       type: 'Pharmacy',
       alt_desc: '',
       description: 'Need some drugs? Find the closest pharmacy!',
-      img: 'https://images.unsplash.com/photo-1622230208995-0f26eba75875?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
+      img: 'service_types/Pharmacy.jpg',
     },
     {
       type: 'InfoPoint',
       alt_desc: '',
       description:
         'In need of some additional informations about the city? Here are some InfoPoints.',
-      img: 'https://images.unsplash.com/photo-1532256253150-2f0e4e883a74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+      img: 'service_types/InfoPoint.jpg',
     },
     {
       type: 'SuperMarket',
       alt_desc: '',
       description: 'U 2 broke 2 eat in a restaurant? lol.',
-      img: 'https://www.esselunga.it/cms/images/images/image-social/esselunga.png',
+      img: 'service_types/Esselunga.png',
     },
   ]
   const serviceList = [
