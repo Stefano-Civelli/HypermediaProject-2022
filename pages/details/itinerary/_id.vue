@@ -31,9 +31,9 @@
           <h2 class="mb-1">Description</h2>
           <br />
           <p>
-            {{ description }}
+            {{ longDescription }}
           </p>
-          <h2 class="mb-4">Related attractions</h2>
+          <h2 class="mb-3 mt-5">Related attractions</h2>
 
           <div class="hero-section">
             <div class="card-grid">
@@ -218,6 +218,7 @@ export default {
       img: data.img,
       altDesc: data.alt_desc,
       description: data.description,
+      longDescription: data.long_description,
       duration: data.duration,
       map_src: data.map_src,
       pois: data2.data,

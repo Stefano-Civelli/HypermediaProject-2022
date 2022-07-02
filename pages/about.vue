@@ -9,7 +9,6 @@
             <p class="text__description">
               {{ description }}
             </p>
-            <a class="text__button" href="#">Learn more</a>
           </div>
 
           <div class="grid__container">
@@ -152,7 +151,7 @@ export default {
         },
       ],
     }
-  }
+  },
 }
 </script>
 
@@ -310,7 +309,7 @@ dd {
   max-width: 1440px;
   gap: 2em;
   justify-content: space-between;
-  margin: 5em 2em;
+  margin: 2em 2em;
 }
 
 .text {
@@ -340,17 +339,6 @@ dd {
   line-height: 145%;
   font-size: 1em;
   padding-bottom: 1em;
-}
-
-.text__button {
-  max-width: 120px;
-  text-align: center;
-  display: inline-block;
-  text-decoration: none;
-  color: white;
-  background-color: #479a7e;
-  padding: 10px;
-  border-radius: 0.5em;
 }
 
 .grid__container {
@@ -465,17 +453,15 @@ dd {
 }
 
 @media (max-width: 780px) {
-  .grid-container {
-    margin-top: -70px;
-  }
   .hero {
-    flex-direction: column-reverse;
+    flex-direction: column;
     margin: 2em 2em;
   }
 
   .text {
-    margin-top: -50px;
+    margin-top: -80px;
     width: 100%;
+    margin-bottom: -120px;
   }
 }
 /**---------------------------------------------- */
