@@ -22,6 +22,35 @@
     </nav>
 
     <div class="row g-5 mt-3">
+      <div class="border-end col-md-4 info-container">
+        <div class="position-sticky" style="top: 5rem">
+          <div class="p-4 mb-3 practical-info-container rounded">
+            <h4 class="fst-italic">Practical Info</h4>
+            <p>Ticket costs: {{ ticket_price }} €</p>
+          </div>
+
+          <div class="p-4 location-container rounded">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              fill="currentColor"
+              class="bi bi-geo-alt"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"
+              />
+              <path
+                d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+              />
+            </svg>
+
+            <nuxt-link :to="`/details/poi/${poi}`" class="my-link">
+              {{ poi }}
+            </nuxt-link>
+          </div>
+        </div>
+      </div>
       <div class="col-md-8">
         <h3 class="pb-4 mb-4 fst-italic border-bottom">
           <div class="list_dates">
@@ -68,39 +97,9 @@
           </div>
         </div>
       </div>
-
-      <div class="border-start col-md-4">
-        <div class="position-sticky" style="top: 5rem">
-          <div class="p-4 mb-3 bg-light rounded">
-            <h4 class="fst-italic">Practical Info</h4>
-            <p>Ticket costs: {{ ticket_price }} €</p>
-          </div>
-
-          <div class="p-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="25"
-              fill="currentColor"
-              class="bi bi-geo-alt"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"
-              />
-              <path
-                d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
-              />
-            </svg>
-
-            <nuxt-link :to="`/details/poi/${poi}`" class="my-link">
-              {{ poi }}
-            </nuxt-link>
-          </div>
-        </div>
-      </div>
     </div>
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-12">
         <nav class="d-flex mt-5 justify-content-end gap-1">
           <button
             class="btn btn-outline-secondary rounded-pill"
@@ -186,14 +185,26 @@ export default {
   width: 100%;
 }
 
+.practical-info-container {
+  background-color: rgb(233, 233, 233);
+}
+
+.location-container {
+  background-color: rgb(72, 85, 106);
+  color: white;
+}
+
 @media (max-width: 992px) {
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .card-grid {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .info-container {
+    border: none !important;
   }
 }
 
@@ -232,12 +243,8 @@ export default {
 li a {
   color: inherit;
   text-decoration: none;
-  background: linear-gradient(to right, rgb(33, 37, 41), rgb(33, 37, 41)),
-    linear-gradient(
-      to right,
-      rgba(124, 138, 150, 0.671),
-      rgba(124, 138, 150, 0.671)
-    );
+  background: linear-gradient(to right, white, white),
+    linear-gradient(to right, rgb(72, 85, 106), rgb(72, 85, 106));
   background-size: 100% 1px, 0 1px;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;

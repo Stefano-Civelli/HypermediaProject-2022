@@ -22,6 +22,27 @@
     </nav>
 
     <div class="row g-5 mt-3">
+      <div class="col-md-4 border-end info-container">
+        <div class="position-sticky" style="top: 5rem">
+          <div class="p-4 mb-3 practical-info-container rounded">
+            <h4 class="fst-italic">Practical Info</h4>
+            <p class="mb-0">{{ practical_info }}</p>
+            <p>ticket costs: {{ ticket_price }} €</p>
+          </div>
+
+          <div class="p-4 itinerary-container rounded">
+            <h4 class="fst-italic">Appears in the following Itineraries</h4>
+            <ol class="list-unstyled mb-0">
+              <li v-for="itinerary in relatedItineraries" :key="itinerary.id">
+                <nuxt-link :to="`/details/itinerary/${itinerary.id}`">
+                  {{ itinerary.name }}
+                </nuxt-link>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
       <div class="col-md-8">
         <h2 class="pb-4 mb-4 border-bottom fw-bold">
           What there is to know about {{ name }}
@@ -68,44 +89,23 @@
           </div>
         </div>
       </div>
-
-      <div class="col-md-4 border-start">
-        <div class="position-sticky" style="top: 5rem">
-          <div class="p-4 mb-3 bg-light rounded">
-            <h4 class="fst-italic">Practical Info</h4>
-            <p class="mb-0">{{ practical_info }}</p>
-            <p>ticket costs: {{ ticket_price }} €</p>
-          </div>
-
-          <div class="p-4">
-            <h4 class="fst-italic">Itineraries</h4>
-            <ol class="list-unstyled mb-0">
-              <li v-for="itinerary in relatedItineraries" :key="itinerary.id">
-                <nuxt-link :to="`/details/itinerary/${itinerary.id}`">
-                  {{ itinerary.name }}
-                </nuxt-link>
-              </li>
-            </ol>
-          </div>
-        </div>
-      </div>
     </div>
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-12">
         <nav class="d-flex mt-5 justify-content-end gap-1">
           <button
             class="btn btn-outline-secondary rounded-pill"
             @click="prev"
             v-if="id != 1"
           >
-            Previous
+            Previous Attraction
           </button>
           <button
             class="btn btn-outline-primary rounded-pill"
             @click="next"
             href="#"
           >
-            Next
+            Next Attraction
           </button>
         </nav>
       </div>
@@ -186,14 +186,26 @@ export default {
   width: 100%;
 }
 
+.practical-info-container {
+  background-color: rgb(233, 233, 233);
+}
+
+.itinerary-container {
+  background-color: rgb(72, 85, 106);
+  color: white;
+}
+
 @media (max-width: 992px) {
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .card-grid {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .info-container {
+    border: none !important;
   }
 }
 
@@ -231,12 +243,8 @@ export default {
 li a {
   color: inherit;
   text-decoration: none;
-  background: linear-gradient(to right, rgb(33, 37, 41), rgb(33, 37, 41)),
-    linear-gradient(
-      to right,
-      rgba(124, 138, 150, 0.671),
-      rgba(124, 138, 150, 0.671)
-    );
+  background: linear-gradient(to right, white, white),
+    linear-gradient(to right, rgb(72, 85, 106), rgb(72, 85, 106));
   background-size: 100% 1px, 0 1px;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
