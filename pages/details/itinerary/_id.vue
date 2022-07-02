@@ -44,9 +44,9 @@
       </div>
 
       <div class="col-md-8">
-        <h3 class="pb-4 mb-4 fst-italic border-bottom">
+        <h2 class="pb-4 mb-4 fw-bold border-bottom">
           "{{ name }}" - What to know
-        </h3>
+        </h2>
 
         <div>
           <h2 class="mb-1">Description</h2>
@@ -108,6 +108,9 @@
 </template>
 
 <style scoped>
+h2 {
+  font-size: 2.4rem;
+}
 .hero-section {
   display: flex;
   justify-content: center;

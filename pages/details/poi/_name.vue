@@ -51,12 +51,12 @@
         <div>
           <h2 class="mb-1">Description</h2>
           <br />
-          <p>
+          <p class="mb-4">
             {{ longDescription }}
           </p>
           <br />
-          <br />
-          <h2 class="mb-1">Where is it?</h2>
+
+          <h2 class="mb-2">Where is it?</h2>
           <div class="px-4 py-2">
             <iframe
               :src="mapSrc"
@@ -66,10 +66,8 @@
               class="border my-map rounded-4"
             ></iframe>
           </div>
-          <br />
-          <br />
-          <h2 class="mb-4">Related Events</h2>
-          <br />
+
+          <h2 class="mb-2 mt-5">Events held here</h2>
           <!-- Events -->
           <div class="hero-section">
             <p class="text-muted my-3" v-if="events.length == 0">
@@ -87,12 +85,33 @@
               />
             </div>
           </div>
+
+          <h2 class="mb-2 mt-3">Near by</h2>
+          <p>
+            You found yourself near <strong>{{ name }}</strong
+            >? Check out these other incredible places near by that you might be
+            interested in.
+          </p>
+          <p></p>
+          <!-- Events -->
+          <div class="hero-section">
+            <div class="card-grid">
+              <ItinPoiComponent
+                v-for="poi in nearByPoisArray"
+                :key="poi.id"
+                :id="poi.id"
+                :name="poi.name"
+                :poi_imgs="poi.poi_imgs"
+                :events="poi.events"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
-        <nav class="d-flex mt-5 justify-content-end gap-1">
+        <nav class="d-flex mt-3 justify-content-end gap-1">
           <button
             class="btn btn-outline-secondary rounded-pill"
             @click="prev"
@@ -115,17 +134,21 @@
 
 <script>
 import EventComponent from '~/components/EventComponent.vue'
+import ItinPoiComponent from '~/components/Itin-Poi-Component.vue'
 export default {
   name: 'PoiPage',
   components: {
     EventComponent,
+    ItinPoiComponent,
   },
   async asyncData({ route, $axios }) {
     const { name } = route.params
     const { data } = await $axios.get('/api/poi/' + name)
+    const nearByPoisArray = await $axios.get('/api/poi/random/' + name)
     const itineraryData = await $axios.get(
       '/api/poi/related_itineraries/' + name
     )
+    console.log(nearByPoisArray.data)
     const relatedItineraries = itineraryData.data.itineraries
     return {
       id: data.id,
@@ -139,6 +162,7 @@ export default {
       mapSrc: data.map_src,
       relatedItineraries,
       longDescription: data.long_description,
+      nearByPoisArray: nearByPoisArray.data,
     }
   },
   head() {
@@ -171,6 +195,9 @@ export default {
 </script>
 
 <style scoped>
+h2 {
+  font-size: 2.4rem;
+}
 .hero-section {
   display: flex;
   justify-content: center;

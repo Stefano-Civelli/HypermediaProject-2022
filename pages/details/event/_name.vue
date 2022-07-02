@@ -170,6 +170,9 @@ export default {
 </script>
 
 <style scoped>
+h2 {
+  font-size: 2.4rem;
+}
 .hero-section {
   display: flex;
   justify-content: center;

@@ -469,50 +469,50 @@ async function runMainApi() {
     return res.json(result)
   })
 
-  app.get('/event/year/next/:year', async(req, res) => {
+  app.get('/event/year/next/:year', async (req, res) => {
     const { year } = req.params
-    const { Op } = require('sequelize') 
+    const { Op } = require('sequelize')
     const currentYear = year + '-12-31'
     const result = await models.Event.findOne({
       where: {
         starting_date: {
-          [Op.gt]: currentYear
+          [Op.gt]: currentYear,
         },
       },
       order: sequelize.col('starting_date'),
       include: [{ model: models.Poi }],
     })
-    if(result == null) {
+    if (result == null) {
       return res.json(result)
     }
     const nextYear = {
-      next: result.starting_date.split('-')[0] 
+      next: result.starting_date.split('-')[0],
     }
     console.log(nextYear)
-    return res.json(nextYear) 
+    return res.json(nextYear)
   })
 
-  app.get('/event/year/previous/:year', async(req, res) => {
+  app.get('/event/year/previous/:year', async (req, res) => {
     const { year } = req.params
-    const { Op } = require('sequelize') 
+    const { Op } = require('sequelize')
     const currentYear = year + '-1-1'
     const result = await models.Event.findOne({
       where: {
         starting_date: {
-          [Op.lt]: currentYear
+          [Op.lt]: currentYear,
         },
       },
       order: [[sequelize.col('starting_date'), 'DESC']],
       include: [{ model: models.Poi }],
     })
-    if(result == null) {
+    if (result == null) {
       return res.json(result)
     }
     const prevYear = {
-      previous: result.starting_date.split('-')[0] 
+      previous: result.starting_date.split('-')[0],
     }
     console.log(prevYear)
-    return res.json(prevYear) 
+    return res.json(prevYear)
   })
   /** Events APIs -------------------------------------------*/
 
@@ -580,7 +580,7 @@ async function runMainApi() {
 
   app.get('/poi/random/:name', async (req, res) => {
     /*const sequelize = new Sequelize(url, opts)*/
-    const name = parseInt(req.params.name)
+    const name = req.params.name
     const { Op } = require('sequelize')
     const result = await models.Poi.findAll({
       where: { name: { [Op.ne]: name } },
@@ -588,16 +588,8 @@ async function runMainApi() {
       include: { model: models.Poi_img },
       limit: 3,
     })
-    const filtered = []
-    for (const element of result) {
-      filtered.push({
-        name: element.name,
-        description: element.description,
-        img: element.poi_imgs[0].img_path,
-        alt_desc: element.poi_imgs[0].alt_desc,
-      })
-    }
-    return res.json(filtered)
+
+    return res.json(result)
   })
   /** POI APIs -------------------------------------------*/
 

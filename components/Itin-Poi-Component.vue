@@ -96,7 +96,7 @@ export default {
     },
     idx: {
       type: Number,
-      required: true,
+      required: false,
     },
   },
 }
