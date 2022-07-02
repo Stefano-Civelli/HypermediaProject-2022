@@ -40,6 +40,16 @@ export default {
   head() {
     return {
       title: 'Itineraries',
+      meta: [
+        {
+          name: 'description',
+          content: `In this page you can find a list of all the we suggest for Milan's visitors`,
+        },
+        {
+          name: 'keywords',
+          content: `Itineraries, list, attractions, Milan, tourists, tourism`,
+        },
+      ],
     }
   },
 }

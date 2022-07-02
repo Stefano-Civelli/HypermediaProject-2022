@@ -69,6 +69,21 @@ export default {
   data() {
     return {}
   },
+  head() {
+    return {
+      title: 'All Events',
+      meta: [
+        {
+          name: 'description',
+          content: `Clickable list of all the events in Milan`,
+        },
+        {
+          name: 'keywords',
+          content: `Milan events, list, attractions, event, events`,
+        },
+      ],
+    }
+  }
 }
 </script>
 

@@ -138,6 +138,21 @@ export default {
       businessSubtitle,
     }
   },
+  head() {
+    return {
+      title: 'About',
+      meta: [
+        {
+          name: 'description',
+          content: `In this page you can find some information on us`,
+        },
+        {
+          name: 'keywords',
+          content: `About page, milan guide, about us, about`,
+        },
+      ],
+    }
+  }
 }
 </script>
 

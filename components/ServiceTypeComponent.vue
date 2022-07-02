@@ -16,7 +16,11 @@
       </div>
 
       <div class="col-md-5 d-flex justify-content-end">
-        <img class="my-img img-fluid" :src="img" :alt="altDesc" />
+        <img
+          class="my-img img-fluid"
+          :src="require(`~/assets/images/${img}`)"
+          :alt="altDesc"
+        />
       </div>
     </div>
     <hr class="my-divider" />

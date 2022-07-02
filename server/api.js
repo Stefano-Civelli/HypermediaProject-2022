@@ -169,7 +169,6 @@ async function runMainApi() {
     })
     const pois = []
     for (const row of result) {
-      console.log(row)
       let temp = await models.Poi.findOne({
         where: { id: row.poiId },
         include: [{ model: models.Poi_img }],
