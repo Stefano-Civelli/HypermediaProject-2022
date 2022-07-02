@@ -121,6 +121,18 @@ const pageContentObject = {
     title: 'About',
     image: 'path/to/img (if any)',
     description: `Milan is a city in northern Italy, capital of Lombardy. Second-most populous city proper in Italy after Rome, the city is also the first Italian economy hosting Italy's stock exchange (Borsa Italiana) and has a population of about 1.4 million, while its metropolitan city has 3.26 million inhabitants.`,
+    history_subtitle: `Milan was in the hands of Celts, Romans, Goths, Lombards, Spaniards and Austrians before becoming Italy's industrial and commercial capital`,
+    history:
+      'The city of Milan was founded around 400 BC by the Insubres, a Gaulish population that lived on the north side of the River Po. Then it remained under Lombardian control until the town was seized by the Franks and Charlemagne in 774, when the Carolingian Empire controlled from modern day France to Germany and Italy. Today Milan is the second largest city in Italy and the wider Milan metropolitan area has a population of over 8 million people.',
+    art_subtitle: `Milan is home to many cultural institutions, museums and art galleries`,
+    art: `Milan's museums and art galleries include some of the most important collections in the world, including major works by Leonardo da Vinci`,
+    nature_subtitle: 'The city hosts a number of incredible parks',
+    nature: `The largest parks in the central area of Milan are Sempione Park, at the north-western edge, and Montanelli Gardens, situated northeast of the city.`,
+    music_subtitle:
+      'Milan is a major national and international centre of the performing arts, most notably opera.',
+    music: `The city hosts La Scala operahouse, considered one of the world's most prestigious, having throughout history witnessed the premieres of numerous operas, such as Nabucco by Giuseppe Verdi in 1842, La Gioconda by Amilcare Ponchielli, Madama Butterfly by Giacomo Puccini in 1904, Turandot by Puccini in 1926, and more recently Teneke, by Fabio Vacchi in 2007. Other major theatres in Milan include the Teatro degli Arcimboldi, Teatro Dal Verme, Teatro Lirico and formerly the Teatro Regio Ducale.`,
+    business_subtitle: `Milan is Italy's biggest economical center`,
+    business: `Whereas Rome is Italy's political capital, Milan is the country's industrial and financial heart. With a 2014 GDP estimated at €158.9 billion, the province of Milan generates approximately 10% of the national GDP. The province of Milan is home to about 45% of businesses in the Lombardy region and more than 8 percent of all businesses in Italy, including three Fortune 500 companies.`,
   },
   contactus: {
     title: 'ContactUs',

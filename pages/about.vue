@@ -30,17 +30,71 @@
     </div>
     <div class="row">
       <div class="col-12 grid-container">
-        <div class="item header border">
-          <h3 class="card__heading">heading</h3>
+        <div class="testimonial-grid">
+          <article
+            class="testimonial grid-col-span-2 flow bg-primary-400 text-secondary-400"
+          >
+            <div class="d-flex">
+              <div>
+                <h2 class="title">History</h2>
+              </div>
+            </div>
+            <p>
+              {{ historySubtitle }}
+            </p>
+            <p>
+              {{ history }}
+            </p>
+          </article>
+          <article class="testimonial flow bg-secondary-400 text-neutral-100">
+            <div class="d-flex">
+              <div>
+                <h2 class="title">Art</h2>
+              </div>
+            </div>
+            <p>{{ artSubtitle }}</p>
+            <p>
+              {{ art }}
+            </p>
+          </article>
+          <article class="testimonial flow bg-neutral-100 text-secondary-400">
+            <div class="d-flex">
+              <div>
+                <h2 class="title">Nature</h2>
+              </div>
+            </div>
+            <p>{{ natureSubtitle }}</p>
+            <p>
+              {{ nature }}
+            </p>
+          </article>
+          <article
+            class="testimonial grid-col-span-2 flow bg-secondary-500 text-neutral-100"
+          >
+            <div class="d-flex">
+              <div>
+                <h2 class="title">Business</h2>
+              </div>
+            </div>
+            <p>
+              {{ businessSubtitle }}
+            </p>
+            <p>
+              {{ business }}
+            </p>
+          </article>
+          <article class="testimonial flow bg-neutral-100 text-secondary-400">
+            <div class="d-flex">
+              <div>
+                <h2 class="title">Music</h2>
+              </div>
+            </div>
+            <p>{{ musicSubtitle }}</p>
+            <p>
+              {{ music }}
+            </p>
+          </article>
         </div>
-        <div class="item sidebar border">sidebar</div>
-        <div class="item content-1 border">
-          <h3 class="card__heading">name</h3>
-          <p class="card__description">description</p>
-        </div>
-        <div class="item content-2 border">Content-2</div>
-        <div class="item content-3 border">Content-3</div>
-        <div class="item footer border">footer</div>
       </div>
     </div>
   </div>
@@ -58,113 +112,183 @@ export default {
     const title = data.title
     const image = data.image
     const description = data.description
+    const history = data.history
+    const historySubtitle = data.history_subtitle
+    const art = data.art
+    const artSubtitle = data.art_subtitle
+    const nature = data.nature
+    const natureSubtitle = data.nature_subtitle
+    const music = data.music
+    const musicSubtitle = data.music_subtitle
+    const business = data.business
+    const businessSubtitle = data.business_subtitle
     return {
       title,
       description,
       image,
+      history,
+      historySubtitle,
+      art,
+      artSubtitle,
+      nature,
+      natureSubtitle,
+      music,
+      musicSubtitle,
+      business,
+      businessSubtitle,
     }
   },
 }
 </script>
 
 <style scoped>
-.card__description {
-  color: rgb(255, 255, 255);
-  font-size: 1rem;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-
-  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
 }
 
-.card__heading {
-  color: rgb(255, 255, 255);
-  font-size: 1.9rem;
-  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-spacer, 1em);
 }
 
-.grid-container {
+.bg-primary-400 {
+  background: rgb(255, 230, 90);
+}
+.bg-secondary-400 {
+  background: rgb(72, 85, 106);
+}
+.bg-secondary-500 {
+  background: rgb(25, 33, 46);
+}
+
+.bg-neutral-100 {
+  background: rgb(255, 255, 255);
+}
+
+.text-neutral-100 {
+  color: rgb(255, 255, 255);
+}
+.text-secondary-400 {
+  color: rgb(72, 85, 106);
+}
+.border-primary-400 {
+  border: 2px solid #a775f1;
+}
+
+/* components */
+.testimonial-grid {
   display: grid;
-  width: 100%;
-  height: 850px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 200px 1fr 1fr 200px;
-  grid-gap: 1rem;
+  gap: 1.5rem;
+  grid-auto-columns: 1fr;
   grid-template-areas:
-    'header header header'
-    'sidebar content-1 content-1'
-    'sidebar content-2 content-3'
-    'footer footer footer';
-}
-/** assign elements to grid areas --------- */
-.header {
-  grid-area: header;
-  justify-content: center;
-  align-items: center;
-}
+    'one'
+    'two'
+    'three'
+    'four'
+    'five';
 
-.sidebar {
-  grid-area: sidebar;
+  padding-block: 2rem;
+  width: min(95%, 70rem);
+  margin-inline: auto;
 }
 
-.content-1 {
-  grid-area: content-1;
+.testimonial {
+  font-size: 0.88rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(217 19% 35% / 0.25);
 }
 
-.content-2 {
-  grid-area: content-2;
+.testimonial:nth-child(1) {
+  grid-area: one;
+}
+.testimonial:nth-child(2) {
+  grid-area: two;
+}
+.testimonial:nth-child(3) {
+  grid-area: three;
+}
+.testimonial:nth-child(4) {
+  grid-area: four;
+}
+.testimonial:nth-child(5) {
+  grid-area: five;
 }
 
-.content-3 {
-  grid-area: content-3;
-}
-/** assign elements to grid areas --------- */
-
-.footer {
-  grid-area: footer;
-  grid-row: 4 / 5;
-  grid-column: 1 / 4;
-}
-
-/* OTHER STYLES */
-
-.item {
-  color: #ffffff;
-  border-radius: 15px;
-  background-color: rgb(94, 94, 94);
-  display: flex;
-  padding: 10px;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.header {
-}
-
-.sidebar {
-}
-
-.content-1,
-.content-2,
-.content-3 {
-}
-
-.footer {
-}
-
-/** fare delle media query per far andare tutto su 1 colonna */
-@media (max-width: 780px) {
-  .grid-container {
+@media screen and (min-width: 33em) {
+  .testimonial-grid {
     grid-template-areas:
-      'header header heder'
-      'sidebar'
-      'content-1'
-      'content-2'
-      'content-3'
-      'footer';
+      'one one'
+      'two three'
+      'five five'
+      'four four';
   }
 }
 
+@media screen and (min-width: 38em) {
+  .testimonial-grid {
+    grid-template-areas:
+      'one one'
+      'two five'
+      'three five'
+      'four four';
+  }
+}
+
+@media screen and (min-width: 54em) {
+  .testimonial-grid {
+    grid-template-areas:
+      'one one two'
+      'five five five'
+      'three four four';
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .testimonial-grid {
+    grid-template-areas:
+      'one one two five'
+      'three four four five';
+  }
+}
+
+.testimonial {
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+}
+
+.testimonial img {
+  width: 1.75rem;
+  border-radius: 50%;
+}
+
+.title {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.testimonial .position {
+  font-size: 0.6875rem;
+  opacity: 0.5;
+}
+
+.testimonial > p:first-of-type {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.testimonial > p:last-of-type {
+  opacity: 0.7;
+}
 /** ------------- UPPER PART OF PAGE from here down------------- */
 .hero {
   display: flex;
@@ -200,7 +324,6 @@ export default {
 .text__description {
   line-height: 145%;
   font-size: 1em;
-  font-weight: 300;
   padding-bottom: 1em;
 }
 
@@ -288,7 +411,7 @@ export default {
 .eight {
   grid-column: 1 / 2;
   grid-row: 4 / 5;
-  background-color: #fadee0;
+  background-color: rgb(194, 204, 221);
   border-radius: 100px 0 0 0;
   -moz-border-radius: 100px 0 0 0;
   -webkit-border-radius: 100px 0 0 0;
@@ -327,6 +450,9 @@ export default {
 }
 
 @media (max-width: 780px) {
+  .grid-container {
+    margin-top: -70px;
+  }
   .hero {
     flex-direction: column-reverse;
     margin: 2em 2em;
