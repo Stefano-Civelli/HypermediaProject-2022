@@ -21,7 +21,7 @@ export default async (models) => {
       name: 'Castello Sforzesco',
       practical_info: 'Always open',
       ticket_price: 0.0,
-      long_description: '',
+      long_description: "Castello Sforzesco, one of the largest in Europe. Throughout history, this imposing complex has played many roles: defensive fortress, ducal residence and military barracks. Nowadays, its magnificent interior hosts Milano’s Municipal museums and other cultural institutions, but the castle grounds are fascinating in themselves, with large courtyards, massive walls, moat, towers (entrance is free excluding the museums), crenulated battlements and the green expanse of Parco Sempione.",
       description: 'At the end of via Dante, near Parco Sempione',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.966627459925!2d9.17714381549889!3d45.470476179101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786fcb60ea97b3d%3A0x6556dd66c472c29b!2sSforzesco%20Castle!5e0!3m2!1sen!2sit!4v1654619619289!5m2!1sen!2sit',
@@ -32,7 +32,7 @@ export default async (models) => {
       name: 'Galleria Vittorio Emanuele II',
       practical_info: 'Always open',
       ticket_price: 0.0,
-      long_description: '',
+      long_description: "The Galleria is Italy’s oldest shopping mall and - beautifully embellished with mosaics and caryatids around windows and balconies - it has maintained its lustre. The arcade’s luxury brand shops, that could easily compete with those in Via Montenapoleone or Via della Spiga, are juxtaposed with the classic white-tablecloth restaurants, the celebrity chefs’ eateries, legendary venues like the Camparino bar and the iconic Bocca art bookstore, based in the Galleria since 1930 but a significant cultural presence in the city since the nineteenth century.",
       description: 'Started builiding in the first part of XX century',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.196600450955!2d9.187751417443847!3d45.46584340000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47793506fd86b6c3%3A0x270b9ca95809d416!2sGalleria%20Vittorio%20Emanuele%20II!5e0!3m2!1sen!2sit!4v1654619666739!5m2!1sen!2sit',
@@ -43,7 +43,7 @@ export default async (models) => {
       name: 'Teatro alla scala',
       practical_info: 'Buy tickets online',
       ticket_price: 0.0,
-      long_description: '',
+      long_description: "Milan’s Teatro alla Scala is the most famous opera house in the world and an unmissable destination for music and culture devotees. Many of the operas singers, performers, conductors, dancers and directors who have made history - from Bellini to Verdi, Maria Callas, Pavarotti, Carla Fracci and Luchino Visconti - have trodden this hallowed stage, presenting the best of the best in global Arts. Yet this has not always been the case: La Scala was constructed in just two years (1776-78) by the architect Giuseppe Piermarini and, over time, it served numerous functions, for a period it was even a gambling venue for the Milanese bourgeoisie.",
       description: 'Opened in 1778',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.1192290445406!2d9.187362515498796!3d45.46740207910103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6ad891a5757%3A0x1bade948102e834f!2sTeatro%20alla%20Scala!5e0!3m2!1sen!2sit!4v1654619729531!5m2!1sen!2sit',
@@ -54,7 +54,7 @@ export default async (models) => {
       name: 'Piancoteca di Brera',
       practical_info: 'Opening hours may vary',
       ticket_price: 15.0,
-      long_description: '',
+      long_description: "If you’re looking for a unique picture gallery experience in  Milano, with a profusion of masterpieces and inspiring installations, then Pinacoteca di Brera is the place for you. The wide rooms of Palazzo di Brera's first floor display masterpieces such as the Discovery of the body of Saint Mark by Tintoretto, the Marriage of the Virgin by Raphael, the Dead Christ by Mantegna, the Supper at Emmaus by Caravaggio, the Pala Montefeltro (The Virgin with Child, Angels and Saints) by Piero della Francesca, Francesco Hayez's The Kiss and Umberto Boccioni's Riot in the Galleria and The City Rises. The collections include artworks ranging from the fourth millennium B.C. to the twentieth century, with an obvious focus on Italian painting",
       description: 'Largest art gallery in Milan',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.893240211957!2d9.185625815498893!3d45.471954479101115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786ee11587e4e1f%3A0x1b367a8e2cb13736!2sPinacoteca%20di%20Brera!5e0!3m2!1sen!2sit!4v1654619761194!5m2!1sen!2sit',
@@ -65,7 +65,7 @@ export default async (models) => {
       name: 'Santa Maria delle Grazie',
       practical_info: 'Closed during religious functions',
       ticket_price: 0.0,
-      long_description: '',
+      long_description: "When you hear the words Santa Maria delle Grazie in Milano, Leonardo da Vinci’s Last Supper immediately comes to mind, as it is in the refectory of the church’s adjoining Dominican convent that his immortal Unesco heritage masterpiece is conserved. But Leonardo's unrivalled work is not the only cultural gem to admire here: a visit to the awesome church takes visitors back to Milano’s golden era. A historic period of great splendour for the city, which saw an unparalleled flourishing of art and culture under the Visconti and Sforza families. Most notably, the court of Ludovico il Moro and Beatrice d’Este was known as being the richest and most sumptuous in Italy: the city of Milano played host to the most renowned and learned artists, musicians, poets and philosophers over the years: Leonardo was the greatest of them all.",
       description: 'Started building in 1463',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.1906647269816!2d9.168773415498706!3d45.465962979101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c15a44bf1c83%3A0xed5bcdc4d3c75a59!2sSanta%20Maria%20delle%20Grazie!5e0!3m2!1sen!2sit!4v1654619791964!5m2!1sen!2sit',
@@ -76,7 +76,7 @@ export default async (models) => {
       name: 'Palazzo Reale',
       practical_info: 'Closed on Mondays',
       ticket_price: 10.0,
-      long_description: '',
+      long_description: "Known as a venue for major exhibitions in Milan, Palazzo Reale, right by the side of the equally famous Museo del Novecento, is a masterpiece of neoclassical architecture. As you ascend the magnificent main staircase located in the atrium, it will be easy to imagine sumptuously dressed ladies and dignitaries going about their everyday court life or their lavish receptions. The Palazzo’s rooms are steeped in its fascinating history as, over the centuries, it became home to the city’s rulers and a cultural and political centre of Lombardy.",
       description: 'Used for different exhibitions',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1399.169686088783!2d9.190202658235588!3d45.46296709477524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6aec57575a1%3A0xdd579e63ba086381!2sRoyal%20Palace!5e0!3m2!1sen!2sit!4v1654619820537!5m2!1sen!2sit',
@@ -87,7 +87,7 @@ export default async (models) => {
       name: 'Biblioteca Pinacoteca Academia Ambrosiana',
       practical_info: 'Closed on Mondays',
       ticket_price: 10.0,
-      long_description: '',
+      long_description: "Pinacoteca Ambrosiana is one of Milano's most important museums, inextricably linked to three geniuses of Italian art. Leonardo da Vinci, as it houses the most extensive and fascinating collection of Leonardo’s notebooks, the Codex Atlanticus. Caravaggio, author of the Pinacoteca’s most iconic piece, the Basket of fruit. And Raphael, as the original full-scale preparatory cartoon of the celebrated School of Athens fresco, his masterpiece in the Vatican’s Raphael Rooms, is on display here.",
       description: "Musem inside Palazzo dell'Ambrosiana",
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.3139592270863!2d9.183599415498627!3d45.463479079100914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6ac88b2ca9f%3A0xcc86bf5e7ffbd36e!2sAmbrosian%20Library!5e0!3m2!1sen!2sit!4v1654619856970!5m2!1sen!2sit',
@@ -98,7 +98,7 @@ export default async (models) => {
       name: 'Science and Technology Museum',
       practical_info: 'Closed on mondays',
       ticket_price: 7.0,
-      long_description: '',
+      long_description: "Do not miss the New Galleries, the largest permanent exhibition in the world dedicated to Leonardo da Vinci. A spectacular journey among 170 historical models, works of art, ancient volumes and immersive installations to discover the life and the works of Da Vinci the engineer and humanist. Discover extraordinary objects such as steam trains, the Luna Rossa AC72 catamaran, the brigantine schooner Ebe, the deck of the Conte Biancamano transatlantic, the Enrico Toti submarine and the Vega space launcher. Explore the Space area displaying the only Moon fragment on show in Italy and visit the exhibition Fragility and Beauty.",
       description: 'Biggest tech-related museum in Italy',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.397788938599!2d9.16808141549859!3d45.46179017910095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c159c26cee9b%3A0x72458fca19e5eb92!2sMuseo%20Nazionale%20della%20Scienza%20e%20della%20Tecnologia%20Leonardo%20da%20Vinci!5e0!3m2!1sen!2sit!4v1654619886737!5m2!1sen!2sit',
@@ -109,7 +109,7 @@ export default async (models) => {
       name: 'Bosco Verticale',
       practical_info: 'Private building',
       ticket_price: 0.0,
-      long_description: '',
+      long_description: "Bosco Verticale (Vertical Forest) in Milano was inaugurated in 2014 and designed by Boeri Studio; today it represents one of the city’s most innovative and prestigious symbols. A new model of urban regeneration and design with a strong ecological impact, now replicated globally with great success. The two residential towers, respectively 76 and 100 meters high, are located midway between the old Isola district and the futuristic Garibaldi neighbourhood; the façades are enveloped by 800 trees, 4,500 shrubs and 15,000 plants (equivalent to 7000 sqm of a normal horizontal forest) that thrive on the cantilevered balconies and terraces. Several species of birds have found their natural habitat amongst the branches.",
       description: 'More than 2000 different tree species',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.214815188939!2d9.188205015499387!3d45.48561877910131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c132b4a49b21%3A0x545068687f3a217b!2sBosco%20Verticale!5e0!3m2!1sen!2sit!4v1654619924198!5m2!1sen!2sit',
@@ -120,7 +120,7 @@ export default async (models) => {
       name: 'Fondazione Prada',
       practical_info: 'Closed on Tuesdays',
       ticket_price: 5.0,
-      long_description: '',
+      long_description: "The project for the recovery of the site in order to create a new home for Fondazione Prada was entrusted in 2008 to the Dutch architects Rem Koolhaas and Chris van Duijn, of the OMA firm. The distillery’s historic structures were recovered and repurposed to house the Fondazione’s many activities, and three new constructions lend an innovative character to the citadel. The Tower, facing the city center, soars with its irregular shapes over the lower buildings; the Haunted House, a 4-storey building clad in gold leaf; and the Podium, a vast central space on two storeys. Fondazione Prada was established by Miuccia Prada and Patrizio Bertelli in 1993 as an institution promoting reflection about the contemporary in art and culture. Behind the Fondazione is a name in fashion known worldwide, with 102 years of activity.",
       description: 'Permanent contemporary art gallery',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2799.2774993125945!2d9.202628415497975!3d45.44406387910073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c69ef804a0d7%3A0x1545d69fc021179f!2sFondazione%20Prada!5e0!3m2!1sen!2sit!4v1654619965440!5m2!1sen!2sit',
@@ -131,7 +131,7 @@ export default async (models) => {
       name: "Peace's Arch",
       practical_info: 'Always open',
       ticket_price: 0.0,
-      long_description: '',
+      long_description: "It is hard to miss the majestic Arco della Pace (Arch of Peace) standing at the far end of Parco Sempione, creating a place where young people like to hang out in the long summer evenings and socialise with friends. It was constructed in 1806 to celebrate the marriage of Eugene de Beauharnais - viceroy of Italy and adopted son of Napoleon - with Princess Augusta of Bavaria, to mark the beginning of the road that led to Paris.",
       description: 'Started builiding in 1807',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.7076564368494!2d9.170262715499053!3d45.47569267910106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c147aa41b7cf%3A0xfbbcb44d7ec5c615!2sArco%20della%20Pace!5e0!3m2!1sen!2sit!4v1654619992451!5m2!1sen!2sit',
@@ -142,7 +142,7 @@ export default async (models) => {
       name: 'Poldi Pezzoli Museum',
       practical_info: 'Closed on Tuesdays',
       ticket_price: 5.0,
-      long_description: '',
+      long_description: "The museum’s collection is unequivocally considered as one of the most prestigious in Europe. It comprises masterpieces by Botticelli, Piero della Francesca, Bellini, Mantegna, Canaletto, Tiepolo and, above all, that most iconic portrait adopted as the symbol of the museum: Piero del Pollaiolo’s Portrait of a Lady (1470). The portrait is the epitome of grace and elegance, displaying an impressive eye for detail and a truly enchanting profile.",
       description: 'Home-Museum',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.0633540013337!2d9.189504015498803!3d45.468527679100944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6b1f202e397%3A0x849898e3faf27d6e!2sPoldi%20Pezzoli%20Museum!5e0!3m2!1sen!2sit!4v1654620020314!5m2!1sen!2sit',
@@ -153,7 +153,7 @@ export default async (models) => {
       name: 'Via Monte Napoleone',
       practical_info: 'Always Open',
       ticket_price: 0.0,
-      long_description: '',
+      long_description: "Via Montenapoleone…just to mention the name conjures up visions of stunning shop windows with revered designer names, front-door staff in bespoke suits, impeccable shop assistants and luxury cars ferrying smartly-dressed ladies and their pampered pooches. \"Via Montenapo\", as it is fondly known to the Milanese, is a place where dreaming costs nothing but buying is for a select few. Every designer yearns for a prized place in this fashion mecca but only the crème de la crème can display their creations for the approval of the Milano fashion elite.",
       description: 'Shopping street',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.072979318978!2d9.19294441549881!3d45.46833377910094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6b046e886ed%3A0x30dd2847bfbfd4b4!2sVia%20Monte%20Napoleone%2C%2020121%20Milano%20MI!5e0!3m2!1sen!2sit!4v1654620048945!5m2!1sen!2sit',
@@ -164,7 +164,7 @@ export default async (models) => {
       name: 'Mudec',
       practical_info: 'Opening hours: 9.30-19.30',
       ticket_price: 4.0,
-      long_description: '',
+      long_description: "MUDEC - Museum of Cultures is an interdisciplinary centre opened in 2015 to host and present the civic ethnographic collections to the public in the new building designed by English architect David Chipperfield within the former industrial Ansaldo Area, located in Tortona District. MUDEC reinterprets the spaces that it fits into with square-shaped forms coated with zinc and with a glass structure – illuminated 24/7 – that geometrically breaks the building that hosts it. The key feature of the new space is the Agorà, a covered courtyard dominated by a cloud-shaped vault: a meeting place between cultures and communities.",
       description: 'Cultures museum',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.9063388014106!2d9.15934971549821!3d45.45154347910079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c3e618f2c2c1%3A0x72134ad9d5328077!2sMudec!5e0!3m2!1sen!2sit!4v1654620078083!5m2!1sen!2sit',
@@ -175,7 +175,7 @@ export default async (models) => {
       name: 'GAM',
       practical_info: 'Closed on Mondays',
       ticket_price: 3.0,
-      long_description: '',
+      long_description: "The imposing and elegant Villa Reale is set in the Indro Montanelli gardens; it is also known as Villa di Belgiojoso in honour of the eponymous Count who commissioned its creation at the end of the 18th century. The sumptuous interiors of the Villa have housed the Galleria d'Arte Moderna (GAM) in Milan since 1921 and, in its long history, it provided lodgings to many illustrious characters. It had the function of representing Milano’s Authorities to those who came to visit from Vienna, before it eventually became a museum.",
       description: 'Modern Art Gallery',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.8523683219664!2d9.197811315498951!3d45.47277777910098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6b9166aa2d1%3A0xc193980dc5f1bc0b!2sModern%20Art%20Gallery!5e0!3m2!1sen!2sit!4v1654620108016!5m2!1sen!2sit',
@@ -186,7 +186,7 @@ export default async (models) => {
       name: "San Lorenzo Maggiore's Chatedral",
       practical_info: 'Always Open',
       ticket_price: 0.0,
-      long_description: '',
+      long_description: "On entering, you will be struck by the sight of the immense dome that rises above the central atrium: on the right, you can enter the Chapel of S. Aquilino, constructed between 390 and 430 AD. Due to its octagonal lantern and the opulence of the interior, it was thought to have been built as an imperial mausoleum. Access is permitted to the foundation, in the chapel's basement, built of squared stone blocks sourced from the demolition of the nearby Roman amphitheatre. The four walls of the atrium are decorated with mosaics depicting the Patriarchs, the Apostles and a beardless Christ. ",
       description: 'One of the oldest churc in Milan',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.5753476147893!2d9.17988891549843!3d45.458212779100904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c3fff8fa2aa5%3A0x84e38da300dd3a16!2sBasilica%20San%20Lorenzo%20Maggiore!5e0!3m2!1sen!2sit!4v1654620136876!5m2!1sen!2sit',
@@ -197,7 +197,7 @@ export default async (models) => {
       name: 'Piazza Gae Aulenti',
       practical_info: 'Always open',
       ticket_price: 0.0,
-      long_description: '',
+      long_description: "If Piazza Duomo is the historic heart of Milan then Piazza Gae Aulenti represents the new face of the city, the symbol of a metropolis that is changing and looking ahead to the future. The Piazza sits at the heart of the Porta Nuova development, the urban renovation of the Garibaldi, Isola and Varesine districts: a circular piazza of about 80 mts in diameter with a surface area of 2,300 m2, it is raised 10 mts above ground with three intermediate levels (underground station, parking, retail).",
       description: 'Designed by archi-star Gae Aulenti',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.3089004747517!2d9.187410015499344!3d45.48372397910119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c133391261d1%3A0xb55f65872cb8ba7!2sPiazza%20Gae%20Aulenti%2C%2020124%20Milano%20MI!5e0!3m2!1sen!2sit!4v1654620167119!5m2!1sen!2sit',
@@ -208,7 +208,7 @@ export default async (models) => {
       name: 'PAC',
       practical_info: 'Closed on Mondays',
       ticket_price: 2.0,
-      long_description: '',
+      long_description: "The history of PAC began in 1947 when the Municipality of Milan, in search of a new space for the Municipal Collections of the XX century, found the former stables of Villa Reale, destroyed by bombing in 1943. Since 1921, the Villa had been the location of the Gallery of Modern Art, but the spaces were too small to house the most recent artistic trends and, ultimately, to become a museum for contemporary art.",
       description: 'Contemporary Art Gallery',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.844713155776!2d9.197276615324864!3d45.4729319791011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6b9bc18b95b%3A0x95c3d804f41744c2!2sPAC%20-%20Padiglione%20d&#39;Arte%20Contemporanea!5e0!3m2!1sen!2sit!4v1656757435261!5m2!1sen!2sit',
@@ -219,7 +219,7 @@ export default async (models) => {
       name: 'Chiaravalle Abbey',
       practical_info: 'Opening Hours: 9-12 15-18',
       ticket_price: 0.0,
-      long_description: '',
+      long_description: "Founded by San Bernardo di Clairvaux in 1135, as a daughterhouse of Clairvaux, this is one of Italy’s most important monastic complexes, located in the periphery of Milan within the extensive lowland of the Parco Agricolo Sud Milano (south agricultural park). The traditional Cistercian monastic community is still very much present in the village of Chiaravalle today; the Abbey is a place of devotion and an important fulcrum from a historical, artistic and cultural point of view. In literal observance of the Rule of San Benedetto da Norcia, over the centuries, the Chiaravalle monastic community has played a fundamental role in the reclamation and regeneration of the marshy lands and woodlands south of Milan. They laid the foundations for economic and agricultural practices that resulted in the thriving cultivation that, still today, makes this part of the Milanese countryside one of the most fertile in Europe.",
       description: 'Founded in the XII Century',
       map_src:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.6773179308657!2d9.233906315497016!3d45.4158461791005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c5a079ba2cef%3A0xac1eadfbc364324b!2sChiaravalle%20Abbey!5e0!3m2!1sen!2sit!4v1654620219258!5m2!1sen!2sit',
@@ -724,32 +724,20 @@ export default async (models) => {
       type: 'Pharmacy',
       alt_desc: '',
       description: 'Need some drugs? Find the closest pharmacy!',
-<<<<<<< HEAD
-      img: 'service_types/Pharmacy.jpg',
-=======
       img: 'service_types/Pharmacy.jpg'
->>>>>>> 9635584973c899fff1e92f75cd463fc6519d3cfc
     },
     {
       type: 'InfoPoint',
       alt_desc: '',
       description:
         'In need of some additional informations about the city? Here are some InfoPoints.',
-<<<<<<< HEAD
-      img: 'service_types/InfoPoint.jpg',
-=======
       img: 'service_types/InfoPoint.jpg'
->>>>>>> 9635584973c899fff1e92f75cd463fc6519d3cfc
     },
     {
       type: 'SuperMarket',
       alt_desc: '',
       description: 'U 2 broke 2 eat in a restaurant? lol.',
-<<<<<<< HEAD
-      img: 'service_types/Esselunga.png',
-=======
       img: 'service_types/Esselunga.png', 
->>>>>>> 9635584973c899fff1e92f75cd463fc6519d3cfc
     },
   ]
   const serviceList = [
