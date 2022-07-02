@@ -54,6 +54,21 @@ export default {
   data() {
     return {}
   },
+  head() {
+    return {
+      title: 'Winter Events',
+      meta: [
+        {
+          name: 'description',
+          content: `In this page you can find the list of all the winter events in Milan`,
+        },
+        {
+          name: 'keywords',
+          content: `Milan events, list, attractions, events, events groups, winter`,
+        },
+      ],
+    }
+  },
 }
 </script>
 

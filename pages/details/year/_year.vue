@@ -35,7 +35,6 @@ export default {
   async asyncData({ route, $axios }) {
     const { year } = route.params
     const { data } = await $axios.get('/api/event/year/' + year)
-    console.log(data)
     return {
       data,
       year,
@@ -44,6 +43,21 @@ export default {
   data() {
     return {}
   },
+  head() {
+    return {
+      title: `Events of ${this.year}`,
+      meta: [
+        {
+          name: 'description',
+          content: `Clickable list of all ${this.year} events in Milan`,
+        },
+        {
+          name: 'keywords',
+          content: `Milan events, list, attractions, event, events, events by year`,
+        },
+      ],
+    }
+  }
 }
 </script>
 

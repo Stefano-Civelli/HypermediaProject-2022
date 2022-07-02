@@ -67,6 +67,21 @@ export default {
       itineraryList,
     }
   },
+  head() {
+    return {
+      title: 'Milan Guide',
+      meta: [
+        {
+          name: 'description',
+          content: `This is the home page of the website. Here you can find some tourism informations on Milan and you can move to the other sections of the website`,
+        },
+        {
+          name: 'keywords',
+          content: `Milan, events, point of interest, itineraries, services, list, attractions, guide, milan guide`,
+        },
+      ],
+    }
+  },
 }
 </script>
 

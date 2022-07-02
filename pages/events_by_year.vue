@@ -43,6 +43,21 @@ export default {
   data() {
     return {}
   },
+  head() {
+    return {
+      title: 'Events by Year',
+      meta: [
+        {
+          name: 'description',
+          content: `Events in Milan grouped by year`,
+        },
+        {
+          name: 'keywords',
+          content: `Milan events, list, attractions, events, events groups, events by year`,
+        },
+      ],
+    }
+  },
   async asyncData({ $axios }) {
     const { data } = await $axios.get('/api/event/list/years')
     return {

@@ -55,6 +55,21 @@ export default {
   data() {
     return {}
   },
+  head() {
+    return {
+      title: 'Summer Events',
+      meta: [
+        {
+          name: 'description',
+          content: `In this page you can find a list of all the summer events in Milan`,
+        },
+        {
+          name: 'keywords',
+          content: `Milan events, list, attractions, events, events groups, summer`,
+        },
+      ],
+    }
+  },
 }
 </script>
 
