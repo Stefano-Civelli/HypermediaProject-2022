@@ -1,9 +1,6 @@
 <template>
   <div class="cards">
-    <nuxt-link
-      :to="`${nuxtLink}/${id == -1 ? title : id}`"
-      class="card shadow-lg"
-    >
+    <nuxt-link :to="`${nuxtLink}/${id == -1 ? title : id}`" class="card">
       <img
         :src="require(`~/assets/images/${img}`)"
         class="card__image"
@@ -96,6 +93,7 @@ export default {
   overflow: hidden;
   text-decoration: none;
   border: none;
+  box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(217 19% 35% / 0.25);
 }
 
 .card__image {
@@ -169,9 +167,6 @@ export default {
   margin: 0;
   color: rgb(165, 141, 152);
   font-size: 0.92em;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
   overflow: hidden;
 }
 </style>
