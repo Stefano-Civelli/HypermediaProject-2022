@@ -16,22 +16,18 @@
 .my-page-title {
   margin-top: 145px;
   font-size: 5.5rem;
-  border-radius: 20px;
   padding: 10px;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
 }
 .hero-section-parallax {
-  /* Set a specific height */
   /** decidere a quanto settarlo */
-  min-height: 850px;
+  height: 850px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-
   top: 0;
 }
 @media (max-width: 768px) {

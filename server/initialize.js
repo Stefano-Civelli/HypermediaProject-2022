@@ -724,20 +724,32 @@ export default async (models) => {
       type: 'Pharmacy',
       alt_desc: '',
       description: 'Need some drugs? Find the closest pharmacy!',
+<<<<<<< HEAD
       img: 'service_types/Pharmacy.jpg',
+=======
+      img: 'service_types/Pharmacy.jpg'
+>>>>>>> 9635584973c899fff1e92f75cd463fc6519d3cfc
     },
     {
       type: 'InfoPoint',
       alt_desc: '',
       description:
         'In need of some additional informations about the city? Here are some InfoPoints.',
+<<<<<<< HEAD
       img: 'service_types/InfoPoint.jpg',
+=======
+      img: 'service_types/InfoPoint.jpg'
+>>>>>>> 9635584973c899fff1e92f75cd463fc6519d3cfc
     },
     {
       type: 'SuperMarket',
       alt_desc: '',
       description: 'U 2 broke 2 eat in a restaurant? lol.',
+<<<<<<< HEAD
       img: 'service_types/Esselunga.png',
+=======
+      img: 'service_types/Esselunga.png', 
+>>>>>>> 9635584973c899fff1e92f75cd463fc6519d3cfc
     },
   ]
   const serviceList = [
