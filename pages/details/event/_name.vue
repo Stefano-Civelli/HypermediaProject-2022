@@ -114,6 +114,7 @@
             class="btn btn-outline-primary rounded-pill"
             @click="next"
             href="#"
+            v-if="id != maxEventId"
           >
             Next Event
           </button>
@@ -135,7 +136,11 @@ export default {
     const { data } = await $axios.get('/api/event/' + name)
     // call to /event/random/:id API that retrieves information of the event related to the one that is being displayed
     const randomEventsData = await $axios.get('/api/event/random/' + data.id)
+    // call to /maxEventId API that retrieves the max event id
+    const data2 = await $axios.get('/api/maxEventId/')
     const randomEvents = randomEventsData.data
+    console.log(data.id)
+    console.log(data2.data)
     return {
       id: data.id,
       name: data.name,
@@ -153,6 +158,7 @@ export default {
       randomEvents,
       longDescription: data.longDescription,
       background: data.header_img,
+      maxEventId: data2.data,
     }
   },
   head() {
