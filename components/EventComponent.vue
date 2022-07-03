@@ -61,7 +61,6 @@ export default {
   position: absolute;
   right: 0;
   top: 0;
-
   transition: filter 200ms linear, transform 200ms linear;
 }
 

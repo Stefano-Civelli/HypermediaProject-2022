@@ -65,6 +65,7 @@ export default {
   width: 500px;
   border-radius: 15px;
 }
+
 .my-divider {
   margin: 5rem 0; /* Space out the Bootstrap <hr> more */
 }
@@ -75,7 +76,6 @@ export default {
 }
 
 /* RESPONSIVE CSS -------------------------------------------------- */
-
 @media (min-width: 62em) {
   .my-heading {
     margin-top: 2rem;

@@ -247,10 +247,6 @@ h2 {
   margin: auto;
 }
 
-.rounded-4 {
-  border-radius: 15px;
-}
-
 .my-border {
   border: 1px solid red;
 }
@@ -269,6 +265,11 @@ h2 {
   background-position: 0% 70%;
 }
 
+/** breadcrumb styling ---------------*/
+.rounded-4 {
+  border-radius: 15px;
+}
+
 .breadcrumb a,
 li a {
   color: inherit;
@@ -285,4 +286,5 @@ li a {
 li a:hover {
   background-size: 0 1px, 100% 1px;
 }
+/** breadcrumb styling ---------------*/
 </style>

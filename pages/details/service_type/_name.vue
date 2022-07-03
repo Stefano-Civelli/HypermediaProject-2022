@@ -64,6 +64,7 @@ export default {
 </script>
 
 <style scoped>
+/** breadcrumb styling ---------------*/
 .bread-container {
   margin: 30px 0px 0px 10px;
 }
@@ -94,4 +95,5 @@ export default {
 .breadcrumb a:hover {
   background-size: 0 1px, 100% 1px;
 }
+/** breadcrumb styling ---------------*/
 </style>

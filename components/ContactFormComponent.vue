@@ -74,19 +74,24 @@ export default {
   border: 1px solid rgb(112, 112, 112);
   box-shadow: none;
 }
+
 .my-textfield {
   box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
   outline: 0;
 }
+
 .my-textfield:focus {
   border: 1px solid rgb(112, 112, 112);
 }
+
 .textarea-container {
   height: 200px;
 }
+
 .my-title {
   text-align: center;
 }
+
 .rounded-4 {
   border-radius: 15px;
 }
