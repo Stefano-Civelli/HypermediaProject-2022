@@ -80,3 +80,7 @@ We used most of the special directories
 ### `pages`
 
 ### `static`
+
+![ER-diagram](https://user-images.githubusercontent.com/62955439/177054688-89f25397-b188-4bfb-bf31-f2c5f99c0b58.jpg)
+
+
