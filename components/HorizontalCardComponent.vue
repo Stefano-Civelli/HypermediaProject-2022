@@ -2,9 +2,9 @@
   <div class="container w-100">
     <div class="row mt-5">
       <div class="col-md-7">
-        <h2 class="my-heading fw-normal lh-1">
-          {{ description }}
-          <span class="text-muted">Click the button below</span>
+        <h2 class="my-heading lh-1">
+          {{ description }}.
+          <span class="text-muted fst-italic">{{ subtitle }}</span>
         </h2>
         <div class="pt-5 justify-content-end">
           <nuxt-link :to="`${nuxtLink}/${type}`">
@@ -47,6 +47,10 @@ export default {
       required: true,
     },
     nuxtLink: {
+      type: String,
+      required: true,
+    },
+    subtitle: {
       type: String,
       required: true,
     },
