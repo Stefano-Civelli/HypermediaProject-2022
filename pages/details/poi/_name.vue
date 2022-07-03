@@ -39,9 +39,9 @@
             <h4 class="fst-italic">Appears in the following Itineraries</h4>
             <ol class="list-unstyled mb-0">
               <li v-for="itinerary in relatedItineraries" :key="itinerary.id">
-                <nuxt-link :to="`/details/itinerary/${itinerary.id}`">
+                <NuxtLink :to="`/details/itinerary/${itinerary.id}`">
                   {{ itinerary.name }}
-                </nuxt-link>
+                </NuxtLink>
               </li>
             </ol>
           </div>

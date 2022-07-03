@@ -14,7 +14,7 @@
               <div class="p-4">
                 <div class="row year-switch-container">
                   <div class="col-6 d-flex">
-                    <nuxt-link
+                    <NuxtLink
                       v-if="previous != null"
                       class="my-links"
                       :to="`/details/year/${previous}`"
@@ -31,12 +31,12 @@
                           d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"
                         />
                       </svg>
-                      {{ previous }}</nuxt-link
+                      {{ previous }}</NuxtLink
                     >
                   </div>
 
                   <div class="col-6 d-flex justify-content-end">
-                    <nuxt-link
+                    <NuxtLink
                       v-if="next != null"
                       class="my-links"
                       :to="`/details/year/${next}`"
@@ -53,7 +53,7 @@
                           d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"
                         />
                       </svg>
-                    </nuxt-link>
+                    </NuxtLink>
                   </div>
                 </div>
               </div>

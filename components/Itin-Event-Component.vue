@@ -1,10 +1,10 @@
 <template>
   <div>
-    <nuxt-link :to="`/details/event/${name}`">
+    <NuxtLink :to="`/details/event/${name}`">
       <div class="img-container">
         <img class="event-img" :src="img" :title="name" />
       </div>
-    </nuxt-link>
+    </NuxtLink>
   </div>
 </template>
 

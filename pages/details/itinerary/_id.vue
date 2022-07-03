@@ -39,9 +39,9 @@
             <h4 class="fst-italic">Events on the way</h4>
             <ol class="list-unstyled mb-0">
               <li v-for="event in events" :key="event.id">
-                <nuxt-link :to="`/details/event/${event.name}`">
+                <NuxtLink :to="`/details/event/${event.name}`">
                   {{ event.name }}
-                </nuxt-link>
+                </NuxtLink>
               </li>
             </ol>
           </div>

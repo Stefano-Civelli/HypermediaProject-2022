@@ -42,24 +42,24 @@
             </a>
             <ul class="dropdown-menu">
               <li>
-                <nuxt-link class="dropdown-item" to="/events"
-                  >All events</nuxt-link
+                <NuxtLink class="dropdown-item" to="/events"
+                  >All events</NuxtLink
                 >
               </li>
               <li>
-                <nuxt-link class="dropdown-item" to="/summer_events"
-                  >Summer Events</nuxt-link
+                <NuxtLink class="dropdown-item" to="/summer_events"
+                  >Summer Events</NuxtLink
                 >
               </li>
               <li>
-                <nuxt-link class="dropdown-item" to="/winter_events"
-                  >Winter Events</nuxt-link
+                <NuxtLink class="dropdown-item" to="/winter_events"
+                  >Winter Events</NuxtLink
                 >
               </li>
 
               <li>
-                <nuxt-link class="dropdown-item" to="/events_by_year"
-                  >Events by Year</nuxt-link
+                <NuxtLink class="dropdown-item" to="/events_by_year"
+                  >Events by Year</NuxtLink
                 >
               </li>
             </ul>
@@ -70,9 +70,9 @@
             :key="`navItem${navItemIndex}`"
             class="nav-item"
           >
-            <nuxt-link :to="navItem.path" class="nav-link">
+            <NuxtLink :to="navItem.path" class="nav-link">
               {{ navItem.name }}
-            </nuxt-link>
+            </NuxtLink>
           </li>
         </ul>
       </div>

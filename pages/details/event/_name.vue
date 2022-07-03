@@ -50,9 +50,9 @@
               />
             </svg>
 
-            <nuxt-link :to="`/details/poi/${poi}`" class="my-link">
+            <NuxtLink :to="`/details/poi/${poi}`" class="my-link">
               {{ poi }}
-            </nuxt-link>
+            </NuxtLink>
           </div>
         </div>
       </div>

@@ -7,11 +7,11 @@
           <span class="text-muted">Click the button below</span>
         </h2>
         <div class="pt-5 justify-content-end">
-          <nuxt-link :to="`${nuxtLink}/${type}`">
+          <NuxtLink :to="`${nuxtLink}/${type}`">
             <button class="btn btn-dark btn-lg my-button mb-3">
               Details >
             </button>
-          </nuxt-link>
+          </NuxtLink>
         </div>
       </div>
 

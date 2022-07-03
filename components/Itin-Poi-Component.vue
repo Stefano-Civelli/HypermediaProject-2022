@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link class="card" :to="`/details/poi/${name}`">
+  <NuxtLink class="card" :to="`/details/poi/${name}`">
     <img
       class="card__background"
       :src="require(`~/assets/images/${poi_imgs[0].img_path}`)"
@@ -10,7 +10,7 @@
       <p class="card__number">{{ idx }}</p>
     </div>
     <h3 class="card__heading">{{ name }}</h3>
-  </nuxt-link>
+  </NuxtLink>
 </template>
 
 <script>
