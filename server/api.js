@@ -213,6 +213,7 @@ async function runMainApi() {
   app.get('/event/list', async (req, res) => {
     const result = await models.Event.findAll({
       include: [{ model: models.Poi }],
+      order: sequelize.literal('starting_date DESC'),
     })
     const filtered = []
     for (const element of result) {
