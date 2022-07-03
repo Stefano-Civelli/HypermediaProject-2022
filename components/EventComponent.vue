@@ -56,7 +56,7 @@ export default {
   background-position: center;
   border-radius: 24px;
   bottom: 0;
-  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  filter: brightness(0.65) saturate(1.2) contrast(0.85);
   left: 0;
   position: absolute;
   right: 0;
@@ -76,11 +76,11 @@ export default {
 
 .card__description {
   color: rgb(255, 255, 255);
-  font-size: 1rem;
+  font-size: 1.15rem;
   margin-bottom: 8px;
   text-transform: uppercase;
   padding: 20px;
-  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
 }
 
 .card__heading {

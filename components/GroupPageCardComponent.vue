@@ -103,6 +103,11 @@ export default {
   border: 1px solid white;
   border-radius: 40px;
   filter: brightness(0.9) saturate(1.2) contrast(0.85);
+  transition: filter 200ms linear, transform 200ms linear;
+}
+
+.card:hover .card__image {
+  filter: brightness(1) saturate(1.2) contrast(0.85);
 }
 
 .card__overlay {
