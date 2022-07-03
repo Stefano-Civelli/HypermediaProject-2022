@@ -457,7 +457,7 @@ async function runMainApi() {
     const { year } = req.params
     const { Op } = require('sequelize')
     const starting = year + '-1-1'
-    const ending = parseInt(year) + 1 + '-12-31'
+    const ending = parseInt(year) + 1 + '-1-1'
     const result = await models.Event.findAll({
       where: {
         starting_date: {
