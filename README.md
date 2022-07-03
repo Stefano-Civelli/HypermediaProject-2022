@@ -1,4 +1,10 @@
 # Final Project template
+## The Team
+* [Stefano Civelli](https://github.com/Stefano-Civelli)
+* [Pietro Bernardelle](https://github.com/PietroBernardelle)
+* [Samuele Cannilla](https://github.com/scannilla)
+* [Stefano D'Errico](https://github.com/stefanoderr)
+
 
 ## Build Setup
 
