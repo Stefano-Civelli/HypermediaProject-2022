@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <!-- Header image element -->
     <div
       class="top-img-container my-4 text-white rounded shadow-lg d-flex justify-content-center align-items-center"
     >
@@ -12,6 +13,8 @@
         {{ name }}
       </div>
     </div>
+
+    <!-- Breadcrumb element -->
     <nav>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/events">Events</a></li>
@@ -21,7 +24,9 @@
       </ol>
     </nav>
 
+    <!-- Major element that contains Practical Info element and Data element -->
     <div class="row g-5 mt-3">
+      <!-- Practical Info element -->
       <div class="border-end col-md-4 info-container">
         <div class="position-sticky" style="top: 5rem">
           <div class="p-4 mb-3 practical-info-container rounded">
@@ -51,6 +56,8 @@
           </div>
         </div>
       </div>
+
+      <!-- Data element -->
       <div class="col-md-8">
         <h3 class="pb-4 mb-4 fst-italic border-bottom">
           <div class="list_dates">
@@ -98,6 +105,8 @@
         </div>
       </div>
     </div>
+
+    <!-- Bottom row that contains next and prev buttons -->
     <div class="row">
       <div class="col-md-12">
         <nav class="d-flex mt-5 justify-content-end gap-1">
@@ -125,9 +134,11 @@
 export default {
   name: 'EventPage',
   async asyncData({ route, $axios }) {
+    // param taken from dynamic page rendering
     const { name } = route.params
+    // call to /event/:name API that retrieves all the information of the specific event
     const { data } = await $axios.get('/api/event/' + name)
-    console.log(data)
+    // call to /event/random/:id API that retrieves information of the event related to the one that is being displayed
     const randomEventsData = await $axios.get('/api/event/random/' + data.id)
 
     const randomEvents = randomEventsData.data
@@ -157,10 +168,12 @@ export default {
   },
   mounted() {},
   methods: {
+    // on click method that retrieves information related to the next event
     async next() {
       const { data } = await this.$axios.get('/api/event/next/' + this.name)
       this.$router.push(`/details/event/${data.name}`)
     },
+    // on click method that retrieves information related to the previous event
     async prev() {
       const { data } = await this.$axios.get('/api/event/prev/' + this.name)
       this.$router.push(`/details/event/${data.name}`)

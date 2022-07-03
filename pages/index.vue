@@ -1,10 +1,8 @@
 <template>
   <div>
     <HomeHeaderComponent />
-    <!-- end of carousel -->
 
     <div class="main-container">
-      <!-- Three columns of text below the carousel -->
       <div class="eventsSlice">
         <div class="container">
           <h1 class="slideH1 mb-5 text-decoration-underline">
@@ -24,7 +22,7 @@
           </div>
         </div>
       </div>
-      <!-- Itinerary part -->
+      <!-- Itinerary section -->
       <div class="itinerarySlice">
         <div class="container">
           <h1 class="slideH1 mb-5 text-decoration-underline">
@@ -37,14 +35,12 @@
             :description="itinerary.name"
             :img="itinerary.img"
             :altDesc="itinerary.alt_desc"
-            :type="itinerary.id"
+            :type="itinerary.id.toString()"
             nuxtLink="/details/itinerary"
           />
         </div>
       </div>
-      <!-- /END Itinerary part -->
     </div>
-    <!-- /.container -->
   </div>
 </template>
 

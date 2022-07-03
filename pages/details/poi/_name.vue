@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <!-- Header image element -->
     <div
       class="top-img-container my-4 text-white rounded shadow-lg d-flex justify-content-center align-items-center"
     >
@@ -12,6 +13,8 @@
         {{ name }}
       </div>
     </div>
+
+    <!-- Breadcrumb element -->
     <nav>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/pois">Points of Interest</a></li>
@@ -21,7 +24,9 @@
       </ol>
     </nav>
 
+    <!-- Major element that contains Practical Info element and Data element -->
     <div class="row g-5 mt-3">
+      <!-- Practical Info element -->
       <div class="col-md-4 border-end info-container">
         <div class="position-sticky" style="top: 5rem">
           <div class="p-4 mb-3 practical-info-container rounded">
@@ -43,6 +48,7 @@
         </div>
       </div>
 
+      <!-- Data element -->
       <div class="col-md-8">
         <h2 class="pb-4 mb-4 border-bottom fw-bold">
           What there is to know about {{ name }}
@@ -68,7 +74,6 @@
           </div>
 
           <h2 class="mb-2 mt-5">Events held here</h2>
-          <!-- Events -->
           <div class="hero-section">
             <p class="text-muted my-3" v-if="events.length == 0">
               At the moment there are no events related to this point of
@@ -93,7 +98,6 @@
             interested in.
           </p>
           <p></p>
-          <!-- Events -->
           <div class="hero-section">
             <div class="card-grid">
               <ItinPoiComponent
@@ -109,6 +113,8 @@
         </div>
       </div>
     </div>
+
+    <!-- Bottom row that contains next and prev buttons -->
     <div class="row">
       <div class="col-md-12">
         <nav class="d-flex mt-3 justify-content-end gap-1">
@@ -142,8 +148,11 @@ export default {
     ItinPoiComponent,
   },
   async asyncData({ route, $axios }) {
+    // param taken from dynamic page rendering
     const { name } = route.params
+    // call to /poi/:name API that retrieves all the information of the specific point of interest
     const { data } = await $axios.get('/api/poi/' + name)
+    // call to /poi/random/:name API that retrieves information of the points of interest related to the one that is being displayed
     const nearByPoisArray = await $axios.get('/api/poi/random/' + name)
     const itineraryData = await $axios.get(
       '/api/poi/related_itineraries/' + name
@@ -182,10 +191,12 @@ export default {
   },
   mounted() {},
   methods: {
+    // on click method that retrieves information related to the next point of interest
     async next() {
       const { data } = await this.$axios.get('/api/poi/next/' + this.name)
       this.$router.push(`/details/poi/${data.name}`)
     },
+    // on click method that retrieves information related to the previous point of interest
     async prev() {
       const { data } = await this.$axios.get('/api/poi/prev/' + this.name)
       this.$router.push(`/details/poi/${data.name}`)
