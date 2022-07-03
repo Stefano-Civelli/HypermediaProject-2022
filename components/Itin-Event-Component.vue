@@ -8,6 +8,25 @@
   </div>
 </template>
 
+<script>
+export default {
+  props: {
+    id: {
+      type: Number,
+      required: true,
+    },
+    img: {
+      type: String,
+      required: true,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+  },
+}
+</script>
+
 <style scoped>
 .img-container {
   width: clamp(32px, 5.2vw, 53px);
@@ -46,22 +65,3 @@
   height: clamp(33px, 5.5vw, 55px);
 }
 </style>
-
-<script>
-export default {
-  props: {
-    id: {
-      type: Number,
-      required: true,
-    },
-    img: {
-      type: String,
-      required: true,
-    },
-    name: {
-      type: String,
-      required: true,
-    },
-  },
-}
-</script>

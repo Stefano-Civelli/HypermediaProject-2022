@@ -12,6 +12,23 @@
   </div>
 </template>
 
+<script>
+export default {
+  props: {
+    text: {
+      type: String,
+      required: true,
+    },
+    textColor: {
+      type: String,
+    },
+    img: {
+      type: String,
+    },
+  },
+}
+</script>
+
 <style scoped>
 .my-page-title {
   margin-top: 145px;
@@ -42,20 +59,3 @@
   }
 }
 </style>
-
-<script>
-export default {
-  props: {
-    text: {
-      type: String,
-      required: true,
-    },
-    textColor: {
-      type: String,
-    },
-    img: {
-      type: String,
-    },
-  },
-}
-</script>

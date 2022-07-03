@@ -13,6 +13,35 @@
   </nuxt-link>
 </template>
 
+<script>
+export default {
+  components: {},
+  props: {
+    id: {
+      type: Number,
+      required: true,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+
+    poi_imgs: {
+      type: Array,
+      required: true,
+    },
+    events: {
+      type: Array,
+      required: true,
+    },
+    idx: {
+      type: Number,
+      required: false,
+    },
+  },
+}
+</script>
+
 <style scoped>
 .card {
   position: relative;
@@ -72,32 +101,3 @@
   line-height: 1.4;
 }
 </style>
-
-<script>
-export default {
-  components: {},
-  props: {
-    id: {
-      type: Number,
-      required: true,
-    },
-    name: {
-      type: String,
-      required: true,
-    },
-
-    poi_imgs: {
-      type: Array,
-      required: true,
-    },
-    events: {
-      type: Array,
-      required: true,
-    },
-    idx: {
-      type: Number,
-      required: false,
-    },
-  },
-}
-</script>
