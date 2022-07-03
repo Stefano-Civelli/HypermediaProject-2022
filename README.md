@@ -1,20 +1,24 @@
 # Final Project template
+## The Team
+* [Stefano Civelli](https://github.com/Stefano-Civelli)
+* [Pietro Bernardelle](https://github.com/PietroBernardelle)
+* [Samuele Cannilla](https://github.com/scannilla)
+* [Stefano D'Errico](https://github.com/stefanoderr)
 
-## Build Setup
+
+## Running the server
 
 ```bash
 # install dependencies
 $ npm install
 
-# serve with hot reload at localhost:3000
+# serve locally at localhost:3000
 $ npm run dev
 
 # build for production and launch server
 $ npm run build
 $ npm run start
 
-# generate static project
-$ npm run generate
 ```
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
