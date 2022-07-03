@@ -125,8 +125,6 @@ export default {
         eventList.push(evento)
       }
     }
-    console.log(data.img)
-    console.log(data2.data)
     return {
       id: data.id,
       name: data.name,

@@ -14,7 +14,7 @@
           :img="itinerary.img"
           :subtitle="'Duration: ' + itinerary.duration + ' hours'"
           :param="itinerary.description"
-          :id="itinerary.id"
+          :id="itinerary.id.toString()"
           :altDesc="itinerary.alt_desc"
           nuxtLink="/details/itinerary"
         />
