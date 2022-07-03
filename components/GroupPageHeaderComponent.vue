@@ -3,10 +3,7 @@
     class="w-100 d-flex justify-content-center align-items-start hero-section-parallax"
     :style="{ 'background-image': 'url(' + img + ')' }"
   >
-    <h1
-      class="display-4 fw-bold my-border my-page-title"
-      :style="{ color: textColor }"
-    >
+    <h1 class="display-4 fw-bold my-page-title" :style="{ color: textColor }">
       {{ text }}
     </h1>
   </div>

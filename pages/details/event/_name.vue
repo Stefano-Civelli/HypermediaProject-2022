@@ -1,18 +1,11 @@
 <template>
   <div class="container">
     <!-- Header image element -->
-    <div
-      class="top-img-container my-4 text-white rounded shadow-lg d-flex justify-content-center align-items-center"
-    >
-      <img
-        class="my-img rounded"
-        :src="require(`~/assets/images/${background}`)"
-        :alt="altDesc"
-      />
-      <div class="display-4 my-title">
-        {{ name }}
-      </div>
-    </div>
+    <KotHeaderComponent
+      :background="background"
+      :altDesc="altDesc"
+      :title="name"
+    />
 
     <!-- Breadcrumb element -->
     <nav>
@@ -131,8 +124,10 @@
 </template>
 
 <script>
+import KotHeaderComponent from '~/components/KotHeaderComponent.vue'
 export default {
   name: 'EventPage',
+  components: { KotHeaderComponent },
   async asyncData({ route, $axios }) {
     // param taken from dynamic page rendering
     const { name } = route.params

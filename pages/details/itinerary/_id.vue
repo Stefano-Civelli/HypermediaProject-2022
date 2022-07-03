@@ -1,18 +1,7 @@
 <template>
   <div class="container">
-    <!-- Header image element -->
-    <div
-      class="top-img-container my-4 text-white rounded shadow-lg d-flex justify-content-center align-items-center"
-    >
-      <img
-        class="my-img rounded"
-        :src="require(`~/assets/images/${img}`)"
-        :alt="altDesc"
-      />
-      <div class="display-4 my-title">
-        {{ name }}
-      </div>
-    </div>
+    <!-- Header image element  -->
+    <KotHeaderComponent :background="img" :altDesc="altDesc" :title="name" />
 
     <!-- Breadcrumb element -->
     <nav aria-label="breadcrumb">
@@ -117,8 +106,9 @@
 
 <script>
 import ItinPoiComponent from '~/components/Itin-Poi-Component.vue'
+import KotHeaderComponent from '~/components/KotHeaderComponent.vue'
 export default {
-  components: { ItinPoiComponent },
+  components: { ItinPoiComponent, KotHeaderComponent },
   name: 'ItineraryPage',
   async asyncData({ route, $axios }) {
     // param taken from dynamic page rendering

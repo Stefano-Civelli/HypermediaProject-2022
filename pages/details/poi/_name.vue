@@ -1,18 +1,11 @@
 <template>
   <div class="container">
     <!-- Header image element -->
-    <div
-      class="top-img-container my-4 text-white rounded shadow-lg d-flex justify-content-center align-items-center"
-    >
-      <img
-        class="my-img rounded"
-        :src="require(`~/assets/images/${imgs[1].img_path}`)"
-        :alt="imgs[1].alt_desc"
-      />
-      <div class="display-4 my-title">
-        {{ name }}
-      </div>
-    </div>
+    <KotHeaderComponent
+      :background="imgs[1].img_path"
+      :altDesc="imgs[1].alt_desc"
+      :title="name"
+    />
 
     <!-- Breadcrumb element -->
     <nav>
@@ -141,11 +134,13 @@
 <script>
 import EventComponent from '~/components/EventComponent.vue'
 import ItinPoiComponent from '~/components/Itin-Poi-Component.vue'
+import KotHeaderComponent from '~/components/KotHeaderComponent.vue'
 export default {
   name: 'PoiPage',
   components: {
     EventComponent,
     ItinPoiComponent,
+    KotHeaderComponent,
   },
   async asyncData({ route, $axios }) {
     // param taken from dynamic page rendering
