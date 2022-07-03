@@ -62,7 +62,6 @@ export default {
   async asyncData({ $axios }) {
     /** fetching list of events to be displayed in the cards of the group page */
     const { data } = await $axios.get('/api/event/list')
-    console.log(data)
     return {
       data,
     }

@@ -47,7 +47,6 @@ export default {
   async asyncData({ $axios }) {
     /** fetching list of winter events to be displayed in the cards of the group page */
     const { data } = await $axios.get('/api/event/winter')
-    console.log(data)
     return {
       data,
     }

@@ -140,7 +140,7 @@ export default {
       id: data.id,
       name: data.name,
       img: data.img,
-      altDesc: data.alt_desc,
+      altDesc: data.alt_header,
       description: data.description,
       startingDay: data.startingDay,
       startingMonth: data.startingMonth,
