@@ -61,6 +61,10 @@ Routing is exclusively implemented with Nuxt-Links like indicated in the Nuxt of
 
 #### `Node Packages used`
 
+## Deployment
+
+Project has been deployed on the **Heroku** hosting platform and is available at [this link](https://hypermedia-project-2022.herokuapp.com/)
+
 ## DB Design
 
 Below is the ER diagram we designed
@@ -69,19 +73,13 @@ Below is the ER diagram we designed
 
 ## Best practices and Framework Functionalities
 
-Most of the framework functionalities have been used like for example Layouts (also the built in functionality for the error page management), dynamic pages, components, Nuxt-Links.
+Most of the functionalities/best practices provided by the Nuxt framework have been used.
+For example Layouts (also the built in functionality for the error page management), dynamic pages, components, Nuxt-Links.
 
-We used most of the special directories
+We used most of the dedicated directories provided by Nuxt:
 
-### `assets`
-
-### `components`
-
-### `layouts`
-
-### `pages`
-
-### `static`
-
-
-
+- `assets`
+- `components`
+- `layouts`
+- `pages`
+- `static`
