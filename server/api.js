@@ -69,6 +69,8 @@ async function initializeDatabaseConnection() {
     name: DataTypes.STRING,
     duration: DataTypes.INTEGER,
     img: DataTypes.TEXT,
+    bg_img: DataTypes.TEXT,
+    alt_bg: DataTypes.TEXT,
     description: DataTypes.TEXT,
     map_src: DataTypes.TEXT,
     alt_desc: DataTypes.TEXT,

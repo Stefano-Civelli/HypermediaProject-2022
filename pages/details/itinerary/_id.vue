@@ -130,8 +130,8 @@ export default {
     return {
       id: data.id,
       name: data.name,
-      img: data.img,
-      altDesc: data.alt_desc,
+      img: data.bg_img,
+      altDesc: data.alt_bg,
       description: data.description,
       longDescription: data.long_description,
       duration: data.duration,

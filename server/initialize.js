@@ -679,8 +679,10 @@ export default async (models) => {
       duration: 12,
       long_description:
         "First time in Milan? No way you skip these amazing points of interest! Start from the world-wide known Duomo di Milano, the biggest church in Italy, next stop: Castello Sforzesco, built in the XV century, takes its name from Francesco Sforza. It's time to relax with a little bit of shopping and dining in one of the finest restaurant, take a walk in Galleria Vittorio Emanuele and don't forget to spin on the bull's \"balls\". Last stop is Picanoteca di Brera, one of the largest art gallery in Italy",
-      alt_desc: 'must see (prova)',
+      alt_desc: 'Rear right view of the Milan CHatedral',
       img: 'itinerary_group_page/Duomo.jpg',
+      bg_img: 'itinerary_background/Milan.jpg',
+      alt_bg: 'A classic tram in Milan, in Via Dante, near Piazza Duomo',
       description: 'Take a look at the most important attractions in Milan!',
       map_src:
         'https://www.google.com/maps/d/u/0/embed?mid=1VGvpuzKVJxiw4KNTq0XH61-9ByHpx8k&ehbc=2E312F',
@@ -690,8 +692,10 @@ export default async (models) => {
       duration: 16,
       long_description:
         'If art in all its form is what you\'re all about you have to see these museums. Starting from Museo della Scienza e della tecnica, whit its 50000 sqm it\'s the largest technical museum in Italy. Mudec is the next stop: its name stands for "Museum of coltures", more than 7000 original pieces. GAM and PAC are the next two points in our itinerary: the first one is a collection of modern art, the latter on contemporary art. Last but not least we have Poldi Pezzoli Museum, here you can find the Bellini Masterpiece "Pietà" and different Botticelli paintings like "Madonna del Libro" and "Compianto del Cristo Morto"',
-      alt_desc: '',
-      img: 'itinerary_group_page/Duomo.jpg',
+      alt_desc: 'Main entrace of Armani Silos with some people in line on the left',
+      img: 'itinerary_group_page/Museum.jpg',
+      bg_img: 'itinerary_background/Museum.jpg',
+      alt_bg: 'View on Fondazione Prada and its golden building',
       description:
         'These museums are a must for your first time in Milan! Palazzo reale, Pinacoteca di Brera, Mudec',
       map_src:
@@ -702,8 +706,10 @@ export default async (models) => {
       duration: 4,
       long_description:
         "Milan is know as the city of fashion, so if you came here to find your unic style these are the places you have to see. Via Montenapoleone is a street near the Duomo, here you'll find a lot of high-end luxury brands. Now go back towards the centre, Galleria Vittorio Emanuele is not only an architecture masterpiece but also has tens of unic shopping stores. It's time to visit the brand new Isola district, between Piazza Gae Aulenti and Bosco Verticale you can find a lot of international brands.",
-      alt_desc: '',
-      img: 'itinerary_group_page/Duomo.jpg',
+      alt_desc: 'Some stores under the gallery in Corso Vittorio Emanuele',
+      img: 'itinerary_group_page/Shopping.jpg',
+      bg_img: 'itinerary_background/Shopping.jpg',
+      alt_bg: 'An open shop sign',
       description:
         'Shopping lover? Try these streets to find all best shops in town!',
       map_src:
@@ -714,8 +720,10 @@ export default async (models) => {
       duration: 8,
       long_description:
         'Everytime you watch a painting you get goosebumps? Everytime you see a scolpture you get fascinated of its beauty? We got the places for you: starting from Biblioteca Pinacoteca Ambrosiana, two forms of art in the same place: paintings and books. New stop, new art: Theatre, Teatro alla Scala is the most famous theatre in italy, its "prima" is one of the most exclusive event. There are so many paintings in the Pinacoteca di Breara that\'s almost for sure that you\'ll find your favourite artist here, what are you waiting for? Last stop is Abbazia di Chiaravalle, to discover the beauties of medioeval architecture',
-      alt_desc: '',
-      img: 'itinerary_group_page/Duomo.jpg',
+      alt_desc: 'Artistic installation in Hangar Bicocca',
+      img: 'itinerary_group_page/Art.jpg',
+      bg_img: 'itinerary_background/Art.jpg',
+      alt_bg: '"Il dito" scolpture by Maurizio Cattelan',
       description:
         "If you're all about art and its forms you have to visit these places",
       map_src:
@@ -726,8 +734,10 @@ export default async (models) => {
       duration: 2,
       long_description:
         "We get it, you'd like to stay more, you just can't because you're gonna miss your flight, don't worry, we have the itinerary for you, all these places in less than 2 hours. Let's start from Palazzo Reale, there's always something new to see here, thanks to its temporary exhibitions. As soon as you exit you'll find yourself in front of the Duomo, take a look from outside, to admire its majesty, or go inside to see all its paintings, if you want you can even get to the top to have an exclusive view on Milan. Now let's go to the Galleria, want to buy a little gift for your family? This is the right place to do so. For the next step you'll probably have not enough time to see an entire play at Teatro alla scala, but trust us, it's worth seeing it also from the outside. And now, just before calling a taxi, don't forget to buy something in \"Via Montenapoleone\"",
-      alt_desc: '',
-      img: 'itinerary_group_page/Duomo.jpg',
+      alt_desc: 'Air view of Milan, taken from a plane',
+      img: 'itinerary_group_page/Rush.jpg',
+      bg_img: 'itinerary_background/Rush.jpg',
+      alt_bg: 'People running in a building',
       description: 'U have to be fast af boi?',
       map_src:
         'https://www.google.com/maps/d/u/0/embed?mid=1BKwGRd02wgFrTS35LC9BZuPHPN-zi2U&ehbc=2E312F',
@@ -737,33 +747,33 @@ export default async (models) => {
   const serviceTypeList = [
     {
       type: 'Hospital',
-      alt_desc: 'provaprovaprova',
+      alt_desc: 'Fron view of an hospital with different people walking',
       description:
         'Need to book a visit? Take a look at the hospitals near to you',
       img: 'service_types/Hospital.jpg',
     },
     {
       type: 'Bank',
-      alt_desc: '',
+      alt_desc: 'Close up on a person holding a bunch of bills',
       description: 'Check out the banks available in the city',
       img: 'service_types/Bank.jpg',
     },
     {
       type: 'Pharmacy',
-      alt_desc: '',
+      alt_desc: 'A green pharmacy led cross',
       description: 'Need some drugs? Find the closest pharmacy',
       img: 'service_types/Pharmacy.jpg',
     },
     {
       type: 'InfoPoint',
-      alt_desc: '',
+      alt_desc: 'An I icon, indicating an info point',
       description:
         'In need of some additional informations about the city? Here are some InfoPoints',
       img: 'service_types/InfoPoint.jpg',
     },
     {
       type: 'SuperMarket',
-      alt_desc: '',
+      alt_desc: 'The esselunga logo, a supermarket in italy',
       description: 'If U 2 broke 2 eat in a restaurant',
       img: 'service_types/Esselunga.png',
     },
