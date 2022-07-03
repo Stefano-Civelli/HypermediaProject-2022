@@ -6,7 +6,7 @@
       img="https://i.imgur.com/csndEgx.jpg"
     />
     <div class="container page-component">
-      <!-- need to add link to summer/winter events page and the one from which is possible to chose by year  -->
+      <!-- Section that contains previous year and next year buttons -->
       <div class="row">
         <div class="col-12">
           <div class="w-100 py-3">
@@ -14,7 +14,7 @@
               <div class="p-4">
                 <div class="row year-switch-container">
                   <div class="col-6 d-flex">
-                    <nuxt-link
+                    <NuxtLink
                       v-if="previous != null"
                       class="my-links"
                       :to="`/details/year/${previous}`"
@@ -31,12 +31,11 @@
                           d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"
                         />
                       </svg>
-                      {{ previous }}</nuxt-link
+                      {{ previous }}</NuxtLink
                     >
                   </div>
-
                   <div class="col-6 d-flex justify-content-end">
-                    <nuxt-link
+                    <NuxtLink
                       v-if="next != null"
                       class="my-links"
                       :to="`/details/year/${next}`"
@@ -53,7 +52,7 @@
                           d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"
                         />
                       </svg>
-                    </nuxt-link>
+                    </NuxtLink>
                   </div>
                 </div>
               </div>
@@ -62,6 +61,7 @@
         </div>
       </div>
       <div class="d-flex flex-wrap justify-content-center">
+        <!-- Breadcrumb element -->
         <nav class="bread-container position-absolute">
           <ol class="breadcrumb p-2 border rounded-4 shadow">
             <li class="breadcrumb-item">
@@ -73,6 +73,7 @@
             <li class="breadcrumb-item">Events of {{ year }}</li>
           </ol>
         </nav>
+
         <GroupPageCardComponent
           v-for="event in data"
           id="-1"
@@ -98,9 +99,13 @@ export default {
     GroupPageCardComponent,
   },
   async asyncData({ route, $axios }) {
+    // param taken from dynamic page rendering
     const { year } = route.params
+    /** fetching list of events to be displayed in the cards of the group page */
     const { data } = await $axios.get('/api/event/year/' + year)
+    /** fetching next year related to the one that is being displayed */
     const nextData = await $axios.get('/api/event/year/next/' + year)
+    /** fetching previous year related to the one that is being displayed */
     const previousData = await $axios.get('/api/event/year/previous/' + year)
     const next = nextData.data == null ? null : nextData.data.next
     const previous =
@@ -182,7 +187,7 @@ export default {
   height: calc(100% + 8px);
 }
 
-/** breadcrumb styling */
+/** breadcrumb styling ---------------*/
 .bread-container {
   margin: 0px 0px 0px 10px;
   left: 0px;
@@ -212,4 +217,5 @@ export default {
 .breadcrumb a:hover {
   background-size: 0 1px, 100% 1px;
 }
+/** breadcrumb styling ---------------*/
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="cards">
-    <nuxt-link :to="`${nuxtLink}/${id == -1 ? title : id}`" class="card">
+    <NuxtLink :to="`${nuxtLink}/${id == -1 ? title : id}`" class="card">
       <img
         :src="require(`~/assets/images/${img}`)"
         class="card__image"
@@ -37,7 +37,7 @@
           {{ param }} <br />
         </p>
       </div>
-    </nuxt-link>
+    </NuxtLink>
   </div>
 </template>
 

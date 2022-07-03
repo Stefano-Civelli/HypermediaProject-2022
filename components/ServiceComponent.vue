@@ -109,14 +109,17 @@ export default {
 .rounded-4 {
   border-radius: 15px;
 }
+
 .my-border {
   border: 1px solid red;
 }
+
 @media (max-width: 992px) {
   .my-map {
     width: 90%;
   }
 }
+
 @media (max-width: 768px) {
   .my-map {
     width: 100%;

@@ -3,10 +3,7 @@
     class="w-100 d-flex justify-content-center align-items-start hero-section-parallax"
     :style="{ 'background-image': 'url(' + img + ')' }"
   >
-    <h1
-      class="display-4 fw-bold my-border my-page-title"
-      :style="{ color: textColor }"
-    >
+    <h1 class="display-4 fw-bold my-page-title" :style="{ color: textColor }">
       {{ text }}
     </h1>
   </div>
@@ -36,6 +33,7 @@ export default {
   padding: 10px;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
 }
+
 .hero-section-parallax {
   /** decidere a quanto settarlo */
   height: 850px;
@@ -47,6 +45,7 @@ export default {
   position: absolute;
   top: 0;
 }
+
 @media (max-width: 768px) {
   .my-page-title {
     font-size: 4.4rem;

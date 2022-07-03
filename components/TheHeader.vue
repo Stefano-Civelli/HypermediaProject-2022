@@ -42,24 +42,24 @@
             </a>
             <ul class="dropdown-menu">
               <li>
-                <nuxt-link class="dropdown-item" to="/events"
-                  >All events</nuxt-link
+                <NuxtLink class="dropdown-item" to="/events"
+                  >All events</NuxtLink
                 >
               </li>
               <li>
-                <nuxt-link class="dropdown-item" to="/summer_events"
-                  >Summer Events</nuxt-link
+                <NuxtLink class="dropdown-item" to="/summer_events"
+                  >Summer Events</NuxtLink
                 >
               </li>
               <li>
-                <nuxt-link class="dropdown-item" to="/winter_events"
-                  >Winter Events</nuxt-link
+                <NuxtLink class="dropdown-item" to="/winter_events"
+                  >Winter Events</NuxtLink
                 >
               </li>
 
               <li>
-                <nuxt-link class="dropdown-item" to="/events_by_year"
-                  >Events by Year</nuxt-link
+                <NuxtLink class="dropdown-item" to="/events_by_year"
+                  >Events by Year</NuxtLink
                 >
               </li>
             </ul>
@@ -70,9 +70,9 @@
             :key="`navItem${navItemIndex}`"
             class="nav-item"
           >
-            <nuxt-link :to="navItem.path" class="nav-link">
+            <NuxtLink :to="navItem.path" class="nav-link">
               {{ navItem.name }}
-            </nuxt-link>
+            </NuxtLink>
           </li>
         </ul>
       </div>
@@ -117,19 +117,24 @@ export default {
 .navbar-home-button {
   font-family: 'Lobster', Georgia, Times, serif;
 }
+
 .spacer {
   height: 62px;
   width: 100%;
 }
+
 .header {
   background: rgba(41, 42, 45, 0.966);
 }
+
 .logo {
   font-size: 32px;
 }
+
 .my-navbar-text {
   color: azure;
 }
+
 /*my-navbar*/
 .my-navbar {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -190,6 +195,7 @@ export default {
   width: 100%;
   left: 0;
 }
+
 @media (min-width: 991.98px) {
   .my-navbar {
     height: 62px;

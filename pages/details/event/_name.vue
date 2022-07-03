@@ -1,18 +1,11 @@
 <template>
   <div class="container">
     <!-- Header image element -->
-    <div
-      class="top-img-container my-4 text-white rounded shadow-lg d-flex justify-content-center align-items-center"
-    >
-      <img
-        class="my-img rounded"
-        :src="require(`~/assets/images/${background}`)"
-        :alt="altDesc"
-      />
-      <div class="display-4 my-title">
-        {{ name }}
-      </div>
-    </div>
+    <KotHeaderComponent
+      :background="background"
+      :altDesc="altDesc"
+      :title="name"
+    />
 
     <!-- Breadcrumb element -->
     <nav>
@@ -50,9 +43,9 @@
               />
             </svg>
 
-            <nuxt-link :to="`/details/poi/${poi}`" class="my-link">
+            <NuxtLink :to="`/details/poi/${poi}`" class="my-link">
               {{ poi }}
-            </nuxt-link>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -131,8 +124,10 @@
 </template>
 
 <script>
+import KotHeaderComponent from '~/components/KotHeaderComponent.vue'
 export default {
   name: 'EventPage',
+  components: { KotHeaderComponent },
   async asyncData({ route, $axios }) {
     // param taken from dynamic page rendering
     const { name } = route.params
@@ -195,6 +190,7 @@ export default {
 h2 {
   font-size: 2.4rem;
 }
+
 .hero-section {
   display: flex;
   justify-content: center;
@@ -224,6 +220,7 @@ h2 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (max-width: 767px) {
   .card-grid {
     grid-template-columns: repeat(1, 1fr);
@@ -236,12 +233,11 @@ h2 {
 .my-map {
   margin: auto;
 }
-.rounded-4 {
-  border-radius: 15px;
-}
+
 .my-border {
   border: 1px solid red;
 }
+
 .my-title {
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
   position: absolute;
@@ -251,6 +247,7 @@ h2 {
   font-family: 'Lobster', Georgia, Times, serif;
   font-size: 56px;
 }
+
 .my-img {
   object-fit: cover;
   width: 100%;
@@ -258,9 +255,15 @@ h2 {
   object-position: center 60%;
   filter: brightness(0.85) saturate(1.2) contrast(0.85);
 }
+
 .top-img-container {
   height: 300px;
   position: relative;
+}
+
+/** breadcrumb styling ---------------*/
+.rounded-4 {
+  border-radius: 15px;
 }
 
 .breadcrumb a,
@@ -281,6 +284,7 @@ li a {
 li a:hover {
   background-size: 0 1px, 100% 1px;
 }
+/** breadcrumb styling ---------------*/
 
 .caption_date {
   max-width: 170px;

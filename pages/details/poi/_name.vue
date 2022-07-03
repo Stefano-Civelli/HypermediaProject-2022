@@ -1,18 +1,11 @@
 <template>
   <div class="container">
     <!-- Header image element -->
-    <div
-      class="top-img-container my-4 text-white rounded shadow-lg d-flex justify-content-center align-items-center"
-    >
-      <img
-        class="my-img rounded"
-        :src="require(`~/assets/images/${imgs[1].img_path}`)"
-        :alt="imgs[1].alt_desc"
-      />
-      <div class="display-4 my-title">
-        {{ name }}
-      </div>
-    </div>
+    <KotHeaderComponent
+      :background="imgs[1].img_path"
+      :altDesc="imgs[1].alt_desc"
+      :title="name"
+    />
 
     <!-- Breadcrumb element -->
     <nav>
@@ -39,9 +32,9 @@
             <h4 class="fst-italic">Appears in the following Itineraries</h4>
             <ol class="list-unstyled mb-0">
               <li v-for="itinerary in relatedItineraries" :key="itinerary.id">
-                <nuxt-link :to="`/details/itinerary/${itinerary.id}`">
+                <NuxtLink :to="`/details/itinerary/${itinerary.id}`">
                   {{ itinerary.name }}
-                </nuxt-link>
+                </NuxtLink>
               </li>
             </ol>
           </div>
@@ -141,11 +134,13 @@
 <script>
 import EventComponent from '~/components/EventComponent.vue'
 import ItinPoiComponent from '~/components/Itin-Poi-Component.vue'
+import KotHeaderComponent from '~/components/KotHeaderComponent.vue'
 export default {
   name: 'PoiPage',
   components: {
     EventComponent,
     ItinPoiComponent,
+    KotHeaderComponent,
   },
   async asyncData({ route, $axios }) {
     // param taken from dynamic page rendering
@@ -209,6 +204,7 @@ export default {
 h2 {
   font-size: 2.4rem;
 }
+
 .hero-section {
   display: flex;
   justify-content: center;
@@ -250,12 +246,11 @@ h2 {
 .my-map {
   margin: auto;
 }
-.rounded-4 {
-  border-radius: 15px;
-}
+
 .my-border {
   border: 1px solid red;
 }
+
 .my-title {
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
   position: absolute;
@@ -265,6 +260,7 @@ h2 {
   font-family: 'Lobster', Georgia, Times, serif;
   font-size: 56px;
 }
+
 .my-img {
   object-fit: cover;
   width: 100%;
@@ -272,9 +268,15 @@ h2 {
   object-position: center 60%;
   filter: brightness(0.85) saturate(1.2) contrast(0.85);
 }
+
 .top-img-container {
   height: 300px;
   position: relative;
+}
+
+/** breadcrumb styling ---------------*/
+.rounded-4 {
+  border-radius: 15px;
 }
 
 .breadcrumb a,
@@ -293,4 +295,5 @@ li a {
 li a:hover {
   background-size: 0 1px, 100% 1px;
 }
+/** breadcrumb styling ---------------*/
 </style>

@@ -34,7 +34,6 @@ export default {
 /*======================
     404 page
 =======================*/
-
 .page_404 {
   padding: 40px 0;
   background: #fff;
@@ -62,6 +61,7 @@ export default {
 .contant_box_404 {
   margin-top: -50px;
 }
+
 .btn {
   background: #39ac31;
   color: #fff;

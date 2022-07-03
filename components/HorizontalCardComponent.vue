@@ -7,11 +7,11 @@
           <span class="text-muted fst-italic">{{ subtitle }}</span>
         </h2>
         <div class="pt-5 justify-content-end">
-          <nuxt-link :to="`${nuxtLink}/${type}`">
+          <NuxtLink :to="`${nuxtLink}/${type}`">
             <button class="btn btn-dark btn-lg my-button mb-3">
               Details >
             </button>
-          </nuxt-link>
+          </NuxtLink>
         </div>
       </div>
 
@@ -65,6 +65,7 @@ export default {
   width: 500px;
   border-radius: 15px;
 }
+
 .my-divider {
   margin: 5rem 0; /* Space out the Bootstrap <hr> more */
 }
@@ -75,7 +76,6 @@ export default {
 }
 
 /* RESPONSIVE CSS -------------------------------------------------- */
-
 @media (min-width: 62em) {
   .my-heading {
     margin-top: 2rem;

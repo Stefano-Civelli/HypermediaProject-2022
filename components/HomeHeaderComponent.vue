@@ -43,6 +43,7 @@ export default {
   margin-left: 120px;
   filter: brightness(1.5) saturate(0) contrast(0.85);
 }
+
 .head-element {
   background-color: rgb(
     243,
@@ -53,6 +54,7 @@ export default {
   height: 600px;
   margin-top: -32px;
 }
+
 .container {
   padding: 0 2rem;
 }
@@ -69,6 +71,7 @@ export default {
 .my-section p {
   margin: 1rem 0;
 }
+
 @media (max-width: 991.98px) {
   .my-img {
     display: none;
