@@ -32,4 +32,11 @@ You can create the following extra directories, some of which have special behav
 ### `pages`
 ### `static`
 
+## Contribution
 
+| member    | Front-end | DB structure and Data | API |
+| --------- | --------- | --------------------- | --- |
+| Ste       |           |                       |     |
+| Pie       |           |                       |     |
+| Samu      |           |                       |     |
+| Ste d'err |           |                       |     |
