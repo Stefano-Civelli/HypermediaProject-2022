@@ -26,6 +26,7 @@ async function initializeDatabaseConnection() {
     img: DataTypes.STRING,
     header_img: DataTypes.STRING,
     alt_desc: DataTypes.TEXT,
+    alt_header: DataTypes.TEXT,
     long_description: DataTypes.TEXT,
     ticket_price: DataTypes.DOUBLE,
     description: DataTypes.TEXT,
@@ -396,6 +397,7 @@ async function runMainApi() {
       ticket_price: result.ticket_price,
       poiName: result.poi.name,
       header_img: result.header_img,
+      alt_header: result.alt_header
     }
     return res.json(filtered)
   })

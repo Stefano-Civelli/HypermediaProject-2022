@@ -51,10 +51,6 @@ export default {
         href: 'https://fonts.googleapis.com/css?family=Cabin',
         rel: 'stylesheet',
       },
-      {
-        href: '//db.onlinewebfonts.com/c/a67dd4b5c96fed6370c1767ececa0952?family=URWClassicoW01-Bold',
-        rel: 'stylesheet',
-      },
     ],
     script: [
       {
