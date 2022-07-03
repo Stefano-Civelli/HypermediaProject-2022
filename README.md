@@ -1,10 +1,16 @@
 # Final Project template
-## The Team
-* [Stefano Civelli](https://github.com/Stefano-Civelli)
-* [Pietro Bernardelle](https://github.com/PietroBernardelle)
-* [Samuele Cannilla](https://github.com/scannilla)
-* [Stefano D'Errico](https://github.com/stefanoderr)
 
+This project consists of a NuxtJS implementation of a city guide website. In particular it is about the city of Milan.
+
+## The Team
+
+**Group name**: HyPSS
+**Members**:
+
+- [Stefano Civelli](https://github.com/Stefano-Civelli)
+- [Pietro Bernardelle](https://github.com/PietroBernardelle)
+- [Samuele Cannilla](https://github.com/scannilla)
+- [Stefano D'Errico](https://github.com/stefanoderr)
 
 ## Running the server
 
@@ -18,19 +24,9 @@ $ npm run dev
 # build for production and launch server
 $ npm run build
 $ npm run start
-
 ```
-For more details check out the [documentation](https://nuxtjs.org).
 
-## Special Directories
-
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
-
-### `assets`
-### `components`
-### `layouts`
-### `pages`
-### `static`
+For more details check out the [nuxt documentation](https://nuxtjs.org).
 
 ## Contribution
 
@@ -40,3 +36,33 @@ You can create the following extra directories, some of which have special behav
 | Pie       |           |                       |     |
 | Samu      |           |                       |     |
 | Ste d'err |           |                       |     |
+
+## API
+
+All APIs are implemented using the **Axios** HTTP client. This module comes already integrated with Nuxt and allows us to easily create REST APIs to allow us the fetching of DB resources from the front-end.
+
+## Components
+
+Most pages are built by assembling components toghether (see Design document commented wireframes for more details). This approach promotes code reusability and better organization, resulting in easier mantainance.
+
+## DB Design
+
+Below is the ER diagram we designed
+
+## Framework functionalities
+
+Most of the framework functionalities have been used like for example Layouts (also the built in functionality for the error page management), dynamic pages, components, Nuxt-Links.
+
+## Best practices
+
+We used most of the special directories
+
+### `assets`
+
+### `components`
+
+### `layouts`
+
+### `pages`
+
+### `static`
