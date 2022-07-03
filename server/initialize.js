@@ -1,6 +1,7 @@
 // initialized the DB ??
 
 export default async (models) => {
+  //Points of interest
   const poiList = [
     {
       address: 'Piazza del Duomo',
@@ -244,15 +245,16 @@ export default async (models) => {
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.6773179308657!2d9.233906315497016!3d45.4158461791005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c5a079ba2cef%3A0xac1eadfbc364324b!2sChiaravalle%20Abbey!5e0!3m2!1sen!2sit!4v1654620219258!5m2!1sen!2sit',
     },
   ]
+  //images for each POI
   const poi_img_list = [
     {
       poiId: 1,
-      alt_desc: 'duomo 0 (prova)',
+      alt_desc: 'Front view of the Milan Chatedral in the evening',
       img_path: 'poi_group_page/MilanCathedral.jpg',
     },
     {
       poiId: 1,
-      alt_desc: 'duomo 1 (prova)',
+      alt_desc: 'Front view of the Milan Chatedral taken from a distance that makes visible the entry of the gallery on the left and the royal palace on the right',
       img_path: 'poi_background/MilanCathedral1.jpg',
     },
     {
@@ -262,12 +264,12 @@ export default async (models) => {
     },
     {
       poiId: 2,
-      alt_desc: '',
+      alt_desc: 'Detail of the fountains in front of Castello Sforzesco',
       img_path: 'poi_group_page/Sforzesco.jpg',
     },
     {
       poiId: 2,
-      alt_desc: '',
+      alt_desc: 'front left view of the castle in the evening with a focus on the fountains',
       img_path: 'poi_background/Sforzesco.webp',
     },
     {
@@ -277,12 +279,12 @@ export default async (models) => {
     },
     {
       poiId: 3,
-      alt_desc: '',
+      alt_desc: 'View of the middle of Galleria Vittorio Emanuele II from the 1st floor',
       img_path: 'poi_group_page/Galleria.jpg',
     },
     {
       poiId: 3,
-      alt_desc: '',
+      alt_desc: 'an exclusive shot of the gallery, taken in the middle of it, without any person',
       img_path: 'poi_background/Galleria.jpg',
     },
     {
@@ -292,12 +294,12 @@ export default async (models) => {
     },
     {
       poiId: 4,
-      alt_desc: '',
+      alt_desc: 'Black and white picture of the theatre from a left side angle',
       img_path: 'poi_group_page/TeatroAllaScala.jpg',
     },
     {
       poiId: 4,
-      alt_desc: '',
+      alt_desc: 'The pit and the boxes of the theatre',
       img_path: 'poi_background/TeatroAllaScala.webp',
     },
     {
@@ -307,12 +309,12 @@ export default async (models) => {
     },
     {
       poiId: 5,
-      alt_desc: '',
+      alt_desc: 'Francesco Hayez\' "Il Bacio"',
       img_path: 'poi_group_page/Pinacoteca.jpg',
     },
     {
       poiId: 5,
-      alt_desc: '',
+      alt_desc: 'Paolo Veronese\'s "Cena in casa di Simone"',
       img_path: 'poi_background/Pinacoteca.jpg',
     },
     {
@@ -322,12 +324,12 @@ export default async (models) => {
     },
     {
       poiId: 6,
-      alt_desc: '',
+      alt_desc: 'Front right view of the church with some trees in the front',
       img_path: 'poi_group_page/SantaMaria.jpg',
     },
     {
       poiId: 6,
-      alt_desc: '',
+      alt_desc: 'The last supper',
       img_path: 'poi_background/SantaMaria.jpg',
     },
     {
@@ -337,12 +339,12 @@ export default async (models) => {
     },
     {
       poiId: 7,
-      alt_desc: '',
+      alt_desc: 'A sumptous stair with a red carpet with a medusa scolpture in foreground',
       img_path: 'poi_group_page/Reale.jpg',
     },
     {
       poiId: 7,
-      alt_desc: '',
+      alt_desc: 'Front view of the royal palace',
       img_path: 'poi_background/Reale.jpg',
     },
     {
@@ -352,12 +354,12 @@ export default async (models) => {
     },
     {
       poiId: 8,
-      alt_desc: '',
+      alt_desc: 'A view on a bookshelf with different highly decorated books',
       img_path: 'poi_group_page/Biblioteca.jpg',
     },
     {
       poiId: 8,
-      alt_desc: '',
+      alt_desc: 'A lot of bookshelves with even more books (duh)',
       img_path: 'poi_background/Biblioteca.jpg',
     },
     {
@@ -367,12 +369,12 @@ export default async (models) => {
     },
     {
       poiId: 9,
-      alt_desc: '',
+      alt_desc: 'A pencil drawing of Leonardo da Vinci',
       img_path: 'poi_group_page/Scienza.jpg',
     },
     {
       poiId: 9,
-      alt_desc: '',
+      alt_desc: 'The Luna Rossa boat',
       img_path: 'poi_background/Scienza.jpg',
     },
     {
@@ -382,12 +384,12 @@ export default async (models) => {
     },
     {
       poiId: 10,
-      alt_desc: '',
+      alt_desc: 'The right "Bosco Verticale" tower, in foreground some white flowers',
       img_path: 'poi_group_page/Bosco.jpg',
     },
     {
       poiId: 10,
-      alt_desc: '',
+      alt_desc: 'A close up on the trees of one of the towers',
       img_path: 'poi_background/Bosco.jpg',
     },
     {
@@ -397,12 +399,12 @@ export default async (models) => {
     },
     {
       poiId: 11,
-      alt_desc: '',
+      alt_desc: 'Fondazione Prada main building seen from below',
       img_path: 'poi_group_page/Prada.jpg',
     },
     {
       poiId: 11,
-      alt_desc: '',
+      alt_desc: 'The shadow of a woman standing next to a window, in black and white',
       img_path: 'poi_background/Prada.jpg',
     },
     {
@@ -412,12 +414,12 @@ export default async (models) => {
     },
     {
       poiId: 12,
-      alt_desc: '',
+      alt_desc: 'A front left view of the arch in the morning',
       img_path: 'poi_group_page/Arco.jpg',
     },
     {
       poiId: 12,
-      alt_desc: '',
+      alt_desc: 'A close up on the top of the arch',
       img_path: 'poi_background/Arco.jpg',
     },
     {
@@ -427,12 +429,12 @@ export default async (models) => {
     },
     {
       poiId: 13,
-      alt_desc: '',
+      alt_desc: 'Some of the art works of the museum',
       img_path: 'poi_group_page/Pezzoli.jpg',
     },
     {
       poiId: 13,
-      alt_desc: '',
+      alt_desc: '2 people looking at the art works in one of the rooms of the museum',
       img_path: 'poi_background/Pezzoli.webp',
     },
     {
@@ -442,12 +444,12 @@ export default async (models) => {
     },
     {
       poiId: 14,
-      alt_desc: '',
+      alt_desc: 'A fashion model holding a lot of bags in her hands',
       img_path: 'poi_group_page/MonteNapo.jpg',
     },
     {
       poiId: 14,
-      alt_desc: '',
+      alt_desc: 'A fashion model, holding a lot of bags in her hands, taking an elevator in a shopping mall',
       img_path: 'poi_background/MonteNapo.jpg',
     },
     {
@@ -457,12 +459,12 @@ export default async (models) => {
     },
     {
       poiId: 15,
-      alt_desc: '',
+      alt_desc: 'The main building seen from below in the evening',
       img_path: 'poi_group_page/Mudec.jpg',
     },
     {
       poiId: 15,
-      alt_desc: '',
+      alt_desc: 'A view on the suggestive arhitecure of the museum, taken from the inside',
       img_path: 'poi_background/Mudec.jpg',
     },
     {
@@ -472,12 +474,12 @@ export default async (models) => {
     },
     {
       poiId: 16,
-      alt_desc: '',
+      alt_desc: 'One of the royal rooms in the museum, with a lot of gold decoration and gigantic chandeliers',
       img_path: 'poi_group_page/GAM.jpg',
     },
     {
       poiId: 16,
-      alt_desc: '',
+      alt_desc: 'An entirely gold decorated room with 2 chandeliers in the foreground',
       img_path: 'poi_background/GAM.jpg',
     },
     {
@@ -487,12 +489,12 @@ export default async (models) => {
     },
     {
       poiId: 17,
-      alt_desc: '',
+      alt_desc: 'Front view of the basilica',
       img_path: 'poi_group_page/Lorenzo.jpg',
     },
     {
       poiId: 17,
-      alt_desc: '',
+      alt_desc: 'A front view of the basilica, with the "Colonne di San Lorenzo" in the foreground',
       img_path: 'poi_background/Lorenzo.jpg',
     },
     {
@@ -502,12 +504,12 @@ export default async (models) => {
     },
     {
       poiId: 18,
-      alt_desc: '',
+      alt_desc: 'A view of the Gae Aulenti square, with its fountains and all its lights',
       img_path: 'poi_group_page/Gae.jpg',
     },
     {
       poiId: 18,
-      alt_desc: '',
+      alt_desc: 'The IBM building in Gae Aulenti square',
       img_path: 'poi_background/Gae.webp',
     },
     {
@@ -517,12 +519,12 @@ export default async (models) => {
     },
     {
       poiId: 19,
-      alt_desc: '',
+      alt_desc: 'One of the rooms of the museum, some visitors on the left are seated looking at the art works',
       img_path: 'poi_group_page/PAC.jpeg',
     },
     {
       poiId: 19,
-      alt_desc: '',
+      alt_desc: 'One of the room of the museum, in black and white',
       img_path: 'poi_background/PAC.jpg',
     },
     {
@@ -532,12 +534,12 @@ export default async (models) => {
     },
     {
       poiId: 20,
-      alt_desc: '',
+      alt_desc: 'A view on the Chiaravalle Abbey bell tower, picture taken from the internal cloister',
       img_path: 'poi_group_page/Chiaravalle.jpg',
     },
     {
       poiId: 20,
-      alt_desc: '',
+      alt_desc: 'The cloister of the abbey',
       img_path: 'poi_background/Chiaravalle.jpg',
     },
     {
@@ -546,6 +548,7 @@ export default async (models) => {
       img_path: 'poi_background/Chiaravalle.jpg',
     },
   ]
+  //events
   const eventList = [
     {
       img: 'events_group_page/DesignWeek2022.png',
@@ -554,7 +557,7 @@ export default async (models) => {
       description: 'Exploring new design concepts',
       long_description:
         "Milan Design Week attracts professionals and enthusiasts from all over the world to Milan, around two key events: the Salone Internazionale del Mobile in the Rho Fiera pavilions, and the Fuorisalone in the various districts of the city. Over the years the Design Weeks have developed all over the world, since 2017 the World Design Weeks project was born, a virtual network of 40 design weeks spread all over the world. The goal is to share the knowledge, resources and good practices of the project so as to improve people's understanding and education in the world of design.",
-      alt_desc: 'milan design week (prova)',
+      alt_desc: 'The logo for the event, "Design is Milano is Design"',
       starting_date: '2022-06-06',
       ending_date: '2022-06-12',
       name: 'Milan Design Week',
@@ -565,8 +568,8 @@ export default async (models) => {
       header_img: 'events_background/EuroBasket.png',
       ticket_price: 100.0,
       description: 'European Basketball Championship ',
-      long_description: '',
-      alt_desc: '',
+      long_description: 'From September 2nd to 8th, great European basketball steps into the arena in Milano with Eurobasket, the European Championship of one of the city’s most beloved sports. 24 teams have qualified for the tournament, including Italy, Germany, Russia and France.',
+      alt_desc: 'The logo of the event',
       starting_date: '2022-09-02',
       ending_date: '2022-09-08',
       name: 'EuroBasket',
@@ -577,8 +580,8 @@ export default async (models) => {
       header_img: 'events_background/NextGenATP.jpg',
       ticket_price: 50.0,
       description: 'Under 21 ATP-Finals',
-      long_description: '',
-      alt_desc: '',
+      long_description: 'From November 2nd to 8th, the best under-21 tennis player in the world will try to win the prestigious tournament "NEXT GEN ATP FINALS". All matches will be hold at Allianz Cloud Stadium, the perfect place to enjoy those matches',
+      alt_desc: 'The name of the event, in the background the duomo in black and white',
       starting_date: '2022-11-08',
       ending_date: '2022-11-12',
       name: 'Next Gen ATP Finals',
@@ -589,8 +592,8 @@ export default async (models) => {
       header_img: 'events_background/Fuorisalone2022.webp',
       ticket_price: 10.0,
       description: 'Annual design exhibition',
-      long_description: '',
-      alt_desc: '',
+      long_description: 'The annual event Milano Design Week always comes together with "Fuorisalone" not a single event but tens of them, all around the city, is there a better way to discover the city than attending some exclusive events? Check the site for updates',
+      alt_desc: 'A man admiring an architectural art work',
       starting_date: '2022-05-06',
       ending_date: '2022-06-12',
       name: 'Fuorisalone 2022',
@@ -601,8 +604,8 @@ export default async (models) => {
       header_img: 'events_background/BIMU.jpg',
       ticket_price: 7.0,
       description: 'Most important italian exhibition about robots',
-      long_description: '',
-      alt_desc: '',
+      long_description: 'BI-MU, is the main and most important Italian exhibition dedicated to the machinery and technology industry for metal working. It\'s not important whether you are a professional or just an enthusiast, come take a look at these fantastic machines!',
+      alt_desc: 'The event logo',
       starting_date: '2022-10-12',
       ending_date: '2022-10-15',
       name: 'Bi-Mu',
@@ -613,8 +616,8 @@ export default async (models) => {
       header_img: 'events_background/EICMA.jpg',
       ticket_price: 15.0,
       description: 'Largest bike and motorbike exhibition in Italy',
-      long_description: '',
-      alt_desc: '',
+      long_description: 'You just can\'t even think of missing the MotoGP race on sunday? Or maybe the weekend for you is the right time to take your bike and travel all around your country? If bikes are your passion we have the event for you! EICMA is the most important exhibition about the "two wheels" in Italy, all the most important brands from all around the world, check the site for future updates and see the convetions schedule',
+      alt_desc: 'EICMA written in red',
       starting_date: '2022-11-08',
       ending_date: '2022-11-13',
       name: 'EICMA',
@@ -625,8 +628,8 @@ export default async (models) => {
       header_img: 'events_background/RunForTheOceans.jpg',
       ticket_price: 0.0,
       description: 'Global event, to help clean beaches and islands',
-      long_description: '',
-      alt_desc: '',
+      long_description: 'RUN FOR THE OCEANS is a global movement that harness the power of sport to raise awareness around the threat of marine plastic pollution and inspire action amongst adidas consumers. So wear your trainers and start running! There\'s a good reason for that, and remember you\'re saving the world, so thank you!',
+      alt_desc: 'A girl (in foreground on the left) and a guy (behind her on the right) stretching before running',
       starting_date: '2020-05-23',
       ending_date: '2020-06-08',
       name: 'Run for the Oceans',
@@ -637,8 +640,8 @@ export default async (models) => {
       header_img: 'events_background/Artur.jpg',
       ticket_price: 8.0,
       description: 'Contemporary art exhibition',
-      long_description: '',
-      alt_desc: '',
+      long_description: 'Artur Zmijewski in this exhibition wants to picture a lot of different aspects of our society from a social and political point of view. You can\'t miss this extraordinary event, cured by Diego Sileo, at PAC',
+      alt_desc: 'DIfferent pics of the artist',
       starting_date: '2022-03-09',
       ending_date: '2022-06-12',
       name: 'Artur Zmijewski',
@@ -649,8 +652,8 @@ export default async (models) => {
       header_img: 'events_background/Fringe.webp',
       ticket_price: 0.0,
       description: 'Art exhibition with more than 100 events',
-      long_description: '',
-      alt_desc: '',
+      long_description: 'An event all around Milan, more than 100 exhibitions in 7 different discrits of the city. Shows for children and grown ups. A lot of theatre plays, but not only that! Talks, meetings, music and much more',
+      alt_desc: 'FRINGE written in white on a pink background',
       starting_date: '2023-06-13',
       ending_date: '2023-06-19',
       name: 'FringeMi Festival',
@@ -661,14 +664,15 @@ export default async (models) => {
       header_img: 'events_background/MilanoVetro.jpg',
       ticket_price: 2.0,
       description: 'Annual glass art competition',
-      long_description: '',
-      alt_desc: '',
+      long_description: 'Glass can be a form of art, the most talented glass designers in the world meet up in Milan to dispute the Grand Finale, courious to see all the 31 finalist art works? Just come to Castello Sforzesco from March 10th to June 19th',
+      alt_desc: 'Two blocks of glass stacked up',
       starting_date: '2023-03-10',
       ending_date: '2023-06-19',
       name: 'Milano Vetro -35',
       poiId: 15,
     },
   ]
+  //itineraries
   const itineraryList = [
     {
       name: 'Must see in Milan',
@@ -729,6 +733,7 @@ export default async (models) => {
         'https://www.google.com/maps/d/u/0/embed?mid=1BKwGRd02wgFrTS35LC9BZuPHPN-zi2U&ehbc=2E312F',
     },
   ]
+  //service types
   const serviceTypeList = [
     {
       type: 'Hospital',
@@ -763,6 +768,7 @@ export default async (models) => {
       img: 'service_types/Esselunga.png',
     },
   ]
+  //services
   const serviceList = [
     {
       serviceTypeId: 1,
@@ -909,6 +915,7 @@ export default async (models) => {
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.8029935476893!2d9.184617216232606!3d45.4737723408244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6b4cb0e418f%3A0x419f28c71a756a99!2sCarrefour%20Express!5e0!3m2!1sit!2sit!4v1655111680154!5m2!1sit!2sit',
     },
   ]
+  //related pois for each itinerary
   const poiItineraryList = [
     {
       poiId: 1,
