@@ -3,6 +3,7 @@
     <HomeHeaderComponent />
 
     <div class="main-container">
+      <!-- Events section  -->
       <div class="eventsSlice">
         <div class="container">
           <h1 class="slideH1 mb-5 text-decoration-underline">
@@ -22,24 +23,27 @@
           </div>
         </div>
       </div>
-      <!-- Itinerary section -->
+      <!-- /END Events section -->
+
+      <!-- Itinerary section  -->
       <div class="itinerarySlice">
         <div class="container">
           <h1 class="slideH1 mb-5 text-decoration-underline">
             ...and the Coolest itineraries!
           </h1>
-
-          <ServiceTypeComponent
+          <HorizontalCardComponent
             v-for="itinerary in itineraryList"
             :key="itinerary.id"
             :description="itinerary.name"
             :img="itinerary.img"
             :altDesc="itinerary.alt_desc"
             :type="itinerary.id.toString()"
+            :subtitle="itinerary.description"
             nuxtLink="/details/itinerary"
           />
         </div>
       </div>
+      <!-- /END Itinerary section -->
     </div>
   </div>
 </template>
@@ -47,14 +51,16 @@
 <script>
 import EventComponent from '~/components/EventComponent.vue'
 import HomeHeaderComponent from '~/components/HomeHeaderComponent.vue'
-import ServiceTypeComponent from '~/components/ServiceTypeComponent.vue'
+import HorizontalCardComponent from '~/components/HorizontalCardComponent.vue'
 export default {
-  components: { HomeHeaderComponent, ServiceTypeComponent, EventComponent },
+  components: { HomeHeaderComponent, EventComponent, HorizontalCardComponent },
   name: 'IndexPage',
 
   async asyncData({ $axios }) {
+    /** fetch 3 random events to display in event cards */
     const { data } = await $axios.get('/api/event/random/-1')
     const eventList = data
+    /** fetch itineraries and than slice to get only the first 3 */
     const itineraryData = await $axios.get('/api/itinerary/list')
     const itineraryList = itineraryData.data.slice(0, 3)
 
@@ -82,6 +88,7 @@ export default {
 </script>
 
 <style scoped>
+/**event cards styling ---------------------------------- */
 .hero-section {
   display: flex;
   justify-content: center;
@@ -108,7 +115,9 @@ export default {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+/**event cards styling ---------------------------------- */
 
+/** backgroudn colors styling ----------*/
 .slideH1 {
   font-size: 60px;
 }
@@ -130,16 +139,9 @@ export default {
     rgb(251, 231, 198) 15.1%
   );
 }
-.my-img {
-  object-fit: cover;
-}
+/** backgroudn colors styling ----------*/
 
-body {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  color: #5a5a5a;
-}
-
+/** main container styling ------------- */
 .main-container .col-lg-4 {
   margin-bottom: 1.5rem;
   text-align: center;
@@ -149,4 +151,5 @@ body {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
 }
+/** main container styling ------------- */
 </style>

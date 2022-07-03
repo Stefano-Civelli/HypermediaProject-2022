@@ -6,13 +6,14 @@
       img="https://i.imgur.com/TefurpW.jpg"
     />
     <div class="container page-component px-5 pt-4">
-      <ServiceTypeComponent
+      <HorizontalCardComponent
         v-for="serviceType in serviceTypeList"
         :key="serviceType.id"
         :type="serviceType.type"
         :img="serviceType.img"
         :altDesc="serviceType.alt_desc"
         :description="serviceType.description"
+        subtitle="Click the button below!"
         nuxtLink="/details/service_type"
       />
     </div>
@@ -21,10 +22,11 @@
 
 <script>
 import GroupPageHeaderComponent from '~/components/GroupPageHeaderComponent.vue'
-import ServiceTypeComponent from '~/components/ServiceTypeComponent.vue'
+import HorizontalCardComponent from '~/components/HorizontalCardComponent.vue'
 export default {
-  components: { ServiceTypeComponent, GroupPageHeaderComponent },
+  components: { GroupPageHeaderComponent, HorizontalCardComponent },
   async asyncData({ $axios }) {
+    /** fetching list of service types to be displayed in the cards of the group page */
     const { data } = await $axios.get('/api/service_type/list')
     const serviceTypeList = data
     return {
@@ -45,14 +47,11 @@ export default {
         },
       ],
     }
-  }
+  },
 }
 </script>
 
 <style scoped>
-.page-title {
-  background-color: rgb(105, 210, 231);
-}
 .page-component {
   background-color: white;
   border-radius: 40px;

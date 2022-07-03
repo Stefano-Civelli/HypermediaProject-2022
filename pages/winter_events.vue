@@ -8,7 +8,7 @@
     <div
       class="container d-flex flex-wrap justify-content-center page-component pt-5"
     >
-      <!-- need to add link to summer/winter events page and the one from which is possible to chose by year  -->
+      <!-- breadcrumb  -->
       <nav class="bread-container position-absolute">
         <ol class="breadcrumb p-2 border rounded-4 shadow">
           <li class="breadcrumb-item">
@@ -45,6 +45,7 @@ import GroupPageCardComponent from '~/components/GroupPageCardComponent.vue'
 export default {
   components: { GroupPageHeaderComponent, GroupPageCardComponent },
   async asyncData({ $axios }) {
+    /** fetching list of winter events to be displayed in the cards of the group page */
     const { data } = await $axios.get('/api/event/winter')
     console.log(data)
     return {
@@ -73,9 +74,6 @@ export default {
 </script>
 
 <style scoped>
-.hero-section-parallax {
-  background-image: url('~/assets/Gae-background.jpg');
-}
 .card {
   margin: 1%;
 }
@@ -93,7 +91,8 @@ export default {
   box-shadow: 0 0 3rem 0.1rem rgb(0 0 0 / 40%);
   min-height: 65vh;
 }
-/** breadcrumb styling */
+
+/** breadcrumb styling ---------------*/
 .bread-container {
   margin: 0px 0px 0px 10px;
   left: 0px;
@@ -127,4 +126,5 @@ export default {
 .breadcrumb a:hover {
   background-size: 0 1px, 100% 1px;
 }
+/** breadcrumb styling ---------------*/
 </style>

@@ -35,8 +35,8 @@ export default {
     return {}
   },
   async asyncData({ $axios }) {
+    /** fetching list of points of interest to be displayed in the cards of the group page */
     const { data } = await $axios.get('/api/poi/list')
-    console.log(data[0])
     return {
       data,
     }
