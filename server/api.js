@@ -213,6 +213,7 @@ async function runMainApi() {
   app.get('/event/list', async (req, res) => {
     const result = await models.Event.findAll({
       include: [{ model: models.Poi }],
+      order: sequelize.literal('starting_date DESC'),
     })
     const filtered = []
     for (const element of result) {
@@ -457,7 +458,7 @@ async function runMainApi() {
     const { year } = req.params
     const { Op } = require('sequelize')
     const starting = year + '-1-1'
-    const ending = parseInt(year) + 1 + '-12-31'
+    const ending = parseInt(year) + 1 + '-1-1'
     const result = await models.Event.findAll({
       where: {
         starting_date: {

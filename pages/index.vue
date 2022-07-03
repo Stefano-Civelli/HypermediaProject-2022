@@ -37,7 +37,7 @@
             :description="itinerary.name"
             :img="itinerary.img"
             :altDesc="itinerary.alt_desc"
-            :type="itinerary.id"
+            :type="itinerary.id.toString()"
             :subtitle="itinerary.description"
             nuxtLink="/details/itinerary"
           />

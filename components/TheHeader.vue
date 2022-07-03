@@ -81,6 +81,38 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'TheHeader',
+  data() {
+    return {
+      headerList: [
+        {
+          name: 'Points of Interest',
+          path: '/pois',
+        },
+        {
+          name: 'Itineraries',
+          path: '/itineraries',
+        },
+        {
+          name: 'Services',
+          path: '/services',
+        },
+        {
+          name: 'About',
+          path: '/about',
+        },
+        {
+          name: 'Contact Us',
+          path: '/contactus',
+        },
+      ],
+    }
+  },
+}
+</script>
+
 <style scoped>
 .navbar-home-button {
   font-family: 'Lobster', Georgia, Times, serif;
@@ -164,35 +196,3 @@
   }
 }
 </style>
-
-<script>
-export default {
-  name: 'TheHeader',
-  data() {
-    return {
-      headerList: [
-        {
-          name: 'Points of Interest',
-          path: '/pois',
-        },
-        {
-          name: 'Itineraries',
-          path: '/itineraries',
-        },
-        {
-          name: 'Services',
-          path: '/services',
-        },
-        {
-          name: 'About',
-          path: '/about',
-        },
-        {
-          name: 'Contact Us',
-          path: '/contactus',
-        },
-      ],
-    }
-  },
-}
-</script>

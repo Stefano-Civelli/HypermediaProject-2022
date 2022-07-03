@@ -18,6 +18,11 @@
     </footer>
   </div>
 </template>
+
+<script>
+export default {}
+</script>
+
 <style>
 body {
   margin: 0;
@@ -78,6 +83,3 @@ body {
   }
 }
 </style>
-<script>
-export default {}
-</script>

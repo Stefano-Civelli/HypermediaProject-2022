@@ -9,17 +9,6 @@
   </div>
 </template>
 
-<style scoped>
-.page-title {
-  width: 100%;
-  height: 120px;
-  text-align: center;
-}
-.my-title {
-  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
-}
-</style>
-
 <script>
 export default {
   props: {
@@ -36,3 +25,14 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.page-title {
+  width: 100%;
+  height: 120px;
+  text-align: center;
+}
+.my-title {
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
+}
+</style>

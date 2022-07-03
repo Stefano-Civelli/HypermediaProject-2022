@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <!-- Header image element -->
     <div
       class="top-img-container my-4 text-white rounded shadow-lg d-flex justify-content-center align-items-center"
     >
@@ -12,6 +13,8 @@
         {{ name }}
       </div>
     </div>
+
+    <!-- Breadcrumb element -->
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/itineraries">Itineraries</a></li>
@@ -21,7 +24,9 @@
       </ol>
     </nav>
 
+    <!-- Major element that contains Practical Info element and Data element -->
     <div class="row g-5 mt-3">
+      <!-- Practical Info element -->
       <div class="border-end col-md-4 info-container">
         <div class="position-sticky" style="top: 5rem">
           <div class="p-4 mb-3 practical-info-container rounded">
@@ -43,6 +48,7 @@
         </div>
       </div>
 
+      <!-- Data element -->
       <div class="col-md-8">
         <h2 class="pb-4 mb-4 fw-bold border-bottom">
           "{{ name }}" - What to know
@@ -84,6 +90,8 @@
         </div>
       </div>
     </div>
+
+    <!-- Bottom row that contains next and prev buttons -->
     <div class="row">
       <div class="col-md-12">
         <nav class="d-flex mt-5 justify-content-end gap-1">
@@ -106,6 +114,79 @@
     </div>
   </div>
 </template>
+
+<script>
+import ItinPoiComponent from '~/components/Itin-Poi-Component.vue'
+export default {
+  components: { ItinPoiComponent },
+  name: 'ItineraryPage',
+  async asyncData({ route, $axios }) {
+    // param taken from dynamic page rendering
+    const { id } = route.params
+    // call to /itinerary/:id API that retrieves all the information of the specific itinerary
+    const { data } = await $axios.get('/api/itinerary/' + id)
+    // call to /pois-by-itin-id/:id API that retrieves information of the points of interest involted in the itinerary that is being displayed
+    const data2 = await $axios.get('/api/pois-by-itin-id/' + id)
+    // call to /maxItinId API that retrieves the max itinerary id
+    const data3 = await $axios.get('/api/maxItinId/')
+    const eventList = []
+    for (const poi of data2.data) {
+      for (const evento of poi.events) {
+        eventList.push(evento)
+      }
+    }
+    console.log(data.img)
+    console.log(data2.data)
+    return {
+      id: data.id,
+      name: data.name,
+      img: data.img,
+      altDesc: data.alt_desc,
+      description: data.description,
+      longDescription: data.long_description,
+      duration: data.duration,
+      map_src: data.map_src,
+      pois: data2.data,
+      maxItinId: data3.data,
+      events: eventList,
+    }
+  },
+  head() {
+    return {
+      title: this.name,
+      meta: [
+        {
+          name: 'description',
+          content: `Detailed information about ${this.name} itinerary: route description, duration, involved attractions, events on the way, map of the itinerary`,
+        },
+        {
+          name: 'keywords',
+          content: `${this.name}, description, map, route map, practical info, pois, attractions, events, POI, route description`,
+        },
+      ],
+    }
+  },
+  mounted() {},
+  methods: {
+    // on click method that retrieves information related to the next itinerary
+    next() {
+      if (this.id + 1 > this.maxItinId) {
+        this.$router.push(`/details/itinerary/${this.maxItinId}`)
+      } else {
+        this.$router.push(`/details/itinerary/${this.id + 1}`)
+      }
+    },
+    // on click method that retrieves information related to the previous itinerary
+    prev() {
+      if (this.id === 1) {
+        this.$router.push(`/details/itinerary/1`)
+      } else {
+        this.$router.push(`/details/itinerary/${this.id - 1}`)
+      }
+    },
+  },
+}
+</script>
 
 <style scoped>
 h2 {
@@ -205,70 +286,3 @@ li a:hover {
   background-size: 0 1px, 100% 1px;
 }
 </style>
-
-<script>
-import ItinPoiComponent from '~/components/Itin-Poi-Component.vue'
-export default {
-  components: { ItinPoiComponent },
-  name: 'ItineraryPage',
-  async asyncData({ route, $axios }) {
-    const { id } = route.params
-    const { data } = await $axios.get('/api/itinerary/' + id)
-    const data2 = await $axios.get('/api/pois-by-itin-id/' + id)
-    const data3 = await $axios.get('/api/maxItinId/')
-    const eventList = []
-    for (const poi of data2.data) {
-      for (const evento of poi.events) {
-        eventList.push(evento)
-      }
-    }
-    console.log(data.img)
-    console.log(data2.data)
-    return {
-      id: data.id,
-      name: data.name,
-      img: data.img,
-      altDesc: data.alt_desc,
-      description: data.description,
-      longDescription: data.long_description,
-      duration: data.duration,
-      map_src: data.map_src,
-      pois: data2.data,
-      maxItinId: data3.data,
-      events: eventList,
-    }
-  },
-  head() {
-    return {
-      title: this.name,
-      meta: [
-        {
-          name: 'description',
-          content: `Detailed information about ${this.name} itinerary: route description, duration, involved attractions, events on the way, map of the itinerary`,
-        },
-        {
-          name: 'keywords',
-          content: `${this.name}, description, map, route map, practical info, pois, attractions, events, POI, route description`,
-        },
-      ],
-    }
-  },
-  mounted() {},
-  methods: {
-    next() {
-      if (this.id + 1 > this.maxItinId) {
-        this.$router.push(`/details/itinerary/${this.maxItinId}`)
-      } else {
-        this.$router.push(`/details/itinerary/${this.id + 1}`)
-      }
-    },
-    prev() {
-      if (this.id === 1) {
-        this.$router.push(`/details/itinerary/1`)
-      } else {
-        this.$router.push(`/details/itinerary/${this.id - 1}`)
-      }
-    },
-  },
-}
-</script>
