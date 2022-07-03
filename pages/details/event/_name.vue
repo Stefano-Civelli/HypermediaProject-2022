@@ -140,7 +140,6 @@ export default {
     const { data } = await $axios.get('/api/event/' + name)
     // call to /event/random/:id API that retrieves information of the event related to the one that is being displayed
     const randomEventsData = await $axios.get('/api/event/random/' + data.id)
-
     const randomEvents = randomEventsData.data
     return {
       id: data.id,
@@ -164,6 +163,16 @@ export default {
   head() {
     return {
       title: this.name,
+      meta: [
+        {
+          name: 'description',
+          content: `Detailed information about ${this.name}: address, tickets, starting and ending dates and other practical informations.`,
+        },
+        {
+          name: 'keywords',
+          content: `${this.name}, address, location, practical info, events, related events, ending, starting, date, tickets, attraction`,
+        },
+      ],
     }
   },
   mounted() {},

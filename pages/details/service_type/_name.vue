@@ -35,9 +35,10 @@ import ServiceComponent from '~/components/ServiceComponent.vue'
 export default {
   components: { ServiceComponent, SimpleGPHeader },
   async asyncData({ route, $axios }) {
+    // param taken from dynamic page rendering
     const { name } = route.params
+    // call to /service_type/:name API that retrieves all the information of the specific service type
     const { data } = await $axios.get('/api/service_type/' + name)
-    console.log(data)
     const serviceList = data
     return {
       name,
@@ -50,7 +51,7 @@ export default {
       meta: [
         {
           name: 'description',
-          content: `Detailed information about ${this.name} in Milan:`,
+          content: `Detailed information about ${this.name} in Milan`,
         },
         {
           name: 'keywords',
