@@ -2,6 +2,8 @@
 
 This project consists of a NuxtJS implementation of a city guide website. In particular it is about the city of Milan.
 
+**Running Link:** [here](https://hypermedia-project-2022.herokuapp.com/)
+
 ## The Team
 
 **Group name**: HyPSS
@@ -30,16 +32,24 @@ For more details check out the [nuxt documentation](https://nuxtjs.org).
 
 ## Contribution
 
-| member    | Front-end | DB structure and Data | API |
-| --------- | --------- | --------------------- | --- |
-| Ste       |           |                       |     |
-| Pie       |           |                       |     |
-| Samu      |           |                       |     |
-| Ste d'err |           |                       |     |
+| member             | Front-end | DB structure and Data | API |
+| ------------------ | --------- | --------------------- | --- |
+| Stefano Civelli    |           |                       |     |
+| Pietro Bernardelle |           |                       |     |
+| Samuele Cannilla   |           |                       |     |
+| Stefano D'Errico   |           |                       |     |
 
-## API
+## Back-end details
+
+Back-end is implemented in NodeJS which comes included with the Nuxt framework.
+
+#### `API`
 
 All APIs are implemented using the **Axios** HTTP client. This module comes already integrated with Nuxt and allows us to easily create REST APIs to allow us the fetching of DB resources from the front-end.
+
+#### `Rendering mode`
+
+As rendering mode we of course chose **Server-side rendering** (SSR). Server-side sends a fully rendered page to the client. This enables the Google crawler to analyze our page and therefore obtain an high SEO rating.
 
 ## Front-end implementation details
 
@@ -50,16 +60,15 @@ Most pages are built by assembling components toghether (see Design document com
 #### `Styling`
 
 Styling is done both with standard CSS and by using **Bootstrap** built-in classes (especially for responsive complex layouts like grids and flexbox).
+All component-related styling is in the `<style>` tag, Global styles instead are in a CSS file in the assets folder like suggested in Nuxt best practices.
 
 #### `Images`
 
-Images are mostly loaded from the project server itself (with some exceptions) for SEO purposes
+Images are mostly loaded from the project server itself (with some exceptions) for SEO purposes. The remaining very big ones are hosted on imgur.
 
 #### `Routing`
 
 Routing is exclusively implemented with Nuxt-Links like indicated in the Nuxt official documentation: _"The `<NuxtLink>` component should be used for all internal links."_
-
-#### `Node Packages used`
 
 ## Deployment
 
