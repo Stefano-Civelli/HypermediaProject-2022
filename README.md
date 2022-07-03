@@ -59,6 +59,8 @@ Images are mostly loaded from the project server itself (with some exceptions) f
 
 Routing is exclusively implemented with Nuxt-Links like indicated in the Nuxt official documentation: _"The `<NuxtLink>` component should be used for all internal links."_
 
+#### `Node Packages used`
+
 ## DB Design
 
 Below is the ER diagram we designed
