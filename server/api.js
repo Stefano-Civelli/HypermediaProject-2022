@@ -519,6 +519,12 @@ async function runMainApi() {
     console.log(prevYear)
     return res.json(prevYear)
   })
+
+  app.get('/maxEventId', async (req, res) => {
+    const result = await models.Event.findAll()
+    const maxEventId = result[result.length - 1].dataValues.id
+    return res.json(maxEventId)
+  })
   /** Events APIs -------------------------------------------*/
 
   /** POI APIs -------------------------------------------*/
@@ -596,6 +602,12 @@ async function runMainApi() {
 
     return res.json(result)
   })
+
+  app.get('/maxPoiId', async (req, res) => {
+    const result = await models.Poi.findAll()
+    const maxPoiId = result[result.length - 1].dataValues.id
+    return res.json(maxPoiId)
+  }) 
   /** POI APIs -------------------------------------------*/
 
   /** ServiceTypes APIs -------------------------------------------*/
@@ -624,43 +636,6 @@ async function runMainApi() {
     const result = pageContentObject[topic]
     return res.json(result)
   })
-
-  /*
-
-
-  app.get('/cats/:id', async (req, res) => {
-    const id = +req.params.id
-    const result = await models.Cat.findOne({
-      where: { id },
-      include: [{ model: models.Location }],
-    })
-    return res.json(result)
-  })
-
-  // HTTP GET api that returns all the cats in our actual database
-   app.get('/cats', async (req, res) => {
-    const result = await models.Cat.findAll()
-    const filtered = []
-    for (const element of result) {
-      filtered.push({
-        name: element.name,
-        img: element.img,
-        breed: element.breed,
-        id: element.id,
-      })
-    }
-    return res.json(filtered)
-  })
-  
-
-  // HTTP POST api, that will push (and therefore create) a new element in
-  // our actual database
-  app.post('/cats', async (req, res) => {
-    const { body } = req
-    await models.Cat.create(body)
-    return res.sendStatus(200)
-  })
-  */
 }
 
 function monthFromIntToString(param) {

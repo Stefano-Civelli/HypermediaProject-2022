@@ -122,6 +122,7 @@
             class="btn btn-outline-primary rounded-pill"
             @click="next"
             href="#"
+            v-if="id != maxPoiId"
           >
             Next Attraction
           </button>
@@ -149,6 +150,8 @@ export default {
     const { data } = await $axios.get('/api/poi/' + name)
     // call to /poi/random/:name API that retrieves information of the points of interest related to the one that is being displayed
     const nearByPoisArray = await $axios.get('/api/poi/random/' + name)
+    // call to /maxPoiId API that retrieves the max poi id
+    const data2 = await $axios.get('/api/maxPoiId/')
     const itineraryData = await $axios.get(
       '/api/poi/related_itineraries/' + name
     )
@@ -167,6 +170,7 @@ export default {
       relatedItineraries,
       longDescription: data.long_description,
       nearByPoisArray: nearByPoisArray.data,
+      maxPoiId: data2.data,
     }
   },
   head() {
