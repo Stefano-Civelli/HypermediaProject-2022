@@ -3,6 +3,7 @@
     <div class="row">
       <div class="col-12">
         <div class="hero">
+          <!-- title and short text -->
           <div class="text">
             <p class="text__short">Start Exploring Today!</p>
             <h1 class="text__title">About the city</h1>
@@ -11,6 +12,7 @@
             </p>
           </div>
 
+          <!-- random image grid -->
           <div class="grid__container">
             <div class="grid__item one"></div>
             <div class="grid__item two"></div>
@@ -27,82 +29,37 @@
         </div>
       </div>
     </div>
+
+    <!-- grid in second half of the page -->
     <div class="row">
       <div class="col-12 grid-container">
-        <div class="testimonial-grid">
-          <article
-            class="testimonial grid-col-span-2 flow bg-primary-400 text-secondary-400"
-          >
-            <div class="d-flex">
-              <div>
-                <h2 class="title">History</h2>
-              </div>
-            </div>
-            <p>
-              {{ historySubtitle }}
-            </p>
-            <p>
-              {{ history }}
-            </p>
-          </article>
-          <article class="testimonial flow bg-secondary-400 text-neutral-100">
-            <div class="d-flex">
-              <div>
-                <h2 class="title">Art</h2>
-              </div>
-            </div>
-            <p>{{ artSubtitle }}</p>
-            <p>
-              {{ art }}
-            </p>
-          </article>
-          <article class="testimonial flow bg-neutral-100 text-secondary-400">
-            <div class="d-flex">
-              <div>
-                <h2 class="title">Nature</h2>
-              </div>
-            </div>
-            <p>{{ natureSubtitle }}</p>
-            <p>
-              {{ nature }}
-            </p>
-          </article>
-          <article
-            class="testimonial grid-col-span-2 flow bg-secondary-500 text-neutral-100"
-          >
-            <div class="d-flex">
-              <div>
-                <h2 class="title">Business</h2>
-              </div>
-            </div>
-            <p>
-              {{ businessSubtitle }}
-            </p>
-            <p>
-              {{ business }}
-            </p>
-          </article>
-          <article class="testimonial flow bg-neutral-100 text-secondary-400">
-            <div class="d-flex">
-              <div>
-                <h2 class="title">Music</h2>
-              </div>
-            </div>
-            <p>{{ musicSubtitle }}</p>
-            <p>
-              {{ music }}
-            </p>
-          </article>
-        </div>
+        <BoxGridComponent
+          title1="History"
+          :subtitle1="historySubtitle"
+          :description1="history"
+          title2="Art"
+          :subtitle2="artSubtitle"
+          :description2="art"
+          title3="Nature"
+          :subtitle3="natureSubtitle"
+          :description3="nature"
+          title4="Business"
+          :subtitle4="businessSubtitle"
+          :description4="business"
+          title5="Music"
+          :subtitle5="musicSubtitle"
+          :description5="music"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import BoxGridComponent from '~/components/BoxGridComponent.vue'
 export default {
   name: 'AboutPage',
-  components: {},
+  components: { BoxGridComponent },
   data() {
     return {}
   },
@@ -156,154 +113,7 @@ export default {
 </script>
 
 <style scoped>
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-.flow > *:where(:not(:first-child)) {
-  margin-top: var(--flow-spacer, 1em);
-}
-
-.bg-primary-400 {
-  background: rgb(255, 230, 90);
-}
-.bg-secondary-400 {
-  background: rgb(72, 85, 106);
-}
-.bg-secondary-500 {
-  background: rgb(25, 33, 46);
-}
-
-.bg-neutral-100 {
-  background: rgb(255, 255, 255);
-}
-
-.text-neutral-100 {
-  color: rgb(255, 255, 255);
-}
-.text-secondary-400 {
-  color: rgb(72, 85, 106);
-}
-.border-primary-400 {
-  border: 2px solid #a775f1;
-}
-
-/* components */
-.testimonial-grid {
-  display: grid;
-  gap: 1.5rem;
-  grid-auto-columns: 1fr;
-  grid-template-areas:
-    'one'
-    'two'
-    'three'
-    'four'
-    'five';
-
-  padding-block: 2rem;
-  width: min(95%, 70rem);
-  margin-inline: auto;
-}
-
-.testimonial {
-  font-size: 0.88rem;
-  padding: 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(217 19% 35% / 0.25);
-}
-
-.testimonial:nth-child(1) {
-  grid-area: one;
-}
-.testimonial:nth-child(2) {
-  grid-area: two;
-}
-.testimonial:nth-child(3) {
-  grid-area: three;
-}
-.testimonial:nth-child(4) {
-  grid-area: four;
-}
-.testimonial:nth-child(5) {
-  grid-area: five;
-}
-
-@media screen and (min-width: 33em) {
-  .testimonial-grid {
-    grid-template-areas:
-      'one one'
-      'two three'
-      'five five'
-      'four four';
-  }
-}
-
-@media screen and (min-width: 38em) {
-  .testimonial-grid {
-    grid-template-areas:
-      'one one'
-      'two five'
-      'three five'
-      'four four';
-  }
-}
-
-@media screen and (min-width: 54em) {
-  .testimonial-grid {
-    grid-template-areas:
-      'one one two'
-      'five five five'
-      'three four four';
-  }
-}
-
-@media screen and (min-width: 75em) {
-  .testimonial-grid {
-    grid-template-areas:
-      'one one two five'
-      'three four four five';
-  }
-}
-
-.testimonial {
-  background-repeat: no-repeat;
-  background-position: top right 10%;
-}
-
-.testimonial img {
-  width: 1.75rem;
-  border-radius: 50%;
-}
-
-.title {
-  font-size: 1.8rem;
-  line-height: 1;
-}
-
-.testimonial .position {
-  font-size: 0.6875rem;
-  opacity: 0.5;
-}
-
-.testimonial > p:first-of-type {
-  font-size: 1rem;
-  line-height: 1.2;
-}
-
-.testimonial > p:last-of-type {
-  opacity: 0.7;
-}
-/** ------------- UPPER PART OF PAGE from here down------------- */
+/** page header and image grid styling ----------------- */
 .hero {
   display: flex;
   max-width: 1440px;
@@ -444,6 +254,7 @@ dd {
   background-size: cover;
 }
 
+/** media queries-------------------------------------- */
 @media (max-width: 900px) {
   .grid__container {
     min-width: 50%;
@@ -463,10 +274,5 @@ dd {
     width: 100%;
     margin-bottom: -120px;
   }
-}
-/**---------------------------------------------- */
-.my-page-title {
-  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
-  text-align: center;
 }
 </style>

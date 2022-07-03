@@ -7,6 +7,7 @@
     />
     <div class="container page-component pt-5">
       <div class="d-flex flex-wrap align-items-center justify-content-center">
+        <!-- breadcrumbs -->
         <nav class="bread-container position-absolute">
           <ol class="breadcrumb p-2 border rounded-4 shadow">
             <li class="breadcrumb-item">

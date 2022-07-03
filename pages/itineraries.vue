@@ -29,6 +29,7 @@ import GroupPageHeaderComponent from '~/components/GroupPageHeaderComponent.vue'
 export default {
   components: { GroupPageCardComponent, GroupPageHeaderComponent },
   async asyncData({ $axios }) {
+    /** fetching list of itineraries to be displayed in the cards of the group page */
     const { data } = await $axios.get('/api/itinerary/list')
     return {
       data,
