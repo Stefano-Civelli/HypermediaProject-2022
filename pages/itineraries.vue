@@ -56,9 +56,6 @@ export default {
 </script>
 
 <style scoped>
-.page-title {
-  background-color: rgb(6, 109, 226);
-}
 .page-component {
   background-color: white;
   border-radius: 40px;

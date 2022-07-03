@@ -59,6 +59,7 @@ export default {
     }
   },
   async asyncData({ $axios }) {
+    /** fetching list of years to be displayed in the cards of the group page */
     const { data } = await $axios.get('/api/event/list/years')
     return {
       data,
@@ -68,10 +69,6 @@ export default {
 </script>
 
 <style scoped>
-.hero-section-parallax {
-  background-image: url('~/assets/Gae-Aulenti.jpg');
-}
-
 .page-component {
   background-color: white;
   border-radius: 40px;
@@ -89,6 +86,8 @@ export default {
 .rounded-4 {
   border-radius: 15px;
 }
+
+/** breadcrumb styling ----------------------- */
 .breadcrumb {
   margin-bottom: -30px;
   background-color: white;
@@ -110,4 +109,5 @@ export default {
 .breadcrumb a:hover {
   background-size: 0 1px, 100% 1px;
 }
+/** breadcrumb styling ----------------------- */
 </style>

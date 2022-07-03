@@ -7,7 +7,7 @@
     />
 
     <div class="container page-component">
-      <!-- need to add link to summer/winter events page and the one from which is possible to chose by year  -->
+      <!-- group links to link this page to other event pages  -->
       <div class="row">
         <div class="col-12">
           <div class="w-100 py-3">
@@ -60,6 +60,7 @@ export default {
     GroupPageCardComponent,
   },
   async asyncData({ $axios }) {
+    /** fetching list of events to be displayed in the cards of the group page */
     const { data } = await $axios.get('/api/event/list')
     console.log(data)
     return {
@@ -83,14 +84,11 @@ export default {
         },
       ],
     }
-  }
+  },
 }
 </script>
 
 <style scoped>
-.hero-section-parallax {
-  background-image: url('~/assets/Gae-background.jpg');
-}
 .card {
   margin: 1%;
 }
@@ -122,6 +120,7 @@ export default {
   border-radius: 15px;
 }
 
+/** link styling ------------------ */
 a {
   display: block;
   color: black;
@@ -144,7 +143,9 @@ a::after {
 a:hover::after {
   height: calc(100% + 8px);
 }
+/** link styling ------------------ */
 
+/** media queries -----------------------------*/
 @media (max-width: 767px) {
   .col-md-4 {
     justify-content: center !important;
