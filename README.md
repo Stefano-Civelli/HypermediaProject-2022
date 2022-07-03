@@ -63,7 +63,7 @@ Routing is exclusively implemented with Nuxt-Links like indicated in the Nuxt of
 
 Below is the ER diagram we designed
 
-**_put here ER DIAGRAM_**
+![ER-diagram](https://user-images.githubusercontent.com/62955439/177054688-89f25397-b188-4bfb-bf31-f2c5f99c0b58.jpg)
 
 ## Best practices and Framework Functionalities
 
@@ -80,3 +80,6 @@ We used most of the special directories
 ### `pages`
 
 ### `static`
+
+
+
