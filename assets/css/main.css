@@ -5,26 +5,6 @@ p, div, a, pre {
     font-family: 'Cabin', Helvetica, Arial, sans-serif;
 }
 
-.my-bg-orange {
-    background-color: rgb(250, 105, 0)
-}
-
-.my-bg-orange-light {
-    background-color: rgb(243, 134, 48)
-}
-
-.my-bg-green-light {
-    background-color: rgb(224, 228, 204)
-}
-
-.my-bg-light-blue {
-    background-color: rgb(167, 219, 216)
-}
-
-.my-bg-turquoise {
-    background-color: rgb(105, 210, 231)
-}
-
 pre {
     white-space: pre-wrap;
     }
