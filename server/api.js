@@ -443,7 +443,7 @@ async function runMainApi() {
     for (const element of result) {
       splittedDate = element.starting_date.split('-')
       if (!years.map((x) => x.year).includes(splittedDate[0])) {
-        years.push({ year: splittedDate[0], img: element.img, events: 1 })
+        years.push({ year: splittedDate[0], img: element.img, alt_desc: element.alt_desc, events: 1 })
       } else {
         let i = 0
         for (const obj of years) {

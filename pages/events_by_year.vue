@@ -27,6 +27,7 @@
           :subtitle="`Up to now there ${year.events > 1 ? 'are' : 'is'} ${
             year.events
           } ${year.events > 1 ? 'events' : 'event'}  available this year`"
+          :altDesc="year.alt_desc"
         />
       </div>
     </div>
