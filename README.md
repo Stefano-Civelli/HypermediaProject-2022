@@ -117,3 +117,5 @@ We used most of the dedicated directories provided by Nuxt:
 - `layouts`
 - `pages`
 - `static`
+
+![#-Tier_architecture](https://user-images.githubusercontent.com/62955439/177119309-c592270f-1a60-4a84-aa60-0cbce1cfc61c.jpg)
