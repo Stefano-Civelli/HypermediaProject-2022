@@ -32,12 +32,19 @@ For more details check out the [nuxt documentation](https://nuxtjs.org).
 
 ## Contribution
 
-| member             | Front-end | DB structure and Data | API |
-| ------------------ | --------- | --------------------- | --- |
-| Stefano Civelli    |           |                       |     |
-| Pietro Bernardelle |           |                       |     |
-| Samuele Cannilla   |           |                       |     |
-| Stefano D'Errico   |           |                       |     |
+**NOTE**: what is indicated in the table are the main tasks but **not the only ones** managed by each member
+
+| member             | Tasks                                             |
+| ------------------ | ------------------------------------------------- |
+| Stefano Civelli    | Front implementation, DB design, SEO optimization |
+| Pietro Bernardelle | Front implementation, DB design, APIs             |
+| Samuele Cannilla   | DB design, DB content, MAP API                    |
+| Stefano D'Errico   | Front implementation, DB design                   |
+
+## General architecture
+
+Application is structured following the **MVC design pattern**: separating _data_ from _rapresentation_ and connecting the 2 aspects with the controller that queries the data and updates the view.
+The _view_ being the _Front-end_ and _model and controller_ being the _Back-end_
 
 ## Back-end details
 
