@@ -36,11 +36,16 @@
               <textarea
                 class="form-control h-100 my-textfield"
                 placeholder="Enter your message"
+                id="message"
               ></textarea>
             </div>
           </div>
           <div class="col-12 d-flex justify-content-end">
-            <button class="btn w-100" :style="{ 'background-color': color }">
+            <button
+              @click="clear()"
+              class="btn w-100"
+              :style="{ 'background-color': color }"
+            >
               {{ text }}
             </button>
           </div>
@@ -64,6 +69,20 @@ export default {
     color: {
       type: String,
       required: true,
+    },
+  },
+  methods: {
+    clear() {
+      const arr = document.getElementsByClassName(`form-control`)
+      if (this.title === 'Customer care') {
+        arr[0].value = ''
+        arr[1].value = ''
+        arr[2].value = ''
+      } else if (this.title === 'Sales & Marketing') {
+        arr[3].value = ''
+        arr[4].value = ''
+        arr[5].value = ''
+      }
     },
   },
 }
