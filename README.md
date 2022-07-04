@@ -4,6 +4,8 @@ This project consists of a NuxtJS implementation of a city guide website. In par
 
 **Running Link:** [here](https://hypermedia-project-2022.herokuapp.com/)
 
+**Design documentation:** [here](https://github.com/Stefano-Civelli/HypermediaProject-2022/blob/master/Civelli%2C_Bernardelle%2C_Cannilla%2C_D'Errico_Design_Report_5_7_2022.pdf)
+
 ![Home-page-screen](https://user-images.githubusercontent.com/62955439/177119733-4747b109-9e8a-4451-b534-0c54ac92d618.jpg)
 
 <br>
