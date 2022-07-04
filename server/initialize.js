@@ -632,8 +632,8 @@ export default async (models) => {
       description: 'Most important italian exhibition about robots',
       long_description:
         "BI-MU, is the main and most important Italian exhibition dedicated to the machinery and technology industry for metal working. It's not important whether you are a professional or just an enthusiast, come take a look at these fantastic machines!",
-      alt_desc: 'The event logo',
-      alt_header: 'The event logo',
+      alt_desc: 'A generic image showing a bunch of gears',
+      alt_header: 'A couple of orange factory robot arms are working',
       starting_date: '2022-10-12',
       ending_date: '2022-10-15',
       name: 'Bi-Mu',
