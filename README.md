@@ -26,7 +26,8 @@ This project consists of a NuxtJS implementation of a city guide website. In par
 ```bash
 # install dependencies
 $ npm install
-
+```
+```bash
 # serve locally at localhost:3000
 $ npm run dev
 
