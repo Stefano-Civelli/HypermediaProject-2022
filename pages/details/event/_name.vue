@@ -164,8 +164,6 @@ export default {
     // call to /maxEventId API that retrieves the max event id
     const data2 = await $axios.get('/api/maxEventId/')
     const randomEvents = randomEventsData.data
-    console.log(data.id)
-    console.log(data2.data)
     return {
       id: data.id,
       name: data.name,

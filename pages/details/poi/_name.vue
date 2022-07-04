@@ -157,7 +157,6 @@ export default {
     const itineraryData = await $axios.get(
       '/api/poi/related_itineraries/' + name
     )
-    console.log(nearByPoisArray.data)
     const relatedItineraries = itineraryData.data.itineraries
     return {
       id: data.id,
