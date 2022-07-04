@@ -10,7 +10,7 @@ This project consists of a NuxtJS implementation of a city guide website. In par
 
 ## The Team
 
-**Group name**: HyPSS
+**Group name**: HyPSSS
 
 **Members**:
 
