@@ -52,7 +52,9 @@ For more details check out the [nuxt documentation](https://nuxtjs.org).
 ## General architecture
 
 Application is structured following the **MVC design pattern**: separating _data_ from _rapresentation_ and connecting the 2 aspects with the controller that queries the data and updates the view.
-The _view_ being the _Front-end_ and _model and controller_ being the _Back-end_
+The _view_ being the _Front-end_ and _model and controller_ being the _Back-end_.
+
+![#-Tier_architecture](https://user-images.githubusercontent.com/62955439/177119309-c592270f-1a60-4a84-aa60-0cbce1cfc61c.jpg)
 
 <br>
 
@@ -118,4 +120,4 @@ We used most of the dedicated directories provided by Nuxt:
 - `pages`
 - `static`
 
-![#-Tier_architecture](https://user-images.githubusercontent.com/62955439/177119309-c592270f-1a60-4a84-aa60-0cbce1cfc61c.jpg)
+
