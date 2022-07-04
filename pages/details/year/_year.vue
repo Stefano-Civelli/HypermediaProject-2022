@@ -3,7 +3,7 @@
     <GroupPageHeaderComponent
       :text="`Events of ${year}`"
       textColor="rgb(248, 249, 250)"
-      img="https://i.imgur.com/csndEgx.jpg"
+      img="https://i.imgur.com/JHmXyvv.jpg"
     />
     <div class="container page-component">
       <!-- Section that contains previous year and next year buttons -->

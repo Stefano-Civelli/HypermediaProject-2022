@@ -3,7 +3,7 @@
     <GroupPageHeaderComponent
       text="Itineraries"
       textColor="rgb(248, 249, 250)"
-      img="https://i.imgur.com/9hEd8gt.jpg"
+      img="https://i.imgur.com/4xKFSXV.jpg"
     />
     <div class="container page-component pt-5">
       <div class="component d-flex flex-wrap justify-content-center">

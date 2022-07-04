@@ -3,7 +3,7 @@
     <GroupPageHeaderComponent
       text="Events by Year"
       textColor="rgb(248, 249, 250)"
-      img="https://i.imgur.com/ojb6cuI.jpg"
+      img="https://i.imgur.com/JHmXyvv.jpg"
     />
     <div class="container page-component pt-5">
       <div class="d-flex flex-wrap align-items-center justify-content-center">

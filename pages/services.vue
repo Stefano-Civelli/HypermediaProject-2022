@@ -3,7 +3,7 @@
     <GroupPageHeaderComponent
       text="Services you might need "
       textColor="rgb(248, 249, 250)"
-      img="https://i.imgur.com/TefurpW.jpg"
+      img="https://i.imgur.com/cmFgTb1.jpg"
     />
     <div class="container page-component px-5 pt-4">
       <HorizontalCardComponent

@@ -3,7 +3,7 @@
     <GroupPageHeaderComponent
       text="Summer Events"
       textColor="rgb(248, 249, 250)"
-      img="https://i.imgur.com/ojb6cuI.jpg"
+      img="https://i.imgur.com/JHmXyvv.jpg"
     />
     <div
       class="container d-flex flex-wrap justify-content-center page-component pt-5"
