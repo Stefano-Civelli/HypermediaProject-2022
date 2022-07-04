@@ -79,20 +79,20 @@ export default {
   text-decoration: none;
 }
 
-.breadcrumb a {
-  background: linear-gradient(to right, rgb(33, 37, 41), rgb(33, 37, 41)),
-    linear-gradient(
-      to right,
-      rgba(105, 210, 231, 0.527),
-      rgba(105, 210, 231, 0.527)
-    );
+.breadcrumb a,
+li a {
+  color: inherit;
+  text-decoration: none;
+  background: linear-gradient(to right, white, white),
+    linear-gradient(to right, rgb(72, 85, 106), rgb(72, 85, 106));
   background-size: 100% 1px, 0 1px;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
   transition: background-size 500ms;
 }
 
-.breadcrumb a:hover {
+.breadcrumb a:hover,
+li a:hover {
   background-size: 0 1px, 100% 1px;
 }
 /** breadcrumb styling ---------------*/

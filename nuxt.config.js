@@ -24,7 +24,7 @@ export default {
       { name: 'author', content: 'HyPSS' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/duomoIcon2.png' },
       {
         rel: 'stylesheet',
         href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css',
@@ -88,8 +88,7 @@ export default {
     /*
     for heroku
 
-    baseURL: 'https://hypermedia-project-2022.herokuapp.com',
-    */
+    baseURL: 'https://hypermedia-project-2022.herokuapp.com',*/
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

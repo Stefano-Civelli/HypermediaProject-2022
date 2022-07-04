@@ -397,7 +397,7 @@ async function runMainApi() {
       ticket_price: result.ticket_price,
       poiName: result.poi.name,
       header_img: result.header_img,
-      alt_header: result.alt_header
+      alt_header: result.alt_header,
     }
     return res.json(filtered)
   })
@@ -607,7 +607,7 @@ async function runMainApi() {
     const result = await models.Poi.findAll()
     const maxPoiId = result[result.length - 1].dataValues.id
     return res.json(maxPoiId)
-  }) 
+  })
   /** POI APIs -------------------------------------------*/
 
   /** ServiceTypes APIs -------------------------------------------*/
