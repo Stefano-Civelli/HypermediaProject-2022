@@ -4,6 +4,8 @@ This project consists of a NuxtJS implementation of a city guide website. In par
 
 **Running Link:** [here](https://hypermedia-project-2022.herokuapp.com/)
 
+<br>
+
 ## The Team
 
 **Group name**: HyPSS
@@ -13,6 +15,8 @@ This project consists of a NuxtJS implementation of a city guide website. In par
 - [Pietro Bernardelle](https://github.com/PietroBernardelle)
 - [Samuele Cannilla](https://github.com/scannilla)
 - [Stefano D'Errico](https://github.com/stefanoderr)
+
+<br>
 
 ## Running the server
 
@@ -30,6 +34,8 @@ $ npm run start
 
 For more details check out the [nuxt documentation](https://nuxtjs.org).
 
+<br>
+
 ## Contribution
 
 **NOTE**: what is indicated in the table are the main tasks but **not the only ones** managed by each member
@@ -41,10 +47,14 @@ For more details check out the [nuxt documentation](https://nuxtjs.org).
 | Samuele Cannilla   | DB design, DB content, MAP API                    |
 | Stefano D'Errico   | Front implementation, DB design                   |
 
+<br>
+
 ## General architecture
 
 Application is structured following the **MVC design pattern**: separating _data_ from _rapresentation_ and connecting the 2 aspects with the controller that queries the data and updates the view.
 The _view_ being the _Front-end_ and _model and controller_ being the _Back-end_
+
+<br>
 
 ## Back-end details
 
@@ -57,6 +67,8 @@ All APIs are implemented using the **Axios** HTTP client. This module comes alre
 #### `Rendering mode`
 
 As rendering mode we of course chose **Server-side rendering** (SSR). Server-side sends a fully rendered page to the client. This enables the Google crawler to analyze our page and therefore obtain an high SEO rating.
+
+<br>
 
 ## Front-end implementation details
 
@@ -77,15 +89,21 @@ Images are mostly loaded from the project server itself (with some exceptions) f
 
 Routing is exclusively implemented with Nuxt-Links like indicated in the Nuxt official documentation: _"The `<NuxtLink>` component should be used for all internal links."_
 
+<br>
+
 ## Deployment
 
 Project has been deployed on the **Heroku** hosting platform and is available at [this link](https://hypermedia-project-2022.herokuapp.com/)
+
+<br>
 
 ## DB Design
 
 Below is the ER diagram we designed
 
 ![ER-diagram](https://user-images.githubusercontent.com/62955439/177054688-89f25397-b188-4bfb-bf31-f2c5f99c0b58.jpg)
+
+<br>
 
 ## Best practices and Framework Functionalities
 
