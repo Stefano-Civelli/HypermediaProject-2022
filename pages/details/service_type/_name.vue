@@ -2,8 +2,8 @@
   <div>
     <SimpleGPHeader
       :text="name"
-      textColor="rgb(33, 37, 41)"
-      bgColor="rgb(105, 210, 231)"
+      textColor="rgb(248, 249, 250)"
+      bgColor="rgb(72, 85, 106)"
     />
     <div class="container">
       <nav class="d-flex bread-container">
