@@ -106,7 +106,8 @@ export default {
   transition: filter 200ms linear, transform 200ms linear;
 }
 
-.card:hover .card__image {
+.card:hover .card__image,
+.card:active .card__image {
   filter: brightness(1) saturate(1.2) contrast(0.85);
 }
 
@@ -122,7 +123,8 @@ export default {
   transition: 0.2s ease-in-out;
 }
 
-.card:hover .card__overlay {
+.card:hover .card__overlay,
+.card:active .card__overlay {
   transform: translateY(0);
 }
 
@@ -152,7 +154,8 @@ export default {
   d: path('M 40 80 c 22 0 40 -22 40 -40 v 40 Z');
 }
 
-.card:hover .card__header {
+.card:hover .card__header,
+.card:active .card__header {
   transform: translateY(0);
 }
 

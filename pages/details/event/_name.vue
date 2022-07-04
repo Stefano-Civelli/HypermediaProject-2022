@@ -90,7 +90,7 @@
               <NuxtLink
                 :to="`/details/year/${startingYear}`"
                 class="btn btn-dark my-btn w-100"
-                >More events of this year</NuxtLink
+                >More events of this year&nbsp;&nbsp;</NuxtLink
               >
             </div>
             <div class="col-md-6 my-3">
@@ -164,8 +164,6 @@ export default {
     // call to /maxEventId API that retrieves the max event id
     const data2 = await $axios.get('/api/maxEventId/')
     const randomEvents = randomEventsData.data
-    console.log(data.id)
-    console.log(data2.data)
     return {
       id: data.id,
       name: data.name,
@@ -184,7 +182,7 @@ export default {
       longDescription: data.longDescription,
       background: data.header_img,
       maxEventId: data2.data,
-      // season: data.season,
+      season: data.season,
     }
   },
   head() {
