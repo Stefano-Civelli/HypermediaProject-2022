@@ -8,7 +8,7 @@ This project consists of a NuxtJS implementation of a city guide website. In par
 
 <br>
 
-## The Team 
+## The Team
 
 **Group name**: HyPSS
 
@@ -47,7 +47,7 @@ For more details check out the [nuxt documentation](https://nuxtjs.org).
 | ------------------ | ------------------------------------------------- |
 | Stefano Civelli    | Front implementation, DB design, SEO optimization |
 | Pietro Bernardelle | Front implementation, DB design, APIs             |
-| Samuele Cannilla   | DB design, DB content, MAP API                    |
+| Samuele Cannilla   | DB design, DB content, map API                    |
 | Stefano D'Errico   | Front implementation, DB design                   |
 
 <br>
@@ -122,5 +122,3 @@ We used most of the dedicated directories provided by Nuxt:
 - `layouts`
 - `pages`
 - `static`
-
-

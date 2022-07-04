@@ -65,8 +65,7 @@
               />
             </div>
           </div>
-          <h2 class="mb-1">Where is it?</h2>
-          <br />
+          <h2 class="mb-2 mt-4">Here's their location!</h2>
           <div class="px-4 py-2">
             <iframe
               :src="map_src"
