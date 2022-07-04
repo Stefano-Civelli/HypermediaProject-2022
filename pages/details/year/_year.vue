@@ -65,10 +65,10 @@
         <nav class="bread-container position-absolute">
           <ol class="breadcrumb p-2 border rounded-4 shadow">
             <li class="breadcrumb-item">
-              <a href="/events">All events</a>
+              <NuxtLink to="/events">All events</NuxtLink>
             </li>
             <li class="breadcrumb-item">
-              <a href="/events_by_year">Events by year</a>
+              <NuxtLink to="/events_by_year">Events by year</NuxtLink>
             </li>
             <li class="breadcrumb-item">Events of {{ year }}</li>
           </ol>

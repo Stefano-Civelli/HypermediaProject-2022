@@ -9,7 +9,7 @@
       <nav class="d-flex bread-container">
         <ol class="breadcrumb p-2">
           <li class="breadcrumb-item">
-            <a href="/services">Services</a>
+            <NuxtLink to="/services">Services</NuxtLink>
           </li>
           <li class="breadcrumb-item">
             {{ name }}

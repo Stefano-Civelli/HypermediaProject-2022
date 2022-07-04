@@ -12,7 +12,7 @@
               and if you find yourself in need of some service don't hesitate to
               check out our services setion.
             </p>
-            <a href="/about" class="btn btn-dark">Read More</a>
+            <NuxtLink to="/about" class="btn btn-dark">Read More</NuxtLink>
           </div>
           <div class="col-md-6">
             <img

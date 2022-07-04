@@ -10,7 +10,9 @@
     <!-- Breadcrumb element -->
     <nav>
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/events">Events</a></li>
+        <li class="breadcrumb-item">
+          <NuxtLink to="/events">Events</NuxtLink>
+        </li>
         <li class="breadcrumb-item">
           {{ name }}
         </li>
@@ -26,7 +28,13 @@
             <h4 class="fst-italic">Practical Info</h4>
             <p>Ticket costs: {{ ticket_price }} €</p>
           </div>
-
+          <form action="https://www.ticketone.it/ ">
+            <input
+              type="submit"
+              value="Buy Tickets"
+              class="mb-3 btn btn-dark w-50"
+            />
+          </form>
           <div class="p-4 location-container rounded">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -72,12 +80,29 @@
         </h3>
 
         <div>
-          <h2 class="mb-1">Description</h2>
-          <br />
+          <h2 class="mb-2">Description</h2>
+
           <p>
             {{ longDescription }}
           </p>
-          <h2 class="mb-4">Related Events</h2>
+          <div class="row btn-container">
+            <div class="col-md-6 my-3">
+              <NuxtLink
+                :to="`/details/year/${startingYear}`"
+                class="btn btn-dark my-btn w-100"
+                >More events of this year</NuxtLink
+              >
+            </div>
+            <div class="col-md-6 my-3">
+              <NuxtLink
+                :to="`/${season}_events`"
+                class="btn btn-dark my-btn w-100"
+                >More events of this season</NuxtLink
+              >
+            </div>
+          </div>
+
+          <h2 class="mb-2 mt-4">Related Events</h2>
           <div class="hero-section">
             <p class="text-muted my-3" v-if="randomEvents.length == 0">
               At the moment there are no events related to this point of
@@ -102,7 +127,7 @@
     <!-- Bottom row that contains next and prev buttons -->
     <div class="row">
       <div class="col-md-12">
-        <nav class="d-flex mt-5 justify-content-end gap-1">
+        <nav class="d-flex mt-3 justify-content-end gap-1">
           <button
             class="btn btn-outline-secondary rounded-pill"
             @click="prev"
@@ -159,6 +184,7 @@ export default {
       longDescription: data.longDescription,
       background: data.header_img,
       maxEventId: data2.data,
+      // season: data.season,
     }
   },
   head() {
@@ -193,6 +219,11 @@ export default {
 </script>
 
 <style scoped>
+.my-btn {
+  min-height: 65px;
+  font-size: 2em;
+  border-radius: 10px;
+}
 h2 {
   font-size: 2.4rem;
 }

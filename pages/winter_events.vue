@@ -12,7 +12,7 @@
       <nav class="bread-container position-absolute">
         <ol class="breadcrumb p-2 border rounded-4 shadow">
           <li class="breadcrumb-item">
-            <a href="/events">Events</a>
+            <NuxtLink to="/events">Events</NuxtLink>
           </li>
           <li class="breadcrumb-item">Winter Events</li>
         </ol>

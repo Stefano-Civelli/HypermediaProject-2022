@@ -10,7 +10,9 @@
     <!-- Breadcrumb element -->
     <nav>
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/pois">Points of Interest</a></li>
+        <li class="breadcrumb-item">
+          <NuxtLink to="/pois">Points of Interest</NuxtLink>
+        </li>
         <li class="breadcrumb-item">
           {{ name }}
         </li>

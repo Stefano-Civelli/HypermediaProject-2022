@@ -17,14 +17,18 @@
 
                 <div class="row mt-5">
                   <div class="col-md-4 d-flex justify-content-end">
-                    <a class="my-links" href="/summer_events">summer events</a>
+                    <NuxtLink class="my-links" to="/summer_events"
+                      >summer events</NuxtLink
+                    >
                   </div>
                   <div class="col-md-4 d-flex justify-content-center">
-                    <a class="my-links" href="/winter_events">winter events</a>
+                    <NuxtLink class="my-links" to="/winter_events"
+                      >winter events</NuxtLink
+                    >
                   </div>
                   <div class="col-md-4 d-flex justify-content-start">
-                    <a class="my-links" href="/events_by_year"
-                      >events by year</a
+                    <NuxtLink class="my-links" to="/events_by_year"
+                      >events by year</NuxtLink
                     >
                   </div>
                 </div>

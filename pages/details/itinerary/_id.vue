@@ -6,7 +6,9 @@
     <!-- Breadcrumb element -->
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/itineraries">Itineraries</a></li>
+        <li class="breadcrumb-item">
+          <NuxtLink to="/itineraries">Itineraries</NuxtLink>
+        </li>
         <li class="breadcrumb-item">
           {{ name }}
         </li>
@@ -82,7 +84,7 @@
     <!-- Bottom row that contains next and prev buttons -->
     <div class="row">
       <div class="col-md-12">
-        <nav class="d-flex mt-5 justify-content-end gap-1">
+        <nav class="d-flex mt-3 justify-content-end gap-1">
           <button
             class="btn btn-outline-secondary rounded-pill"
             @click="prev"

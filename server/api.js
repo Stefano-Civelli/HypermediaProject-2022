@@ -7,16 +7,16 @@ const initialize = require('./initialize').default
 app.use(express.json())
 
 // Development
-// const database = new Sequelize('postgres://postgres:admin@localhost:5432/hyp')
+const database = new Sequelize('postgres://postgres:admin@localhost:5432/hyp')
 
 // Production (use this code when deploying to production in Heroku)
-
+/*
 const pg = require('pg')
 pg.defaults.ssl = true
 const database = new Sequelize(process.env.DATABASE_URL, {
   ssl: true,
   dialectOptions: { ssl: { require: true, rejectUnauthorized: false } },
-})
+})*/
 
 // Function that will initialize the connection to the database
 async function initializeDatabaseConnection() {
@@ -381,6 +381,8 @@ async function runMainApi() {
       parseInt(splittedEndingDate[1])
     )
 
+    // if(splittedStartingDate[1])
+
     const filtered = {
       id: result.id,
       name: result.name,
@@ -398,6 +400,7 @@ async function runMainApi() {
       poiName: result.poi.name,
       header_img: result.header_img,
       alt_header: result.alt_header,
+      // season: seasonString,
     }
     return res.json(filtered)
   })
@@ -443,7 +446,12 @@ async function runMainApi() {
     for (const element of result) {
       splittedDate = element.starting_date.split('-')
       if (!years.map((x) => x.year).includes(splittedDate[0])) {
-        years.push({ year: splittedDate[0], img: element.img, alt_desc: element.alt_desc, events: 1 })
+        years.push({
+          year: splittedDate[0],
+          img: element.img,
+          alt_desc: element.alt_desc,
+          events: 1,
+        })
       } else {
         let i = 0
         for (const obj of years) {
