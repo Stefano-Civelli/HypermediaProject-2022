@@ -4,11 +4,14 @@ This project consists of a NuxtJS implementation of a city guide website. In par
 
 **Running Link:** [here](https://hypermedia-project-2022.herokuapp.com/)
 
+![Home-page-screen](https://user-images.githubusercontent.com/62955439/177119733-4747b109-9e8a-4451-b534-0c54ac92d618.jpg)
+
 <br>
 
-## The Team
+## The Team 
 
 **Group name**: HyPSS
+
 **Members**:
 
 - [Stefano Civelli](https://github.com/Stefano-Civelli)
