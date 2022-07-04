@@ -143,9 +143,7 @@ export default {
   font-size: 1.7em;
   color: inherit;
 }
-.hero-section-parallax {
-  background-image: url('~/assets/Gae-background.jpg');
-}
+
 .card {
   margin: 1%;
 }
@@ -155,6 +153,7 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .page-component {
   background-color: white;
   border-radius: 40px;
@@ -193,13 +192,16 @@ export default {
   left: 0px;
   top: -50px;
 }
+
 .rounded-4 {
   border-radius: 15px;
 }
+
 .breadcrumb {
   margin-bottom: -30px;
   background-color: white;
 }
+
 .breadcrumb a {
   color: inherit;
   text-decoration: none;
