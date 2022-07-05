@@ -66,15 +66,15 @@ The _view_ being the _Front-end_ and _model and controller_ being the _Back-end_
 
 ## Back-end details
 
-Back-end is implemented in NodeJS which comes included with the Nuxt framework.
+Back-end is implemented in NodeJS which comes built-in with the Nuxt framework.
 
 #### `API`
 
-All APIs are implemented using the **Axios** HTTP client. This module comes already integrated with Nuxt and allows us to easily create REST APIs to allow us the fetching of DB resources from the front-end.
+All APIs are implemented using the **Axios** HTTP client. This module comes already integrated with Nuxt and allows us to easily create REST APIs to fetch DB resources from the front-end.
 
 #### `Rendering mode`
 
-As rendering mode we of course chose **Server-side rendering** (SSR). Server-side sends a fully rendered page to the client. This enables the Google crawler to analyze our page and therefore obtain an high SEO rating.
+As rendering mode we, of course, chose **Server-side rendering** (SSR). SSR sends a fully rendered page to the client, this enables the Google crawler to analyze our page and therefore obtain an higher SEO rating.
 
 <br>
 
@@ -82,20 +82,21 @@ As rendering mode we of course chose **Server-side rendering** (SSR). Server-sid
 
 #### `Components`
 
-Most pages are built by assembling components toghether (see Design document commented wireframes for more details). This approach promotes code reusability and better organization, resulting in easier mantainance.
+Almost all pages are built by assembling components toghether (see Design document commented wireframes for more details). This approach promotes code reusability and better organization, resulting in easier mantainance. 
+Obviously omponents have been implemented following the standard Vue component notation.
 
 #### `Styling`
 
 Styling is done both with standard CSS and by using **Bootstrap** built-in classes (especially for responsive complex layouts like grids and flexbox).
-All component-related styling is in the `<style>` tag, Global styles instead are in a CSS file in the assets folder like suggested in Nuxt best practices.
+All component-related styling is in the `<style>` tag while global styles are in a CSS file in the assets folder like suggested in Nuxt best practices.
 
 #### `Images`
 
-Images are mostly loaded from the project server itself (with some exceptions) for SEO purposes. The remaining very big ones are hosted on imgur.
+Images are mostly loaded from the project server itself (with some exceptions) for SEO purposes. The remaining bigger ones (very few) are hosted on imgur.
 
 #### `Routing`
 
-Routing is exclusively implemented with Nuxt-Links like indicated in the Nuxt official documentation: _"The `<NuxtLink>` component should be used for all internal links."_
+Routing is exclusively implemented with Nuxt-Links like prescribed in the Nuxt official documentation: _"The `<NuxtLink>` component should be used for all internal links."_
 
 <br>
 
@@ -117,6 +118,12 @@ Below is the ER diagram we designed
 
 Most of the functionalities/best practices provided by the Nuxt framework have been used.
 For example Layouts (also the built in functionality for the error page management), dynamic pages, components, Nuxt-Links.
+
+Another very important Nuxt feature we used is SSR like mentioned in the previous sections.
+
+We also implemented "meta" tags the Nuxt way by adding it in the `head()` function of pages
+
+
 
 We used most of the dedicated directories provided by Nuxt:
 
