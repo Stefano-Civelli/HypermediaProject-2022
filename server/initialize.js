@@ -802,13 +802,13 @@ export default async (models) => {
     },
     {
       type: 'Pharmacy',
-      alt_desc: 'A green pharmacy led cross',
+      alt_desc: 'Some pills on a table',
       description: 'Need some drugs? Find the closest pharmacy',
       img: 'service_types/Pharmacy.jpg',
     },
     {
       type: 'InfoPoint',
-      alt_desc: 'An I icon, indicating an info point',
+      alt_desc: 'Magnifying glass on a blue background',
       description:
         'In need of some additional informations about the city? Here are some InfoPoints',
       img: 'service_types/InfoPoint.jpg',
