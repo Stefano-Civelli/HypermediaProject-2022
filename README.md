@@ -1,4 +1,4 @@
-# Final Project template
+# Hypermedia Project 2022 - HyPSS
 
 This project consists of a NuxtJS implementation of a city guide website. In particular it is about the city of Milan.
 
