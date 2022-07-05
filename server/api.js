@@ -382,16 +382,14 @@ async function runMainApi() {
     )
 
     let month = parseInt(splittedStartingDate[1])
-    let day = parseInt(splittedStartingDate[2]) 
+    let day = parseInt(splittedStartingDate[2])
 
     let seasonString = ''
-    if((month > 3) && (month < 9)) {
+    if (month > 3 && month < 9) {
       seasonString = 'summer'
-    }
-    else if((month == 3 && day >= 20) || (month == 9 && day <= 23)) {
-      seasonString = 'summer' 
-    }
-    else {
+    } else if ((month == 3 && day >= 20) || (month == 9 && day <= 23)) {
+      seasonString = 'summer'
+    } else {
       seasonString = 'winter'
     }
 
